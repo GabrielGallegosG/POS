@@ -46,14 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="agregarMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="agregarMenuForm.Designer.cs">
+      <DependentUpon>agregarMenuForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="altaMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="altaMenuForm.Designer.cs">
       <DependentUpon>altaMenuForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PLAgregarMenuForm.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="agregarMenuForm.resx">
+      <DependentUpon>agregarMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="altaMenuForm.resx">
       <DependentUpon>altaMenuForm.cs</DependentUpon>
     </EmbeddedResource>
