@@ -26,16 +26,29 @@ namespace POS
         }
 
         public  static void posicionConsultaMenu(PictureBox logo, Label menu, Panel platillos, Panel bebidas, Panel postres,
-                                                    DataGridView platillosDGV, DataGridView bebidasDGV, DataGridView postresDGV)
+                                                    DataGridView platillosDGV, DataGridView bebidasDGV, DataGridView postresDGV,
+                                                    Label platillo, Label bebida, Label postre, Button modiPlatillo, Button modiBebida, 
+                                                    Button modiPostre, Button eliPlatillo, Button eliBebida, Button eliPostre,
+                                                    Label agregarMenuL, Button agregarMenuBtn)
         {
             logo.Size = new Size(115,100);
             menu.Size = new Size(100,40);
-            platillos.Size = new Size(160, 40);
-            bebidas.Size = new Size(160, 40);
-            postres.Size = new Size(160, 40);
-            platillosDGV.Size = new Size(160, 150);
-            bebidasDGV.Size = new Size(160, 150);
-            postresDGV.Size = new Size(160, 150);
+            platillos.Size = new Size(200, 40);
+            bebidas.Size = new Size(200, 40);
+            postres.Size = new Size(200, 40);
+            platillosDGV.Size = new Size(200, 150);
+            bebidasDGV.Size = new Size(200, 150);
+            postresDGV.Size = new Size(200, 150);
+            platillo.Size = new Size(100, 40);
+            bebida.Size = new Size(100, 40);
+            postre.Size = new Size(100, 40);
+            modiPlatillo.Size = new Size(35,30);
+            modiBebida.Size = new Size(35, 30);
+            modiPostre.Size = new Size(35, 30);
+            eliPlatillo.Size = new Size(35, 30);
+            eliBebida.Size = new Size(35, 30);
+            eliPostre.Size = new Size(35, 30);
+            agregarMenuBtn.Size = new Size(45, 30);
 
             logo.Location = new Point(30,10);
             logo.BringToFront();
@@ -48,6 +61,36 @@ namespace POS
             platillosDGV.Location = new Point(30, 200);
             bebidasDGV.Location = new Point(300, 200);
             postresDGV.Location = new Point(570, 200);
+
+            platillo.Location = new Point(30, 370);
+            bebida.Location = new Point(300, 370);
+            postre.Location = new Point(570, 370);
+
+            modiPlatillo.Location = new Point(160, 365);
+            modiBebida.Location = new Point(430, 365);
+            modiPostre.Location = new Point(700, 365);
+
+            eliPlatillo.Location = new Point(190,365);
+            eliBebida.Location = new Point(460,365);
+            eliPostre.Location = new Point(730,365);
+
+            agregarMenuL.Location = new Point(585, 50);
+            agregarMenuBtn.Location = new Point(740, 45);
+        }
+
+        public static void panelPlatillo(Label platillos)
+        {
+            platillos.Location = new Point(50, 10);
+        }
+
+        public static void panelBebida(Label bebida)
+        {
+            bebida.Location = new Point(60, 10);
+        }
+
+        public static void panelPostre(Label postre)
+        {
+            postre.Location = new Point(60, 10);
         }
     }
 }
