@@ -10,17 +10,12 @@ using System.Windows.Forms;
 
 namespace POS
 {
-    public partial class altaMenuForm : Form
+    public partial class agregarMenuForm : Form
     {
-        public altaMenuForm()
+        public agregarMenuForm()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-            agregarMenuForm frm = new agregarMenuForm();
-            frm.Show();
+            PLAgregarMenuForm.posicionAgregarMenu(encabezadoPanel, nombreLabel, nombreTextBox, seccionLabel, seccionComboBox, precioLabel, precioTextBox,descripcionLabel, descripcionRichTextBox);
         }
     }
 }
