@@ -22,5 +22,11 @@ namespace POS
             agregarMenuForm frm = new agregarMenuForm();
             frm.Show();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            consultaMenuForm frm2 = new consultaMenuForm();
+            frm2.Show();
+        }
     }
 }
