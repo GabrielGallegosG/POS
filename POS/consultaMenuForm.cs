@@ -16,7 +16,11 @@ namespace POS
         {
             InitializeComponent();
             PLConsultaMenu.posicionEncabezado(inicioBbutton,menuButton,ordenesButton,ventasButton,usuariosButton);
-            PLConsultaMenu.posicionConsultaMenu(logoPictureBox,encabezadoLabel,platillosPanel,bebidasPanel,postresPanel, platillosDataGridView, bebidasDataGridView,postresDataGridView);
+            PLConsultaMenu.posicionConsultaMenu(logoPictureBox, encabezadoLabel, platillosPanel, bebidasPanel, postresPanel, platillosDataGridView, bebidasDataGridView, postresDataGridView, platilloLabel, bebidaLabel, postreLabel,
+                                                editarPlatilloButton,editarBebidaButton,editarPostreButton,eliminarPlatilloButton,eliminarBebidaButton,eliminarPostreButton,agregarMenuLabel,agregarMenuButton);
+            PLConsultaMenu.panelPlatillo(platillosLabel);
+            PLConsultaMenu.panelBebida(bebidasLabel);
+            PLConsultaMenu.panelPostre(postresLabel);
         }
     }
 }

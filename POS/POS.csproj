@@ -106,5 +106,26 @@
   <ItemGroup>
     <None Include="Resources\LOGO.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminar_icono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminar_icono1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modificar_icono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar_icono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modificar.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminar.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
