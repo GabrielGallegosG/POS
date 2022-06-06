@@ -64,8 +64,22 @@
     <Compile Include="consultaMenuForm.Designer.cs">
       <DependentUpon>consultaMenuForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="inicioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inicioForm.Designer.cs">
+      <DependentUpon>inicioForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogInForm.Designer.cs">
+      <DependentUpon>LogInForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PLAgregarMenuForm.cs" />
     <Compile Include="PLConsultaMenu.cs" />
+    <Compile Include="PLInicio.cs" />
+    <Compile Include="PLLogIn.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="agregarMenuForm.resx">
@@ -76,6 +90,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="consultaMenuForm.resx">
       <DependentUpon>consultaMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inicioForm.resx">
+      <DependentUpon>inicioForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogInForm.resx">
+      <DependentUpon>LogInForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

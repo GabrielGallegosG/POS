@@ -192,9 +192,9 @@ namespace POS
             this.ordenesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ordenesButton.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
             this.ordenesButton.ForeColor = System.Drawing.Color.White;
-            this.ordenesButton.Location = new System.Drawing.Point(486, 3);
+            this.ordenesButton.Location = new System.Drawing.Point(474, 3);
             this.ordenesButton.Name = "ordenesButton";
-            this.ordenesButton.Size = new System.Drawing.Size(90, 30);
+            this.ordenesButton.Size = new System.Drawing.Size(101, 30);
             this.ordenesButton.TabIndex = 11;
             this.ordenesButton.Text = "ORDENES";
             this.ordenesButton.UseVisualStyleBackColor = false;
@@ -206,7 +206,7 @@ namespace POS
             this.menuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.menuButton.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
             this.menuButton.ForeColor = System.Drawing.Color.White;
-            this.menuButton.Location = new System.Drawing.Point(390, 3);
+            this.menuButton.Location = new System.Drawing.Point(378, 3);
             this.menuButton.Name = "menuButton";
             this.menuButton.Size = new System.Drawing.Size(90, 30);
             this.menuButton.TabIndex = 10;
@@ -221,12 +221,13 @@ namespace POS
             this.inicioBbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.inicioBbutton.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
             this.inicioBbutton.ForeColor = System.Drawing.Color.White;
-            this.inicioBbutton.Location = new System.Drawing.Point(294, 3);
+            this.inicioBbutton.Location = new System.Drawing.Point(282, 3);
             this.inicioBbutton.Name = "inicioBbutton";
             this.inicioBbutton.Size = new System.Drawing.Size(90, 30);
             this.inicioBbutton.TabIndex = 9;
             this.inicioBbutton.Text = "INICIO";
             this.inicioBbutton.UseVisualStyleBackColor = false;
+            this.inicioBbutton.Click += new System.EventHandler(this.inicioBbutton_Click);
             // 
             // platillosDataGridView
             // 
@@ -254,7 +255,6 @@ namespace POS
             // 
             // platilloLabel
             // 
-            this.platilloLabel.AutoSize = true;
             this.platilloLabel.BackColor = System.Drawing.Color.White;
             this.platilloLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.platilloLabel.Font = new System.Drawing.Font("Gadugi", 14F);
@@ -262,11 +262,9 @@ namespace POS
             this.platilloLabel.Name = "platilloLabel";
             this.platilloLabel.Size = new System.Drawing.Size(91, 24);
             this.platilloLabel.TabIndex = 12;
-            this.platilloLabel.Text = "PLATILLO";
             // 
             // bebidaLabel
             // 
-            this.bebidaLabel.AutoSize = true;
             this.bebidaLabel.BackColor = System.Drawing.Color.White;
             this.bebidaLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.bebidaLabel.Font = new System.Drawing.Font("Gadugi", 14F);
@@ -274,11 +272,9 @@ namespace POS
             this.bebidaLabel.Name = "bebidaLabel";
             this.bebidaLabel.Size = new System.Drawing.Size(74, 24);
             this.bebidaLabel.TabIndex = 13;
-            this.bebidaLabel.Text = "BEBIDA";
             // 
             // postreLabel
             // 
-            this.postreLabel.AutoSize = true;
             this.postreLabel.BackColor = System.Drawing.Color.White;
             this.postreLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.postreLabel.Font = new System.Drawing.Font("Gadugi", 14F);
@@ -286,7 +282,6 @@ namespace POS
             this.postreLabel.Name = "postreLabel";
             this.postreLabel.Size = new System.Drawing.Size(78, 24);
             this.postreLabel.TabIndex = 14;
-            this.postreLabel.Text = "POSTRE";
             // 
             // agregarMenuLabel
             // 
