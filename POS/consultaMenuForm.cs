@@ -22,5 +22,12 @@ namespace POS
             PLConsultaMenu.panelBebida(bebidasLabel);
             PLConsultaMenu.panelPostre(postresLabel);
         }
+
+        private void inicioBbutton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            inicioForm frm = new inicioForm();
+            frm.Show();
+        }
     }
 }

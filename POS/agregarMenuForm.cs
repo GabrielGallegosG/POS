@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Drawing2D;
 
 namespace POS
 {
@@ -15,7 +16,13 @@ namespace POS
         public agregarMenuForm()
         {
             InitializeComponent();
-            PLAgregarMenuForm.posicionAgregarMenu(encabezadoPanel, nombreLabel, nombreTextBox, seccionLabel, seccionComboBox, precioLabel, precioTextBox,descripcionLabel, descripcionRichTextBox);
+            PLAgregarMenuForm.posicionAgregarMenu(encabezadoPanel, encabezadoLabel, nombreLabel, nombreTextBox, seccionLabel, seccionComboBox, precioLabel, 
+                                                  precioTextBox,descripcionLabel, descripcionRichTextBox, agregarButton,cancelarButton);
+        }
+
+        private void agregarButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

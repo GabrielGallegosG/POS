@@ -14,13 +14,13 @@ namespace POS
         {
             inicio.Size = new Size(90,30);
             menu.Size = new Size(90, 30);
-            orden.Size = new Size(90, 30);
+            orden.Size = new Size(95, 30);
             venta.Size = new Size(90, 30);
             usuario.Size = new Size(110, 30);
 
-            inicio.Location = new Point(305,4);
-            menu.Location = new Point(400,4);
-            orden.Location = new Point(495,4);
+            inicio.Location = new Point(300,4);
+            menu.Location = new Point(395,4);
+            orden.Location = new Point(490,4);
             venta.Location = new Point(590,4);
             usuario.Location = new Point(685,4);
         }
@@ -39,9 +39,9 @@ namespace POS
             platillosDGV.Size = new Size(200, 150);
             bebidasDGV.Size = new Size(200, 150);
             postresDGV.Size = new Size(200, 150);
-            platillo.Size = new Size(100, 40);
-            bebida.Size = new Size(100, 40);
-            postre.Size = new Size(100, 40);
+            platillo.Size = new Size(120, 25);
+            bebida.Size = new Size(120, 25);
+            postre.Size = new Size(120, 25);
             modiPlatillo.Size = new Size(35,30);
             modiBebida.Size = new Size(35, 30);
             modiPostre.Size = new Size(35, 30);

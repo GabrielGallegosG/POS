@@ -1,4 +1,5 @@
-﻿
+﻿using System.Drawing.Drawing2D;
+
 namespace POS
 {
     partial class agregarMenuForm
@@ -40,6 +41,8 @@ namespace POS
             this.logoPictureBox = new System.Windows.Forms.PictureBox();
             this.encabezadoLabel = new System.Windows.Forms.Label();
             this.encabezadoPanel = new System.Windows.Forms.Panel();
+            this.agregarButton = new System.Windows.Forms.Button();
+            this.cancelarButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
             this.encabezadoPanel.SuspendLayout();
             this.SuspendLayout();
@@ -135,7 +138,7 @@ namespace POS
             this.encabezadoLabel.AutoSize = true;
             this.encabezadoLabel.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.encabezadoLabel.ForeColor = System.Drawing.Color.White;
-            this.encabezadoLabel.Location = new System.Drawing.Point(201, 7);
+            this.encabezadoLabel.Location = new System.Drawing.Point(160, 0);
             this.encabezadoLabel.Name = "encabezadoLabel";
             this.encabezadoLabel.Size = new System.Drawing.Size(201, 25);
             this.encabezadoLabel.TabIndex = 9;
@@ -147,14 +150,39 @@ namespace POS
             this.encabezadoPanel.Controls.Add(this.encabezadoLabel);
             this.encabezadoPanel.Location = new System.Drawing.Point(1, 99);
             this.encabezadoPanel.Name = "encabezadoPanel";
-            this.encabezadoPanel.Size = new System.Drawing.Size(581, 38);
+            this.encabezadoPanel.Size = new System.Drawing.Size(525, 38);
             this.encabezadoPanel.TabIndex = 10;
+            // 
+            // agregarButton
+            // 
+            this.agregarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
+            this.agregarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.agregarButton.Location = new System.Drawing.Point(480, 489);
+            this.agregarButton.Name = "agregarButton";
+            this.agregarButton.Size = new System.Drawing.Size(75, 23);
+            this.agregarButton.TabIndex = 11;
+            this.agregarButton.Text = "AGREGAR";
+            this.agregarButton.UseVisualStyleBackColor = false;
+            this.agregarButton.Click += new System.EventHandler(this.agregarButton_Click);
+            // 
+            // cancelarButton
+            // 
+            this.cancelarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
+            this.cancelarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelarButton.Location = new System.Drawing.Point(12, 489);
+            this.cancelarButton.Name = "cancelarButton";
+            this.cancelarButton.Size = new System.Drawing.Size(87, 23);
+            this.cancelarButton.TabIndex = 12;
+            this.cancelarButton.Text = "CANCELAR";
+            this.cancelarButton.UseVisualStyleBackColor = false;
             // 
             // agregarMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(581, 497);
+            this.ClientSize = new System.Drawing.Size(525, 535);
+            this.Controls.Add(this.cancelarButton);
+            this.Controls.Add(this.agregarButton);
             this.Controls.Add(this.encabezadoPanel);
             this.Controls.Add(this.logoPictureBox);
             this.Controls.Add(this.descripcionRichTextBox);
@@ -166,7 +194,7 @@ namespace POS
             this.Controls.Add(this.seccionLabel);
             this.Controls.Add(this.nombreLabel);
             this.Name = "agregarMenuForm";
-            this.Text = "agregarMenuForm";
+            this.Text = "Agregar a Menu";
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
             this.encabezadoPanel.ResumeLayout(false);
             this.encabezadoPanel.PerformLayout();
@@ -188,5 +216,7 @@ namespace POS
         private System.Windows.Forms.PictureBox logoPictureBox;
         private System.Windows.Forms.Label encabezadoLabel;
         private System.Windows.Forms.Panel encabezadoPanel;
+        private System.Windows.Forms.Button agregarButton;
+        private System.Windows.Forms.Button cancelarButton;
     }
 }
