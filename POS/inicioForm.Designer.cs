@@ -89,6 +89,7 @@ namespace POS
             this.Controls.Add(this.agregarMenuLabel);
             this.Controls.Add(this.encabezadoLabel);
             this.Name = "inicioForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
             this.ResumeLayout(false);
             this.PerformLayout();

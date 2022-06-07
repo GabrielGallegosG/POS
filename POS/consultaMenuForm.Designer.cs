@@ -304,6 +304,7 @@ namespace POS
             this.agregarMenuButton.Size = new System.Drawing.Size(33, 29);
             this.agregarMenuButton.TabIndex = 21;
             this.agregarMenuButton.UseVisualStyleBackColor = false;
+            this.agregarMenuButton.Click += new System.EventHandler(this.agregarMenuButton_Click);
             // 
             // editarPostreButton
             // 
@@ -316,6 +317,7 @@ namespace POS
             this.editarPostreButton.Size = new System.Drawing.Size(40, 30);
             this.editarPostreButton.TabIndex = 20;
             this.editarPostreButton.UseVisualStyleBackColor = false;
+            this.editarPostreButton.Click += new System.EventHandler(this.editarPostreButton_Click);
             // 
             // editarBebidaButton
             // 
@@ -323,11 +325,12 @@ namespace POS
             this.editarBebidaButton.FlatAppearance.BorderSize = 0;
             this.editarBebidaButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editarBebidaButton.Image = global::POS.Properties.Resources.modificar;
-            this.editarBebidaButton.Location = new System.Drawing.Point(333, 384);
+            this.editarBebidaButton.Location = new System.Drawing.Point(342, 384);
             this.editarBebidaButton.Name = "editarBebidaButton";
             this.editarBebidaButton.Size = new System.Drawing.Size(40, 32);
             this.editarBebidaButton.TabIndex = 19;
             this.editarBebidaButton.UseVisualStyleBackColor = false;
+            this.editarBebidaButton.Click += new System.EventHandler(this.editarBebidaButton_Click);
             // 
             // editarPlatilloButton
             // 
@@ -340,6 +343,7 @@ namespace POS
             this.editarPlatilloButton.Size = new System.Drawing.Size(40, 30);
             this.editarPlatilloButton.TabIndex = 18;
             this.editarPlatilloButton.UseVisualStyleBackColor = false;
+            this.editarPlatilloButton.Click += new System.EventHandler(this.editarPlatilloButton_Click);
             // 
             // eliminarPostreButton
             // 
@@ -352,6 +356,7 @@ namespace POS
             this.eliminarPostreButton.Size = new System.Drawing.Size(40, 30);
             this.eliminarPostreButton.TabIndex = 17;
             this.eliminarPostreButton.UseVisualStyleBackColor = false;
+            this.eliminarPostreButton.Click += new System.EventHandler(this.eliminarPostreButton_Click);
             // 
             // eliminarBebidaButton
             // 
@@ -364,6 +369,7 @@ namespace POS
             this.eliminarBebidaButton.Size = new System.Drawing.Size(40, 30);
             this.eliminarBebidaButton.TabIndex = 16;
             this.eliminarBebidaButton.UseVisualStyleBackColor = false;
+            this.eliminarBebidaButton.Click += new System.EventHandler(this.eliminarBebidaButton_Click);
             // 
             // eliminarPlatilloButton
             // 
@@ -376,6 +382,7 @@ namespace POS
             this.eliminarPlatilloButton.Size = new System.Drawing.Size(40, 30);
             this.eliminarPlatilloButton.TabIndex = 15;
             this.eliminarPlatilloButton.UseVisualStyleBackColor = false;
+            this.eliminarPlatilloButton.Click += new System.EventHandler(this.eliminarPlatilloButton_Click);
             // 
             // logoPictureBox
             // 
@@ -415,6 +422,7 @@ namespace POS
             this.Controls.Add(this.platillosPanel);
             this.Controls.Add(this.logoPictureBox);
             this.Name = "consultaMenuForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "consultaMenuForm";
             this.platillosPanel.ResumeLayout(false);
             this.platillosPanel.PerformLayout();
