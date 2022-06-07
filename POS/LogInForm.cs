@@ -18,5 +18,11 @@ namespace POS
             PLLogIn.posicionLogin(encabezadoLabel, inicioSesionLabel, empleadoButton, administradorButton,contenedorPanel);
             PLLogIn.posicionPanel(usuarioLabel, usuarioTextBox, contraseñaLabel, contraseñaTextBox, iniciarSesionButton);
         }
+
+        private void iniciarSesionButton_Click(object sender, EventArgs e)
+        {
+            inicioForm frm = new inicioForm();
+            frm.Show();
+        }
     }
 }

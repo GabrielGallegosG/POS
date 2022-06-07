@@ -25,8 +25,49 @@ namespace POS
 
         private void inicioBbutton_Click(object sender, EventArgs e)
         {
-            this.Close();
             inicioForm frm = new inicioForm();
+            frm.Show();
+        }
+
+        private void agregarMenuButton_Click(object sender, EventArgs e)
+        {
+            agregarMenuForm frm = new agregarMenuForm();
+            frm.Show();
+        }
+
+        private void editarPlatilloButton_Click(object sender, EventArgs e)
+        {
+            editarMenuForm frm = new editarMenuForm();
+            frm.Show();
+        }
+
+        private void editarBebidaButton_Click(object sender, EventArgs e)
+        {
+            editarMenuForm frm = new editarMenuForm();
+            frm.Show();
+        }
+
+        private void editarPostreButton_Click(object sender, EventArgs e)
+        {
+            editarMenuForm frm = new editarMenuForm();
+            frm.Show();
+        }
+
+        private void eliminarPlatilloButton_Click(object sender, EventArgs e)
+        {
+            eliminarMenuForm frm = new eliminarMenuForm();
+            frm.Show();
+        }
+
+        private void eliminarBebidaButton_Click(object sender, EventArgs e)
+        {
+            eliminarMenuForm frm = new eliminarMenuForm();
+            frm.Show();
+        }
+
+        private void eliminarPostreButton_Click(object sender, EventArgs e)
+        {
+            eliminarMenuForm frm = new eliminarMenuForm();
             frm.Show();
         }
     }
