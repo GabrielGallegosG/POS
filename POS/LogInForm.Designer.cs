@@ -85,6 +85,7 @@ namespace POS
             this.empleadoButton.TabIndex = 2;
             this.empleadoButton.Text = "SOY EMPLEADO";
             this.empleadoButton.UseVisualStyleBackColor = false;
+            this.empleadoButton.Click += new System.EventHandler(this.empleadoButton_Click);
             // 
             // administradorButton
             // 
@@ -97,6 +98,7 @@ namespace POS
             this.administradorButton.TabIndex = 3;
             this.administradorButton.Text = "SOY ADMINISTRADOR";
             this.administradorButton.UseVisualStyleBackColor = false;
+            this.administradorButton.Click += new System.EventHandler(this.administradorButton_Click);
             // 
             // contenedorPanel
             // 

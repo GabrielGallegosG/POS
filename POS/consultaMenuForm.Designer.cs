@@ -227,7 +227,6 @@ namespace POS
             this.inicioBbutton.TabIndex = 9;
             this.inicioBbutton.Text = "INICIO";
             this.inicioBbutton.UseVisualStyleBackColor = false;
-            this.inicioBbutton.Click += new System.EventHandler(this.inicioBbutton_Click);
             // 
             // platillosDataGridView
             // 
@@ -423,7 +422,7 @@ namespace POS
             this.Controls.Add(this.logoPictureBox);
             this.Name = "consultaMenuForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "consultaMenuForm";
+            this.Text = "Consulta menú";
             this.platillosPanel.ResumeLayout(false);
             this.platillosPanel.PerformLayout();
             this.bebidasPanel.ResumeLayout(false);

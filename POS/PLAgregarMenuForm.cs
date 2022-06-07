@@ -19,22 +19,22 @@ namespace POS
             encabezadoL.Size = new Size(100, 40);
 
             //Posiciones
-            encabezado.Location = new Point(0,50);
+            encabezado.Location = new Point(0,0);
             encabezadoL.Location = new Point(160,10);
-            nombreL.Location = new Point(50, 150);
-            nombreTB.Location = new Point(150, 150);
+            nombreL.Location = new Point(50, 90);
+            nombreTB.Location = new Point(150, 90);
 
-            seccionL.Location = new Point(50, 200);
-            seccionCB.Location = new Point(150, 200);
+            seccionL.Location = new Point(50, 140);
+            seccionCB.Location = new Point(150, 140);
 
-            precioL.Location = new Point(290, 200);
-            precioTB.Location = new Point(370, 200);
+            precioL.Location = new Point(290, 140);
+            precioTB.Location = new Point(370, 140);
 
-            descripcionL.Location = new Point(50, 250);
-            descripcionRTB.Location = new Point(50, 280);
+            descripcionL.Location = new Point(50, 190);
+            descripcionRTB.Location = new Point(50, 220);
 
-            agregar.Location = new Point(370, 500);
-            cancelar.Location = new Point(50, 500);
+            agregar.Location = new Point(370, 440);
+            cancelar.Location = new Point(50, 440);
         }
     }
 }

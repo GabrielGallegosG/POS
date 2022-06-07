@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Drawing;
+﻿using System.Drawing;
 using System.Windows.Forms;
 
 namespace POS
@@ -23,6 +18,8 @@ namespace POS
             empleado.Location = new Point(110, 130);
             admin.Location = new Point(430, 130);
             panel.Location = new Point(160, 200);
+
+            panel.Hide();
         }
 
         public static void posicionPanel(Label usuarioL, TextBox usuario, Label contraseñaL, TextBox contraseña, Button inicio)

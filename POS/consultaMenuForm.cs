@@ -23,12 +23,6 @@ namespace POS
             PLConsultaMenu.panelPostre(postresLabel);
         }
 
-        private void inicioBbutton_Click(object sender, EventArgs e)
-        {
-            inicioForm frm = new inicioForm();
-            frm.Show();
-        }
-
         private void agregarMenuButton_Click(object sender, EventArgs e)
         {
             agregarMenuForm frm = new agregarMenuForm();

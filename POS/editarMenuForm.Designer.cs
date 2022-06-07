@@ -207,7 +207,7 @@ namespace POS
             this.Controls.Add(this.encabezadoPanel);
             this.Name = "editarMenuForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Editar en menú";
+            this.Text = "Modificar en menú";
             this.encabezadoPanel.ResumeLayout(false);
             this.encabezadoPanel.PerformLayout();
             this.ResumeLayout(false);
