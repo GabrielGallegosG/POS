@@ -42,16 +42,14 @@ namespace POS
             this.encabezadoPanel = new System.Windows.Forms.Panel();
             this.agregarButton = new System.Windows.Forms.Button();
             this.cancelarButton = new System.Windows.Forms.Button();
-            this.logoPictureBox = new System.Windows.Forms.PictureBox();
             this.encabezadoPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // nombreLabel
             // 
             this.nombreLabel.AutoSize = true;
             this.nombreLabel.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombreLabel.Location = new System.Drawing.Point(53, 183);
+            this.nombreLabel.Location = new System.Drawing.Point(52, 94);
             this.nombreLabel.Name = "nombreLabel";
             this.nombreLabel.Size = new System.Drawing.Size(77, 19);
             this.nombreLabel.TabIndex = 0;
@@ -61,7 +59,7 @@ namespace POS
             // 
             this.seccionLabel.AutoSize = true;
             this.seccionLabel.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.seccionLabel.Location = new System.Drawing.Point(53, 234);
+            this.seccionLabel.Location = new System.Drawing.Point(52, 145);
             this.seccionLabel.Name = "seccionLabel";
             this.seccionLabel.Size = new System.Drawing.Size(77, 19);
             this.seccionLabel.TabIndex = 1;
@@ -71,7 +69,7 @@ namespace POS
             // 
             this.precioLabel.AutoSize = true;
             this.precioLabel.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.precioLabel.Location = new System.Drawing.Point(297, 234);
+            this.precioLabel.Location = new System.Drawing.Point(296, 145);
             this.precioLabel.Name = "precioLabel";
             this.precioLabel.Size = new System.Drawing.Size(65, 19);
             this.precioLabel.TabIndex = 2;
@@ -81,7 +79,7 @@ namespace POS
             // 
             this.descripcionLabel.AutoSize = true;
             this.descripcionLabel.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.descripcionLabel.Location = new System.Drawing.Point(53, 284);
+            this.descripcionLabel.Location = new System.Drawing.Point(52, 195);
             this.descripcionLabel.Name = "descripcionLabel";
             this.descripcionLabel.Size = new System.Drawing.Size(111, 19);
             this.descripcionLabel.TabIndex = 3;
@@ -90,7 +88,7 @@ namespace POS
             // nombreTextBox
             // 
             this.nombreTextBox.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombreTextBox.Location = new System.Drawing.Point(145, 180);
+            this.nombreTextBox.Location = new System.Drawing.Point(144, 91);
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(323, 29);
             this.nombreTextBox.TabIndex = 4;
@@ -98,7 +96,7 @@ namespace POS
             // precioTextBox
             // 
             this.precioTextBox.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.precioTextBox.Location = new System.Drawing.Point(368, 226);
+            this.precioTextBox.Location = new System.Drawing.Point(367, 137);
             this.precioTextBox.Name = "precioTextBox";
             this.precioTextBox.Size = new System.Drawing.Size(100, 29);
             this.precioTextBox.TabIndex = 5;
@@ -111,7 +109,7 @@ namespace POS
             "PLATILLO",
             "BEBIDA",
             "POSTRE"});
-            this.seccionComboBox.Location = new System.Drawing.Point(136, 226);
+            this.seccionComboBox.Location = new System.Drawing.Point(135, 137);
             this.seccionComboBox.Name = "seccionComboBox";
             this.seccionComboBox.Size = new System.Drawing.Size(121, 27);
             this.seccionComboBox.TabIndex = 6;
@@ -119,7 +117,7 @@ namespace POS
             // descripcionRichTextBox
             // 
             this.descripcionRichTextBox.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.descripcionRichTextBox.Location = new System.Drawing.Point(57, 306);
+            this.descripcionRichTextBox.Location = new System.Drawing.Point(56, 217);
             this.descripcionRichTextBox.Name = "descripcionRichTextBox";
             this.descripcionRichTextBox.Size = new System.Drawing.Size(412, 171);
             this.descripcionRichTextBox.TabIndex = 7;
@@ -130,7 +128,7 @@ namespace POS
             this.encabezadoLabel.AutoSize = true;
             this.encabezadoLabel.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.encabezadoLabel.ForeColor = System.Drawing.Color.White;
-            this.encabezadoLabel.Location = new System.Drawing.Point(160, 0);
+            this.encabezadoLabel.Location = new System.Drawing.Point(139, 0);
             this.encabezadoLabel.Name = "encabezadoLabel";
             this.encabezadoLabel.Size = new System.Drawing.Size(201, 25);
             this.encabezadoLabel.TabIndex = 9;
@@ -140,7 +138,7 @@ namespace POS
             // 
             this.encabezadoPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
             this.encabezadoPanel.Controls.Add(this.encabezadoLabel);
-            this.encabezadoPanel.Location = new System.Drawing.Point(1, 99);
+            this.encabezadoPanel.Location = new System.Drawing.Point(0, 12);
             this.encabezadoPanel.Name = "encabezadoPanel";
             this.encabezadoPanel.Size = new System.Drawing.Size(525, 38);
             this.encabezadoPanel.TabIndex = 10;
@@ -149,7 +147,7 @@ namespace POS
             // 
             this.agregarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
             this.agregarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.agregarButton.Location = new System.Drawing.Point(394, 489);
+            this.agregarButton.Location = new System.Drawing.Point(393, 400);
             this.agregarButton.Name = "agregarButton";
             this.agregarButton.Size = new System.Drawing.Size(75, 23);
             this.agregarButton.TabIndex = 11;
@@ -161,7 +159,7 @@ namespace POS
             // 
             this.cancelarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
             this.cancelarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelarButton.Location = new System.Drawing.Point(12, 489);
+            this.cancelarButton.Location = new System.Drawing.Point(11, 400);
             this.cancelarButton.Name = "cancelarButton";
             this.cancelarButton.Size = new System.Drawing.Size(87, 23);
             this.cancelarButton.TabIndex = 12;
@@ -169,23 +167,14 @@ namespace POS
             this.cancelarButton.UseVisualStyleBackColor = false;
             this.cancelarButton.Click += new System.EventHandler(this.cancelarButton_Click);
             // 
-            // logoPictureBox
-            // 
-            this.logoPictureBox.Location = new System.Drawing.Point(23, 23);
-            this.logoPictureBox.Name = "logoPictureBox";
-            this.logoPictureBox.Size = new System.Drawing.Size(100, 50);
-            this.logoPictureBox.TabIndex = 8;
-            this.logoPictureBox.TabStop = false;
-            // 
             // agregarMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(525, 540);
+            this.ClientSize = new System.Drawing.Size(525, 490);
             this.Controls.Add(this.cancelarButton);
             this.Controls.Add(this.agregarButton);
             this.Controls.Add(this.encabezadoPanel);
-            this.Controls.Add(this.logoPictureBox);
             this.Controls.Add(this.descripcionRichTextBox);
             this.Controls.Add(this.seccionComboBox);
             this.Controls.Add(this.precioTextBox);
@@ -199,7 +188,6 @@ namespace POS
             this.Text = "Agregar a Menu";
             this.encabezadoPanel.ResumeLayout(false);
             this.encabezadoPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,7 +203,6 @@ namespace POS
         private System.Windows.Forms.TextBox precioTextBox;
         private System.Windows.Forms.ComboBox seccionComboBox;
         private System.Windows.Forms.RichTextBox descripcionRichTextBox;
-        private System.Windows.Forms.PictureBox logoPictureBox;
         private System.Windows.Forms.Label encabezadoLabel;
         private System.Windows.Forms.Panel encabezadoPanel;
         private System.Windows.Forms.Button agregarButton;

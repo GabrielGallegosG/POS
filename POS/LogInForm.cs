@@ -21,8 +21,18 @@ namespace POS
 
         private void iniciarSesionButton_Click(object sender, EventArgs e)
         {
-            inicioForm frm = new inicioForm();
+           consultaMenuForm frm = new consultaMenuForm();
             frm.Show();
+        }
+
+        private void empleadoButton_Click(object sender, EventArgs e)
+        {
+            contenedorPanel.Show();
+        }
+
+        private void administradorButton_Click(object sender, EventArgs e)
+        {
+            contenedorPanel.Show();
         }
     }
 }
