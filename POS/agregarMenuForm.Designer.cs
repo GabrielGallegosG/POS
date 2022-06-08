@@ -92,6 +92,7 @@ namespace POS
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(323, 29);
             this.nombreTextBox.TabIndex = 4;
+            this.nombreTextBox.TextChanged += new System.EventHandler(this.nombreTextBox_TextChanged);
             // 
             // precioTextBox
             // 
@@ -186,6 +187,7 @@ namespace POS
             this.Name = "agregarMenuForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar a Menu";
+            this.Load += new System.EventHandler(this.agregarMenuForm_Load);
             this.encabezadoPanel.ResumeLayout(false);
             this.encabezadoPanel.PerformLayout();
             this.ResumeLayout(false);
