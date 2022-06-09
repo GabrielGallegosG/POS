@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace POS
 {
-    public class BLAgregarMenu
+    public class BLAgregarElemento
     {
         public static void agregarElemento(string nombreTextBox, string seccionComboBox, double precio, string descripcionRichTextBox) {
             int y = 1;

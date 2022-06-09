@@ -58,7 +58,7 @@
     <Compile Include="altaMenuForm.Designer.cs">
       <DependentUpon>altaMenuForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="BLAgregarMenu.cs" />
+    <Compile Include="BLAgregarElemento.cs" />
     <Compile Include="consultaMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
