@@ -41,7 +41,7 @@ namespace POS
                         precio = Convert.ToDouble(precioTextBox.Text);
                         try
                         {
-                            BLAgregarMenu.agregarElemento(nombreTextBox.Text, seccionComboBox.Text, precio, descripcionRichTextBox.Text);
+                            BLAgregarElemento.agregarElemento(nombreTextBox.Text, seccionComboBox.Text, precio, descripcionRichTextBox.Text);
                             //MessageBox.Show("¡Se ha dado de alta con exito!", "Alta de elemento", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         catch(Exception ex) {
