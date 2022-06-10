@@ -59,6 +59,7 @@
       <DependentUpon>altaMenuForm.cs</DependentUpon>
     </Compile>
     <Compile Include="BLAgregarElemento.cs" />
+    <Compile Include="BLConsultaElemento.cs" />
     <Compile Include="consultaMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
