@@ -198,6 +198,7 @@ namespace POS
             this.ordenesButton.TabIndex = 11;
             this.ordenesButton.Text = "ORDENES";
             this.ordenesButton.UseVisualStyleBackColor = false;
+            this.ordenesButton.Click += new System.EventHandler(this.ordenesButton_Click);
             // 
             // menuButton
             // 
@@ -212,6 +213,7 @@ namespace POS
             this.menuButton.TabIndex = 10;
             this.menuButton.Text = "MENÚ";
             this.menuButton.UseVisualStyleBackColor = false;
+            this.menuButton.Click += new System.EventHandler(this.menuButton_Click);
             // 
             // inicioBbutton
             // 
