@@ -98,9 +98,12 @@ namespace POS
             // 
             this.precioTextBox.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.precioTextBox.Location = new System.Drawing.Point(367, 137);
+            this.precioTextBox.Multiline = true;
             this.precioTextBox.Name = "precioTextBox";
-            this.precioTextBox.Size = new System.Drawing.Size(100, 29);
+            this.precioTextBox.Size = new System.Drawing.Size(100, 20);
             this.precioTextBox.TabIndex = 5;
+            this.precioTextBox.TextChanged += new System.EventHandler(this.precioTextBox_TextChanged);
+            this.precioTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numeros_KeyPress);
             // 
             // seccionComboBox
             // 
