@@ -64,5 +64,18 @@ namespace POS
             eliminarMenuForm frm = new eliminarMenuForm();
             frm.Show();
         }
+
+        //Botones encabezado
+        private void ordenesButton_Click(object sender, EventArgs e)
+        {
+            consultaOrdenesForm frm = new consultaOrdenesForm();
+            frm.Show();
+        }
+
+        private void menuButton_Click(object sender, EventArgs e)
+        {
+            consultaMenuForm frm = new consultaMenuForm();
+            frm.Show();
+        }
     }
 }

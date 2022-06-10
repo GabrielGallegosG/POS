@@ -61,6 +61,12 @@
     <Compile Include="agregarMenuForm.Designer.cs">
       <DependentUpon>agregarMenuForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="agregarOrdenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="agregarOrdenForm.Designer.cs">
+      <DependentUpon>agregarOrdenForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="altaMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,7 +128,9 @@
       <DependentUpon>LogInForm.cs</DependentUpon>
     </Compile>
     <Compile Include="PLAgregarMenuForm.cs" />
+    <Compile Include="PLAgregarOrden.cs" />
     <Compile Include="PLConsultaMenu.cs" />
+    <Compile Include="PLConsultaOrdenes.cs" />
     <Compile Include="PLEditarMenu.cs" />
     <Compile Include="PLEliminarMenu.cs" />
     <Compile Include="PLInicio.cs" />
@@ -132,11 +140,17 @@
     <EmbeddedResource Include="agregarMenuForm.resx">
       <DependentUpon>agregarMenuForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="agregarOrdenForm.resx">
+      <DependentUpon>agregarOrdenForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="altaMenuForm.resx">
       <DependentUpon>altaMenuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="consultaMenuForm.resx">
       <DependentUpon>consultaMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="consultaOrdenesForm.resx">
+      <DependentUpon>consultaOrdenesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="editarMenuForm.resx">
       <DependentUpon>editarMenuForm.cs</DependentUpon>
