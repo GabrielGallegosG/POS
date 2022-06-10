@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -64,6 +73,28 @@
     </Compile>
     <Compile Include="consultaMenuForm.Designer.cs">
       <DependentUpon>consultaMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dataLayer\elemento.cs">
+      <DependentUpon>POSBDModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dataLayer\POSBDDTO.cs" />
+    <Compile Include="dataLayer\POSBDModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POSBDModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dataLayer\POSBDModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POSBDModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dataLayer\POSBDModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POSBDModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="dataLayer\seccion.cs">
+      <DependentUpon>POSBDModel.tt</DependentUpon>
     </Compile>
     <Compile Include="editarMenuForm.cs">
       <SubType>Form</SubType>
@@ -128,6 +159,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EntityDeploy Include="dataLayer\POSBDModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>POSBDModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="dataLayer\POSBDModel.edmx.diagram">
+      <DependentUpon>POSBDModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -167,6 +206,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\agregar.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dataLayer\POSBDModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>POSBDModel.edmx</DependentUpon>
+      <LastGenOutput>POSBDModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="dataLayer\POSBDModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>POSBDModel.edmx</DependentUpon>
+      <LastGenOutput>POSBDModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

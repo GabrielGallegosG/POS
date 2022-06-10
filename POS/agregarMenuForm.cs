@@ -42,7 +42,7 @@ namespace POS
                         try
                         {
                             BLAgregarElemento.agregarElemento(nombreTextBox.Text, seccionComboBox.Text, precio, descripcionRichTextBox.Text);
-                            //MessageBox.Show("¡Se ha dado de alta con exito!", "Alta de elemento", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("¡Se ha dado de alta con exito!", "Alta de elemento", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         catch(Exception ex) {
                             MessageBox.Show("¡Ha ocurrido un error al dar de alta el elemento!", "Dato requerido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
