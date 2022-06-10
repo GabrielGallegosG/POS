@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="POS_BDModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="elemento">
+          <Key>
+            <PropertyRef Name="id_elemento" />
+          </Key>
+          <Property Name="id_elemento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre_elemento" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="precio" Type="float" Nullable="false" />
+          <Property Name="descripcion" Type="varchar" MaxLength="50" />
+          <Property Name="seccion" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="seccion">
+          <Key>
+            <PropertyRef Name="id_seccion" />
+          </Key>
+          <Property Name="id_seccion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre_seccion" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_elemento_seccion">
+          <End Role="seccion" Type="Self.seccion" Multiplicity="1" />
+          <End Role="elemento" Type="Self.elemento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="seccion">
+              <PropertyRef Name="id_seccion" />
+            </Principal>
+            <Dependent Role="elemento">
+              <PropertyRef Name="seccion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_seccion_seccion">
+          <End Role="seccion" Type="Self.seccion" Multiplicity="1" />
+          <End Role="seccion1" Type="Self.seccion" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="seccion">
+              <PropertyRef Name="id_seccion" />
+            </Principal>
+            <Dependent Role="seccion1">
+              <PropertyRef Name="id_seccion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="POS_BDModelStoreContainer">
+          <EntitySet Name="elemento" EntityType="Self.elemento" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="seccion" EntityType="Self.seccion" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_elemento_seccion" Association="Self.FK_elemento_seccion">
+            <End Role="seccion" EntitySet="seccion" />
+            <End Role="elemento" EntitySet="elemento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_seccion_seccion" Association="Self.FK_seccion_seccion">
+            <End Role="seccion" EntitySet="seccion" />
+            <End Role="seccion1" EntitySet="seccion" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="POS_BDModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="elemento">
+          <Key>
+            <PropertyRef Name="id_elemento" />
+          </Key>
+          <Property Name="id_elemento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre_elemento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="precio" Type="Double" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="seccion" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="seccion1" Relationship="Self.FK_elemento_seccion" FromRole="elemento" ToRole="seccion" />
+        </EntityType>
+        <EntityType Name="seccion">
+          <Key>
+            <PropertyRef Name="id_seccion" />
+          </Key>
+          <Property Name="id_seccion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre_seccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="elemento" Relationship="Self.FK_elemento_seccion" FromRole="seccion" ToRole="elemento" />
+          <NavigationProperty Name="seccion1" Relationship="Self.FK_seccion_seccion" FromRole="seccion" ToRole="seccion1" />
+          <NavigationProperty Name="seccion2" Relationship="Self.FK_seccion_seccion" FromRole="seccion1" ToRole="seccion" />
+        </EntityType>
+        <Association Name="FK_elemento_seccion">
+          <End Role="seccion" Type="Self.seccion" Multiplicity="1" />
+          <End Role="elemento" Type="Self.elemento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="seccion">
+              <PropertyRef Name="id_seccion" />
+            </Principal>
+            <Dependent Role="elemento">
+              <PropertyRef Name="seccion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_seccion_seccion">
+          <End Role="seccion" Type="Self.seccion" Multiplicity="1" />
+          <End Role="seccion1" Type="Self.seccion" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="seccion">
+              <PropertyRef Name="id_seccion" />
+            </Principal>
+            <Dependent Role="seccion1">
+              <PropertyRef Name="id_seccion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="POS_BDEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="elemento" EntityType="Self.elemento" />
+          <EntitySet Name="seccion" EntityType="Self.seccion" />
+          <AssociationSet Name="FK_elemento_seccion" Association="Self.FK_elemento_seccion">
+            <End Role="seccion" EntitySet="seccion" />
+            <End Role="elemento" EntitySet="elemento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_seccion_seccion" Association="Self.FK_seccion_seccion">
+            <End Role="seccion" EntitySet="seccion" />
+            <End Role="seccion1" EntitySet="seccion" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="POS_BDModelStoreContainer" CdmEntityContainer="POS_BDEntities">
+          <EntitySetMapping Name="elemento">
+            <EntityTypeMapping TypeName="POS_BDModel.elemento">
+              <MappingFragment StoreEntitySet="elemento">
+                <ScalarProperty Name="id_elemento" ColumnName="id_elemento" />
+                <ScalarProperty Name="nombre_elemento" ColumnName="nombre_elemento" />
+                <ScalarProperty Name="precio" ColumnName="precio" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="seccion" ColumnName="seccion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="seccion">
+            <EntityTypeMapping TypeName="POS_BDModel.seccion">
+              <MappingFragment StoreEntitySet="seccion">
+                <ScalarProperty Name="id_seccion" ColumnName="id_seccion" />
+                <ScalarProperty Name="nombre_seccion" ColumnName="nombre_seccion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
