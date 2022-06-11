@@ -16,13 +16,13 @@ namespace POS
         {
             InitializeComponent();
 
-            PLAgregarOrden.posicionAgregarOrden(empleadoLabel,tipoServicioLabel,noMesaLabel,fechaLabel,horaLabel,tipoServicioComboBox,noMesaComboBox,
+            PLAgregarOrden.posicionAgregarOrden(empleadoLabel,empleadoOrdenLabel,tipoServicioLabel,noMesaLabel,fechaLabel,horaLabel,fechaOrdenLabel,horaOrdenLabel,tipoServicioComboBox,noMesaComboBox,
                 agregarLabel,platilloCheckBox,postreCheckBox,bebidaCheckBox);
         }
 
-        private void platilloCheckBox_CheckedChanged(object sender, EventArgs e)
+        private void agregarOrdenForm_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

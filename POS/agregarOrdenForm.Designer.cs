@@ -29,6 +29,7 @@ namespace POS
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.encabezadoPanel = new System.Windows.Forms.Panel();
             this.noOrdenLabel = new System.Windows.Forms.Label();
             this.empleadoLabel = new System.Windows.Forms.Label();
@@ -46,6 +47,10 @@ namespace POS
             this.agregarButton = new System.Windows.Forms.Button();
             this.comentariosRichTextBox = new System.Windows.Forms.RichTextBox();
             this.comentariosLabel = new System.Windows.Forms.Label();
+            this.horaOrdenLabel = new System.Windows.Forms.Label();
+            this.fechaOrdenLabel = new System.Windows.Forms.Label();
+            this.empleadoOrdenLabel = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.encabezadoPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -198,7 +203,7 @@ namespace POS
             // 
             this.cancelarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
             this.cancelarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelarButton.Location = new System.Drawing.Point(12, 557);
+            this.cancelarButton.Location = new System.Drawing.Point(12, 717);
             this.cancelarButton.Name = "cancelarButton";
             this.cancelarButton.Size = new System.Drawing.Size(87, 23);
             this.cancelarButton.TabIndex = 24;
@@ -209,7 +214,7 @@ namespace POS
             // 
             this.agregarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
             this.agregarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.agregarButton.Location = new System.Drawing.Point(713, 557);
+            this.agregarButton.Location = new System.Drawing.Point(713, 717);
             this.agregarButton.Name = "agregarButton";
             this.agregarButton.Size = new System.Drawing.Size(75, 23);
             this.agregarButton.TabIndex = 23;
@@ -219,7 +224,7 @@ namespace POS
             // comentariosRichTextBox
             // 
             this.comentariosRichTextBox.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comentariosRichTextBox.Location = new System.Drawing.Point(32, 425);
+            this.comentariosRichTextBox.Location = new System.Drawing.Point(32, 585);
             this.comentariosRichTextBox.Name = "comentariosRichTextBox";
             this.comentariosRichTextBox.Size = new System.Drawing.Size(729, 126);
             this.comentariosRichTextBox.TabIndex = 26;
@@ -229,18 +234,49 @@ namespace POS
             // 
             this.comentariosLabel.AutoSize = true;
             this.comentariosLabel.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comentariosLabel.Location = new System.Drawing.Point(28, 403);
+            this.comentariosLabel.Location = new System.Drawing.Point(28, 563);
             this.comentariosLabel.Name = "comentariosLabel";
             this.comentariosLabel.Size = new System.Drawing.Size(121, 19);
             this.comentariosLabel.TabIndex = 25;
             this.comentariosLabel.Text = "COMENTARIOS:";
             // 
+            // horaOrdenLabel
+            // 
+            this.horaOrdenLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.horaOrdenLabel.Font = new System.Drawing.Font("Gadugi", 12F);
+            this.horaOrdenLabel.Location = new System.Drawing.Point(655, 114);
+            this.horaOrdenLabel.Name = "horaOrdenLabel";
+            this.horaOrdenLabel.Size = new System.Drawing.Size(100, 23);
+            this.horaOrdenLabel.TabIndex = 27;
+            // 
+            // fechaOrdenLabel
+            // 
+            this.fechaOrdenLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.fechaOrdenLabel.Font = new System.Drawing.Font("Gadugi", 12F);
+            this.fechaOrdenLabel.Location = new System.Drawing.Point(655, 58);
+            this.fechaOrdenLabel.Name = "fechaOrdenLabel";
+            this.fechaOrdenLabel.Size = new System.Drawing.Size(100, 23);
+            this.fechaOrdenLabel.TabIndex = 28;
+            // 
+            // empleadoOrdenLabel
+            // 
+            this.empleadoOrdenLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.empleadoOrdenLabel.Font = new System.Drawing.Font("Gadugi", 12F);
+            this.empleadoOrdenLabel.Location = new System.Drawing.Point(189, 58);
+            this.empleadoOrdenLabel.Name = "empleadoOrdenLabel";
+            this.empleadoOrdenLabel.Size = new System.Drawing.Size(100, 23);
+            this.empleadoOrdenLabel.TabIndex = 29;
+            // 
             // agregarOrdenForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 592);
+            this.ClientSize = new System.Drawing.Size(800, 636);
+            this.Controls.Add(this.empleadoOrdenLabel);
+            this.Controls.Add(this.fechaOrdenLabel);
+            this.Controls.Add(this.horaOrdenLabel);
             this.Controls.Add(this.comentariosRichTextBox);
             this.Controls.Add(this.comentariosLabel);
             this.Controls.Add(this.cancelarButton);
@@ -260,6 +296,7 @@ namespace POS
             this.Name = "agregarOrdenForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar orden";
+            this.Load += new System.EventHandler(this.agregarOrdenForm_Load);
             this.encabezadoPanel.ResumeLayout(false);
             this.encabezadoPanel.PerformLayout();
             this.ResumeLayout(false);
@@ -286,5 +323,9 @@ namespace POS
         private System.Windows.Forms.Button agregarButton;
         private System.Windows.Forms.RichTextBox comentariosRichTextBox;
         private System.Windows.Forms.Label comentariosLabel;
+        private System.Windows.Forms.Label horaOrdenLabel;
+        private System.Windows.Forms.Label fechaOrdenLabel;
+        private System.Windows.Forms.Label empleadoOrdenLabel;
+        private System.Windows.Forms.Timer timer1;
     }
 }
