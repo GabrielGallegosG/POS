@@ -29,41 +29,21 @@ namespace POS
         /// </summary>
         private void InitializeComponent()
         {
-            this.precioLabel = new System.Windows.Forms.Label();
-            this.seccionLabel = new System.Windows.Forms.Label();
             this.nombreLabel = new System.Windows.Forms.Label();
             this.idSeleccionadoLabel = new System.Windows.Forms.Label();
-            this.idLabel = new System.Windows.Forms.Label();
             this.encabezadoPanel = new System.Windows.Forms.Panel();
             this.encabezadoLabel = new System.Windows.Forms.Label();
             this.eliminarButton = new System.Windows.Forms.Button();
             this.cancelarButton = new System.Windows.Forms.Button();
             this.notaRichTextBox = new System.Windows.Forms.RichTextBox();
             this.nombreSeleccionadoLabel = new System.Windows.Forms.Label();
+            this.idLabel = new System.Windows.Forms.Label();
             this.seccionSeleccionadoLabel = new System.Windows.Forms.Label();
             this.precioSeleccionadoLabel = new System.Windows.Forms.Label();
+            this.seccionLabel = new System.Windows.Forms.Label();
+            this.precioLabel = new System.Windows.Forms.Label();
             this.encabezadoPanel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // precioLabel
-            // 
-            this.precioLabel.AutoSize = true;
-            this.precioLabel.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.precioLabel.Location = new System.Drawing.Point(284, 178);
-            this.precioLabel.Name = "precioLabel";
-            this.precioLabel.Size = new System.Drawing.Size(65, 19);
-            this.precioLabel.TabIndex = 20;
-            this.precioLabel.Text = "PRECIO:";
-            // 
-            // seccionLabel
-            // 
-            this.seccionLabel.AutoSize = true;
-            this.seccionLabel.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.seccionLabel.Location = new System.Drawing.Point(40, 178);
-            this.seccionLabel.Name = "seccionLabel";
-            this.seccionLabel.Size = new System.Drawing.Size(77, 19);
-            this.seccionLabel.TabIndex = 19;
-            this.seccionLabel.Text = "SECCIÓN:";
             // 
             // nombreLabel
             // 
@@ -83,16 +63,6 @@ namespace POS
             this.idSeleccionadoLabel.Name = "idSeleccionadoLabel";
             this.idSeleccionadoLabel.Size = new System.Drawing.Size(100, 23);
             this.idSeleccionadoLabel.TabIndex = 17;
-            // 
-            // idLabel
-            // 
-            this.idLabel.AutoSize = true;
-            this.idLabel.Font = new System.Drawing.Font("Gadugi", 12F);
-            this.idLabel.Location = new System.Drawing.Point(41, 84);
-            this.idLabel.Name = "idLabel";
-            this.idLabel.Size = new System.Drawing.Size(38, 19);
-            this.idLabel.TabIndex = 16;
-            this.idLabel.Text = "ID - ";
             // 
             // encabezadoPanel
             // 
@@ -158,6 +128,16 @@ namespace POS
             this.nombreSeleccionadoLabel.Size = new System.Drawing.Size(77, 19);
             this.nombreSeleccionadoLabel.TabIndex = 28;
             // 
+            // idLabel
+            // 
+            this.idLabel.AutoSize = true;
+            this.idLabel.Font = new System.Drawing.Font("Gadugi", 12F);
+            this.idLabel.Location = new System.Drawing.Point(41, 84);
+            this.idLabel.Name = "idLabel";
+            this.idLabel.Size = new System.Drawing.Size(38, 19);
+            this.idLabel.TabIndex = 16;
+            this.idLabel.Text = "ID - ";
+            // 
             // seccionSeleccionadoLabel
             // 
             this.seccionSeleccionadoLabel.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -173,6 +153,26 @@ namespace POS
             this.precioSeleccionadoLabel.Name = "precioSeleccionadoLabel";
             this.precioSeleccionadoLabel.Size = new System.Drawing.Size(65, 19);
             this.precioSeleccionadoLabel.TabIndex = 30;
+            // 
+            // seccionLabel
+            // 
+            this.seccionLabel.AutoSize = true;
+            this.seccionLabel.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.seccionLabel.Location = new System.Drawing.Point(40, 178);
+            this.seccionLabel.Name = "seccionLabel";
+            this.seccionLabel.Size = new System.Drawing.Size(77, 19);
+            this.seccionLabel.TabIndex = 19;
+            this.seccionLabel.Text = "SECCIÓN:";
+            // 
+            // precioLabel
+            // 
+            this.precioLabel.AutoSize = true;
+            this.precioLabel.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.precioLabel.Location = new System.Drawing.Point(284, 178);
+            this.precioLabel.Name = "precioLabel";
+            this.precioLabel.Size = new System.Drawing.Size(65, 19);
+            this.precioLabel.TabIndex = 20;
+            this.precioLabel.Text = "PRECIO:";
             // 
             // eliminarMenuForm
             // 
@@ -203,18 +203,18 @@ namespace POS
         }
 
         #endregion
-        private System.Windows.Forms.Label precioLabel;
-        private System.Windows.Forms.Label seccionLabel;
         private System.Windows.Forms.Label nombreLabel;
         private System.Windows.Forms.Label idSeleccionadoLabel;
-        private System.Windows.Forms.Label idLabel;
         private System.Windows.Forms.Panel encabezadoPanel;
         private System.Windows.Forms.Label encabezadoLabel;
         private System.Windows.Forms.Button eliminarButton;
         private System.Windows.Forms.Button cancelarButton;
         private System.Windows.Forms.RichTextBox notaRichTextBox;
         private System.Windows.Forms.Label nombreSeleccionadoLabel;
+        private System.Windows.Forms.Label idLabel;
         private System.Windows.Forms.Label seccionSeleccionadoLabel;
         private System.Windows.Forms.Label precioSeleccionadoLabel;
+        private System.Windows.Forms.Label seccionLabel;
+        private System.Windows.Forms.Label precioLabel;
     }
 }

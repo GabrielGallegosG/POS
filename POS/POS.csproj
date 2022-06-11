@@ -81,6 +81,12 @@
     <Compile Include="consultaMenuForm.Designer.cs">
       <DependentUpon>consultaMenuForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="consultarOrdenesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="consultarOrdenesForm.Designer.cs">
+      <DependentUpon>consultarOrdenesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="dataLayer\elemento.cs">
       <DependentUpon>POSBDModel.tt</DependentUpon>
     </Compile>
@@ -109,11 +115,23 @@
     <Compile Include="editarMenuForm.Designer.cs">
       <DependentUpon>editarMenuForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="editarOrdenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editarOrdenForm.Designer.cs">
+      <DependentUpon>editarOrdenForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="eliminarMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="eliminarMenuForm.Designer.cs">
       <DependentUpon>eliminarMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="eliminarOrdenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="eliminarOrdenForm.Designer.cs">
+      <DependentUpon>eliminarOrdenForm.cs</DependentUpon>
     </Compile>
     <Compile Include="inicioForm.cs">
       <SubType>Form</SubType>
@@ -132,7 +150,9 @@
     <Compile Include="PLConsultaMenu.cs" />
     <Compile Include="PLConsultaOrdenes.cs" />
     <Compile Include="PLEditarMenu.cs" />
+    <Compile Include="PLEditarOrden.cs" />
     <Compile Include="PLEliminarMenu.cs" />
+    <Compile Include="PLEliminarOrden.cs" />
     <Compile Include="PLInicio.cs" />
     <Compile Include="PLLogIn.cs" />
     <Compile Include="Program.cs" />
@@ -152,11 +172,20 @@
     <EmbeddedResource Include="consultaOrdenesForm.resx">
       <DependentUpon>consultaOrdenesForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="consultarOrdenesForm.resx">
+      <DependentUpon>consultarOrdenesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="editarMenuForm.resx">
       <DependentUpon>editarMenuForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="editarOrdenForm.resx">
+      <DependentUpon>editarOrdenForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="eliminarMenuForm.resx">
       <DependentUpon>eliminarMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="eliminarOrdenForm.resx">
+      <DependentUpon>eliminarOrdenForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="inicioForm.resx">
       <DependentUpon>inicioForm.cs</DependentUpon>
