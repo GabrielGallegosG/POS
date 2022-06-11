@@ -46,7 +46,7 @@ namespace POS
                             this.Close();
                         }
                         catch(Exception ex) {
-                            MessageBox.Show("¡Ha ocurrido un error al dar de alta el elemento!", "Dato requerido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show("¡Ha ocurrido un error al dar de alta el elemento!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         } 
                     }
                 }

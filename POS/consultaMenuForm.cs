@@ -68,8 +68,8 @@ namespace POS
         //Botones encabezado
         private void ordenesButton_Click(object sender, EventArgs e)
         {
-            consultaOrdenesForm frm = new consultaOrdenesForm();
-            frm.Show();
+            //consultaOrdenesForm frm = new consultaOrdenesForm();
+            //frm.Show();
         }
 
         private void menuButton_Click(object sender, EventArgs e)
