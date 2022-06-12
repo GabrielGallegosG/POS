@@ -77,5 +77,12 @@ namespace POS
             consultaMenuForm frm = new consultaMenuForm();
             frm.Show();
         }
+
+        private void consultaMenuForm_Load(object sender, EventArgs e)
+        {
+            //platillosDataGridView.DataSource = BLConsultaElemento.elementosGet();
+            //bebidasDataGridView.DataSource = BLConsultaElemento.elementosGet();
+            //postresDataGridView.DataSource = BLConsultaElemento.elementosGet();
+        }
     }
 }

@@ -425,6 +425,7 @@ namespace POS
             this.Name = "consultaMenuForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta menú";
+            this.Load += new System.EventHandler(this.consultaMenuForm_Load);
             this.platillosPanel.ResumeLayout(false);
             this.platillosPanel.PerformLayout();
             this.bebidasPanel.ResumeLayout(false);
