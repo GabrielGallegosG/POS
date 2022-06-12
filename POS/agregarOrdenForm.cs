@@ -24,5 +24,10 @@ namespace POS
         {
             
         }
+
+        private void cancelarButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

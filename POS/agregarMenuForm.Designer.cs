@@ -40,8 +40,8 @@ namespace POS
             this.descripcionRichTextBox = new System.Windows.Forms.RichTextBox();
             this.encabezadoLabel = new System.Windows.Forms.Label();
             this.encabezadoPanel = new System.Windows.Forms.Panel();
-            this.agregarButton = new System.Windows.Forms.Button();
-            this.cancelarButton = new System.Windows.Forms.Button();
+            this.cancelarButton = new buttonSystem();
+            this.agregarButton = new buttonSystem();
             this.encabezadoPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -148,37 +148,50 @@ namespace POS
             this.encabezadoPanel.Size = new System.Drawing.Size(525, 38);
             this.encabezadoPanel.TabIndex = 10;
             // 
-            // agregarButton
-            // 
-            this.agregarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
-            this.agregarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.agregarButton.Location = new System.Drawing.Point(393, 400);
-            this.agregarButton.Name = "agregarButton";
-            this.agregarButton.Size = new System.Drawing.Size(75, 23);
-            this.agregarButton.TabIndex = 11;
-            this.agregarButton.Text = "AGREGAR";
-            this.agregarButton.UseVisualStyleBackColor = false;
-            this.agregarButton.Click += new System.EventHandler(this.agregarButton_Click);
-            // 
             // cancelarButton
             // 
             this.cancelarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
-            this.cancelarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelarButton.Location = new System.Drawing.Point(11, 400);
+            this.cancelarButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
+            this.cancelarButton.BorderRadius = 20;
+            this.cancelarButton.FlatAppearance.BorderSize = 0;
+            this.cancelarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(60)))));
+            this.cancelarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelarButton.Font = new System.Drawing.Font("Gadugi", 10F, System.Drawing.FontStyle.Bold);
+            this.cancelarButton.ForeColor = System.Drawing.Color.Black;
+            this.cancelarButton.Location = new System.Drawing.Point(12, 439);
             this.cancelarButton.Name = "cancelarButton";
-            this.cancelarButton.Size = new System.Drawing.Size(87, 23);
-            this.cancelarButton.TabIndex = 12;
+            this.cancelarButton.Padding = new System.Windows.Forms.Padding(3);
+            this.cancelarButton.Size = new System.Drawing.Size(121, 39);
+            this.cancelarButton.TabIndex = 13;
             this.cancelarButton.Text = "CANCELAR";
             this.cancelarButton.UseVisualStyleBackColor = false;
-            this.cancelarButton.Click += new System.EventHandler(this.cancelarButton_Click);
+            this.cancelarButton.Click += new System.EventHandler(this.cancelarButton_Click_1);
+            // 
+            // agregarButton
+            // 
+            this.agregarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
+            this.agregarButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
+            this.agregarButton.BorderRadius = 20;
+            this.agregarButton.FlatAppearance.BorderSize = 0;
+            this.agregarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(60)))));
+            this.agregarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.agregarButton.Font = new System.Drawing.Font("Gadugi", 10F, System.Drawing.FontStyle.Bold);
+            this.agregarButton.ForeColor = System.Drawing.Color.Black;
+            this.agregarButton.Location = new System.Drawing.Point(367, 439);
+            this.agregarButton.Name = "agregarButton";
+            this.agregarButton.Padding = new System.Windows.Forms.Padding(3);
+            this.agregarButton.Size = new System.Drawing.Size(121, 39);
+            this.agregarButton.TabIndex = 14;
+            this.agregarButton.Text = "AGREGAR";
+            this.agregarButton.UseVisualStyleBackColor = false;
             // 
             // agregarMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(525, 490);
-            this.Controls.Add(this.cancelarButton);
             this.Controls.Add(this.agregarButton);
+            this.Controls.Add(this.cancelarButton);
             this.Controls.Add(this.encabezadoPanel);
             this.Controls.Add(this.descripcionRichTextBox);
             this.Controls.Add(this.seccionComboBox);
@@ -211,7 +224,7 @@ namespace POS
         private System.Windows.Forms.RichTextBox descripcionRichTextBox;
         private System.Windows.Forms.Label encabezadoLabel;
         private System.Windows.Forms.Panel encabezadoPanel;
-        private System.Windows.Forms.Button agregarButton;
-        private System.Windows.Forms.Button cancelarButton;
+        private buttonSystem cancelarButton;
+        private buttonSystem agregarButton;
     }
 }

@@ -75,6 +75,12 @@
     </Compile>
     <Compile Include="BLAgregarElemento.cs" />
     <Compile Include="BLConsultaElemento.cs" />
+    <Compile Include="buttonLogin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="buttonSystem.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="consultaMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>

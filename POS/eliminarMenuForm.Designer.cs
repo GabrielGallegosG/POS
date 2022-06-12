@@ -33,8 +33,6 @@ namespace POS
             this.idSeleccionadoLabel = new System.Windows.Forms.Label();
             this.encabezadoPanel = new System.Windows.Forms.Panel();
             this.encabezadoLabel = new System.Windows.Forms.Label();
-            this.eliminarButton = new System.Windows.Forms.Button();
-            this.cancelarButton = new System.Windows.Forms.Button();
             this.notaRichTextBox = new System.Windows.Forms.RichTextBox();
             this.nombreSeleccionadoLabel = new System.Windows.Forms.Label();
             this.idLabel = new System.Windows.Forms.Label();
@@ -42,6 +40,8 @@ namespace POS
             this.precioSeleccionadoLabel = new System.Windows.Forms.Label();
             this.seccionLabel = new System.Windows.Forms.Label();
             this.precioLabel = new System.Windows.Forms.Label();
+            this.cancelarButton = new buttonSystem();
+            this.eliminarButton = new buttonSystem();
             this.encabezadoPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,29 +83,6 @@ namespace POS
             this.encabezadoLabel.Size = new System.Drawing.Size(554, 25);
             this.encabezadoLabel.TabIndex = 0;
             this.encabezadoLabel.Text = "¿SE ENCUENTRA SEGURO DE REALIZAR ESTA ACCIÓN?";
-            // 
-            // eliminarButton
-            // 
-            this.eliminarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
-            this.eliminarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.eliminarButton.Location = new System.Drawing.Point(407, 327);
-            this.eliminarButton.Name = "eliminarButton";
-            this.eliminarButton.Size = new System.Drawing.Size(100, 23);
-            this.eliminarButton.TabIndex = 26;
-            this.eliminarButton.Text = "ELIMINAR";
-            this.eliminarButton.UseVisualStyleBackColor = false;
-            // 
-            // cancelarButton
-            // 
-            this.cancelarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
-            this.cancelarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelarButton.Location = new System.Drawing.Point(30, 327);
-            this.cancelarButton.Name = "cancelarButton";
-            this.cancelarButton.Size = new System.Drawing.Size(87, 23);
-            this.cancelarButton.TabIndex = 25;
-            this.cancelarButton.Text = "CANCELAR";
-            this.cancelarButton.UseVisualStyleBackColor = false;
-            this.cancelarButton.Click += new System.EventHandler(this.cancelarButton_Click);
             // 
             // notaRichTextBox
             // 
@@ -174,18 +151,55 @@ namespace POS
             this.precioLabel.TabIndex = 20;
             this.precioLabel.Text = "PRECIO:";
             // 
+            // cancelarButton
+            // 
+            this.cancelarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
+            this.cancelarButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
+            this.cancelarButton.BorderRadius = 20;
+            this.cancelarButton.FlatAppearance.BorderSize = 0;
+            this.cancelarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(60)))));
+            this.cancelarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelarButton.Font = new System.Drawing.Font("Gadugi", 10F, System.Drawing.FontStyle.Bold);
+            this.cancelarButton.ForeColor = System.Drawing.Color.Black;
+            this.cancelarButton.Location = new System.Drawing.Point(16, 327);
+            this.cancelarButton.Name = "cancelarButton";
+            this.cancelarButton.Padding = new System.Windows.Forms.Padding(3);
+            this.cancelarButton.Size = new System.Drawing.Size(121, 39);
+            this.cancelarButton.TabIndex = 31;
+            this.cancelarButton.Text = "CANCELAR";
+            this.cancelarButton.UseVisualStyleBackColor = false;
+            this.cancelarButton.Click += new System.EventHandler(this.cancelarButton_Click_1);
+            // 
+            // eliminarButton
+            // 
+            this.eliminarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
+            this.eliminarButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
+            this.eliminarButton.BorderRadius = 20;
+            this.eliminarButton.FlatAppearance.BorderSize = 0;
+            this.eliminarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(60)))));
+            this.eliminarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.eliminarButton.Font = new System.Drawing.Font("Gadugi", 10F, System.Drawing.FontStyle.Bold);
+            this.eliminarButton.ForeColor = System.Drawing.Color.Black;
+            this.eliminarButton.Location = new System.Drawing.Point(386, 327);
+            this.eliminarButton.Name = "eliminarButton";
+            this.eliminarButton.Padding = new System.Windows.Forms.Padding(3);
+            this.eliminarButton.Size = new System.Drawing.Size(121, 39);
+            this.eliminarButton.TabIndex = 32;
+            this.eliminarButton.Text = "ELIMINAR";
+            this.eliminarButton.UseVisualStyleBackColor = false;
+            // 
             // eliminarMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(569, 381);
+            this.Controls.Add(this.eliminarButton);
+            this.Controls.Add(this.cancelarButton);
             this.Controls.Add(this.precioSeleccionadoLabel);
             this.Controls.Add(this.seccionSeleccionadoLabel);
             this.Controls.Add(this.nombreSeleccionadoLabel);
             this.Controls.Add(this.notaRichTextBox);
-            this.Controls.Add(this.eliminarButton);
-            this.Controls.Add(this.cancelarButton);
             this.Controls.Add(this.precioLabel);
             this.Controls.Add(this.seccionLabel);
             this.Controls.Add(this.nombreLabel);
@@ -195,6 +209,7 @@ namespace POS
             this.Name = "eliminarMenuForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Eliminar";
+            this.Load += new System.EventHandler(this.eliminarMenuForm_Load);
             this.encabezadoPanel.ResumeLayout(false);
             this.encabezadoPanel.PerformLayout();
             this.ResumeLayout(false);
@@ -207,8 +222,6 @@ namespace POS
         private System.Windows.Forms.Label idSeleccionadoLabel;
         private System.Windows.Forms.Panel encabezadoPanel;
         private System.Windows.Forms.Label encabezadoLabel;
-        private System.Windows.Forms.Button eliminarButton;
-        private System.Windows.Forms.Button cancelarButton;
         private System.Windows.Forms.RichTextBox notaRichTextBox;
         private System.Windows.Forms.Label nombreSeleccionadoLabel;
         private System.Windows.Forms.Label idLabel;
@@ -216,5 +229,7 @@ namespace POS
         private System.Windows.Forms.Label precioSeleccionadoLabel;
         private System.Windows.Forms.Label seccionLabel;
         private System.Windows.Forms.Label precioLabel;
+        private buttonSystem cancelarButton;
+        private buttonSystem eliminarButton;
     }
 }

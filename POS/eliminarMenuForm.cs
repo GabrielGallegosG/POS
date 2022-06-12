@@ -19,9 +19,14 @@ namespace POS
                                             precioSeleccionadoLabel, notaRichTextBox, cancelarButton, eliminarButton);
         }
 
-        private void cancelarButton_Click(object sender, EventArgs e)
+        private void cancelarButton_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void eliminarMenuForm_Load(object sender, EventArgs e)
+        {
+            ActiveControl = null;
         }
     }
 }

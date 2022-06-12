@@ -5,12 +5,12 @@ namespace POS
 {
     class PLLogIn
     {
-        public static void posicionLogin(Label encabezado, Label inicio, Button empleado, Button admin, Panel panel) { 
+        public static void posicionLogin(Label encabezado, Label inicio, buttonLogin empleado, buttonLogin admin, Panel panel) { 
 
             encabezado.Size = new Size(150, 30);
             inicio.Size = new Size(160, 30);
-            empleado.Size = new Size(230, 30);
-            admin.Size = new Size(230, 30);
+            empleado.Size = new Size(230, 40);
+            admin.Size = new Size(245, 40);
             panel.Size = new Size(450, 240);
 
             encabezado.Location = new Point(280, 10);
@@ -22,7 +22,7 @@ namespace POS
             panel.Hide();
         }
 
-        public static void posicionPanel(Label usuarioL, TextBox usuario, Label contraseñaL, TextBox contraseña, Button inicio)
+        public static void posicionPanel(Label usuarioL, TextBox usuario, Label contraseñaL, TextBox contraseña, buttonLogin inicio)
         {
             usuarioL.Size = new Size(170, 20);
             usuario.Size = new Size(360, 20);

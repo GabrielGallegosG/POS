@@ -30,8 +30,6 @@ namespace POS
         private void InitializeComponent()
         {
             this.notaRichTextBox = new System.Windows.Forms.RichTextBox();
-            this.eliminarButton = new System.Windows.Forms.Button();
-            this.cancelarButton = new System.Windows.Forms.Button();
             this.encabezadoPanel = new System.Windows.Forms.Panel();
             this.encabezadoLabel = new System.Windows.Forms.Label();
             this.noMesaOrdenLabel = new System.Windows.Forms.Label();
@@ -44,6 +42,8 @@ namespace POS
             this.servicioOrdenLabel = new System.Windows.Forms.Label();
             this.noOrdenLabel = new System.Windows.Forms.Label();
             this.noOrdenSeleccionadoLabel = new System.Windows.Forms.Label();
+            this.eliminarButton = new buttonSystem();
+            this.cancelarButton = new buttonSystem();
             this.encabezadoPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,29 +59,6 @@ namespace POS
             this.notaRichTextBox.TabIndex = 39;
             this.notaRichTextBox.Text = "*Nota: Se eliminará de manera permanente el elemento seleccionado.\nSeleccione “El" +
     "iminar” para continuar con la acción…";
-            // 
-            // eliminarButton
-            // 
-            this.eliminarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
-            this.eliminarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.eliminarButton.Location = new System.Drawing.Point(406, 326);
-            this.eliminarButton.Name = "eliminarButton";
-            this.eliminarButton.Size = new System.Drawing.Size(100, 23);
-            this.eliminarButton.TabIndex = 38;
-            this.eliminarButton.Text = "ELIMINAR";
-            this.eliminarButton.UseVisualStyleBackColor = false;
-            // 
-            // cancelarButton
-            // 
-            this.cancelarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
-            this.cancelarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelarButton.Location = new System.Drawing.Point(29, 326);
-            this.cancelarButton.Name = "cancelarButton";
-            this.cancelarButton.Size = new System.Drawing.Size(87, 23);
-            this.cancelarButton.TabIndex = 37;
-            this.cancelarButton.Text = "CANCELAR";
-            this.cancelarButton.UseVisualStyleBackColor = false;
-            this.cancelarButton.Click += new System.EventHandler(this.cancelarButton_Click);
             // 
             // encabezadoPanel
             // 
@@ -194,12 +171,51 @@ namespace POS
             this.noOrdenSeleccionadoLabel.Size = new System.Drawing.Size(100, 23);
             this.noOrdenSeleccionadoLabel.TabIndex = 40;
             // 
+            // eliminarButton
+            // 
+            this.eliminarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
+            this.eliminarButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
+            this.eliminarButton.BorderRadius = 20;
+            this.eliminarButton.FlatAppearance.BorderSize = 0;
+            this.eliminarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(60)))));
+            this.eliminarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.eliminarButton.Font = new System.Drawing.Font("Gadugi", 10F, System.Drawing.FontStyle.Bold);
+            this.eliminarButton.ForeColor = System.Drawing.Color.Black;
+            this.eliminarButton.Location = new System.Drawing.Point(389, 316);
+            this.eliminarButton.Name = "eliminarButton";
+            this.eliminarButton.Padding = new System.Windows.Forms.Padding(3);
+            this.eliminarButton.Size = new System.Drawing.Size(131, 37);
+            this.eliminarButton.TabIndex = 54;
+            this.eliminarButton.Text = "ELIMINAR";
+            this.eliminarButton.UseVisualStyleBackColor = false;
+            // 
+            // cancelarButton
+            // 
+            this.cancelarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
+            this.cancelarButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
+            this.cancelarButton.BorderRadius = 20;
+            this.cancelarButton.FlatAppearance.BorderSize = 0;
+            this.cancelarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(60)))));
+            this.cancelarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelarButton.Font = new System.Drawing.Font("Gadugi", 10F, System.Drawing.FontStyle.Bold);
+            this.cancelarButton.ForeColor = System.Drawing.Color.Black;
+            this.cancelarButton.Location = new System.Drawing.Point(29, 316);
+            this.cancelarButton.Name = "cancelarButton";
+            this.cancelarButton.Padding = new System.Windows.Forms.Padding(3);
+            this.cancelarButton.Size = new System.Drawing.Size(123, 38);
+            this.cancelarButton.TabIndex = 53;
+            this.cancelarButton.Text = "CANCELAR";
+            this.cancelarButton.UseVisualStyleBackColor = false;
+            this.cancelarButton.Click += new System.EventHandler(this.cancelarButton_Click_1);
+            // 
             // eliminarOrdenForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(573, 374);
+            this.Controls.Add(this.eliminarButton);
+            this.Controls.Add(this.cancelarButton);
             this.Controls.Add(this.noMesaOrdenLabel);
             this.Controls.Add(this.fechaOrdenLabel);
             this.Controls.Add(this.horaOrdenLabel);
@@ -211,8 +227,6 @@ namespace POS
             this.Controls.Add(this.noOrdenLabel);
             this.Controls.Add(this.noOrdenSeleccionadoLabel);
             this.Controls.Add(this.notaRichTextBox);
-            this.Controls.Add(this.eliminarButton);
-            this.Controls.Add(this.cancelarButton);
             this.Controls.Add(this.encabezadoPanel);
             this.Name = "eliminarOrdenForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -226,8 +240,6 @@ namespace POS
 
         #endregion
         private System.Windows.Forms.RichTextBox notaRichTextBox;
-        private System.Windows.Forms.Button eliminarButton;
-        private System.Windows.Forms.Button cancelarButton;
         private System.Windows.Forms.Panel encabezadoPanel;
         private System.Windows.Forms.Label encabezadoLabel;
         private System.Windows.Forms.Label noMesaOrdenLabel;
@@ -240,5 +252,7 @@ namespace POS
         private System.Windows.Forms.Label servicioOrdenLabel;
         private System.Windows.Forms.Label noOrdenLabel;
         private System.Windows.Forms.Label noOrdenSeleccionadoLabel;
+        private buttonSystem cancelarButton;
+        private buttonSystem eliminarButton;
     }
 }

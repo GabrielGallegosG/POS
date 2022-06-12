@@ -47,8 +47,8 @@ namespace POS
             this.empleadoLabel = new System.Windows.Forms.Label();
             this.encabezadoPanel = new System.Windows.Forms.Panel();
             this.noOrdenLabel = new System.Windows.Forms.Label();
-            this.cancelarButton = new System.Windows.Forms.Button();
-            this.agregarButton = new System.Windows.Forms.Button();
+            this.cancelarButton = new buttonSystem();
+            this.agregarButton = new buttonSystem();
             this.encabezadoPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -246,23 +246,37 @@ namespace POS
             // cancelarButton
             // 
             this.cancelarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
-            this.cancelarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelarButton.Location = new System.Drawing.Point(12, 520);
+            this.cancelarButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
+            this.cancelarButton.BorderRadius = 20;
+            this.cancelarButton.FlatAppearance.BorderSize = 0;
+            this.cancelarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(60)))));
+            this.cancelarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelarButton.Font = new System.Drawing.Font("Gadugi", 10F, System.Drawing.FontStyle.Bold);
+            this.cancelarButton.ForeColor = System.Drawing.Color.Black;
+            this.cancelarButton.Location = new System.Drawing.Point(15, 505);
             this.cancelarButton.Name = "cancelarButton";
-            this.cancelarButton.Size = new System.Drawing.Size(87, 23);
-            this.cancelarButton.TabIndex = 48;
+            this.cancelarButton.Padding = new System.Windows.Forms.Padding(3);
+            this.cancelarButton.Size = new System.Drawing.Size(113, 39);
+            this.cancelarButton.TabIndex = 49;
             this.cancelarButton.Text = "CANCELAR";
             this.cancelarButton.UseVisualStyleBackColor = false;
-            this.cancelarButton.Click += new System.EventHandler(this.cancelarButton_Click);
+            this.cancelarButton.Click += new System.EventHandler(this.cancelarButton_Click_1);
             // 
             // agregarButton
             // 
             this.agregarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
-            this.agregarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.agregarButton.Location = new System.Drawing.Point(713, 520);
+            this.agregarButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
+            this.agregarButton.BorderRadius = 20;
+            this.agregarButton.FlatAppearance.BorderSize = 0;
+            this.agregarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(60)))));
+            this.agregarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.agregarButton.Font = new System.Drawing.Font("Gadugi", 10F, System.Drawing.FontStyle.Bold);
+            this.agregarButton.ForeColor = System.Drawing.Color.Black;
+            this.agregarButton.Location = new System.Drawing.Point(637, 505);
             this.agregarButton.Name = "agregarButton";
-            this.agregarButton.Size = new System.Drawing.Size(75, 23);
-            this.agregarButton.TabIndex = 47;
+            this.agregarButton.Padding = new System.Windows.Forms.Padding(3);
+            this.agregarButton.Size = new System.Drawing.Size(125, 39);
+            this.agregarButton.TabIndex = 50;
             this.agregarButton.Text = "AGREGAR";
             this.agregarButton.UseVisualStyleBackColor = false;
             // 
@@ -272,8 +286,8 @@ namespace POS
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 596);
-            this.Controls.Add(this.cancelarButton);
             this.Controls.Add(this.agregarButton);
+            this.Controls.Add(this.cancelarButton);
             this.Controls.Add(this.empleadoOrdenLabel);
             this.Controls.Add(this.fechaOrdenLabel);
             this.Controls.Add(this.horaOrdenLabel);
@@ -321,7 +335,7 @@ namespace POS
         private System.Windows.Forms.Label empleadoLabel;
         private System.Windows.Forms.Panel encabezadoPanel;
         private System.Windows.Forms.Label noOrdenLabel;
-        private System.Windows.Forms.Button cancelarButton;
-        private System.Windows.Forms.Button agregarButton;
+        private buttonSystem cancelarButton;
+        private buttonSystem agregarButton;
     }
 }

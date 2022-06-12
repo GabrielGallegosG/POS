@@ -6,7 +6,7 @@ namespace POS
     class PLEditarMenu
     {
         public static void posicionEditarMenu(Panel encabezado, Label encabezadoL, Label id, Label idSeleccionado,Label nombreL, TextBox nombreTB, Label seccionL, ComboBox seccionCB, Label precioL, TextBox precioTB,
-                                               Label descripcionL, RichTextBox descripcionRTB, Button agregar, Button cancelar)
+                                               Label descripcionL, RichTextBox descripcionRTB, buttonSystem agregar, buttonSystem cancelar)
         {
             //Tamaños
             id.Size = new Size(20, 20);
@@ -15,7 +15,7 @@ namespace POS
             seccionCB.Size = new Size(120, 20);
             precioTB.Size = new Size(100, 20);
             descripcionRTB.Size = new Size(420, 200);
-            agregar.Size = new Size(150, 30);
+            agregar.Size = new Size(100, 30);
             cancelar.Size = new Size(100, 30);
             encabezado.Size = new Size(525, 40);
             encabezadoL.Size = new Size(100, 40);
@@ -39,7 +39,7 @@ namespace POS
             descripcionL.Location = new Point(50, 230);
             descripcionRTB.Location = new Point(50, 260);
 
-            agregar.Location = new Point(320, 500);
+            agregar.Location = new Point(370, 500);
             cancelar.Location = new Point(50, 500);
         }
     }

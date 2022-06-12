@@ -6,7 +6,7 @@ namespace POS
     class PLEliminarMenu
     {
         public static void posicionEliminarMenu(Panel encabezado, Label encabezadoL, Label id, Label idSeleccionado, Label nombreL, Label nombreSeleccionado, Label seccionL, Label seccionSeleccionado, Label precioL, Label precioSeleccionado,
-                                               RichTextBox nota, Button cancelar, Button eliminar)
+                                               RichTextBox nota, buttonSystem cancelar, buttonSystem eliminar)
         {
             //Tamaños
             id.Size = new Size(20, 20);
