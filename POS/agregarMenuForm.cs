@@ -53,11 +53,6 @@ namespace POS
             }
         }
 
-        private void cancelarButton_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void agregarMenuForm_Load(object sender, EventArgs e)
         {
 
@@ -84,6 +79,11 @@ namespace POS
             {
                 e.Handled = true;
             }
+        }
+
+        private void cancelarButton_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

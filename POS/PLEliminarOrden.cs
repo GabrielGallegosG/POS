@@ -6,7 +6,7 @@ namespace POS
     class PLEliminarOrden
     {
         public static void posicionEliminarOrden(Panel encabezado, Label encabezadoL, Label noOrden, Label noOrdenSelec, Label tipoServ, Label servicio, Label noMesa, Label mesa, Label fecha, Label fechaOrd,
-                                               Label hora, Label horaOrd,RichTextBox nota, Button cancelar, Button eliminar)
+                                               Label hora, Label horaOrd,RichTextBox nota, buttonSystem cancelar, buttonSystem eliminar)
         {
             //Tamaños
             noOrden.Size = new Size(20, 20);

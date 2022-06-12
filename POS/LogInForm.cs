@@ -19,13 +19,8 @@ namespace POS
             PLLogIn.posicionPanel(usuarioLabel, usuarioTextBox, contraseñaLabel, contraseñaTextBox, iniciarSesionButton);
         }
 
-        private void iniciarSesionButton_Click(object sender, EventArgs e)
-        {
-           consultaMenuForm frm = new consultaMenuForm();
-            frm.Show();
-        }
-
-        private void empleadoButton_Click(object sender, EventArgs e)
+       
+        private void empleadoButton_Click_1(object sender, EventArgs e)
         {
             contenedorPanel.Show();
         }
@@ -33,6 +28,12 @@ namespace POS
         private void administradorButton_Click(object sender, EventArgs e)
         {
             contenedorPanel.Show();
+        }
+
+        private void iniciarSesionButton_Click_1(object sender, EventArgs e)
+        {
+            consultaMenuForm frm = new consultaMenuForm();
+            frm.Show();
         }
     }
 }

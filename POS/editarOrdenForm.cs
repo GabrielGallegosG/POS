@@ -19,7 +19,7 @@ namespace POS
                 agregarLabel, platilloCheckBox, postreCheckBox, bebidaCheckBox);
         }
 
-        private void cancelarButton_Click(object sender, EventArgs e)
+        private void cancelarButton_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }

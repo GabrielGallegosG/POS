@@ -41,8 +41,8 @@ namespace POS
             this.precioLabel = new System.Windows.Forms.Label();
             this.seccionLabel = new System.Windows.Forms.Label();
             this.nombreLabel = new System.Windows.Forms.Label();
-            this.cancelarButton = new System.Windows.Forms.Button();
-            this.guardarCambiosButton = new System.Windows.Forms.Button();
+            this.guardarButton = new buttonSystem();
+            this.cancelarButton = new buttonSystem();
             this.encabezadoPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -163,28 +163,42 @@ namespace POS
             this.nombreLabel.TabIndex = 8;
             this.nombreLabel.Text = "NOMBRE:";
             // 
+            // guardarButton
+            // 
+            this.guardarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
+            this.guardarButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
+            this.guardarButton.BorderRadius = 20;
+            this.guardarButton.FlatAppearance.BorderSize = 0;
+            this.guardarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(60)))));
+            this.guardarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.guardarButton.Font = new System.Drawing.Font("Gadugi", 10F, System.Drawing.FontStyle.Bold);
+            this.guardarButton.ForeColor = System.Drawing.Color.Black;
+            this.guardarButton.Location = new System.Drawing.Point(356, 474);
+            this.guardarButton.Name = "guardarButton";
+            this.guardarButton.Padding = new System.Windows.Forms.Padding(3);
+            this.guardarButton.Size = new System.Drawing.Size(100, 35);
+            this.guardarButton.TabIndex = 19;
+            this.guardarButton.Text = "GUARDAR";
+            this.guardarButton.UseVisualStyleBackColor = false;
+            // 
             // cancelarButton
             // 
             this.cancelarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
-            this.cancelarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelarButton.Location = new System.Drawing.Point(45, 445);
+            this.cancelarButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
+            this.cancelarButton.BorderRadius = 20;
+            this.cancelarButton.FlatAppearance.BorderSize = 0;
+            this.cancelarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(60)))));
+            this.cancelarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelarButton.Font = new System.Drawing.Font("Gadugi", 10F, System.Drawing.FontStyle.Bold);
+            this.cancelarButton.ForeColor = System.Drawing.Color.Black;
+            this.cancelarButton.Location = new System.Drawing.Point(45, 475);
             this.cancelarButton.Name = "cancelarButton";
-            this.cancelarButton.Size = new System.Drawing.Size(87, 23);
-            this.cancelarButton.TabIndex = 16;
+            this.cancelarButton.Padding = new System.Windows.Forms.Padding(3);
+            this.cancelarButton.Size = new System.Drawing.Size(98, 34);
+            this.cancelarButton.TabIndex = 18;
             this.cancelarButton.Text = "CANCELAR";
             this.cancelarButton.UseVisualStyleBackColor = false;
-            this.cancelarButton.Click += new System.EventHandler(this.cancelarButton_Click);
-            // 
-            // guardarCambiosButton
-            // 
-            this.guardarCambiosButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
-            this.guardarCambiosButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guardarCambiosButton.Location = new System.Drawing.Point(289, 445);
-            this.guardarCambiosButton.Name = "guardarCambiosButton";
-            this.guardarCambiosButton.Size = new System.Drawing.Size(168, 23);
-            this.guardarCambiosButton.TabIndex = 17;
-            this.guardarCambiosButton.Text = "GUARDAR CAMBIOS";
-            this.guardarCambiosButton.UseVisualStyleBackColor = false;
+            this.cancelarButton.Click += new System.EventHandler(this.cancelarButton_Click_1);
             // 
             // editarMenuForm
             // 
@@ -192,7 +206,7 @@ namespace POS
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(525, 540);
-            this.Controls.Add(this.guardarCambiosButton);
+            this.Controls.Add(this.guardarButton);
             this.Controls.Add(this.cancelarButton);
             this.Controls.Add(this.descripcionRichTextBox);
             this.Controls.Add(this.seccionComboBox);
@@ -229,7 +243,7 @@ namespace POS
         private System.Windows.Forms.Label precioLabel;
         private System.Windows.Forms.Label seccionLabel;
         private System.Windows.Forms.Label nombreLabel;
-        private System.Windows.Forms.Button cancelarButton;
-        private System.Windows.Forms.Button guardarCambiosButton;
+        private buttonSystem cancelarButton;
+        private buttonSystem guardarButton;
     }
 }

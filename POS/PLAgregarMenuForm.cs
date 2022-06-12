@@ -6,7 +6,7 @@ namespace POS
     class PLAgregarMenuForm
     {
         public static void posicionAgregarMenu(Panel encabezado, Label encabezadoL, Label nombreL, TextBox nombreTB,Label seccionL, ComboBox seccionCB, Label precioL, TextBox precioTB,
-                                                Label descripcionL, RichTextBox descripcionRTB, Button agregar, Button cancelar)
+                                                Label descripcionL, RichTextBox descripcionRTB, buttonSystem agregar, buttonSystem cancelar)
         {
             //Tamaños
             nombreTB.Size = new Size(320, 20);

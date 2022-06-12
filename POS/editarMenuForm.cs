@@ -16,10 +16,10 @@ namespace POS
         {
             InitializeComponent();
             PLEditarMenu.posicionEditarMenu(encabezadoPanel, encabezadoLabel, idLabel, idSeleccionadoLabel,nombreLabel, nombreTextBox, seccionLabel, seccionComboBox, precioLabel,
-                                            precioTextBox, descripcionLabel, descripcionRichTextBox,guardarCambiosButton, cancelarButton);
+                                            precioTextBox, descripcionLabel, descripcionRichTextBox,guardarButton, cancelarButton);
         }
 
-        private void cancelarButton_Click(object sender, EventArgs e)
+        private void cancelarButton_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }
