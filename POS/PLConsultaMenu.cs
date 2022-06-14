@@ -37,14 +37,14 @@ namespace POS
             bebidasDGV.Size = new Size(740, 200);
             postresDGV.Size = new Size(740, 200);
 
-            platillo.Size = new Size(120, 25);
-            bebida.Size = new Size(120, 25);
-            postre.Size = new Size(120, 25);
+            platillo.Size = new Size(120, 35);
+            bebida.Size = new Size(120, 30);
+            postre.Size = new Size(120, 30);
 
-            modiPlatillo.Size = new Size(35,30);
+            modiPlatillo.Size = new Size(35,35);
             modiBebida.Size = new Size(35, 30);
             modiPostre.Size = new Size(35, 30);
-            eliPlatillo.Size = new Size(35, 30);
+            eliPlatillo.Size = new Size(35, 35);
             eliBebida.Size = new Size(35, 30);
             eliPostre.Size = new Size(35, 30);
             agregarMenuBtn.Size = new Size(45, 30);
@@ -61,20 +61,59 @@ namespace POS
             bebidasDGV.Location = new Point(30, 230);
             postresDGV.Location = new Point(30, 230);
 
-            platillo.Location = new Point(30, 430);
-            bebida.Location = new Point(300, 430);
-            postre.Location = new Point(570, 430);
+            platillo.Location = new Point(570, 440);
+            bebida.Location = new Point(570, 440);
+            postre.Location = new Point(570, 440);
 
-            modiPlatillo.Location = new Point(160, 435);
-            modiBebida.Location = new Point(430, 435);
-            modiPostre.Location = new Point(700, 435);
+            modiPlatillo.Location = new Point(700, 440);
+            modiBebida.Location = new Point(700, 440);
+            modiPostre.Location = new Point(700, 440);
 
-            eliPlatillo.Location = new Point(190,435);
-            eliBebida.Location = new Point(460,435);
-            eliPostre.Location = new Point(730,435);
+            eliPlatillo.Location = new Point(730, 440);
+            eliBebida.Location = new Point(730, 440);
+            eliPostre.Location = new Point(730,440);
 
             agregarMenuL.Location = new Point(585, 50);
             agregarMenuBtn.Location = new Point(740, 45);
+        }
+
+        public static void dataGridView(DataGridView dataGrid) {
+
+
+            dataGrid.AllowUserToOrderColumns = true;
+            dataGrid.AllowUserToResizeColumns = true;
+
+            dataGrid.RowsDefaultCellStyle.Padding = new Padding(2, 2, 2, 2);
+            dataGrid.RowsDefaultCellStyle.Font = new Font("Gadugi", 15);
+            dataGrid.RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+
+            dataGrid.AlternatingRowsDefaultCellStyle.Padding = new Padding(2, 2, 2, 2);
+            dataGrid.AlternatingRowsDefaultCellStyle.Font = new Font("Gadugi", 15);
+            dataGrid.AlternatingRowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGrid.AlternatingRowsDefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
+            dataGrid.ColumnHeadersDefaultCellStyle.Padding = new Padding(0, 0, 0, 0);
+            dataGrid.ColumnHeadersDefaultCellStyle.Font = new Font("Gadugi", 15);
+            dataGrid.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGrid.ColumnHeadersDefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
+            dataGrid.DefaultCellStyle.Padding = new Padding(0, 0, 0, 0);
+            dataGrid.DefaultCellStyle.Font = new Font("Gadugi", 15);
+            dataGrid.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGrid.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
+            dataGrid.RowHeadersDefaultCellStyle.Padding = new Padding(0, 0, 0, 0);
+            dataGrid.RowHeadersDefaultCellStyle.Font = new Font("Gadugi", 15);
+            dataGrid.RowHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGrid.RowHeadersDefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
+            dataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            dataGrid.AutoResizeColumns();
+            dataGrid.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dataGrid.ReadOnly = true;
+
+            dataGrid.RowHeadersWidth = 100;
         }
 
         public static void panelPlatillo(Label platillos)

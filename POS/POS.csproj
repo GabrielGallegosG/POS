@@ -87,6 +87,14 @@
     <Compile Include="consultaMenuForm.Designer.cs">
       <DependentUpon>consultaMenuForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="consultaOrdenesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="consultaOrdenesForm.Designer.cs">
+      <DependentUpon>consultaOrdenesForm.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="consultarOrdenesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +185,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="consultaOrdenesForm.resx">
       <DependentUpon>consultaOrdenesForm.cs</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>consultaOrdenesForm.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="consultarOrdenesForm.resx">
       <DependentUpon>consultarOrdenesForm.cs</DependentUpon>
@@ -271,6 +281,7 @@
       <DependentUpon>POSBDModel.edmx</DependentUpon>
       <LastGenOutput>POSBDModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\edi.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

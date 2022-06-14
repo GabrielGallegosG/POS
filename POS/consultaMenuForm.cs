@@ -22,6 +22,9 @@ namespace POS
             PLConsultaMenu.panelPlatillo(platillosLabel);
             PLConsultaMenu.panelBebida(bebidasLabel);
             PLConsultaMenu.panelPostre(postresLabel);
+            PLConsultaMenu.dataGridView(platillosDataGridView);
+            PLConsultaMenu.dataGridView(bebidasDataGridView);
+            PLConsultaMenu.dataGridView(postresDataGridView);
         }
 
         private void agregarMenuButton_Click(object sender, EventArgs e)
@@ -88,34 +91,8 @@ namespace POS
 
         private void consultaMenuForm_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'pOS_BDDataSet.elemento' Puede moverla o quitarla según sea necesario.
-            //this.elementoTableAdapter.Fill(this.pOS_BDDataSet.elemento);
-            //platillosDataGridView.DataSource = BLConsultaElemento.elementosGet();
-            //bebidasDataGridView.DataSource = BLConsultaElemento.elementosGet();
-            //postresDataGridView.DataSource = BLConsultaElemento.elementosGet();
-
-            SqlConnection conexion = new SqlConnection("server=desktop-arias-r\\mssqlserver01 ; database=POS_BD ; integrated security = SSPI");
-            conexion.Open();
-
-            string consulPla = "select nombre_elemento,precio from elemento where seccion = '1'";
-            string consulBeb = "select nombre_elemento,precio from elemento where seccion = '2'";
-            string consulPos = "select nombre_elemento,precio from elemento where seccion = '3'";
-           
-            SqlDataAdapter adaptPla = new SqlDataAdapter(consulPla, conexion);
-            SqlDataAdapter adaptBeb = new SqlDataAdapter(consulBeb, conexion);
-            SqlDataAdapter adaptPos = new SqlDataAdapter(consulPos, conexion);
-
-            DataTable dtPlatillo = new DataTable();
-            DataTable dtBebida = new DataTable();
-            DataTable dtPostre = new DataTable();
-
-            adaptPla.Fill(dtPlatillo);
-            adaptBeb.Fill(dtBebida);
-            adaptPos.Fill(dtPostre);
-
-            platillosDataGridView.DataSource = dtPlatillo;
-            bebidasDataGridView.DataSource = dtBebida;
-            postresDataGridView.DataSource = dtPostre;
+            platillosDataGridView.DataSource = BLConsultaElemento.PlatillosDT();
+            platillosPanel.BackColor = Color.DodgerBlue;
         }
 
         private void mostrarPlatillosPanel()
@@ -123,7 +100,11 @@ namespace POS
             platillosDataGridView.Visible = true;
             bebidasDataGridView.Visible = false;
             postresDataGridView.Visible = false;
-            //platillosDataGridView.DataSource = BLConsultaElemento.elementosGet();
+            platillosDataGridView.DataSource = BLConsultaElemento.PlatillosDT();
+            
+            platillosPanel.BackColor = Color.DodgerBlue;
+            bebidasPanel.BackColor = Color.FromArgb(0, 87, 158);
+            postresPanel.BackColor = Color.FromArgb(0, 87, 158);
         }
 
         private void mostrarBebidasPanel()
@@ -131,7 +112,11 @@ namespace POS
             platillosDataGridView.Visible = false;
             bebidasDataGridView.Visible = true;
             postresDataGridView.Visible = false;
-            //bebidasDataGridView.DataSource = BLConsultaElemento.elementosGet();
+            bebidasDataGridView.DataSource = BLConsultaElemento.BebidasDT();
+
+            platillosPanel.BackColor = Color.FromArgb(0, 87, 158);
+            bebidasPanel.BackColor = Color.DodgerBlue;
+            postresPanel.BackColor = Color.FromArgb(0, 87, 158);
         }
 
         private void mostrarPostresPanel()
@@ -139,7 +124,11 @@ namespace POS
             platillosDataGridView.Visible = false;
             bebidasDataGridView.Visible = false;
             postresDataGridView.Visible = true;
-            //postresDataGridView.DataSource = BLConsultaElemento.elementosGet();
+            postresDataGridView.DataSource = BLConsultaElemento.PostresDT();
+
+            platillosPanel.BackColor = Color.FromArgb(0, 87, 158);
+            bebidasPanel.BackColor = Color.FromArgb(0, 87, 158);
+            postresPanel.BackColor = Color.DodgerBlue;
         }
 
         private void platillosPanel_Click(object sender, EventArgs e){mostrarPlatillosPanel();}

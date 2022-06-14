@@ -33,13 +33,13 @@ namespace POS
             this.encabezadoLabel = new System.Windows.Forms.Label();
             this.inicioSesionLabel = new System.Windows.Forms.Label();
             this.contenedorPanel = new System.Windows.Forms.Panel();
+            this.iniciarSesionButton = new buttonLogin();
             this.contraseñaTextBox = new System.Windows.Forms.TextBox();
             this.usuarioTextBox = new System.Windows.Forms.TextBox();
             this.contraseñaLabel = new System.Windows.Forms.Label();
             this.usuarioLabel = new System.Windows.Forms.Label();
             this.administradorButton = new buttonLogin();
             this.empleadoButton = new buttonLogin();
-            this.iniciarSesionButton = new buttonLogin();
             this.panel1.SuspendLayout();
             this.contenedorPanel.SuspendLayout();
             this.SuspendLayout();
@@ -49,7 +49,7 @@ namespace POS
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
             this.panel1.Controls.Add(this.encabezadoLabel);
             this.panel1.Location = new System.Drawing.Point(1, 1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1067, 73);
             this.panel1.TabIndex = 0;
@@ -87,16 +87,36 @@ namespace POS
             this.contenedorPanel.Controls.Add(this.contraseñaLabel);
             this.contenedorPanel.Controls.Add(this.usuarioLabel);
             this.contenedorPanel.Location = new System.Drawing.Point(208, 249);
-            this.contenedorPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.contenedorPanel.Margin = new System.Windows.Forms.Padding(4);
             this.contenedorPanel.Name = "contenedorPanel";
             this.contenedorPanel.Size = new System.Drawing.Size(595, 290);
             this.contenedorPanel.TabIndex = 4;
+            // 
+            // iniciarSesionButton
+            // 
+            this.iniciarSesionButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
+            this.iniciarSesionButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
+            this.iniciarSesionButton.BorderRadius = 20;
+            this.iniciarSesionButton.FlatAppearance.BorderSize = 0;
+            this.iniciarSesionButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(200)))));
+            this.iniciarSesionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iniciarSesionButton.Font = new System.Drawing.Font("Gadugi", 10F, System.Drawing.FontStyle.Bold);
+            this.iniciarSesionButton.ForeColor = System.Drawing.Color.White;
+            this.iniciarSesionButton.Location = new System.Drawing.Point(176, 235);
+            this.iniciarSesionButton.Margin = new System.Windows.Forms.Padding(4);
+            this.iniciarSesionButton.Name = "iniciarSesionButton";
+            this.iniciarSesionButton.Padding = new System.Windows.Forms.Padding(4);
+            this.iniciarSesionButton.Size = new System.Drawing.Size(221, 52);
+            this.iniciarSesionButton.TabIndex = 10;
+            this.iniciarSesionButton.Text = "INICIAR  SESIÓN";
+            this.iniciarSesionButton.UseVisualStyleBackColor = false;
+            this.iniciarSesionButton.Click += new System.EventHandler(this.iniciarSesionButton_Click_1);
             // 
             // contraseñaTextBox
             // 
             this.contraseñaTextBox.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contraseñaTextBox.Location = new System.Drawing.Point(51, 150);
-            this.contraseñaTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.contraseñaTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.contraseñaTextBox.Name = "contraseñaTextBox";
             this.contraseñaTextBox.PasswordChar = '*';
             this.contraseñaTextBox.Size = new System.Drawing.Size(479, 34);
@@ -106,7 +126,7 @@ namespace POS
             // 
             this.usuarioTextBox.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usuarioTextBox.Location = new System.Drawing.Point(51, 63);
-            this.usuarioTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.usuarioTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.usuarioTextBox.Name = "usuarioTextBox";
             this.usuarioTextBox.Size = new System.Drawing.Size(479, 34);
             this.usuarioTextBox.TabIndex = 8;
@@ -173,26 +193,6 @@ namespace POS
             this.empleadoButton.UseVisualStyleBackColor = false;
             this.empleadoButton.Click += new System.EventHandler(this.empleadoButton_Click_1);
             // 
-            // iniciarSesionButton
-            // 
-            this.iniciarSesionButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
-            this.iniciarSesionButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
-            this.iniciarSesionButton.BorderRadius = 20;
-            this.iniciarSesionButton.FlatAppearance.BorderSize = 0;
-            this.iniciarSesionButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(200)))));
-            this.iniciarSesionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iniciarSesionButton.Font = new System.Drawing.Font("Gadugi", 10F, System.Drawing.FontStyle.Bold);
-            this.iniciarSesionButton.ForeColor = System.Drawing.Color.White;
-            this.iniciarSesionButton.Location = new System.Drawing.Point(176, 235);
-            this.iniciarSesionButton.Margin = new System.Windows.Forms.Padding(4);
-            this.iniciarSesionButton.Name = "iniciarSesionButton";
-            this.iniciarSesionButton.Padding = new System.Windows.Forms.Padding(4);
-            this.iniciarSesionButton.Size = new System.Drawing.Size(221, 52);
-            this.iniciarSesionButton.TabIndex = 10;
-            this.iniciarSesionButton.Text = "INICIAR  SESIÓN";
-            this.iniciarSesionButton.UseVisualStyleBackColor = false;
-            this.iniciarSesionButton.Click += new System.EventHandler(this.iniciarSesionButton_Click_1);
-            // 
             // LogInForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -203,7 +203,7 @@ namespace POS
             this.Controls.Add(this.contenedorPanel);
             this.Controls.Add(this.inicioSesionLabel);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LogInForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Iniciar Sesión";
