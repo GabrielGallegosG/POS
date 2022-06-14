@@ -21,12 +21,18 @@ namespace POS
 
         private void ordenesButton_Click(object sender, EventArgs e)
         {
+            consultarOrdenesForm frmOrd = new consultarOrdenesForm();
+            frmOrd.Close();
+            this.Hide();
             consultarOrdenesForm frm = new consultarOrdenesForm();
             frm.Show();
         }
 
         private void menuButton_Click(object sender, EventArgs e)
         {
+            consultarOrdenesForm frmOrd = new consultarOrdenesForm();
+            frmOrd.Close();
+            this.Hide();
             consultaMenuForm frm = new consultaMenuForm();
             frm.Show();
         }
@@ -40,13 +46,13 @@ namespace POS
         private void ventasButton_Click(object sender, EventArgs e)
         {
             eliminarOrdenForm frm = new eliminarOrdenForm();
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void usuariosButton_Click(object sender, EventArgs e)
         {
             editarOrdenForm frm = new editarOrdenForm();
-            frm.Show();
+            frm.ShowDialog();
         }
     }
 }
