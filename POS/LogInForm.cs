@@ -22,18 +22,23 @@ namespace POS
        
         private void empleadoButton_Click_1(object sender, EventArgs e)
         {
-            contenedorPanel.Show();
+            iniciarSesionButton.BackColor = Color.DodgerBlue;
+           contenedorPanel.Show();
         }
 
         private void administradorButton_Click(object sender, EventArgs e)
         {
-            contenedorPanel.Show();
+            iniciarSesionButton.BackColor = Color.FromArgb(0, 87, 158);
+           contenedorPanel.Show();
         }
 
         private void iniciarSesionButton_Click_1(object sender, EventArgs e)
         {
-            consultaMenuForm frm = new consultaMenuForm();
-            frm.Show();
+            LogInForm logIn = new LogInForm();
+            logIn.Close();
+            this.Hide();
+            consultaMenuForm consultaMenu = new consultaMenuForm();
+            consultaMenu.Show();
         }
     }
 }

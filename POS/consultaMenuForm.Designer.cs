@@ -29,6 +29,9 @@ namespace POS
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(consultaMenuForm));
             this.platillosPanel = new System.Windows.Forms.Panel();
             this.platillosLabel = new System.Windows.Forms.Label();
@@ -71,73 +74,92 @@ namespace POS
             // platillosPanel
             // 
             this.platillosPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
+            this.platillosPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.platillosPanel.Controls.Add(this.platillosLabel);
+            this.platillosPanel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.platillosPanel.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.platillosPanel.Location = new System.Drawing.Point(38, 153);
+            this.platillosPanel.Location = new System.Drawing.Point(133, 199);
+            this.platillosPanel.Margin = new System.Windows.Forms.Padding(4);
             this.platillosPanel.Name = "platillosPanel";
-            this.platillosPanel.Size = new System.Drawing.Size(140, 40);
+            this.platillosPanel.Size = new System.Drawing.Size(253, 49);
             this.platillosPanel.TabIndex = 1;
+            this.platillosPanel.Click += new System.EventHandler(this.platillosPanel_Click);
             // 
             // platillosLabel
             // 
             this.platillosLabel.AutoSize = true;
             this.platillosLabel.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.platillosLabel.ForeColor = System.Drawing.Color.White;
-            this.platillosLabel.Location = new System.Drawing.Point(15, 9);
+            this.platillosLabel.Location = new System.Drawing.Point(20, 11);
+            this.platillosLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.platillosLabel.Name = "platillosLabel";
-            this.platillosLabel.Size = new System.Drawing.Size(107, 21);
+            this.platillosLabel.Size = new System.Drawing.Size(133, 28);
             this.platillosLabel.TabIndex = 4;
             this.platillosLabel.Text = "PLATILLOS";
+            this.platillosLabel.Click += new System.EventHandler(this.platillosLabel_Click);
             // 
             // bebidasPanel
             // 
             this.bebidasPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
+            this.bebidasPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.bebidasPanel.Controls.Add(this.bebidasLabel);
+            this.bebidasPanel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bebidasPanel.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bebidasPanel.Location = new System.Drawing.Point(265, 153);
+            this.bebidasPanel.Location = new System.Drawing.Point(394, 199);
+            this.bebidasPanel.Margin = new System.Windows.Forms.Padding(4);
             this.bebidasPanel.Name = "bebidasPanel";
-            this.bebidasPanel.Size = new System.Drawing.Size(140, 40);
+            this.bebidasPanel.Size = new System.Drawing.Size(268, 49);
             this.bebidasPanel.TabIndex = 2;
+            this.bebidasPanel.Click += new System.EventHandler(this.bebidasPanel_Click);
             // 
             // bebidasLabel
             // 
             this.bebidasLabel.AutoSize = true;
             this.bebidasLabel.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bebidasLabel.ForeColor = System.Drawing.Color.White;
-            this.bebidasLabel.Location = new System.Drawing.Point(26, 9);
+            this.bebidasLabel.Location = new System.Drawing.Point(35, 11);
+            this.bebidasLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.bebidasLabel.Name = "bebidasLabel";
-            this.bebidasLabel.Size = new System.Drawing.Size(88, 21);
+            this.bebidasLabel.Size = new System.Drawing.Size(111, 28);
             this.bebidasLabel.TabIndex = 5;
             this.bebidasLabel.Text = "BEBIDAS";
+            this.bebidasLabel.Click += new System.EventHandler(this.bebidasLabel_Click);
             // 
             // postresPanel
             // 
             this.postresPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
+            this.postresPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.postresPanel.Controls.Add(this.postresLabel);
+            this.postresPanel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.postresPanel.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.postresPanel.Location = new System.Drawing.Point(491, 153);
+            this.postresPanel.Location = new System.Drawing.Point(670, 199);
+            this.postresPanel.Margin = new System.Windows.Forms.Padding(4);
             this.postresPanel.Name = "postresPanel";
-            this.postresPanel.Size = new System.Drawing.Size(140, 40);
+            this.postresPanel.Size = new System.Drawing.Size(254, 49);
             this.postresPanel.TabIndex = 3;
+            this.postresPanel.Click += new System.EventHandler(this.postresPanel_Click);
             // 
             // postresLabel
             // 
             this.postresLabel.AutoSize = true;
             this.postresLabel.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.postresLabel.ForeColor = System.Drawing.Color.White;
-            this.postresLabel.Location = new System.Drawing.Point(26, 9);
+            this.postresLabel.Location = new System.Drawing.Point(35, 11);
+            this.postresLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.postresLabel.Name = "postresLabel";
-            this.postresLabel.Size = new System.Drawing.Size(91, 21);
+            this.postresLabel.Size = new System.Drawing.Size(114, 28);
             this.postresLabel.TabIndex = 6;
             this.postresLabel.Text = "POSTRES";
+            this.postresLabel.Click += new System.EventHandler(this.postresLabel_Click);
             // 
             // encabezadoLabel
             // 
             this.encabezadoLabel.AutoSize = true;
             this.encabezadoLabel.Font = new System.Drawing.Font("Gadugi", 18.75F, System.Drawing.FontStyle.Bold);
-            this.encabezadoLabel.Location = new System.Drawing.Point(133, 86);
+            this.encabezadoLabel.Location = new System.Drawing.Point(177, 106);
+            this.encabezadoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.encabezadoLabel.Name = "encabezadoLabel";
-            this.encabezadoLabel.Size = new System.Drawing.Size(88, 30);
+            this.encabezadoLabel.Size = new System.Drawing.Size(113, 38);
             this.encabezadoLabel.TabIndex = 7;
             this.encabezadoLabel.Text = "MENÚ";
             this.encabezadoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -153,8 +175,9 @@ namespace POS
             this.encabezadoPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.encabezadoPanel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.encabezadoPanel.Location = new System.Drawing.Point(0, 0);
+            this.encabezadoPanel.Margin = new System.Windows.Forms.Padding(4);
             this.encabezadoPanel.Name = "encabezadoPanel";
-            this.encabezadoPanel.Size = new System.Drawing.Size(800, 37);
+            this.encabezadoPanel.Size = new System.Drawing.Size(1067, 46);
             this.encabezadoPanel.TabIndex = 8;
             // 
             // usuariosButton
@@ -164,9 +187,10 @@ namespace POS
             this.usuariosButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.usuariosButton.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
             this.usuariosButton.ForeColor = System.Drawing.Color.White;
-            this.usuariosButton.Location = new System.Drawing.Point(678, 4);
+            this.usuariosButton.Location = new System.Drawing.Point(904, 5);
+            this.usuariosButton.Margin = new System.Windows.Forms.Padding(4);
             this.usuariosButton.Name = "usuariosButton";
-            this.usuariosButton.Size = new System.Drawing.Size(110, 30);
+            this.usuariosButton.Size = new System.Drawing.Size(147, 37);
             this.usuariosButton.TabIndex = 11;
             this.usuariosButton.Text = "USUARIOS";
             this.usuariosButton.UseVisualStyleBackColor = false;
@@ -178,9 +202,10 @@ namespace POS
             this.ventasButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ventasButton.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
             this.ventasButton.ForeColor = System.Drawing.Color.White;
-            this.ventasButton.Location = new System.Drawing.Point(582, 4);
+            this.ventasButton.Location = new System.Drawing.Point(776, 5);
+            this.ventasButton.Margin = new System.Windows.Forms.Padding(4);
             this.ventasButton.Name = "ventasButton";
-            this.ventasButton.Size = new System.Drawing.Size(90, 30);
+            this.ventasButton.Size = new System.Drawing.Size(120, 37);
             this.ventasButton.TabIndex = 12;
             this.ventasButton.Text = "VENTAS";
             this.ventasButton.UseVisualStyleBackColor = false;
@@ -192,9 +217,10 @@ namespace POS
             this.ordenesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ordenesButton.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
             this.ordenesButton.ForeColor = System.Drawing.Color.White;
-            this.ordenesButton.Location = new System.Drawing.Point(474, 3);
+            this.ordenesButton.Location = new System.Drawing.Point(632, 4);
+            this.ordenesButton.Margin = new System.Windows.Forms.Padding(4);
             this.ordenesButton.Name = "ordenesButton";
-            this.ordenesButton.Size = new System.Drawing.Size(101, 30);
+            this.ordenesButton.Size = new System.Drawing.Size(135, 37);
             this.ordenesButton.TabIndex = 11;
             this.ordenesButton.Text = "ORDENES";
             this.ordenesButton.UseVisualStyleBackColor = false;
@@ -207,9 +233,10 @@ namespace POS
             this.menuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.menuButton.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
             this.menuButton.ForeColor = System.Drawing.Color.White;
-            this.menuButton.Location = new System.Drawing.Point(378, 3);
+            this.menuButton.Location = new System.Drawing.Point(504, 4);
+            this.menuButton.Margin = new System.Windows.Forms.Padding(4);
             this.menuButton.Name = "menuButton";
-            this.menuButton.Size = new System.Drawing.Size(90, 30);
+            this.menuButton.Size = new System.Drawing.Size(120, 37);
             this.menuButton.TabIndex = 10;
             this.menuButton.Text = "MENÚ";
             this.menuButton.UseVisualStyleBackColor = false;
@@ -223,74 +250,115 @@ namespace POS
             this.inicioBbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.inicioBbutton.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
             this.inicioBbutton.ForeColor = System.Drawing.Color.White;
-            this.inicioBbutton.Location = new System.Drawing.Point(282, 3);
+            this.inicioBbutton.Location = new System.Drawing.Point(376, 4);
+            this.inicioBbutton.Margin = new System.Windows.Forms.Padding(4);
             this.inicioBbutton.Name = "inicioBbutton";
-            this.inicioBbutton.Size = new System.Drawing.Size(90, 30);
+            this.inicioBbutton.Size = new System.Drawing.Size(120, 37);
             this.inicioBbutton.TabIndex = 9;
             this.inicioBbutton.Text = "INICIO";
             this.inicioBbutton.UseVisualStyleBackColor = false;
             // 
             // platillosDataGridView
             // 
+            this.platillosDataGridView.AllowUserToAddRows = false;
+            this.platillosDataGridView.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.RoyalBlue;
+            this.platillosDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.platillosDataGridView.BackgroundColor = System.Drawing.Color.White;
+            this.platillosDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.platillosDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.platillosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.platillosDataGridView.Location = new System.Drawing.Point(38, 219);
+            this.platillosDataGridView.Location = new System.Drawing.Point(133, 265);
+            this.platillosDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.platillosDataGridView.Name = "platillosDataGridView";
-            this.platillosDataGridView.Size = new System.Drawing.Size(140, 150);
+            this.platillosDataGridView.RowHeadersWidth = 51;
+            this.platillosDataGridView.Size = new System.Drawing.Size(791, 92);
             this.platillosDataGridView.TabIndex = 9;
             // 
             // bebidasDataGridView
             // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.RoyalBlue;
+            this.bebidasDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.bebidasDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.bebidasDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.bebidasDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.bebidasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.bebidasDataGridView.Location = new System.Drawing.Point(265, 219);
+            this.bebidasDataGridView.Location = new System.Drawing.Point(133, 365);
+            this.bebidasDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.bebidasDataGridView.Name = "bebidasDataGridView";
-            this.bebidasDataGridView.Size = new System.Drawing.Size(140, 150);
+            this.bebidasDataGridView.RowHeadersWidth = 51;
+            this.bebidasDataGridView.Size = new System.Drawing.Size(791, 88);
             this.bebidasDataGridView.TabIndex = 10;
+            this.bebidasDataGridView.Visible = false;
             // 
             // postresDataGridView
             // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.RoyalBlue;
+            this.postresDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.postresDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.postresDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.postresDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.postresDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.postresDataGridView.Location = new System.Drawing.Point(491, 219);
+            this.postresDataGridView.Location = new System.Drawing.Point(133, 462);
+            this.postresDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.postresDataGridView.Name = "postresDataGridView";
-            this.postresDataGridView.Size = new System.Drawing.Size(140, 150);
+            this.postresDataGridView.RowHeadersWidth = 51;
+            this.postresDataGridView.Size = new System.Drawing.Size(791, 88);
             this.postresDataGridView.TabIndex = 11;
+            this.postresDataGridView.Visible = false;
             // 
             // platilloLabel
             // 
             this.platilloLabel.BackColor = System.Drawing.Color.White;
             this.platilloLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.platilloLabel.Font = new System.Drawing.Font("Gadugi", 14F);
-            this.platilloLabel.Location = new System.Drawing.Point(38, 386);
+            this.platilloLabel.Location = new System.Drawing.Point(30, 615);
+            this.platilloLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.platilloLabel.Name = "platilloLabel";
-            this.platilloLabel.Size = new System.Drawing.Size(91, 24);
+            this.platilloLabel.Size = new System.Drawing.Size(121, 29);
             this.platilloLabel.TabIndex = 12;
+            this.platilloLabel.Visible = false;
             // 
             // bebidaLabel
             // 
             this.bebidaLabel.BackColor = System.Drawing.Color.White;
             this.bebidaLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.bebidaLabel.Font = new System.Drawing.Font("Gadugi", 14F);
-            this.bebidaLabel.Location = new System.Drawing.Point(265, 386);
+            this.bebidaLabel.Location = new System.Drawing.Point(313, 613);
+            this.bebidaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.bebidaLabel.Name = "bebidaLabel";
-            this.bebidaLabel.Size = new System.Drawing.Size(74, 24);
+            this.bebidaLabel.Size = new System.Drawing.Size(98, 29);
             this.bebidaLabel.TabIndex = 13;
+            this.bebidaLabel.Visible = false;
             // 
             // postreLabel
             // 
             this.postreLabel.BackColor = System.Drawing.Color.White;
             this.postreLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.postreLabel.Font = new System.Drawing.Font("Gadugi", 14F);
-            this.postreLabel.Location = new System.Drawing.Point(491, 386);
+            this.postreLabel.Location = new System.Drawing.Point(701, 619);
+            this.postreLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.postreLabel.Name = "postreLabel";
-            this.postreLabel.Size = new System.Drawing.Size(78, 24);
+            this.postreLabel.Size = new System.Drawing.Size(103, 29);
             this.postreLabel.TabIndex = 14;
+            this.postreLabel.Visible = false;
             // 
             // agregarMenuLabel
             // 
             this.agregarMenuLabel.AutoSize = true;
             this.agregarMenuLabel.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.agregarMenuLabel.Location = new System.Drawing.Point(503, 57);
+            this.agregarMenuLabel.Location = new System.Drawing.Point(671, 70);
+            this.agregarMenuLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.agregarMenuLabel.Name = "agregarMenuLabel";
-            this.agregarMenuLabel.Size = new System.Drawing.Size(150, 19);
+            this.agregarMenuLabel.Size = new System.Drawing.Size(189, 24);
             this.agregarMenuLabel.TabIndex = 22;
             this.agregarMenuLabel.Text = "AGREGAR A MENÚ";
             // 
@@ -300,9 +368,10 @@ namespace POS
             this.agregarMenuButton.FlatAppearance.BorderSize = 0;
             this.agregarMenuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.agregarMenuButton.Image = global::POS.Properties.Resources.agregar;
-            this.agregarMenuButton.Location = new System.Drawing.Point(678, 53);
+            this.agregarMenuButton.Location = new System.Drawing.Point(904, 65);
+            this.agregarMenuButton.Margin = new System.Windows.Forms.Padding(4);
             this.agregarMenuButton.Name = "agregarMenuButton";
-            this.agregarMenuButton.Size = new System.Drawing.Size(33, 29);
+            this.agregarMenuButton.Size = new System.Drawing.Size(44, 36);
             this.agregarMenuButton.TabIndex = 21;
             this.agregarMenuButton.UseVisualStyleBackColor = false;
             this.agregarMenuButton.Click += new System.EventHandler(this.agregarMenuButton_Click);
@@ -313,9 +382,10 @@ namespace POS
             this.editarPostreButton.FlatAppearance.BorderSize = 0;
             this.editarPostreButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editarPostreButton.Image = global::POS.Properties.Resources.modificar;
-            this.editarPostreButton.Location = new System.Drawing.Point(575, 385);
+            this.editarPostreButton.Location = new System.Drawing.Point(813, 618);
+            this.editarPostreButton.Margin = new System.Windows.Forms.Padding(4);
             this.editarPostreButton.Name = "editarPostreButton";
-            this.editarPostreButton.Size = new System.Drawing.Size(40, 30);
+            this.editarPostreButton.Size = new System.Drawing.Size(53, 37);
             this.editarPostreButton.TabIndex = 20;
             this.editarPostreButton.UseVisualStyleBackColor = false;
             this.editarPostreButton.Click += new System.EventHandler(this.editarPostreButton_Click);
@@ -326,9 +396,10 @@ namespace POS
             this.editarBebidaButton.FlatAppearance.BorderSize = 0;
             this.editarBebidaButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editarBebidaButton.Image = global::POS.Properties.Resources.modificar;
-            this.editarBebidaButton.Location = new System.Drawing.Point(342, 384);
+            this.editarBebidaButton.Location = new System.Drawing.Point(416, 611);
+            this.editarBebidaButton.Margin = new System.Windows.Forms.Padding(4);
             this.editarBebidaButton.Name = "editarBebidaButton";
-            this.editarBebidaButton.Size = new System.Drawing.Size(40, 32);
+            this.editarBebidaButton.Size = new System.Drawing.Size(53, 39);
             this.editarBebidaButton.TabIndex = 19;
             this.editarBebidaButton.UseVisualStyleBackColor = false;
             this.editarBebidaButton.Click += new System.EventHandler(this.editarBebidaButton_Click);
@@ -339,9 +410,10 @@ namespace POS
             this.editarPlatilloButton.FlatAppearance.BorderSize = 0;
             this.editarPlatilloButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editarPlatilloButton.Image = global::POS.Properties.Resources.modificar;
-            this.editarPlatilloButton.Location = new System.Drawing.Point(135, 384);
+            this.editarPlatilloButton.Location = new System.Drawing.Point(159, 613);
+            this.editarPlatilloButton.Margin = new System.Windows.Forms.Padding(4);
             this.editarPlatilloButton.Name = "editarPlatilloButton";
-            this.editarPlatilloButton.Size = new System.Drawing.Size(40, 30);
+            this.editarPlatilloButton.Size = new System.Drawing.Size(53, 37);
             this.editarPlatilloButton.TabIndex = 18;
             this.editarPlatilloButton.UseVisualStyleBackColor = false;
             this.editarPlatilloButton.Click += new System.EventHandler(this.editarPlatilloButton_Click);
@@ -352,9 +424,10 @@ namespace POS
             this.eliminarPostreButton.FlatAppearance.BorderSize = 0;
             this.eliminarPostreButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.eliminarPostreButton.Image = ((System.Drawing.Image)(resources.GetObject("eliminarPostreButton.Image")));
-            this.eliminarPostreButton.Location = new System.Drawing.Point(610, 386);
+            this.eliminarPostreButton.Location = new System.Drawing.Point(859, 619);
+            this.eliminarPostreButton.Margin = new System.Windows.Forms.Padding(4);
             this.eliminarPostreButton.Name = "eliminarPostreButton";
-            this.eliminarPostreButton.Size = new System.Drawing.Size(40, 30);
+            this.eliminarPostreButton.Size = new System.Drawing.Size(53, 37);
             this.eliminarPostreButton.TabIndex = 17;
             this.eliminarPostreButton.UseVisualStyleBackColor = false;
             this.eliminarPostreButton.Click += new System.EventHandler(this.eliminarPostreButton_Click);
@@ -365,9 +438,10 @@ namespace POS
             this.eliminarBebidaButton.FlatAppearance.BorderSize = 0;
             this.eliminarBebidaButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.eliminarBebidaButton.Image = ((System.Drawing.Image)(resources.GetObject("eliminarBebidaButton.Image")));
-            this.eliminarBebidaButton.Location = new System.Drawing.Point(379, 384);
+            this.eliminarBebidaButton.Location = new System.Drawing.Point(465, 611);
+            this.eliminarBebidaButton.Margin = new System.Windows.Forms.Padding(4);
             this.eliminarBebidaButton.Name = "eliminarBebidaButton";
-            this.eliminarBebidaButton.Size = new System.Drawing.Size(40, 30);
+            this.eliminarBebidaButton.Size = new System.Drawing.Size(53, 37);
             this.eliminarBebidaButton.TabIndex = 16;
             this.eliminarBebidaButton.UseVisualStyleBackColor = false;
             this.eliminarBebidaButton.Click += new System.EventHandler(this.eliminarBebidaButton_Click);
@@ -378,9 +452,10 @@ namespace POS
             this.eliminarPlatilloButton.FlatAppearance.BorderSize = 0;
             this.eliminarPlatilloButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.eliminarPlatilloButton.Image = ((System.Drawing.Image)(resources.GetObject("eliminarPlatilloButton.Image")));
-            this.eliminarPlatilloButton.Location = new System.Drawing.Point(163, 386);
+            this.eliminarPlatilloButton.Location = new System.Drawing.Point(196, 615);
+            this.eliminarPlatilloButton.Margin = new System.Windows.Forms.Padding(4);
             this.eliminarPlatilloButton.Name = "eliminarPlatilloButton";
-            this.eliminarPlatilloButton.Size = new System.Drawing.Size(40, 30);
+            this.eliminarPlatilloButton.Size = new System.Drawing.Size(53, 37);
             this.eliminarPlatilloButton.TabIndex = 15;
             this.eliminarPlatilloButton.UseVisualStyleBackColor = false;
             this.eliminarPlatilloButton.Click += new System.EventHandler(this.eliminarPlatilloButton_Click);
@@ -389,19 +464,20 @@ namespace POS
             // 
             this.logoPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.logoPictureBox.Image = global::POS.Properties.Resources.LOGO;
-            this.logoPictureBox.Location = new System.Drawing.Point(12, 47);
+            this.logoPictureBox.Location = new System.Drawing.Point(16, 58);
+            this.logoPictureBox.Margin = new System.Windows.Forms.Padding(4);
             this.logoPictureBox.Name = "logoPictureBox";
-            this.logoPictureBox.Size = new System.Drawing.Size(115, 100);
+            this.logoPictureBox.Size = new System.Drawing.Size(153, 123);
             this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logoPictureBox.TabIndex = 0;
             this.logoPictureBox.TabStop = false;
             // 
             // consultaMenuForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 653);
             this.Controls.Add(this.agregarMenuLabel);
             this.Controls.Add(this.agregarMenuButton);
             this.Controls.Add(this.editarPostreButton);
@@ -422,6 +498,7 @@ namespace POS
             this.Controls.Add(this.bebidasPanel);
             this.Controls.Add(this.platillosPanel);
             this.Controls.Add(this.logoPictureBox);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "consultaMenuForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta menú";

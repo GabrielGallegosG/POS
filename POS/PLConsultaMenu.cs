@@ -28,15 +28,19 @@ namespace POS
         {
             logo.Size = new Size(115,100);
             menu.Size = new Size(100,40);
-            platillos.Size = new Size(200, 40);
-            bebidas.Size = new Size(200, 40);
-            postres.Size = new Size(200, 40);
-            platillosDGV.Size = new Size(200, 150);
-            bebidasDGV.Size = new Size(200, 150);
-            postresDGV.Size = new Size(200, 150);
+
+            platillos.Size = new Size(245, 40);
+            bebidas.Size = new Size(245, 40);
+            postres.Size = new Size(245, 40);
+
+            platillosDGV.Size = new Size(740, 200);
+            bebidasDGV.Size = new Size(740, 200);
+            postresDGV.Size = new Size(740, 200);
+
             platillo.Size = new Size(120, 25);
             bebida.Size = new Size(120, 25);
             postre.Size = new Size(120, 25);
+
             modiPlatillo.Size = new Size(35,30);
             modiBebida.Size = new Size(35, 30);
             modiPostre.Size = new Size(35, 30);
@@ -50,24 +54,24 @@ namespace POS
             menu.Location = new Point(160, 80);
 
             platillos.Location = new Point(30, 180);
-            bebidas.Location = new Point(300, 180);
-            postres.Location = new Point(570, 180);
+            bebidas.Location = new Point(277, 180);
+            postres.Location = new Point(524, 180);
 
             platillosDGV.Location = new Point(30, 230);
-            bebidasDGV.Location = new Point(300, 230);
-            postresDGV.Location = new Point(570, 230);
+            bebidasDGV.Location = new Point(30, 230);
+            postresDGV.Location = new Point(30, 230);
 
-            platillo.Location = new Point(30, 400);
-            bebida.Location = new Point(300, 400);
-            postre.Location = new Point(570, 400);
+            platillo.Location = new Point(30, 430);
+            bebida.Location = new Point(300, 430);
+            postre.Location = new Point(570, 430);
 
-            modiPlatillo.Location = new Point(160, 395);
-            modiBebida.Location = new Point(430, 395);
-            modiPostre.Location = new Point(700, 395);
+            modiPlatillo.Location = new Point(160, 435);
+            modiBebida.Location = new Point(430, 435);
+            modiPostre.Location = new Point(700, 435);
 
-            eliPlatillo.Location = new Point(190,395);
-            eliBebida.Location = new Point(460,395);
-            eliPostre.Location = new Point(730,395);
+            eliPlatillo.Location = new Point(190,435);
+            eliBebida.Location = new Point(460,435);
+            eliPostre.Location = new Point(730,435);
 
             agregarMenuL.Location = new Point(585, 50);
             agregarMenuBtn.Location = new Point(740, 45);

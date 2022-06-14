@@ -46,9 +46,10 @@
             // 
             this.nuevaOrdenLabel.AutoSize = true;
             this.nuevaOrdenLabel.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nuevaOrdenLabel.Location = new System.Drawing.Point(613, 75);
+            this.nuevaOrdenLabel.Location = new System.Drawing.Point(817, 92);
+            this.nuevaOrdenLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nuevaOrdenLabel.Name = "nuevaOrdenLabel";
-            this.nuevaOrdenLabel.Size = new System.Drawing.Size(125, 19);
+            this.nuevaOrdenLabel.Size = new System.Drawing.Size(154, 24);
             this.nuevaOrdenLabel.TabIndex = 27;
             this.nuevaOrdenLabel.Text = "NUEVA ORDEN";
             // 
@@ -58,9 +59,10 @@
             this.agregarOrdenButton.FlatAppearance.BorderSize = 0;
             this.agregarOrdenButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.agregarOrdenButton.Image = global::POS.Properties.Resources.agregar;
-            this.agregarOrdenButton.Location = new System.Drawing.Point(744, 71);
+            this.agregarOrdenButton.Location = new System.Drawing.Point(992, 87);
+            this.agregarOrdenButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.agregarOrdenButton.Name = "agregarOrdenButton";
-            this.agregarOrdenButton.Size = new System.Drawing.Size(33, 29);
+            this.agregarOrdenButton.Size = new System.Drawing.Size(44, 36);
             this.agregarOrdenButton.TabIndex = 26;
             this.agregarOrdenButton.UseVisualStyleBackColor = false;
             this.agregarOrdenButton.Click += new System.EventHandler(this.agregarOrdenButton_Click);
@@ -76,8 +78,9 @@
             this.encabezadoPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.encabezadoPanel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.encabezadoPanel.Location = new System.Drawing.Point(0, 0);
+            this.encabezadoPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.encabezadoPanel.Name = "encabezadoPanel";
-            this.encabezadoPanel.Size = new System.Drawing.Size(800, 37);
+            this.encabezadoPanel.Size = new System.Drawing.Size(1067, 46);
             this.encabezadoPanel.TabIndex = 25;
             // 
             // usuariosButton
@@ -87,9 +90,10 @@
             this.usuariosButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.usuariosButton.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
             this.usuariosButton.ForeColor = System.Drawing.Color.White;
-            this.usuariosButton.Location = new System.Drawing.Point(678, 4);
+            this.usuariosButton.Location = new System.Drawing.Point(904, 5);
+            this.usuariosButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.usuariosButton.Name = "usuariosButton";
-            this.usuariosButton.Size = new System.Drawing.Size(110, 30);
+            this.usuariosButton.Size = new System.Drawing.Size(147, 37);
             this.usuariosButton.TabIndex = 11;
             this.usuariosButton.Text = "USUARIOS";
             this.usuariosButton.UseVisualStyleBackColor = false;
@@ -102,9 +106,10 @@
             this.ventasButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ventasButton.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
             this.ventasButton.ForeColor = System.Drawing.Color.White;
-            this.ventasButton.Location = new System.Drawing.Point(582, 4);
+            this.ventasButton.Location = new System.Drawing.Point(776, 5);
+            this.ventasButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ventasButton.Name = "ventasButton";
-            this.ventasButton.Size = new System.Drawing.Size(90, 30);
+            this.ventasButton.Size = new System.Drawing.Size(120, 37);
             this.ventasButton.TabIndex = 12;
             this.ventasButton.Text = "VENTAS";
             this.ventasButton.UseVisualStyleBackColor = false;
@@ -117,9 +122,10 @@
             this.ordenesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ordenesButton.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
             this.ordenesButton.ForeColor = System.Drawing.Color.White;
-            this.ordenesButton.Location = new System.Drawing.Point(474, 3);
+            this.ordenesButton.Location = new System.Drawing.Point(632, 4);
+            this.ordenesButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ordenesButton.Name = "ordenesButton";
-            this.ordenesButton.Size = new System.Drawing.Size(101, 30);
+            this.ordenesButton.Size = new System.Drawing.Size(135, 37);
             this.ordenesButton.TabIndex = 11;
             this.ordenesButton.Text = "ORDENES";
             this.ordenesButton.UseVisualStyleBackColor = false;
@@ -132,9 +138,10 @@
             this.menuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.menuButton.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
             this.menuButton.ForeColor = System.Drawing.Color.White;
-            this.menuButton.Location = new System.Drawing.Point(378, 3);
+            this.menuButton.Location = new System.Drawing.Point(504, 4);
+            this.menuButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.menuButton.Name = "menuButton";
-            this.menuButton.Size = new System.Drawing.Size(90, 30);
+            this.menuButton.Size = new System.Drawing.Size(120, 37);
             this.menuButton.TabIndex = 10;
             this.menuButton.Text = "MENÚ";
             this.menuButton.UseVisualStyleBackColor = false;
@@ -148,9 +155,10 @@
             this.inicioBbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.inicioBbutton.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
             this.inicioBbutton.ForeColor = System.Drawing.Color.White;
-            this.inicioBbutton.Location = new System.Drawing.Point(282, 3);
+            this.inicioBbutton.Location = new System.Drawing.Point(376, 4);
+            this.inicioBbutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.inicioBbutton.Name = "inicioBbutton";
-            this.inicioBbutton.Size = new System.Drawing.Size(90, 30);
+            this.inicioBbutton.Size = new System.Drawing.Size(120, 37);
             this.inicioBbutton.TabIndex = 9;
             this.inicioBbutton.Text = "INICIO";
             this.inicioBbutton.UseVisualStyleBackColor = false;
@@ -159,9 +167,10 @@
             // 
             this.encabezadoLabel.AutoSize = true;
             this.encabezadoLabel.Font = new System.Drawing.Font("Gadugi", 18.75F, System.Drawing.FontStyle.Bold);
-            this.encabezadoLabel.Location = new System.Drawing.Point(124, 75);
+            this.encabezadoLabel.Location = new System.Drawing.Point(165, 92);
+            this.encabezadoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.encabezadoLabel.Name = "encabezadoLabel";
-            this.encabezadoLabel.Size = new System.Drawing.Size(126, 30);
+            this.encabezadoLabel.Size = new System.Drawing.Size(163, 38);
             this.encabezadoLabel.TabIndex = 24;
             this.encabezadoLabel.Text = "ORDENES";
             this.encabezadoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -170,24 +179,26 @@
             // 
             this.logoPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.logoPictureBox.Image = global::POS.Properties.Resources.LOGO;
-            this.logoPictureBox.Location = new System.Drawing.Point(3, 43);
+            this.logoPictureBox.Location = new System.Drawing.Point(4, 53);
+            this.logoPictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.logoPictureBox.Name = "logoPictureBox";
-            this.logoPictureBox.Size = new System.Drawing.Size(115, 100);
+            this.logoPictureBox.Size = new System.Drawing.Size(153, 123);
             this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logoPictureBox.TabIndex = 23;
             this.logoPictureBox.TabStop = false;
             // 
             // consultarOrdenesForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 653);
             this.Controls.Add(this.nuevaOrdenLabel);
             this.Controls.Add(this.agregarOrdenButton);
             this.Controls.Add(this.encabezadoPanel);
             this.Controls.Add(this.encabezadoLabel);
             this.Controls.Add(this.logoPictureBox);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "consultarOrdenesForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta ordenes";
