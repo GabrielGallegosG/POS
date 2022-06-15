@@ -49,9 +49,10 @@ namespace POS
             // 
             this.nombreLabel.AutoSize = true;
             this.nombreLabel.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombreLabel.Location = new System.Drawing.Point(40, 127);
+            this.nombreLabel.Location = new System.Drawing.Point(53, 156);
+            this.nombreLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nombreLabel.Name = "nombreLabel";
-            this.nombreLabel.Size = new System.Drawing.Size(77, 19);
+            this.nombreLabel.Size = new System.Drawing.Size(95, 24);
             this.nombreLabel.TabIndex = 18;
             this.nombreLabel.Text = "NOMBRE:";
             // 
@@ -59,9 +60,10 @@ namespace POS
             // 
             this.idSeleccionadoLabel.BackColor = System.Drawing.Color.Transparent;
             this.idSeleccionadoLabel.Font = new System.Drawing.Font("Gadugi", 12F);
-            this.idSeleccionadoLabel.Location = new System.Drawing.Point(83, 83);
+            this.idSeleccionadoLabel.Location = new System.Drawing.Point(111, 102);
+            this.idSeleccionadoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.idSeleccionadoLabel.Name = "idSeleccionadoLabel";
-            this.idSeleccionadoLabel.Size = new System.Drawing.Size(100, 23);
+            this.idSeleccionadoLabel.Size = new System.Drawing.Size(133, 28);
             this.idSeleccionadoLabel.TabIndex = 17;
             // 
             // encabezadoPanel
@@ -69,8 +71,9 @@ namespace POS
             this.encabezadoPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
             this.encabezadoPanel.Controls.Add(this.encabezadoLabel);
             this.encabezadoPanel.Location = new System.Drawing.Point(0, 0);
+            this.encabezadoPanel.Margin = new System.Windows.Forms.Padding(4);
             this.encabezadoPanel.Name = "encabezadoPanel";
-            this.encabezadoPanel.Size = new System.Drawing.Size(574, 40);
+            this.encabezadoPanel.Size = new System.Drawing.Size(765, 49);
             this.encabezadoPanel.TabIndex = 15;
             // 
             // encabezadoLabel
@@ -78,9 +81,10 @@ namespace POS
             this.encabezadoLabel.AutoSize = true;
             this.encabezadoLabel.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.encabezadoLabel.ForeColor = System.Drawing.Color.White;
-            this.encabezadoLabel.Location = new System.Drawing.Point(11, 9);
+            this.encabezadoLabel.Location = new System.Drawing.Point(15, 11);
+            this.encabezadoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.encabezadoLabel.Name = "encabezadoLabel";
-            this.encabezadoLabel.Size = new System.Drawing.Size(554, 25);
+            this.encabezadoLabel.Size = new System.Drawing.Size(704, 32);
             this.encabezadoLabel.TabIndex = 0;
             this.encabezadoLabel.Text = "¿SE ENCUENTRA SEGURO DE REALIZAR ESTA ACCIÓN?";
             // 
@@ -89,55 +93,62 @@ namespace POS
             this.notaRichTextBox.BackColor = System.Drawing.Color.White;
             this.notaRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.notaRichTextBox.Font = new System.Drawing.Font("Gadugi", 12F);
-            this.notaRichTextBox.Location = new System.Drawing.Point(16, 260);
+            this.notaRichTextBox.Location = new System.Drawing.Point(21, 320);
+            this.notaRichTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.notaRichTextBox.Name = "notaRichTextBox";
             this.notaRichTextBox.ReadOnly = true;
-            this.notaRichTextBox.Size = new System.Drawing.Size(491, 61);
+            this.notaRichTextBox.Size = new System.Drawing.Size(655, 75);
             this.notaRichTextBox.TabIndex = 27;
             this.notaRichTextBox.Text = "*Nota: Se eliminará de manera permanente el elemento seleccionado.\nSeleccione “El" +
     "iminar” para continuar con la acción…";
+            this.notaRichTextBox.TextChanged += new System.EventHandler(this.notaRichTextBox_TextChanged);
             // 
             // nombreSeleccionadoLabel
             // 
             this.nombreSeleccionadoLabel.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombreSeleccionadoLabel.Location = new System.Drawing.Point(123, 127);
+            this.nombreSeleccionadoLabel.Location = new System.Drawing.Point(164, 156);
+            this.nombreSeleccionadoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nombreSeleccionadoLabel.Name = "nombreSeleccionadoLabel";
-            this.nombreSeleccionadoLabel.Size = new System.Drawing.Size(77, 19);
+            this.nombreSeleccionadoLabel.Size = new System.Drawing.Size(103, 23);
             this.nombreSeleccionadoLabel.TabIndex = 28;
             // 
             // idLabel
             // 
             this.idLabel.AutoSize = true;
             this.idLabel.Font = new System.Drawing.Font("Gadugi", 12F);
-            this.idLabel.Location = new System.Drawing.Point(41, 84);
+            this.idLabel.Location = new System.Drawing.Point(55, 103);
+            this.idLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.idLabel.Name = "idLabel";
-            this.idLabel.Size = new System.Drawing.Size(38, 19);
+            this.idLabel.Size = new System.Drawing.Size(47, 24);
             this.idLabel.TabIndex = 16;
             this.idLabel.Text = "ID - ";
             // 
             // seccionSeleccionadoLabel
             // 
             this.seccionSeleccionadoLabel.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.seccionSeleccionadoLabel.Location = new System.Drawing.Point(123, 178);
+            this.seccionSeleccionadoLabel.Location = new System.Drawing.Point(164, 219);
+            this.seccionSeleccionadoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.seccionSeleccionadoLabel.Name = "seccionSeleccionadoLabel";
-            this.seccionSeleccionadoLabel.Size = new System.Drawing.Size(77, 19);
+            this.seccionSeleccionadoLabel.Size = new System.Drawing.Size(103, 23);
             this.seccionSeleccionadoLabel.TabIndex = 29;
             // 
             // precioSeleccionadoLabel
             // 
             this.precioSeleccionadoLabel.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.precioSeleccionadoLabel.Location = new System.Drawing.Point(370, 178);
+            this.precioSeleccionadoLabel.Location = new System.Drawing.Point(493, 219);
+            this.precioSeleccionadoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.precioSeleccionadoLabel.Name = "precioSeleccionadoLabel";
-            this.precioSeleccionadoLabel.Size = new System.Drawing.Size(65, 19);
+            this.precioSeleccionadoLabel.Size = new System.Drawing.Size(87, 23);
             this.precioSeleccionadoLabel.TabIndex = 30;
             // 
             // seccionLabel
             // 
             this.seccionLabel.AutoSize = true;
             this.seccionLabel.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.seccionLabel.Location = new System.Drawing.Point(40, 178);
+            this.seccionLabel.Location = new System.Drawing.Point(53, 219);
+            this.seccionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.seccionLabel.Name = "seccionLabel";
-            this.seccionLabel.Size = new System.Drawing.Size(77, 19);
+            this.seccionLabel.Size = new System.Drawing.Size(94, 24);
             this.seccionLabel.TabIndex = 19;
             this.seccionLabel.Text = "SECCIÓN:";
             // 
@@ -145,9 +156,10 @@ namespace POS
             // 
             this.precioLabel.AutoSize = true;
             this.precioLabel.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.precioLabel.Location = new System.Drawing.Point(284, 178);
+            this.precioLabel.Location = new System.Drawing.Point(379, 219);
+            this.precioLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.precioLabel.Name = "precioLabel";
-            this.precioLabel.Size = new System.Drawing.Size(65, 19);
+            this.precioLabel.Size = new System.Drawing.Size(79, 24);
             this.precioLabel.TabIndex = 20;
             this.precioLabel.Text = "PRECIO:";
             // 
@@ -161,10 +173,11 @@ namespace POS
             this.cancelarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelarButton.Font = new System.Drawing.Font("Gadugi", 10F, System.Drawing.FontStyle.Bold);
             this.cancelarButton.ForeColor = System.Drawing.Color.Black;
-            this.cancelarButton.Location = new System.Drawing.Point(16, 327);
+            this.cancelarButton.Location = new System.Drawing.Point(21, 402);
+            this.cancelarButton.Margin = new System.Windows.Forms.Padding(4);
             this.cancelarButton.Name = "cancelarButton";
-            this.cancelarButton.Padding = new System.Windows.Forms.Padding(3);
-            this.cancelarButton.Size = new System.Drawing.Size(121, 39);
+            this.cancelarButton.Padding = new System.Windows.Forms.Padding(4);
+            this.cancelarButton.Size = new System.Drawing.Size(161, 48);
             this.cancelarButton.TabIndex = 31;
             this.cancelarButton.Text = "CANCELAR";
             this.cancelarButton.UseVisualStyleBackColor = false;
@@ -180,20 +193,22 @@ namespace POS
             this.eliminarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.eliminarButton.Font = new System.Drawing.Font("Gadugi", 10F, System.Drawing.FontStyle.Bold);
             this.eliminarButton.ForeColor = System.Drawing.Color.Black;
-            this.eliminarButton.Location = new System.Drawing.Point(386, 327);
+            this.eliminarButton.Location = new System.Drawing.Point(515, 402);
+            this.eliminarButton.Margin = new System.Windows.Forms.Padding(4);
             this.eliminarButton.Name = "eliminarButton";
-            this.eliminarButton.Padding = new System.Windows.Forms.Padding(3);
-            this.eliminarButton.Size = new System.Drawing.Size(121, 39);
+            this.eliminarButton.Padding = new System.Windows.Forms.Padding(4);
+            this.eliminarButton.Size = new System.Drawing.Size(161, 48);
             this.eliminarButton.TabIndex = 32;
             this.eliminarButton.Text = "ELIMINAR";
             this.eliminarButton.UseVisualStyleBackColor = false;
+            this.eliminarButton.Click += new System.EventHandler(this.eliminarButton_Click);
             // 
             // eliminarMenuForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(569, 381);
+            this.ClientSize = new System.Drawing.Size(759, 469);
             this.Controls.Add(this.eliminarButton);
             this.Controls.Add(this.cancelarButton);
             this.Controls.Add(this.precioSeleccionadoLabel);
@@ -206,6 +221,7 @@ namespace POS
             this.Controls.Add(this.idSeleccionadoLabel);
             this.Controls.Add(this.idLabel);
             this.Controls.Add(this.encabezadoPanel);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "eliminarMenuForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Eliminar";

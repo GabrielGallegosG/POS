@@ -37,16 +37,16 @@ namespace POS
             bebidasDGV.Size = new Size(740, 200);
             postresDGV.Size = new Size(740, 200);
 
-            platillo.Size = new Size(120, 35);
-            bebida.Size = new Size(120, 30);
-            postre.Size = new Size(120, 30);
+            platillo.Size = new Size(600, 30);
+            bebida.Size = new Size(600, 30);
+            postre.Size = new Size(600, 30);
 
             modiPlatillo.Size = new Size(35,35);
-            modiBebida.Size = new Size(35, 30);
-            modiPostre.Size = new Size(35, 30);
+            modiBebida.Size = new Size(35, 35);
+            modiPostre.Size = new Size(35, 35);
             eliPlatillo.Size = new Size(35, 35);
-            eliBebida.Size = new Size(35, 30);
-            eliPostre.Size = new Size(35, 30);
+            eliBebida.Size = new Size(35, 35);
+            eliPostre.Size = new Size(35, 35);
             agregarMenuBtn.Size = new Size(45, 30);
 
             logo.Location = new Point(30,40);
@@ -61,17 +61,17 @@ namespace POS
             bebidasDGV.Location = new Point(30, 230);
             postresDGV.Location = new Point(30, 230);
 
-            platillo.Location = new Point(570, 440);
-            bebida.Location = new Point(570, 440);
-            postre.Location = new Point(570, 440);
+            platillo.Location = new Point(30, 455);
+            bebida.Location = new Point(30, 455);
+            postre.Location = new Point(30, 455);
 
-            modiPlatillo.Location = new Point(700, 440);
-            modiBebida.Location = new Point(700, 440);
-            modiPostre.Location = new Point(700, 440);
+            modiPlatillo.Location = new Point(695, 450);
+            modiBebida.Location = new Point(695, 450);
+            modiPostre.Location = new Point(695, 450);
 
-            eliPlatillo.Location = new Point(730, 440);
-            eliBebida.Location = new Point(730, 440);
-            eliPostre.Location = new Point(730,440);
+            eliPlatillo.Location = new Point(735, 450);
+            eliBebida.Location = new Point(735, 450);
+            eliPostre.Location = new Point(735,450);
 
             agregarMenuL.Location = new Point(585, 50);
             agregarMenuBtn.Location = new Point(740, 45);

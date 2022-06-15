@@ -10,7 +10,7 @@ namespace POS
         {
             //Tamaños
             id.Size = new Size(20, 20);
-            idSeleccionado.Size = new Size(100, 20);
+            idSeleccionado.Size = new Size(500, 20);
             nombreTB.Size = new Size(320, 20);
             seccionCB.Size = new Size(120, 20);
             precioTB.Size = new Size(100, 20);
