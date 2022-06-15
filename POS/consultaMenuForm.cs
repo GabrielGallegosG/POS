@@ -35,37 +35,61 @@ namespace POS
 
         private void editarPlatilloButton_Click(object sender, EventArgs e)
         {
-            editarMenuForm frm = new editarMenuForm();
+            string id = BLEditarElemento.idSeleccionadoDT(platilloLabel.Text);
+            string precio = BLEditarElemento.precioSeleccionadoDT(platilloLabel.Text);
+            int platillo = 0;
+            string descripcion = BLEditarElemento.descripcionSeleccionadoDT(platilloLabel.Text);
+            editarMenuForm frm = new editarMenuForm(id, platilloLabel.Text, precio, platillo, descripcion);
             frm.ShowDialog();
         }
 
         private void editarBebidaButton_Click(object sender, EventArgs e)
         {
-            editarMenuForm frm = new editarMenuForm();
+            string id = BLEditarElemento.idSeleccionadoDT(bebidaLabel.Text);
+            string precio = BLEditarElemento.precioSeleccionadoDT(bebidaLabel.Text);
+            int platillo = 1;
+            string descripcion = BLEditarElemento.descripcionSeleccionadoDT(bebidaLabel.Text);
+            editarMenuForm frm = new editarMenuForm(id, bebidaLabel.Text, precio, platillo, descripcion);
             frm.ShowDialog();
         }
 
         private void editarPostreButton_Click(object sender, EventArgs e)
         {
-            editarMenuForm frm = new editarMenuForm();
+            string id = BLEditarElemento.idSeleccionadoDT(postreLabel.Text);
+            string precio = BLEditarElemento.precioSeleccionadoDT(postreLabel.Text);
+            int platillo = 2;
+            string descripcion = BLEditarElemento.descripcionSeleccionadoDT(postreLabel.Text);
+            editarMenuForm frm = new editarMenuForm(id, postreLabel.Text, precio, platillo, descripcion);
             frm.ShowDialog();
         }
 
         private void eliminarPlatilloButton_Click(object sender, EventArgs e)
         {
-            eliminarMenuForm frm = new eliminarMenuForm();
+            string id = BLEditarElemento.idSeleccionadoDT(platilloLabel.Text);
+            string precio = BLEditarElemento.precioSeleccionadoDT(platilloLabel.Text);
+            int platillo = 0;
+            string descripcion = BLEditarElemento.descripcionSeleccionadoDT(platilloLabel.Text);
+            eliminarMenuForm frm = new eliminarMenuForm(id, platilloLabel.Text, precio, platillo, descripcion);
             frm.ShowDialog();
         }
 
         private void eliminarBebidaButton_Click(object sender, EventArgs e)
         {
-            eliminarMenuForm frm = new eliminarMenuForm();
+            string id = BLEditarElemento.idSeleccionadoDT(bebidaLabel.Text);
+            string precio = BLEditarElemento.precioSeleccionadoDT(bebidaLabel.Text);
+            int platillo = 1;
+            string descripcion = BLEditarElemento.descripcionSeleccionadoDT(bebidaLabel.Text);
+            eliminarMenuForm frm = new eliminarMenuForm(id, bebidaLabel.Text, precio, platillo, descripcion);
             frm.ShowDialog();
         }
 
         private void eliminarPostreButton_Click(object sender, EventArgs e)
         {
-            eliminarMenuForm frm = new eliminarMenuForm();
+            string id = BLEditarElemento.idSeleccionadoDT(postreLabel.Text);
+            string precio = BLEditarElemento.precioSeleccionadoDT(postreLabel.Text);
+            int platillo = 2;
+            string descripcion = BLEditarElemento.descripcionSeleccionadoDT(postreLabel.Text);
+            eliminarMenuForm frm = new eliminarMenuForm(id, postreLabel.Text, precio, platillo, descripcion);
             frm.ShowDialog();
         }
 
@@ -93,6 +117,7 @@ namespace POS
         {
             platillosDataGridView.DataSource = BLConsultaElemento.PlatillosDT();
             platillosPanel.BackColor = Color.DodgerBlue;
+            platilloLabel.Visible = true;
         }
 
         private void mostrarPlatillosPanel()
@@ -100,6 +125,19 @@ namespace POS
             platillosDataGridView.Visible = true;
             bebidasDataGridView.Visible = false;
             postresDataGridView.Visible = false;
+
+            platilloLabel.Visible = true;
+            bebidaLabel.Visible = false;
+            postreLabel.Visible = false;
+
+            editarPlatilloButton.Visible = true;
+            editarBebidaButton.Visible = false;
+            editarPostreButton.Visible = false;
+
+            eliminarPlatilloButton.Visible = true;
+            eliminarPostreButton.Visible = false;
+            eliminarBebidaButton.Visible = false;
+
             platillosDataGridView.DataSource = BLConsultaElemento.PlatillosDT();
             
             platillosPanel.BackColor = Color.DodgerBlue;
@@ -112,6 +150,19 @@ namespace POS
             platillosDataGridView.Visible = false;
             bebidasDataGridView.Visible = true;
             postresDataGridView.Visible = false;
+
+            platilloLabel.Visible = false;
+            bebidaLabel.Visible = true;
+            postreLabel.Visible = false;
+
+            editarPlatilloButton.Visible = false;
+            editarBebidaButton.Visible = true;
+            editarPostreButton.Visible = false;
+
+            eliminarPlatilloButton.Visible = false;
+            eliminarPostreButton.Visible = false;
+            eliminarBebidaButton.Visible = true;
+
             bebidasDataGridView.DataSource = BLConsultaElemento.BebidasDT();
 
             platillosPanel.BackColor = Color.FromArgb(0, 87, 158);
@@ -124,6 +175,19 @@ namespace POS
             platillosDataGridView.Visible = false;
             bebidasDataGridView.Visible = false;
             postresDataGridView.Visible = true;
+
+            platilloLabel.Visible = false;
+            bebidaLabel.Visible = false;
+            postreLabel.Visible = true;
+
+            editarPlatilloButton.Visible = false;
+            editarBebidaButton.Visible = false;
+            editarPostreButton.Visible = true;
+
+            eliminarPlatilloButton.Visible = false;
+            eliminarPostreButton.Visible = true;
+            eliminarBebidaButton.Visible = false;
+
             postresDataGridView.DataSource = BLConsultaElemento.PostresDT();
 
             platillosPanel.BackColor = Color.FromArgb(0, 87, 158);
@@ -137,6 +201,23 @@ namespace POS
         private void platillosLabel_Click(object sender, EventArgs e) { mostrarPlatillosPanel(); }
         private void bebidasLabel_Click(object sender, EventArgs e) { mostrarBebidasPanel(); }
         private void postresLabel_Click(object sender, EventArgs e) { mostrarPostresPanel(); }
-        
+
+        private void platillosDataGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            var row = (sender as DataGridView).CurrentRow;
+            platilloLabel.Text = row.Cells[0].Value.ToString();
+        }
+
+        private void bebidasDataGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            var row = (sender as DataGridView).CurrentRow;
+            bebidaLabel.Text = row.Cells[0].Value.ToString();
+        }
+
+        private void postresDataGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            var row = (sender as DataGridView).CurrentRow;
+            postreLabel.Text = row.Cells[0].Value.ToString();
+        }
     }
 }

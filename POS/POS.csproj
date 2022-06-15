@@ -75,6 +75,8 @@
     </Compile>
     <Compile Include="BLAgregarElemento.cs" />
     <Compile Include="BLConsultaElemento.cs" />
+    <Compile Include="BLEditarElemento.cs" />
+    <Compile Include="BLEliminarElemento.cs" />
     <Compile Include="buttonLogin.cs">
       <SubType>Component</SubType>
     </Compile>

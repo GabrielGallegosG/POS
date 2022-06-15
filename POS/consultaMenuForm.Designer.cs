@@ -32,6 +32,9 @@ namespace POS
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(consultaMenuForm));
             this.platillosPanel = new System.Windows.Forms.Panel();
             this.platillosLabel = new System.Windows.Forms.Label();
@@ -184,6 +187,7 @@ namespace POS
             // 
             this.usuariosButton.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.usuariosButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.usuariosButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.usuariosButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.usuariosButton.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
             this.usuariosButton.ForeColor = System.Drawing.Color.White;
@@ -199,6 +203,7 @@ namespace POS
             // 
             this.ventasButton.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.ventasButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.ventasButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ventasButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ventasButton.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
             this.ventasButton.ForeColor = System.Drawing.Color.White;
@@ -214,6 +219,7 @@ namespace POS
             // 
             this.ordenesButton.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.ordenesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.ordenesButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ordenesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ordenesButton.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
             this.ordenesButton.ForeColor = System.Drawing.Color.White;
@@ -230,6 +236,7 @@ namespace POS
             // 
             this.menuButton.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.menuButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.menuButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.menuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.menuButton.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
             this.menuButton.ForeColor = System.Drawing.Color.White;
@@ -247,6 +254,7 @@ namespace POS
             this.inicioBbutton.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.inicioBbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.inicioBbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.inicioBbutton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.inicioBbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.inicioBbutton.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
             this.inicioBbutton.ForeColor = System.Drawing.Color.White;
@@ -269,6 +277,13 @@ namespace POS
             this.platillosDataGridView.BackgroundColor = System.Drawing.Color.White;
             this.platillosDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.platillosDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.platillosDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.platillosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.platillosDataGridView.Location = new System.Drawing.Point(133, 265);
             this.platillosDataGridView.Margin = new System.Windows.Forms.Padding(4);
@@ -276,17 +291,25 @@ namespace POS
             this.platillosDataGridView.RowHeadersWidth = 51;
             this.platillosDataGridView.Size = new System.Drawing.Size(791, 92);
             this.platillosDataGridView.TabIndex = 9;
+            this.platillosDataGridView.SelectionChanged += new System.EventHandler(this.platillosDataGridView_SelectionChanged);
             // 
             // bebidasDataGridView
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.RoyalBlue;
-            this.bebidasDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.RoyalBlue;
+            this.bebidasDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.bebidasDataGridView.BackgroundColor = System.Drawing.Color.White;
             this.bebidasDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.bebidasDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bebidasDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.bebidasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bebidasDataGridView.Location = new System.Drawing.Point(133, 365);
             this.bebidasDataGridView.Margin = new System.Windows.Forms.Padding(4);
@@ -295,17 +318,25 @@ namespace POS
             this.bebidasDataGridView.Size = new System.Drawing.Size(791, 88);
             this.bebidasDataGridView.TabIndex = 10;
             this.bebidasDataGridView.Visible = false;
+            this.bebidasDataGridView.SelectionChanged += new System.EventHandler(this.bebidasDataGridView_SelectionChanged);
             // 
             // postresDataGridView
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.RoyalBlue;
-            this.postresDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.RoyalBlue;
+            this.postresDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.postresDataGridView.BackgroundColor = System.Drawing.Color.White;
             this.postresDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.postresDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.postresDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.postresDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.postresDataGridView.Location = new System.Drawing.Point(133, 462);
             this.postresDataGridView.Margin = new System.Windows.Forms.Padding(4);
@@ -314,6 +345,7 @@ namespace POS
             this.postresDataGridView.Size = new System.Drawing.Size(791, 88);
             this.postresDataGridView.TabIndex = 11;
             this.postresDataGridView.Visible = false;
+            this.postresDataGridView.SelectionChanged += new System.EventHandler(this.postresDataGridView_SelectionChanged);
             // 
             // platilloLabel
             // 
@@ -364,6 +396,7 @@ namespace POS
             // agregarMenuButton
             // 
             this.agregarMenuButton.BackColor = System.Drawing.Color.Transparent;
+            this.agregarMenuButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.agregarMenuButton.FlatAppearance.BorderSize = 0;
             this.agregarMenuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.agregarMenuButton.Image = global::POS.Properties.Resources.agregar;
@@ -380,6 +413,7 @@ namespace POS
             this.editarPostreButton.BackColor = System.Drawing.Color.Transparent;
             this.editarPostreButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("editarPostreButton.BackgroundImage")));
             this.editarPostreButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.editarPostreButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.editarPostreButton.FlatAppearance.BorderSize = 0;
             this.editarPostreButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editarPostreButton.Location = new System.Drawing.Point(829, 609);
@@ -396,6 +430,7 @@ namespace POS
             this.editarBebidaButton.BackColor = System.Drawing.Color.Transparent;
             this.editarBebidaButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("editarBebidaButton.BackgroundImage")));
             this.editarBebidaButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.editarBebidaButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.editarBebidaButton.FlatAppearance.BorderSize = 0;
             this.editarBebidaButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editarBebidaButton.Location = new System.Drawing.Point(413, 607);
@@ -412,6 +447,7 @@ namespace POS
             this.editarPlatilloButton.BackColor = System.Drawing.Color.Transparent;
             this.editarPlatilloButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("editarPlatilloButton.BackgroundImage")));
             this.editarPlatilloButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.editarPlatilloButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.editarPlatilloButton.FlatAppearance.BorderSize = 0;
             this.editarPlatilloButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editarPlatilloButton.Location = new System.Drawing.Point(829, 561);
@@ -427,6 +463,7 @@ namespace POS
             this.eliminarPostreButton.BackColor = System.Drawing.Color.Transparent;
             this.eliminarPostreButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("eliminarPostreButton.BackgroundImage")));
             this.eliminarPostreButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.eliminarPostreButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.eliminarPostreButton.FlatAppearance.BorderSize = 0;
             this.eliminarPostreButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.eliminarPostreButton.Location = new System.Drawing.Point(871, 609);
@@ -443,6 +480,7 @@ namespace POS
             this.eliminarBebidaButton.BackColor = System.Drawing.Color.Transparent;
             this.eliminarBebidaButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("eliminarBebidaButton.BackgroundImage")));
             this.eliminarBebidaButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.eliminarBebidaButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.eliminarBebidaButton.FlatAppearance.BorderSize = 0;
             this.eliminarBebidaButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.eliminarBebidaButton.Location = new System.Drawing.Point(454, 609);
@@ -459,6 +497,7 @@ namespace POS
             this.eliminarPlatilloButton.BackColor = System.Drawing.Color.Transparent;
             this.eliminarPlatilloButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("eliminarPlatilloButton.BackgroundImage")));
             this.eliminarPlatilloButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.eliminarPlatilloButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.eliminarPlatilloButton.FlatAppearance.BorderSize = 0;
             this.eliminarPlatilloButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.eliminarPlatilloButton.Location = new System.Drawing.Point(871, 561);

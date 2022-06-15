@@ -11,7 +11,7 @@ namespace POS
             inicio.Size = new Size(160, 30);
             empleado.Size = new Size(230, 40);
             admin.Size = new Size(245, 40);
-            panel.Size = new Size(450, 240);
+            panel.Size = new Size(450, 260);
 
             encabezado.Location = new Point(280, 10);
             inicio.Location = new Point(300, 80);
@@ -28,7 +28,7 @@ namespace POS
             usuario.Size = new Size(360, 20);
             contraseñaL.Size = new Size(150, 20);
             contraseña.Size = new Size(360, 20);
-            inicio.Size = new Size(135, 30);
+            inicio.Size = new Size(155, 35);
 
             usuarioL.Location = new Point(45, 20);
             usuario.Location = new Point(45, 50);

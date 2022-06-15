@@ -97,10 +97,11 @@ namespace POS
             this.iniciarSesionButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
             this.iniciarSesionButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
             this.iniciarSesionButton.BorderRadius = 20;
+            this.iniciarSesionButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iniciarSesionButton.FlatAppearance.BorderSize = 0;
             this.iniciarSesionButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(200)))));
             this.iniciarSesionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iniciarSesionButton.Font = new System.Drawing.Font("Gadugi", 10F, System.Drawing.FontStyle.Bold);
+            this.iniciarSesionButton.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
             this.iniciarSesionButton.ForeColor = System.Drawing.Color.White;
             this.iniciarSesionButton.Location = new System.Drawing.Point(176, 235);
             this.iniciarSesionButton.Margin = new System.Windows.Forms.Padding(4);
@@ -158,6 +159,7 @@ namespace POS
             this.administradorButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
             this.administradorButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
             this.administradorButton.BorderRadius = 20;
+            this.administradorButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.administradorButton.FlatAppearance.BorderSize = 0;
             this.administradorButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(200)))));
             this.administradorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -178,6 +180,7 @@ namespace POS
             this.empleadoButton.BackColor = System.Drawing.Color.DodgerBlue;
             this.empleadoButton.BackgroundColor = System.Drawing.Color.DodgerBlue;
             this.empleadoButton.BorderRadius = 20;
+            this.empleadoButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.empleadoButton.FlatAppearance.BorderSize = 0;
             this.empleadoButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(200)))));
             this.empleadoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
