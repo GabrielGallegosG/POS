@@ -51,8 +51,8 @@ namespace POS
 
         private void usuariosButton_Click(object sender, EventArgs e)
         {
-            editarOrdenForm frm = new editarOrdenForm();
-            frm.ShowDialog();
+            consultarUsuariosForm frm = new consultarUsuariosForm();
+            frm.Show();
         }
     }
 }

@@ -5,19 +5,17 @@ namespace POS
 {
     class PLLogIn
     {
-        public static void posicionLogin(Label encabezado, Label inicio, buttonLogin empleado, buttonLogin admin, Panel panel) { 
+        public static void posicionLogin(Panel encabezadoP,Label encabezado, Label inicio, buttonLogin empleado, buttonLogin admin, Panel panel) { 
 
-            encabezado.Size = new Size(150, 30);
-            inicio.Size = new Size(160, 30);
             empleado.Size = new Size(230, 40);
             admin.Size = new Size(245, 40);
-            panel.Size = new Size(450, 260);
+            panel.Size = new Size(540, 320);
 
-            encabezado.Location = new Point(280, 10);
-            inicio.Location = new Point(300, 80);
-            empleado.Location = new Point(110, 130);
-            admin.Location = new Point(430, 130);
-            panel.Location = new Point(160, 200);
+
+            inicio.Location = new Point(550, 100);
+            empleado.Location = new Point(400, 160);
+            admin.Location = new Point(730, 160);
+            panel.Location = new Point(420, 270);
 
             panel.Hide();
         }
@@ -25,16 +23,16 @@ namespace POS
         public static void posicionPanel(Label usuarioL, TextBox usuario, Label contraseñaL, TextBox contraseña, buttonLogin inicio)
         {
             usuarioL.Size = new Size(170, 20);
-            usuario.Size = new Size(360, 20);
+            usuario.Size = new Size(380, 20);
             contraseñaL.Size = new Size(150, 20);
-            contraseña.Size = new Size(360, 20);
+            contraseña.Size = new Size(380, 20);
             inicio.Size = new Size(155, 35);
 
-            usuarioL.Location = new Point(45, 20);
-            usuario.Location = new Point(45, 50);
-            contraseñaL.Location = new Point(45, 110);
-            contraseña.Location = new Point(45, 140);
-            inicio.Location = new Point(150, 200);
+            usuarioL.Location = new Point(80, 50);
+            usuario.Location = new Point(80, 80);
+            contraseñaL.Location = new Point(80, 150);
+            contraseña.Location = new Point(80, 180);
+            inicio.Location = new Point(190, 250);
         }
     }
 }

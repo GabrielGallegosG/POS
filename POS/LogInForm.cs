@@ -15,7 +15,7 @@ namespace POS
         public LogInForm()
         {
             InitializeComponent();
-            PLLogIn.posicionLogin(encabezadoLabel, inicioSesionLabel, empleadoButton, administradorButton,contenedorPanel);
+            PLLogIn.posicionLogin(encabezadoPanel,encabezadoLabel, inicioSesionLabel, empleadoButton, administradorButton,contenedorPanel);
             PLLogIn.posicionPanel(usuarioLabel, usuarioTextBox, contraseñaLabel, contraseñaTextBox, iniciarSesionButton);
         }
 
@@ -39,6 +39,8 @@ namespace POS
             this.Hide();
             consultaMenuForm consultaMenu = new consultaMenuForm();
             consultaMenu.Show();
+            /*consultarUsuariosForm consultaUsuario = new consultarUsuariosForm();
+            consultaUsuario.Show(); */
         }
     }
 }

@@ -103,6 +103,12 @@
     <Compile Include="consultarOrdenesForm.Designer.cs">
       <DependentUpon>consultarOrdenesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="consultarUsuariosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="consultarUsuariosForm.Designer.cs">
+      <DependentUpon>consultarUsuariosForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="dataLayer\elemento.cs">
       <DependentUpon>POSBDModel.tt</DependentUpon>
     </Compile>
@@ -165,6 +171,7 @@
     <Compile Include="PLAgregarOrden.cs" />
     <Compile Include="PLConsultaMenu.cs" />
     <Compile Include="PLConsultaOrdenes.cs" />
+    <Compile Include="PLConsultarUsuarios.cs" />
     <Compile Include="PLEditarMenu.cs" />
     <Compile Include="PLEditarOrden.cs" />
     <Compile Include="PLEliminarMenu.cs" />
@@ -192,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="consultarOrdenesForm.resx">
       <DependentUpon>consultarOrdenesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="consultarUsuariosForm.resx">
+      <DependentUpon>consultarUsuariosForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="editarMenuForm.resx">
       <DependentUpon>editarMenuForm.cs</DependentUpon>

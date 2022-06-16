@@ -219,5 +219,11 @@ namespace POS
             var row = (sender as DataGridView).CurrentRow;
             postreLabel.Text = row.Cells[0].Value.ToString();
         }
+
+        private void usuariosButton_Click(object sender, EventArgs e)
+        {
+            consultarUsuariosForm frm = new consultarUsuariosForm();
+            frm.Show();
+        }
     }
 }
