@@ -67,9 +67,9 @@ namespace POS
             this.encabezadoLabel.ForeColor = System.Drawing.Color.White;
             this.encabezadoLabel.Location = new System.Drawing.Point(12, 9);
             this.encabezadoLabel.Name = "encabezadoLabel";
-            this.encabezadoLabel.Size = new System.Drawing.Size(201, 25);
+            this.encabezadoLabel.Size = new System.Drawing.Size(211, 25);
             this.encabezadoLabel.TabIndex = 9;
-            this.encabezadoLabel.Text = "AGREGAR A MENÚ";
+            this.encabezadoLabel.Text = "AGREGAR USUARIO";
             // 
             // tipoComboBox
             // 
@@ -264,6 +264,7 @@ namespace POS
             this.Name = "agregarUsuarioForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar usuario";
+            this.Load += new System.EventHandler(this.agregarUsuarioForm_Load);
             this.encabezadoPanel.ResumeLayout(false);
             this.encabezadoPanel.PerformLayout();
             this.ResumeLayout(false);

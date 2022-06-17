@@ -149,6 +149,12 @@
     <Compile Include="editarOrdenForm.Designer.cs">
       <DependentUpon>editarOrdenForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="editarUsuarioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editarUsuarioForm.Designer.cs">
+      <DependentUpon>editarUsuarioForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="eliminarMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +193,7 @@
     <Compile Include="PLConsultarUsuarios.cs" />
     <Compile Include="PLEditarMenu.cs" />
     <Compile Include="PLEditarOrden.cs" />
+    <Compile Include="PLEditarUsuario.cs" />
     <Compile Include="PLEliminarMenu.cs" />
     <Compile Include="PLEliminarOrden.cs" />
     <Compile Include="PLEliminarUsuario.cs" />
@@ -225,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="editarOrdenForm.resx">
       <DependentUpon>editarOrdenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editarUsuarioForm.resx">
+      <DependentUpon>editarUsuarioForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="eliminarMenuForm.resx">
       <DependentUpon>eliminarMenuForm.cs</DependentUpon>
