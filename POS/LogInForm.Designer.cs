@@ -1,7 +1,7 @@
 ﻿
 namespace POS
 {
-    partial class LogInForm
+    partial class loginForm
     {
         /// <summary>
         /// Required designer variable.

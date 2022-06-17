@@ -21,14 +21,16 @@ namespace POS
         }
 
         public static void posicionConsultaUsuarios(PictureBox logo, Label menu, Label agregar, Button agregarUs, Panel panel, DataGridView tabla,
-                                                     TextBox buscar, Label usuario)
+                                                     Panel buscar, Label usuario, Button editar, Button baja, TextBox buscarU, PictureBox lupa)
         {
             logo.Size = new Size(135, 120);
             menu.Size = new Size(110, 40);
             panel.Size = new Size(900, 40);
             tabla.Size = new Size(900, 300);
             buscar.Size = new Size(350, 40);
+            buscarU.Size = new Size(310, 40);
             usuario.Size = new Size(350, 30);
+            lupa.Size = new Size(25, 25);
 
             logo.Location = new Point(40, 70);
             logo.BringToFront();
@@ -41,7 +43,12 @@ namespace POS
             tabla.Location = new Point(250, 260);
 
             buscar.Location = new Point(800, 170);
+            buscarU.Location = new Point(35, 9);
+            lupa.Location = new Point(5, 5);
+
             usuario.Location = new Point(250, 580);
+            editar.Location = new Point(620, 580);
+            baja.Location = new Point(660, 580);
         }
         
     }

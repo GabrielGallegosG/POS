@@ -67,6 +67,12 @@
     <Compile Include="agregarOrdenForm.Designer.cs">
       <DependentUpon>agregarOrdenForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="agregarUsuarioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="agregarUsuarioForm.Designer.cs">
+      <DependentUpon>agregarUsuarioForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="altaMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,20 +161,27 @@
     <Compile Include="eliminarOrdenForm.Designer.cs">
       <DependentUpon>eliminarOrdenForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="eliminarUsuarioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="eliminarUsuarioForm.Designer.cs">
+      <DependentUpon>eliminarUsuarioForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="inicioForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="inicioForm.Designer.cs">
       <DependentUpon>inicioForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LogInForm.cs">
+    <Compile Include="loginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LogInForm.Designer.cs">
-      <DependentUpon>LogInForm.cs</DependentUpon>
+    <Compile Include="loginForm.Designer.cs">
+      <DependentUpon>loginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="PLAgregarMenuForm.cs" />
     <Compile Include="PLAgregarOrden.cs" />
+    <Compile Include="PLAgregarUsuario.cs" />
     <Compile Include="PLConsultaMenu.cs" />
     <Compile Include="PLConsultaOrdenes.cs" />
     <Compile Include="PLConsultarUsuarios.cs" />
@@ -176,6 +189,7 @@
     <Compile Include="PLEditarOrden.cs" />
     <Compile Include="PLEliminarMenu.cs" />
     <Compile Include="PLEliminarOrden.cs" />
+    <Compile Include="PLEliminarUsuario.cs" />
     <Compile Include="PLInicio.cs" />
     <Compile Include="PLLogIn.cs" />
     <Compile Include="Program.cs" />
@@ -185,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="agregarOrdenForm.resx">
       <DependentUpon>agregarOrdenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="agregarUsuarioForm.resx">
+      <DependentUpon>agregarUsuarioForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="altaMenuForm.resx">
       <DependentUpon>altaMenuForm.cs</DependentUpon>
@@ -215,11 +232,14 @@
     <EmbeddedResource Include="eliminarOrdenForm.resx">
       <DependentUpon>eliminarOrdenForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="eliminarUsuarioForm.resx">
+      <DependentUpon>eliminarUsuarioForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="inicioForm.resx">
       <DependentUpon>inicioForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LogInForm.resx">
-      <DependentUpon>LogInForm.cs</DependentUpon>
+    <EmbeddedResource Include="loginForm.resx">
+      <DependentUpon>loginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -293,6 +313,7 @@
       <DependentUpon>POSBDModel.edmx</DependentUpon>
       <LastGenOutput>POSBDModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\lupa.png" />
     <None Include="Resources\edi.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

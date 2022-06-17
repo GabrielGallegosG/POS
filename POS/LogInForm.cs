@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace POS
 {
-    public partial class LogInForm : Form
+    public partial class loginForm : Form
     {
-        public LogInForm()
+        public loginForm()
         {
             InitializeComponent();
             PLLogIn.posicionLogin(encabezadoPanel,encabezadoLabel, inicioSesionLabel, empleadoButton, administradorButton,contenedorPanel);
@@ -34,7 +34,7 @@ namespace POS
 
         private void iniciarSesionButton_Click_1(object sender, EventArgs e)
         {
-            LogInForm logIn = new LogInForm();
+            loginForm logIn = new loginForm();
             logIn.Close();
             this.Hide();
             consultaMenuForm consultaMenu = new consultaMenuForm();

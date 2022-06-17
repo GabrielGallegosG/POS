@@ -29,8 +29,8 @@ namespace POS
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(consultarUsuariosForm));
             this.agregarUsuarioLabel = new System.Windows.Forms.Label();
-            this.agregarUsuarioButton = new System.Windows.Forms.Button();
             this.encabezadoPanel = new System.Windows.Forms.Panel();
             this.usuariosButton = new System.Windows.Forms.Button();
             this.ventasButton = new System.Windows.Forms.Button();
@@ -38,14 +38,21 @@ namespace POS
             this.menuButton = new System.Windows.Forms.Button();
             this.inicioBbutton = new System.Windows.Forms.Button();
             this.encabezadoLabel = new System.Windows.Forms.Label();
-            this.logoPictureBox = new System.Windows.Forms.PictureBox();
             this.buscarTextBox = new System.Windows.Forms.TextBox();
             this.consultaPanel = new System.Windows.Forms.Panel();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.usuarioLabel = new System.Windows.Forms.Label();
+            this.buscarPanel = new System.Windows.Forms.Panel();
+            this.buscarPictureBox = new System.Windows.Forms.PictureBox();
+            this.editarUsuarioButton = new System.Windows.Forms.Button();
+            this.eliminarUsuarioButton = new System.Windows.Forms.Button();
+            this.agregarUsuarioButton = new System.Windows.Forms.Button();
+            this.logoPictureBox = new System.Windows.Forms.PictureBox();
             this.encabezadoPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            this.buscarPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buscarPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // agregarUsuarioLabel
@@ -57,19 +64,6 @@ namespace POS
             this.agregarUsuarioLabel.Size = new System.Drawing.Size(187, 21);
             this.agregarUsuarioLabel.TabIndex = 27;
             this.agregarUsuarioLabel.Text = "AGREGAR USUARIO";
-            // 
-            // agregarUsuarioButton
-            // 
-            this.agregarUsuarioButton.BackColor = System.Drawing.Color.Transparent;
-            this.agregarUsuarioButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.agregarUsuarioButton.FlatAppearance.BorderSize = 0;
-            this.agregarUsuarioButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.agregarUsuarioButton.Image = global::POS.Properties.Resources.agregar;
-            this.agregarUsuarioButton.Location = new System.Drawing.Point(735, 53);
-            this.agregarUsuarioButton.Name = "agregarUsuarioButton";
-            this.agregarUsuarioButton.Size = new System.Drawing.Size(33, 40);
-            this.agregarUsuarioButton.TabIndex = 26;
-            this.agregarUsuarioButton.UseVisualStyleBackColor = false;
             // 
             // encabezadoPanel
             // 
@@ -176,23 +170,14 @@ namespace POS
             this.encabezadoLabel.Text = "USUARIOS";
             this.encabezadoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // logoPictureBox
-            // 
-            this.logoPictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.logoPictureBox.Image = global::POS.Properties.Resources.LOGO;
-            this.logoPictureBox.Location = new System.Drawing.Point(12, 43);
-            this.logoPictureBox.Name = "logoPictureBox";
-            this.logoPictureBox.Size = new System.Drawing.Size(115, 100);
-            this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.logoPictureBox.TabIndex = 23;
-            this.logoPictureBox.TabStop = false;
-            // 
             // buscarTextBox
             // 
+            this.buscarTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.buscarTextBox.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buscarTextBox.Location = new System.Drawing.Point(519, 137);
+            this.buscarTextBox.Location = new System.Drawing.Point(47, 0);
+            this.buscarTextBox.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
             this.buscarTextBox.Name = "buscarTextBox";
-            this.buscarTextBox.Size = new System.Drawing.Size(196, 33);
+            this.buscarTextBox.Size = new System.Drawing.Size(196, 26);
             this.buscarTextBox.TabIndex = 28;
             // 
             // consultaPanel
@@ -220,16 +205,92 @@ namespace POS
             this.usuarioLabel.Size = new System.Drawing.Size(274, 25);
             this.usuarioLabel.TabIndex = 32;
             // 
+            // buscarPanel
+            // 
+            this.buscarPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.buscarPanel.Controls.Add(this.buscarTextBox);
+            this.buscarPanel.Controls.Add(this.buscarPictureBox);
+            this.buscarPanel.Location = new System.Drawing.Point(470, 134);
+            this.buscarPanel.Name = "buscarPanel";
+            this.buscarPanel.Size = new System.Drawing.Size(245, 36);
+            this.buscarPanel.TabIndex = 36;
+            // 
+            // buscarPictureBox
+            // 
+            this.buscarPictureBox.Image = global::POS.Properties.Resources.lupa;
+            this.buscarPictureBox.Location = new System.Drawing.Point(3, 3);
+            this.buscarPictureBox.Name = "buscarPictureBox";
+            this.buscarPictureBox.Size = new System.Drawing.Size(33, 33);
+            this.buscarPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.buscarPictureBox.TabIndex = 35;
+            this.buscarPictureBox.TabStop = false;
+            // 
+            // editarUsuarioButton
+            // 
+            this.editarUsuarioButton.BackColor = System.Drawing.Color.Transparent;
+            this.editarUsuarioButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("editarUsuarioButton.BackgroundImage")));
+            this.editarUsuarioButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.editarUsuarioButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.editarUsuarioButton.FlatAppearance.BorderSize = 0;
+            this.editarUsuarioButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editarUsuarioButton.Location = new System.Drawing.Point(351, 394);
+            this.editarUsuarioButton.Name = "editarUsuarioButton";
+            this.editarUsuarioButton.Size = new System.Drawing.Size(40, 30);
+            this.editarUsuarioButton.TabIndex = 34;
+            this.editarUsuarioButton.UseVisualStyleBackColor = false;
+            // 
+            // eliminarUsuarioButton
+            // 
+            this.eliminarUsuarioButton.BackColor = System.Drawing.Color.Transparent;
+            this.eliminarUsuarioButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("eliminarUsuarioButton.BackgroundImage")));
+            this.eliminarUsuarioButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.eliminarUsuarioButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.eliminarUsuarioButton.FlatAppearance.BorderSize = 0;
+            this.eliminarUsuarioButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.eliminarUsuarioButton.Location = new System.Drawing.Point(382, 394);
+            this.eliminarUsuarioButton.Name = "eliminarUsuarioButton";
+            this.eliminarUsuarioButton.Size = new System.Drawing.Size(40, 30);
+            this.eliminarUsuarioButton.TabIndex = 33;
+            this.eliminarUsuarioButton.UseVisualStyleBackColor = false;
+            this.eliminarUsuarioButton.Click += new System.EventHandler(this.eliminarUsuarioButton_Click);
+            // 
+            // agregarUsuarioButton
+            // 
+            this.agregarUsuarioButton.BackColor = System.Drawing.Color.Transparent;
+            this.agregarUsuarioButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.agregarUsuarioButton.FlatAppearance.BorderSize = 0;
+            this.agregarUsuarioButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.agregarUsuarioButton.Image = global::POS.Properties.Resources.agregar;
+            this.agregarUsuarioButton.Location = new System.Drawing.Point(735, 53);
+            this.agregarUsuarioButton.Name = "agregarUsuarioButton";
+            this.agregarUsuarioButton.Size = new System.Drawing.Size(33, 40);
+            this.agregarUsuarioButton.TabIndex = 26;
+            this.agregarUsuarioButton.UseVisualStyleBackColor = false;
+            this.agregarUsuarioButton.Click += new System.EventHandler(this.agregarUsuarioButton_Click);
+            // 
+            // logoPictureBox
+            // 
+            this.logoPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.logoPictureBox.Image = global::POS.Properties.Resources.LOGO;
+            this.logoPictureBox.Location = new System.Drawing.Point(12, 43);
+            this.logoPictureBox.Name = "logoPictureBox";
+            this.logoPictureBox.Size = new System.Drawing.Size(115, 100);
+            this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logoPictureBox.TabIndex = 23;
+            this.logoPictureBox.TabStop = false;
+            // 
             // consultarUsuariosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buscarPanel);
+            this.Controls.Add(this.editarUsuarioButton);
+            this.Controls.Add(this.eliminarUsuarioButton);
             this.Controls.Add(this.usuarioLabel);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.consultaPanel);
-            this.Controls.Add(this.buscarTextBox);
             this.Controls.Add(this.agregarUsuarioLabel);
             this.Controls.Add(this.agregarUsuarioButton);
             this.Controls.Add(this.encabezadoPanel);
@@ -240,8 +301,11 @@ namespace POS
             this.Text = "Consultar usuarios";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.encabezadoPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            this.buscarPanel.ResumeLayout(false);
+            this.buscarPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buscarPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -263,5 +327,9 @@ namespace POS
         private System.Windows.Forms.Panel consultaPanel;
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Label usuarioLabel;
+        private System.Windows.Forms.Button editarUsuarioButton;
+        private System.Windows.Forms.Button eliminarUsuarioButton;
+        private System.Windows.Forms.PictureBox buscarPictureBox;
+        private System.Windows.Forms.Panel buscarPanel;
     }
 }
