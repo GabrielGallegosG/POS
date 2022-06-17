@@ -16,7 +16,8 @@ namespace POS
         {
             InitializeComponent();
             PLConsultarUsuarios.posicionEncabezado(inicioBbutton,menuButton,ordenesButton,ventasButton,usuariosButton);
-            PLConsultarUsuarios.posicionConsultaUsuarios(logoPictureBox, encabezadoLabel,agregarUsuarioLabel,agregarUsuarioButton,consultaPanel,dataGridView,buscarTextBox,usuarioLabel);
+            PLConsultarUsuarios.posicionConsultaUsuarios(logoPictureBox, encabezadoLabel,agregarUsuarioLabel,agregarUsuarioButton,
+                consultaPanel,dataGridView,buscarPanel,usuarioLabel,editarUsuarioButton,eliminarUsuarioButton,buscarTextBox,buscarPictureBox);
         }
 
         private void menuButton_Click(object sender, EventArgs e)
@@ -34,6 +35,18 @@ namespace POS
         private void usuariosButton_Click(object sender, EventArgs e)
         {
             consultarUsuariosForm frm = new consultarUsuariosForm();
+            frm.Show();
+        }
+
+        private void eliminarUsuarioButton_Click(object sender, EventArgs e)
+        {
+            eliminarUsuarioForm frm = new eliminarUsuarioForm();
+            frm.Show();
+        }
+
+        private void agregarUsuarioButton_Click(object sender, EventArgs e)
+        {
+            agregarUsuarioForm frm = new agregarUsuarioForm();
             frm.Show();
         }
     }

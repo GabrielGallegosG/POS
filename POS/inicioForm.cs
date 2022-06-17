@@ -32,7 +32,7 @@ namespace POS
 
         private void loginLabel_Click(object sender, EventArgs e)
         {
-            LogInForm frm = new LogInForm();
+            loginForm frm = new loginForm();
             frm.Show();
         }
     }
