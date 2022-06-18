@@ -22,18 +22,27 @@ namespace POS
 
         private void menuButton_Click(object sender, EventArgs e)
         {
+            consultarUsuariosForm frmUs = new consultarUsuariosForm();
+            frmUs.Close();
+            this.Hide();
             consultaMenuForm frm = new consultaMenuForm();
             frm.Show();
         }
 
         private void ordenesButton_Click(object sender, EventArgs e)
         {
+            consultarUsuariosForm frmUs = new consultarUsuariosForm();
+            frmUs.Close();
+            this.Hide();
             consultarOrdenesForm frm = new consultarOrdenesForm();
             frm.Show();
         }
 
         private void usuariosButton_Click(object sender, EventArgs e)
         {
+            consultarUsuariosForm frmUs = new consultarUsuariosForm();
+            frmUs.Close();
+            this.Hide();
             consultarUsuariosForm frm = new consultarUsuariosForm();
             frm.Show();
         }

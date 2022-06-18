@@ -18,7 +18,7 @@ namespace POS
             InitializeComponent();
             PLConsultaMenu.posicionEncabezado(inicioBbutton,menuButton,ordenesButton,ventasButton,usuariosButton);
             PLConsultaMenu.posicionConsultaMenu(logoPictureBox, encabezadoLabel, platillosPanel, bebidasPanel, postresPanel, platillosDataGridView, bebidasDataGridView, postresDataGridView, platilloLabel, bebidaLabel, postreLabel,
-                                                editarPlatilloButton,editarBebidaButton,editarPostreButton,eliminarPlatilloButton,eliminarBebidaButton,eliminarPostreButton,agregarMenuLabel,agregarMenuButton);
+                                                editarPlatilloButton,editarBebidaButton,editarPostreButton,eliminarPlatilloButton,eliminarBebidaButton,eliminarPostreButton,agregarMenuLabel,agregarMenuButton,nombreSeccionLabel,precioSeccionLabel);
             PLConsultaMenu.panelPlatillo(platillosLabel);
             PLConsultaMenu.panelBebida(bebidasLabel);
             PLConsultaMenu.panelPostre(postresLabel);
@@ -118,10 +118,16 @@ namespace POS
             platillosDataGridView.DataSource = BLConsultaElemento.PlatillosDT();
             platillosPanel.BackColor = Color.DodgerBlue;
             platilloLabel.Visible = true;
+
+            nombreSeccionLabel.Text = "Nombre del Platillo";
+            precioSeccionLabel.Text = "Precio por Platillo";
         }
 
         private void mostrarPlatillosPanel()
         {
+            nombreSeccionLabel.Text = "Nombre del Platillo";
+            precioSeccionLabel.Text = "Precio";
+
             platillosDataGridView.Visible = true;
             bebidasDataGridView.Visible = false;
             postresDataGridView.Visible = false;
@@ -147,6 +153,10 @@ namespace POS
 
         private void mostrarBebidasPanel()
         {
+
+            nombreSeccionLabel.Text = "Nombre de la Bebida";
+            precioSeccionLabel.Text = "Precio";
+
             platillosDataGridView.Visible = false;
             bebidasDataGridView.Visible = true;
             postresDataGridView.Visible = false;
@@ -172,6 +182,10 @@ namespace POS
 
         private void mostrarPostresPanel()
         {
+
+            nombreSeccionLabel.Text = "Nombre del Postre";
+            precioSeccionLabel.Text = "Precio";
+
             platillosDataGridView.Visible = false;
             bebidasDataGridView.Visible = false;
             postresDataGridView.Visible = true;
@@ -222,6 +236,9 @@ namespace POS
 
         private void usuariosButton_Click(object sender, EventArgs e)
         {
+            consultaMenuForm consultaMenu = new consultaMenuForm();
+            consultaMenu.Close();
+            this.Hide();
             consultarUsuariosForm frm = new consultarUsuariosForm();
             frm.Show();
         }
