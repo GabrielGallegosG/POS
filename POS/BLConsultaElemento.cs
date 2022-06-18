@@ -13,7 +13,7 @@ namespace POS
         public static DataTable PlatillosDT()
         {
             try { 
-                SqlConnection conexion = new SqlConnection("server=desktop-arias-r\\mssqlserver01 ; database=POS_BD ; Integrated Security = SSPI ;User=AdminPOS; password=admin");
+                SqlConnection conexion = new SqlConnection("server=desktop-arias-r\\mssqlserver01 ; database=POS_BD  ;User=AdminPOS; password=admin");
                 conexion.Open();
 
                 string consulPla = "select nombre_elemento,precio from elemento where seccion = '1'";
@@ -32,7 +32,7 @@ namespace POS
         public static DataTable BebidasDT()
         {
             try {
-                SqlConnection conexion = new SqlConnection("server=desktop-arias-r\\mssqlserver01 ; database=POS_BD ; Integrated Security = SSPI ;User=AdminPOS; password=admin");
+                SqlConnection conexion = new SqlConnection("server=desktop-arias-r\\mssqlserver01 ; database=POS_BD ; User=AdminPOS; password=admin");
                 conexion.Open();
 
                 string consulBe = "select nombre_elemento,precio from elemento where seccion = '2'";
@@ -50,7 +50,7 @@ namespace POS
         public static DataTable PostresDT()
         {
             try {
-                SqlConnection conexion = new SqlConnection("server=desktop-arias-r\\mssqlserver01 ; database=POS_BD ; Integrated Security = SSPI ;User=AdminPOS; password=admin");
+                SqlConnection conexion = new SqlConnection("server=desktop-arias-r\\mssqlserver01 ; database=POS_BD ; User=AdminPOS; password=admin");
                 conexion.Open();
 
                 string consulPos = "select nombre_elemento,precio from elemento where seccion = '3'";
