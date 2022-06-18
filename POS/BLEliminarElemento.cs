@@ -13,7 +13,7 @@ namespace POS
         {
             try
             {
-                SqlConnection conexion = new SqlConnection("server=desktop-arias-r\\mssqlserver01 ; database=POS_BD ; integrated security = SSPI");
+                SqlConnection conexion = new SqlConnection("server=desktop-arias-r\\mssqlserver01 ; database=POS_BD ; Integrated Security = SSPI ;User=AdminPOS; password=admin");
                 conexion.Open();
                 string query = "DELETE FROM elemento WHERE id_elemento = " + id;
                 SqlCommand command = new SqlCommand(query, conexion);
