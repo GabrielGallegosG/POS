@@ -40,7 +40,7 @@ namespace POS
         {
             try
             {
-                SqlConnection conexion = new SqlConnection("server=desktop-arias-r\\mssqlserver01 ; database=POS_BD ; Integrated Security = SSPI ;User=AdminPOS; password=admin");
+                SqlConnection conexion = new SqlConnection("server=desktop-arias-r\\mssqlserver01 ; database=POS_BD ; User=AdminPOS; password=admin");
                 conexion.Open();
 
                 string query = "select precio from elemento where nombre_elemento = '" + nombreP + "'";
@@ -64,7 +64,7 @@ namespace POS
         {
             try
             {
-                SqlConnection conexion = new SqlConnection("server=desktop-arias-r\\mssqlserver01 ; database=POS_BD ; Integrated Security = SSPI ;User=AdminPOS; password=admin"); 
+                SqlConnection conexion = new SqlConnection("server=desktop-arias-r\\mssqlserver01 ; database=POS_BD ;User=AdminPOS; password=admin"); 
                 conexion.Open();
 
                 string query = "select descripcion from elemento where nombre_elemento = '" + nombreP + "'";
@@ -88,7 +88,7 @@ namespace POS
         {
             try
             {
-                SqlConnection conexion = new SqlConnection("server=desktop-arias-r\\mssqlserver01 ; database=POS_BD ; Integrated Security = SSPI ;User=AdminPOS; password=admin");
+                SqlConnection conexion = new SqlConnection("server=desktop-arias-r\\mssqlserver01 ; database=POS_BD ;User=AdminPOS; password=admin");
                 conexion.Open();
                 string query = "UPDATE elemento SET nombre_elemento = '" + nombre + "' ,seccion = " + seccion + " ,descripcion =  '" + descripcion + "' ,precio = " + precio +" WHERE id_elemento = " + id ;
                 SqlCommand command = new SqlCommand(query, conexion);
