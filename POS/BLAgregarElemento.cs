@@ -1,47 +1,41 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Forms;
 
 namespace POS
 {
     public class BLAgregarElemento
     { 
-        static int seccionC;
-        public static void agregarElemento(string nombreTextBox, string seccionComboBox, double precio, string descripcionRichTextBox) {
+        public static int seccion;
+        public static void agregarElemento(string nombre, string seccionComboBox, double precio, string descripcion) {
             int y = 1;
            
 
             if (seccionComboBox.Equals("PLATILLO")) {
-                seccionC = 1;
+                seccion = 1;
             }
             if (seccionComboBox.Equals("BEBIDA"))
             {
-                seccionC = 2;
+                seccion = 2;
             }
             if (seccionComboBox.Equals("POSTRE"))
             {
-                seccionC = 3;
+                seccion = 3;
             }
 
             try
             {
+                SqlConnection conexion = new SqlConnection("server=desktop-arias-r\\mssqlserver01 ; database=POS_BD ; Integrated Security = SSPI ;User=AdminPOS; password=admin");
+                conexion.Open();
+                string query = "INSERT INTO elemento(nombre_elemento ,seccion ,descripcion ,precio) VALUES ( '" + nombre + "', " + seccion +", '"+descripcion+"', "+ precio+")";
+                SqlCommand command = new SqlCommand(query, conexion);
+                int cant;
+                cant = command.ExecuteNonQuery();
 
-                using (dataLayer.POS_BDEntities db = new dataLayer.POS_BDEntities())
-                {
-                    var query = db.Set< dataLayer.elemento> ();
-                    query.Add(new dataLayer.elemento
-                    {
-                        nombre_elemento = nombreTextBox,
-                        seccion = seccionC,
-                        precio = precio,
-                        descripcion = descripcionRichTextBox
-                    });
-
-                    db.SaveChanges();
-                }
             }
             catch (Exception)
             {
