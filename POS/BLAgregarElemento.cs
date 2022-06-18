@@ -29,7 +29,7 @@ namespace POS
 
             try
             {
-                SqlConnection conexion = new SqlConnection("server=desktop-arias-r\\mssqlserver01 ; database=POS_BD ; Integrated Security = SSPI ;User=AdminPOS; password=admin");
+                SqlConnection conexion = new SqlConnection("server=desktop-arias-r\\mssqlserver01 ; database=POS_BD ;User=AdminPOS; password=admin");
                 conexion.Open();
                 string query = "INSERT INTO elemento(nombre_elemento ,seccion ,descripcion ,precio) VALUES ( '" + nombre + "', " + seccion +", '"+descripcion+"', "+ precio+")";
                 SqlCommand command = new SqlCommand(query, conexion);
