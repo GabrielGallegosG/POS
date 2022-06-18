@@ -15,8 +15,8 @@ namespace POS
             apellidoPSeleccionado.Size = new Size(250, 20);
             apellidoMSeleccionado.Size = new Size(250, 20);
             nota.Size = new Size(490, 60);
-            eliminar.Size = new Size(150, 30);
-            cancelar.Size = new Size(150, 30);
+            eliminar.Size = new Size(150, 40);
+            cancelar.Size = new Size(150, 40);
             encabezado.Size = new Size(580, 40);
             encabezadoL.Size = new Size(200, 40);
 

@@ -16,8 +16,8 @@ namespace POS
             contraseña.Size = new Size(230, 30);
             tipo.Size = new Size(160, 30);
             cargo.Size = new Size(240, 30);
-            agregar.Size = new Size(100, 30);
-            cancelar.Size = new Size(100, 30);
+            agregar.Size = new Size(120, 40);
+            cancelar.Size = new Size(120, 40);
 
             encabezadoL.Location = new Point(10, 10);
 
@@ -42,7 +42,7 @@ namespace POS
             cargoL.Location = new Point(440, 330);
             cargo.Location = new Point(510, 330);
 
-            agregar.Location = new Point(650, 420);
+            agregar.Location = new Point(630, 420);
             cancelar.Location = new Point(50, 420);
         }
 

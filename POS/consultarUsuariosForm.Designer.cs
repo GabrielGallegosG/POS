@@ -238,6 +238,7 @@ namespace POS
             this.editarUsuarioButton.Size = new System.Drawing.Size(40, 30);
             this.editarUsuarioButton.TabIndex = 34;
             this.editarUsuarioButton.UseVisualStyleBackColor = false;
+            this.editarUsuarioButton.Click += new System.EventHandler(this.editarUsuarioButton_Click);
             // 
             // eliminarUsuarioButton
             // 

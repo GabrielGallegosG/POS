@@ -23,5 +23,10 @@ namespace POS
         {
             this.Close();
         }
+
+        private void agregarUsuarioForm_Load(object sender, EventArgs e)
+        {
+            ActiveControl = nombreTextBox;
+        }
     }
 }
