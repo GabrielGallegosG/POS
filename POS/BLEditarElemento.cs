@@ -15,7 +15,7 @@ namespace POS
     public static String idSeleccionadoDT(string nombreP) {
         try
         {
-            SqlConnection conexion = new SqlConnection("server=desktop-arias-r\\mssqlserver01 ; database=POS_BD ; Integrated Security = SSPI ;User=AdminPOS; password=admin");
+            SqlConnection conexion = new SqlConnection("server=desktop-arias-r\\mssqlserver01 ; database=POS_BD ;User=AdminPOS; password=admin");
             conexion.Open();
 
             string query = "select id_elemento from elemento where nombre_elemento = '" + nombreP + "'";
