@@ -17,7 +17,8 @@ namespace POS
             InitializeComponent();
             PLConsultarUsuarios.posicionEncabezado(inicioBbutton,menuButton,ordenesButton,ventasButton,usuariosButton);
             PLConsultarUsuarios.posicionConsultaUsuarios(logoPictureBox, encabezadoLabel,agregarUsuarioLabel,agregarUsuarioButton,
-                consultaPanel,dataGridView,buscarPanel,usuarioLabel,editarUsuarioButton,eliminarUsuarioButton,buscarTextBox,buscarPictureBox);
+                consultaPanel,usuariosDataGridView,buscarPanel,usuarioLabel,editarUsuarioButton,eliminarUsuarioButton,buscarTextBox,buscarPictureBox);
+            PLConsultarUsuarios.encabezadosTabla(idUsuarioLabel,nombreUsuarioLabel,apellidoPUsuarioLabel,apellidoMUsuarioLabel,cargoUsuarioLabel);
         }
 
         private void menuButton_Click(object sender, EventArgs e)
