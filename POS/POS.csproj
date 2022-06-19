@@ -80,7 +80,9 @@
       <DependentUpon>altaMenuForm.cs</DependentUpon>
     </Compile>
     <Compile Include="BLAgregarElemento.cs" />
+    <Compile Include="BLAgregarOrden.cs" />
     <Compile Include="BLConsultaElemento.cs" />
+    <Compile Include="BLConsultarOrden.cs" />
     <Compile Include="BLConsultarUsuarios.cs" />
     <Compile Include="BLEditarElemento.cs" />
     <Compile Include="BLEliminarElemento.cs" />
