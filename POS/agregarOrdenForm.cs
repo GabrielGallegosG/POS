@@ -22,12 +22,25 @@ namespace POS
 
         private void agregarOrdenForm_Load(object sender, EventArgs e)
         {
-            
+            fechaOrdenLabel.Text = DateTime.Now.ToShortDateString();
+            horaOrdenLabel.Text = DateTime.Now.ToShortTimeString();
         }
 
         private void cancelarButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void agregarButton_Click(object sender, EventArgs e)
+        {
+            try {
+                int numMesa;
+                numMesa = Convert.ToInt32(noMesaComboBox.Text);
+                BLAgregarOrden.agregarOrden(tipoServicioComboBox.Text, numMesa);
+            }
+            catch (Exception ex) {
+                MessageBox.Show("¡Ha ocurrido un error al dar de alta la orden!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
