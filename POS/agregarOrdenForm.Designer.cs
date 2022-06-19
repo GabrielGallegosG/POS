@@ -29,6 +29,7 @@ namespace POS
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.encabezadoPanel = new System.Windows.Forms.Panel();
             this.noOrdenLabel = new System.Windows.Forms.Label();
             this.empleadoLabel = new System.Windows.Forms.Label();
@@ -47,8 +48,9 @@ namespace POS
             this.horaOrdenLabel = new System.Windows.Forms.Label();
             this.fechaOrdenLabel = new System.Windows.Forms.Label();
             this.empleadoOrdenLabel = new System.Windows.Forms.Label();
-            this.cancelarButton = new buttonSystem();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.agregarButton = new buttonSystem();
+            this.cancelarButton = new buttonSystem();
             this.encabezadoPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -124,6 +126,7 @@ namespace POS
             // 
             // tipoServicioComboBox
             // 
+            this.tipoServicioComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.tipoServicioComboBox.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tipoServicioComboBox.FormattingEnabled = true;
             this.tipoServicioComboBox.Items.AddRange(new object[] {
@@ -136,6 +139,7 @@ namespace POS
             // 
             // noMesaComboBox
             // 
+            this.noMesaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.noMesaComboBox.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.noMesaComboBox.FormattingEnabled = true;
             this.noMesaComboBox.Items.AddRange(new object[] {
@@ -243,24 +247,9 @@ namespace POS
             this.empleadoOrdenLabel.Size = new System.Drawing.Size(100, 23);
             this.empleadoOrdenLabel.TabIndex = 29;
             // 
-            // cancelarButton
+            // timer1
             // 
-            this.cancelarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
-            this.cancelarButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
-            this.cancelarButton.BorderRadius = 20;
-            this.cancelarButton.FlatAppearance.BorderSize = 0;
-            this.cancelarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(60)))));
-            this.cancelarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancelarButton.Font = new System.Drawing.Font("Gadugi", 10F, System.Drawing.FontStyle.Bold);
-            this.cancelarButton.ForeColor = System.Drawing.Color.Black;
-            this.cancelarButton.Location = new System.Drawing.Point(21, 661);
-            this.cancelarButton.Name = "cancelarButton";
-            this.cancelarButton.Padding = new System.Windows.Forms.Padding(3);
-            this.cancelarButton.Size = new System.Drawing.Size(114, 41);
-            this.cancelarButton.TabIndex = 30;
-            this.cancelarButton.Text = "CANCELAR";
-            this.cancelarButton.UseVisualStyleBackColor = false;
-            this.cancelarButton.Click += new System.EventHandler(this.cancelarButton_Click);
+            this.timer1.Enabled = true;
             // 
             // agregarButton
             // 
@@ -279,6 +268,26 @@ namespace POS
             this.agregarButton.TabIndex = 31;
             this.agregarButton.Text = "AGREGAR";
             this.agregarButton.UseVisualStyleBackColor = false;
+            this.agregarButton.Click += new System.EventHandler(this.agregarButton_Click);
+            // 
+            // cancelarButton
+            // 
+            this.cancelarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
+            this.cancelarButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
+            this.cancelarButton.BorderRadius = 20;
+            this.cancelarButton.FlatAppearance.BorderSize = 0;
+            this.cancelarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(60)))));
+            this.cancelarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelarButton.Font = new System.Drawing.Font("Gadugi", 10F, System.Drawing.FontStyle.Bold);
+            this.cancelarButton.ForeColor = System.Drawing.Color.Black;
+            this.cancelarButton.Location = new System.Drawing.Point(21, 661);
+            this.cancelarButton.Name = "cancelarButton";
+            this.cancelarButton.Padding = new System.Windows.Forms.Padding(3);
+            this.cancelarButton.Size = new System.Drawing.Size(114, 41);
+            this.cancelarButton.TabIndex = 30;
+            this.cancelarButton.Text = "CANCELAR";
+            this.cancelarButton.UseVisualStyleBackColor = false;
+            this.cancelarButton.Click += new System.EventHandler(this.cancelarButton_Click);
             // 
             // agregarOrdenForm
             // 
@@ -339,5 +348,6 @@ namespace POS
         private System.Windows.Forms.Label empleadoOrdenLabel;
         private buttonSystem cancelarButton;
         private buttonSystem agregarButton;
+        private System.Windows.Forms.Timer timer1;
     }
 }
