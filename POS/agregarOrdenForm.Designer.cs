@@ -29,6 +29,7 @@ namespace POS
         /// </summary>
         private void InitializeComponent()
         {
+
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -38,6 +39,8 @@ namespace POS
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+          
+            this.components = new System.ComponentModel.Container();
             this.encabezadoPanel = new System.Windows.Forms.Panel();
             this.noOrdenLabel = new System.Windows.Forms.Label();
             this.empleadoLabel = new System.Windows.Forms.Label();
@@ -59,6 +62,7 @@ namespace POS
             this.platillosDataGridView = new System.Windows.Forms.DataGridView();
             this.bebidasDataGridView = new System.Windows.Forms.DataGridView();
             this.postresDataGridView = new System.Windows.Forms.DataGridView();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.agregarButton = new buttonSystem();
             this.cancelarButton = new buttonSystem();
             this.encabezadoPanel.SuspendLayout();
@@ -155,6 +159,7 @@ namespace POS
             // tipoServicioComboBox
             // 
             this.tipoServicioComboBox.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tipoServicioComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.tipoServicioComboBox.FormattingEnabled = true;
             this.tipoServicioComboBox.Items.AddRange(new object[] {
             "PARA COMER AQUI",
@@ -169,6 +174,7 @@ namespace POS
             // noMesaComboBox
             // 
             this.noMesaComboBox.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.noMesaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.noMesaComboBox.FormattingEnabled = true;
             this.noMesaComboBox.Items.AddRange(new object[] {
             "1",
@@ -421,8 +427,11 @@ namespace POS
             this.agregarButton.Text = "AGREGAR";
             this.agregarButton.UseVisualStyleBackColor = false;
             // 
-            // cancelarButton
+            // timer1
             // 
+            this.timer1.Enabled = true;
+            // cancelarButton
+            //
             this.cancelarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
             this.cancelarButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
             this.cancelarButton.BorderRadius = 20;
@@ -513,5 +522,6 @@ namespace POS
         private System.Windows.Forms.DataGridView platillosDataGridView;
         private System.Windows.Forms.DataGridView bebidasDataGridView;
         private System.Windows.Forms.DataGridView postresDataGridView;
+        private System.Windows.Forms.Timer timer1;
     }
 }
