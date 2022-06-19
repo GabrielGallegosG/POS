@@ -25,8 +25,8 @@ namespace POS
         {
             logo.Size = new Size(135, 120);
             menu.Size = new Size(110, 40);
-            panel.Size = new Size(900, 40);
-            tabla.Size = new Size(900, 300);
+            panel.Size = new Size(1000, 40);
+            tabla.Size = new Size(1000, 300);
             buscar.Size = new Size(350, 40);
             buscarU.Size = new Size(310, 40);
             usuario.Size = new Size(350, 30);
@@ -39,16 +39,25 @@ namespace POS
             agregar.Location = new Point(1100, 90);
             agregarUs.Location = new Point(1300, 80);
 
-            panel.Location = new Point(250, 220);
-            tabla.Location = new Point(250, 260);
+            panel.Location = new Point(200, 220);
+            tabla.Location = new Point(200, 260);
 
-            buscar.Location = new Point(800, 170);
+            buscar.Location = new Point(850, 170);
             buscarU.Location = new Point(35, 9);
             lupa.Location = new Point(5, 5);
 
-            usuario.Location = new Point(250, 580);
-            editar.Location = new Point(620, 580);
-            baja.Location = new Point(660, 580);
+            usuario.Location = new Point(200, 580);
+            editar.Location = new Point(580, 580);
+            baja.Location = new Point(620, 580);
+        }
+
+        public static void encabezadosTabla(Label id, Label nombre, Label apellidoP, Label apellidoM, Label cargo)
+        {
+            id.Location = new Point(250, 262);
+            nombre.Location = new Point(330, 262);
+            apellidoP.Location = new Point(430, 262);
+            apellidoM.Location = new Point(630, 262);
+            cargo.Location = new Point(850, 262);
         }
         
     }

@@ -40,7 +40,7 @@ namespace POS
             this.encabezadoLabel = new System.Windows.Forms.Label();
             this.buscarTextBox = new System.Windows.Forms.TextBox();
             this.consultaPanel = new System.Windows.Forms.Panel();
-            this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.usuariosDataGridView = new System.Windows.Forms.DataGridView();
             this.usuarioLabel = new System.Windows.Forms.Label();
             this.buscarPanel = new System.Windows.Forms.Panel();
             this.buscarPictureBox = new System.Windows.Forms.PictureBox();
@@ -48,8 +48,13 @@ namespace POS
             this.eliminarUsuarioButton = new System.Windows.Forms.Button();
             this.agregarUsuarioButton = new System.Windows.Forms.Button();
             this.logoPictureBox = new System.Windows.Forms.PictureBox();
+            this.nombreUsuarioLabel = new System.Windows.Forms.Label();
+            this.idUsuarioLabel = new System.Windows.Forms.Label();
+            this.apellidoPUsuarioLabel = new System.Windows.Forms.Label();
+            this.apellidoMUsuarioLabel = new System.Windows.Forms.Label();
+            this.cargoUsuarioLabel = new System.Windows.Forms.Label();
             this.encabezadoPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosDataGridView)).BeginInit();
             this.buscarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buscarPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
@@ -188,13 +193,21 @@ namespace POS
             this.consultaPanel.Size = new System.Drawing.Size(653, 37);
             this.consultaPanel.TabIndex = 29;
             // 
-            // dataGridView
+            // usuariosDataGridView
             // 
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(62, 219);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(653, 169);
-            this.dataGridView.TabIndex = 30;
+            this.usuariosDataGridView.AllowUserToAddRows = false;
+            this.usuariosDataGridView.AllowUserToDeleteRows = false;
+            this.usuariosDataGridView.BackgroundColor = System.Drawing.Color.White;
+            this.usuariosDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
+            this.usuariosDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.usuariosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.usuariosDataGridView.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.usuariosDataGridView.Location = new System.Drawing.Point(62, 255);
+            this.usuariosDataGridView.Margin = new System.Windows.Forms.Padding(4);
+            this.usuariosDataGridView.Name = "usuariosDataGridView";
+            this.usuariosDataGridView.RowHeadersWidth = 51;
+            this.usuariosDataGridView.Size = new System.Drawing.Size(653, 92);
+            this.usuariosDataGridView.TabIndex = 30;
             // 
             // usuarioLabel
             // 
@@ -280,17 +293,82 @@ namespace POS
             this.logoPictureBox.TabIndex = 23;
             this.logoPictureBox.TabStop = false;
             // 
+            // nombreUsuarioLabel
+            // 
+            this.nombreUsuarioLabel.AutoSize = true;
+            this.nombreUsuarioLabel.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nombreUsuarioLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.nombreUsuarioLabel.Location = new System.Drawing.Point(126, 216);
+            this.nombreUsuarioLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.nombreUsuarioLabel.Name = "nombreUsuarioLabel";
+            this.nombreUsuarioLabel.Size = new System.Drawing.Size(84, 21);
+            this.nombreUsuarioLabel.TabIndex = 37;
+            this.nombreUsuarioLabel.Text = "Nombre";
+            // 
+            // idUsuarioLabel
+            // 
+            this.idUsuarioLabel.AutoSize = true;
+            this.idUsuarioLabel.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idUsuarioLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.idUsuarioLabel.Location = new System.Drawing.Point(70, 216);
+            this.idUsuarioLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.idUsuarioLabel.Name = "idUsuarioLabel";
+            this.idUsuarioLabel.Size = new System.Drawing.Size(30, 21);
+            this.idUsuarioLabel.TabIndex = 38;
+            this.idUsuarioLabel.Text = "ID";
+            // 
+            // apellidoPUsuarioLabel
+            // 
+            this.apellidoPUsuarioLabel.AutoSize = true;
+            this.apellidoPUsuarioLabel.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.apellidoPUsuarioLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.apellidoPUsuarioLabel.Location = new System.Drawing.Point(275, 216);
+            this.apellidoPUsuarioLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.apellidoPUsuarioLabel.Name = "apellidoPUsuarioLabel";
+            this.apellidoPUsuarioLabel.Size = new System.Drawing.Size(160, 21);
+            this.apellidoPUsuarioLabel.TabIndex = 39;
+            this.apellidoPUsuarioLabel.Text = "Apellido Paterno";
+            // 
+            // apellidoMUsuarioLabel
+            // 
+            this.apellidoMUsuarioLabel.AutoSize = true;
+            this.apellidoMUsuarioLabel.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.apellidoMUsuarioLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.apellidoMUsuarioLabel.Location = new System.Drawing.Point(450, 216);
+            this.apellidoMUsuarioLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.apellidoMUsuarioLabel.Name = "apellidoMUsuarioLabel";
+            this.apellidoMUsuarioLabel.Size = new System.Drawing.Size(166, 21);
+            this.apellidoMUsuarioLabel.TabIndex = 40;
+            this.apellidoMUsuarioLabel.Text = "Apellido Materno";
+            // 
+            // cargoUsuarioLabel
+            // 
+            this.cargoUsuarioLabel.AutoSize = true;
+            this.cargoUsuarioLabel.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cargoUsuarioLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.cargoUsuarioLabel.Location = new System.Drawing.Point(641, 216);
+            this.cargoUsuarioLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.cargoUsuarioLabel.Name = "cargoUsuarioLabel";
+            this.cargoUsuarioLabel.Size = new System.Drawing.Size(64, 21);
+            this.cargoUsuarioLabel.TabIndex = 41;
+            this.cargoUsuarioLabel.Text = "Cargo";
+            // 
             // consultarUsuariosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cargoUsuarioLabel);
+            this.Controls.Add(this.apellidoMUsuarioLabel);
+            this.Controls.Add(this.apellidoPUsuarioLabel);
+            this.Controls.Add(this.idUsuarioLabel);
+            this.Controls.Add(this.nombreUsuarioLabel);
             this.Controls.Add(this.buscarPanel);
             this.Controls.Add(this.editarUsuarioButton);
             this.Controls.Add(this.eliminarUsuarioButton);
             this.Controls.Add(this.usuarioLabel);
-            this.Controls.Add(this.dataGridView);
+            this.Controls.Add(this.usuariosDataGridView);
             this.Controls.Add(this.consultaPanel);
             this.Controls.Add(this.agregarUsuarioLabel);
             this.Controls.Add(this.agregarUsuarioButton);
@@ -302,7 +380,7 @@ namespace POS
             this.Text = "Consultar usuarios";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.encabezadoPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosDataGridView)).EndInit();
             this.buscarPanel.ResumeLayout(false);
             this.buscarPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buscarPictureBox)).EndInit();
@@ -326,11 +404,16 @@ namespace POS
         private System.Windows.Forms.PictureBox logoPictureBox;
         private System.Windows.Forms.TextBox buscarTextBox;
         private System.Windows.Forms.Panel consultaPanel;
-        private System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.DataGridView usuariosDataGridView;
         private System.Windows.Forms.Label usuarioLabel;
         private System.Windows.Forms.Button editarUsuarioButton;
         private System.Windows.Forms.Button eliminarUsuarioButton;
         private System.Windows.Forms.PictureBox buscarPictureBox;
         private System.Windows.Forms.Panel buscarPanel;
+        private System.Windows.Forms.Label nombreUsuarioLabel;
+        private System.Windows.Forms.Label idUsuarioLabel;
+        private System.Windows.Forms.Label apellidoPUsuarioLabel;
+        private System.Windows.Forms.Label apellidoMUsuarioLabel;
+        private System.Windows.Forms.Label cargoUsuarioLabel;
     }
 }
