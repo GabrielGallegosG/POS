@@ -242,5 +242,6 @@ namespace POS
             consultarUsuariosForm frm = new consultarUsuariosForm();
             frm.Show();
         }
+
     }
 }

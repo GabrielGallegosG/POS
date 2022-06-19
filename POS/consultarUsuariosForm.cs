@@ -17,7 +17,7 @@ namespace POS
             InitializeComponent();
             PLConsultarUsuarios.posicionEncabezado(inicioBbutton,menuButton,ordenesButton,ventasButton,usuariosButton);
             PLConsultarUsuarios.posicionConsultaUsuarios(logoPictureBox, encabezadoLabel,agregarUsuarioLabel,agregarUsuarioButton,
-                consultaPanel,dataGridView,buscarPanel,usuarioLabel,editarUsuarioButton,eliminarUsuarioButton,buscarTextBox,buscarPictureBox);
+                consultaPanel,usuariosDataGridView,buscarPanel,usuarioLabel,editarUsuarioButton,eliminarUsuarioButton,buscarTextBox,buscarPictureBox);
         }
 
         private void menuButton_Click(object sender, EventArgs e)
@@ -64,5 +64,17 @@ namespace POS
             editarUsuarioForm frm = new editarUsuarioForm();
             frm.Show();
         }
+
+        private void consultarUsuariosForm_Load(object sender, EventArgs e)
+        {
+            usuariosDataGridView.DataSource = BLConsultarUsuarios.UsuariosDT();
+        }
+
+        private void usuariosDataGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            var row = (sender as DataGridView).CurrentRow;
+           usuarioLabel.Text = row.Cells[1].Value.ToString();
+        }
+
     }
 }

@@ -30,6 +30,8 @@ namespace POS
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(consultarUsuariosForm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.agregarUsuarioLabel = new System.Windows.Forms.Label();
             this.encabezadoPanel = new System.Windows.Forms.Panel();
             this.usuariosButton = new System.Windows.Forms.Button();
@@ -40,7 +42,6 @@ namespace POS
             this.encabezadoLabel = new System.Windows.Forms.Label();
             this.buscarTextBox = new System.Windows.Forms.TextBox();
             this.consultaPanel = new System.Windows.Forms.Panel();
-            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.usuarioLabel = new System.Windows.Forms.Label();
             this.buscarPanel = new System.Windows.Forms.Panel();
             this.buscarPictureBox = new System.Windows.Forms.PictureBox();
@@ -48,11 +49,12 @@ namespace POS
             this.eliminarUsuarioButton = new System.Windows.Forms.Button();
             this.agregarUsuarioButton = new System.Windows.Forms.Button();
             this.logoPictureBox = new System.Windows.Forms.PictureBox();
+            this.usuariosDataGridView = new System.Windows.Forms.DataGridView();
             this.encabezadoPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.buscarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buscarPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // agregarUsuarioLabel
@@ -188,14 +190,6 @@ namespace POS
             this.consultaPanel.Size = new System.Drawing.Size(653, 37);
             this.consultaPanel.TabIndex = 29;
             // 
-            // dataGridView
-            // 
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(62, 219);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(653, 169);
-            this.dataGridView.TabIndex = 30;
-            // 
             // usuarioLabel
             // 
             this.usuarioLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -280,17 +274,45 @@ namespace POS
             this.logoPictureBox.TabIndex = 23;
             this.logoPictureBox.TabStop = false;
             // 
+            // usuariosDataGridView
+            // 
+            this.usuariosDataGridView.AllowUserToAddRows = false;
+            this.usuariosDataGridView.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.RoyalBlue;
+            this.usuariosDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.usuariosDataGridView.BackgroundColor = System.Drawing.Color.White;
+            this.usuariosDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.usuariosDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
+            this.usuariosDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.usuariosDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.usuariosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.usuariosDataGridView.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.usuariosDataGridView.Location = new System.Drawing.Point(62, 219);
+            this.usuariosDataGridView.Name = "usuariosDataGridView";
+            this.usuariosDataGridView.RowHeadersWidth = 51;
+            this.usuariosDataGridView.Size = new System.Drawing.Size(652, 75);
+            this.usuariosDataGridView.TabIndex = 37;
+            this.usuariosDataGridView.SelectionChanged += new System.EventHandler(this.usuariosDataGridView_SelectionChanged);
+            // 
             // consultarUsuariosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.usuariosDataGridView);
             this.Controls.Add(this.buscarPanel);
             this.Controls.Add(this.editarUsuarioButton);
             this.Controls.Add(this.eliminarUsuarioButton);
             this.Controls.Add(this.usuarioLabel);
-            this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.consultaPanel);
             this.Controls.Add(this.agregarUsuarioLabel);
             this.Controls.Add(this.agregarUsuarioButton);
@@ -301,12 +323,13 @@ namespace POS
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar usuarios";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.consultarUsuariosForm_Load);
             this.encabezadoPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.buscarPanel.ResumeLayout(false);
             this.buscarPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buscarPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -326,11 +349,11 @@ namespace POS
         private System.Windows.Forms.PictureBox logoPictureBox;
         private System.Windows.Forms.TextBox buscarTextBox;
         private System.Windows.Forms.Panel consultaPanel;
-        private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Label usuarioLabel;
         private System.Windows.Forms.Button editarUsuarioButton;
         private System.Windows.Forms.Button eliminarUsuarioButton;
         private System.Windows.Forms.PictureBox buscarPictureBox;
         private System.Windows.Forms.Panel buscarPanel;
+        private System.Windows.Forms.DataGridView usuariosDataGridView;
     }
 }

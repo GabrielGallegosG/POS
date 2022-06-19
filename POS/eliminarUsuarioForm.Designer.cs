@@ -168,6 +168,7 @@ namespace POS
             this.eliminarButton.TabIndex = 68;
             this.eliminarButton.Text = "ELIMINAR";
             this.eliminarButton.UseVisualStyleBackColor = false;
+            this.eliminarButton.Click += new System.EventHandler(this.eliminarButton_Click);
             // 
             // cancelarButton
             // 

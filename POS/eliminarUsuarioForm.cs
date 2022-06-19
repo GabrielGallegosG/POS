@@ -23,5 +23,10 @@ namespace POS
         {
             this.Close();
         }
+
+        private void eliminarButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
