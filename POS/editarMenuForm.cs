@@ -78,16 +78,13 @@ namespace POS
                             string descripcion = descripcionRichTextBox.Text;
                             
                             string nombre = nombreTextBox.Text;
-                            /*double precio;
-                            precio = Convert.ToDouble(precioTextBox.Text);*/
                             string precio = precioTextBox.Text;
                             
                             int id = Int32.Parse(idSeleccionadoLabel.Text);
                             BLEditarElemento.guardarEdicionDT(id, nombre, seccion, descripcion, precio );
                             this.Close();
 
-                            consultaMenuForm frm = new consultaMenuForm();
-                            frm.Refresh();
+
                         }
                         catch (Exception ex)
                         {

@@ -63,7 +63,7 @@ namespace POS
             this.encabezadoPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
             this.encabezadoPanel.Controls.Add(this.encabezadoLabel);
             this.encabezadoPanel.Location = new System.Drawing.Point(1, 0);
-            this.encabezadoPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.encabezadoPanel.Margin = new System.Windows.Forms.Padding(4);
             this.encabezadoPanel.Name = "encabezadoPanel";
             this.encabezadoPanel.Size = new System.Drawing.Size(700, 49);
             this.encabezadoPanel.TabIndex = 1;
@@ -93,7 +93,7 @@ namespace POS
             // 
             this.descripcionRichTextBox.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.descripcionRichTextBox.Location = new System.Drawing.Point(60, 308);
-            this.descripcionRichTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.descripcionRichTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.descripcionRichTextBox.Name = "descripcionRichTextBox";
             this.descripcionRichTextBox.Size = new System.Drawing.Size(548, 210);
             this.descripcionRichTextBox.TabIndex = 15;
@@ -108,7 +108,7 @@ namespace POS
             "BEBIDA",
             "POSTRE"});
             this.seccionComboBox.Location = new System.Drawing.Point(165, 209);
-            this.seccionComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.seccionComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.seccionComboBox.Name = "seccionComboBox";
             this.seccionComboBox.Size = new System.Drawing.Size(160, 32);
             this.seccionComboBox.TabIndex = 14;
@@ -117,7 +117,7 @@ namespace POS
             // 
             this.precioTextBox.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.precioTextBox.Location = new System.Drawing.Point(475, 209);
-            this.precioTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.precioTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.precioTextBox.Name = "precioTextBox";
             this.precioTextBox.Size = new System.Drawing.Size(132, 34);
             this.precioTextBox.TabIndex = 13;
@@ -126,7 +126,7 @@ namespace POS
             // 
             this.nombreTextBox.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nombreTextBox.Location = new System.Drawing.Point(177, 153);
-            this.nombreTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nombreTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(429, 34);
             this.nombreTextBox.TabIndex = 12;
@@ -236,7 +236,9 @@ namespace POS
             this.Controls.Add(this.idSeleccionadoLabel);
             this.Controls.Add(this.idLabel);
             this.Controls.Add(this.encabezadoPanel);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "editarMenuForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar en menú";

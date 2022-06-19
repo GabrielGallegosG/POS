@@ -168,6 +168,7 @@ namespace POS
             this.cancelarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
             this.cancelarButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
             this.cancelarButton.BorderRadius = 20;
+            this.cancelarButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cancelarButton.FlatAppearance.BorderSize = 0;
             this.cancelarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(60)))));
             this.cancelarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -188,6 +189,7 @@ namespace POS
             this.eliminarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
             this.eliminarButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
             this.eliminarButton.BorderRadius = 20;
+            this.eliminarButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.eliminarButton.FlatAppearance.BorderSize = 0;
             this.eliminarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(60)))));
             this.eliminarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -222,6 +224,8 @@ namespace POS
             this.Controls.Add(this.idLabel);
             this.Controls.Add(this.encabezadoPanel);
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "eliminarMenuForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Eliminar";

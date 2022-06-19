@@ -18,13 +18,21 @@ namespace POS
             InitializeComponent();
             PLConsultaMenu.posicionEncabezado(inicioBbutton,menuButton,ordenesButton,ventasButton,usuariosButton);
             PLConsultaMenu.posicionConsultaMenu(logoPictureBox, encabezadoLabel, platillosPanel, bebidasPanel, postresPanel, platillosDataGridView, bebidasDataGridView, postresDataGridView, platilloLabel, bebidaLabel, postreLabel,
-                                                editarPlatilloButton,editarBebidaButton,editarPostreButton,eliminarPlatilloButton,eliminarBebidaButton,eliminarPostreButton,agregarMenuLabel,agregarMenuButton,nombreSeccionLabel,precioSeccionLabel);
+                                                editarPlatilloButton,editarBebidaButton,editarPostreButton,eliminarPlatilloButton,eliminarBebidaButton,eliminarPostreButton,agregarMenuLabel,agregarMenuButton,nombreSeccionLabel,precioSeccionLabel
+                                                , verPlatilloButton, verBebidaButton, verPostreButton, actualizarButton);
             PLConsultaMenu.panelPlatillo(platillosLabel);
             PLConsultaMenu.panelBebida(bebidasLabel);
             PLConsultaMenu.panelPostre(postresLabel);
             PLConsultaMenu.dataGridView(platillosDataGridView);
             PLConsultaMenu.dataGridView(bebidasDataGridView);
             PLConsultaMenu.dataGridView(postresDataGridView);
+
+
+            var tt = new ToolTip();
+            tt.SetToolTip(platillosLabel, "Ver todos los platillos");
+            tt.SetToolTip(bebidasLabel, "Ver todas las bebidas");
+            tt.SetToolTip(postresLabel, "Ver todos los postres");
+
         }
 
         private void agregarMenuButton_Click(object sender, EventArgs e)
@@ -120,7 +128,7 @@ namespace POS
             platilloLabel.Visible = true;
 
             nombreSeccionLabel.Text = "Nombre del Platillo";
-            precioSeccionLabel.Text = "Precio por Platillo";
+            precioSeccionLabel.Text = "Precio";
         }
 
         private void mostrarPlatillosPanel()
@@ -143,6 +151,10 @@ namespace POS
             eliminarPlatilloButton.Visible = true;
             eliminarPostreButton.Visible = false;
             eliminarBebidaButton.Visible = false;
+
+            verPlatilloButton.Visible = true;
+            verBebidaButton.Visible = false;
+            verPostreButton.Visible = false;
 
             platillosDataGridView.DataSource = BLConsultaElemento.PlatillosDT();
             
@@ -173,6 +185,11 @@ namespace POS
             eliminarPostreButton.Visible = false;
             eliminarBebidaButton.Visible = true;
 
+
+            verPlatilloButton.Visible = false;
+            verBebidaButton.Visible = true;
+            verPostreButton.Visible = false;
+
             bebidasDataGridView.DataSource = BLConsultaElemento.BebidasDT();
 
             platillosPanel.BackColor = Color.FromArgb(0, 87, 158);
@@ -201,6 +218,10 @@ namespace POS
             eliminarPlatilloButton.Visible = false;
             eliminarPostreButton.Visible = true;
             eliminarBebidaButton.Visible = false;
+
+            verPlatilloButton.Visible = false;
+            verBebidaButton.Visible = false;
+            verPostreButton.Visible = true;
 
             postresDataGridView.DataSource = BLConsultaElemento.PostresDT();
 
@@ -241,6 +262,50 @@ namespace POS
             this.Hide();
             consultarUsuariosForm frm = new consultarUsuariosForm();
             frm.Show();
+        }
+
+        private void verPlatilloButton_Click(object sender, EventArgs e)
+        {
+            string id = BLEditarElemento.idSeleccionadoDT(platilloLabel.Text);
+            string precio = BLEditarElemento.precioSeleccionadoDT(platilloLabel.Text);
+            int platillo = 1;
+            string descripcion = BLEditarElemento.descripcionSeleccionadoDT(platilloLabel.Text);
+            consultarElementoMenuForm frm = new consultarElementoMenuForm(id, platilloLabel.Text, precio, platillo, descripcion);
+            frm.ShowDialog();
+        }
+
+        private void verPostreButton_Click(object sender, EventArgs e)
+        {
+            string id = BLEditarElemento.idSeleccionadoDT(postreLabel.Text);
+            string precio = BLEditarElemento.precioSeleccionadoDT(postreLabel.Text);
+            int postre = 3;
+            string descripcion = BLEditarElemento.descripcionSeleccionadoDT(postreLabel.Text);
+            consultarElementoMenuForm frm = new consultarElementoMenuForm(id, postreLabel.Text, precio, postre, descripcion);
+            frm.ShowDialog();
+        }
+
+        private void verBebidaButton_Click(object sender, EventArgs e)
+        {
+            string id = BLEditarElemento.idSeleccionadoDT(bebidaLabel.Text);
+            string precio = BLEditarElemento.precioSeleccionadoDT(bebidaLabel.Text);
+            int bebida = 2;
+            string descripcion = BLEditarElemento.descripcionSeleccionadoDT(bebidaLabel.Text);
+            consultarElementoMenuForm frm = new consultarElementoMenuForm(id, bebidaLabel.Text, precio, bebida, descripcion);
+            frm.ShowDialog();
+        }
+
+        private void actualizarButton_Click(object sender, EventArgs e)
+        {
+            platillosDataGridView.DataSource = BLConsultaElemento.PlatillosDT();
+            bebidasDataGridView.DataSource = BLConsultaElemento.BebidasDT();
+            postresDataGridView.DataSource = BLConsultaElemento.PostresDT();
+            this.Refresh();
+        }
+
+        private void agregarMenuLabel_Click(object sender, EventArgs e)
+        {
+            agregarMenuForm frm = new agregarMenuForm();
+            frm.ShowDialog();
         }
     }
 }
