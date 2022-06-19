@@ -29,6 +29,7 @@ namespace POS
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.encabezadoPanel = new System.Windows.Forms.Panel();
             this.noOrdenLabel = new System.Windows.Forms.Label();
             this.empleadoLabel = new System.Windows.Forms.Label();
@@ -49,6 +50,7 @@ namespace POS
             this.empleadoOrdenLabel = new System.Windows.Forms.Label();
             this.cancelarButton = new buttonSystem();
             this.agregarButton = new buttonSystem();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.encabezadoPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -280,6 +282,10 @@ namespace POS
             this.agregarButton.Text = "AGREGAR";
             this.agregarButton.UseVisualStyleBackColor = false;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            // 
             // agregarOrdenForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -339,5 +345,6 @@ namespace POS
         private System.Windows.Forms.Label empleadoOrdenLabel;
         private buttonSystem cancelarButton;
         private buttonSystem agregarButton;
+        private System.Windows.Forms.Timer timer1;
     }
 }

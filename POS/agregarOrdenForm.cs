@@ -22,7 +22,9 @@ namespace POS
 
         private void agregarOrdenForm_Load(object sender, EventArgs e)
         {
-            
+            //Muestra la fecha y la hora actual en sus respectivos labels
+            fechaOrdenLabel.Text = DateTime.Now.ToShortDateString();
+            horaOrdenLabel.Text = DateTime.Now.ToLongTimeString();
         }
 
         private void cancelarButton_Click(object sender, EventArgs e)
