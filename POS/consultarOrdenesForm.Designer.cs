@@ -45,11 +45,11 @@
             // nuevaOrdenLabel
             // 
             this.nuevaOrdenLabel.AutoSize = true;
-            this.nuevaOrdenLabel.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nuevaOrdenLabel.Location = new System.Drawing.Point(817, 92);
+            this.nuevaOrdenLabel.Font = new System.Drawing.Font("Gadugi", 14F, System.Drawing.FontStyle.Bold);
+            this.nuevaOrdenLabel.Location = new System.Drawing.Point(771, 87);
             this.nuevaOrdenLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nuevaOrdenLabel.Name = "nuevaOrdenLabel";
-            this.nuevaOrdenLabel.Size = new System.Drawing.Size(154, 24);
+            this.nuevaOrdenLabel.Size = new System.Drawing.Size(185, 28);
             this.nuevaOrdenLabel.TabIndex = 27;
             this.nuevaOrdenLabel.Text = "NUEVA ORDEN";
             // 
@@ -60,7 +60,7 @@
             this.agregarOrdenButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.agregarOrdenButton.Image = global::POS.Properties.Resources.agregar;
             this.agregarOrdenButton.Location = new System.Drawing.Point(992, 87);
-            this.agregarOrdenButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.agregarOrdenButton.Margin = new System.Windows.Forms.Padding(4);
             this.agregarOrdenButton.Name = "agregarOrdenButton";
             this.agregarOrdenButton.Size = new System.Drawing.Size(44, 36);
             this.agregarOrdenButton.TabIndex = 26;
@@ -78,7 +78,7 @@
             this.encabezadoPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.encabezadoPanel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.encabezadoPanel.Location = new System.Drawing.Point(0, 0);
-            this.encabezadoPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.encabezadoPanel.Margin = new System.Windows.Forms.Padding(4);
             this.encabezadoPanel.Name = "encabezadoPanel";
             this.encabezadoPanel.Size = new System.Drawing.Size(1067, 46);
             this.encabezadoPanel.TabIndex = 25;
@@ -91,7 +91,7 @@
             this.usuariosButton.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
             this.usuariosButton.ForeColor = System.Drawing.Color.White;
             this.usuariosButton.Location = new System.Drawing.Point(904, 5);
-            this.usuariosButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.usuariosButton.Margin = new System.Windows.Forms.Padding(4);
             this.usuariosButton.Name = "usuariosButton";
             this.usuariosButton.Size = new System.Drawing.Size(147, 37);
             this.usuariosButton.TabIndex = 11;
@@ -107,7 +107,7 @@
             this.ventasButton.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
             this.ventasButton.ForeColor = System.Drawing.Color.White;
             this.ventasButton.Location = new System.Drawing.Point(776, 5);
-            this.ventasButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ventasButton.Margin = new System.Windows.Forms.Padding(4);
             this.ventasButton.Name = "ventasButton";
             this.ventasButton.Size = new System.Drawing.Size(120, 37);
             this.ventasButton.TabIndex = 12;
@@ -123,7 +123,7 @@
             this.ordenesButton.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
             this.ordenesButton.ForeColor = System.Drawing.Color.White;
             this.ordenesButton.Location = new System.Drawing.Point(632, 4);
-            this.ordenesButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ordenesButton.Margin = new System.Windows.Forms.Padding(4);
             this.ordenesButton.Name = "ordenesButton";
             this.ordenesButton.Size = new System.Drawing.Size(135, 37);
             this.ordenesButton.TabIndex = 11;
@@ -139,7 +139,7 @@
             this.menuButton.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
             this.menuButton.ForeColor = System.Drawing.Color.White;
             this.menuButton.Location = new System.Drawing.Point(504, 4);
-            this.menuButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.menuButton.Margin = new System.Windows.Forms.Padding(4);
             this.menuButton.Name = "menuButton";
             this.menuButton.Size = new System.Drawing.Size(120, 37);
             this.menuButton.TabIndex = 10;
@@ -156,7 +156,7 @@
             this.inicioBbutton.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
             this.inicioBbutton.ForeColor = System.Drawing.Color.White;
             this.inicioBbutton.Location = new System.Drawing.Point(376, 4);
-            this.inicioBbutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.inicioBbutton.Margin = new System.Windows.Forms.Padding(4);
             this.inicioBbutton.Name = "inicioBbutton";
             this.inicioBbutton.Size = new System.Drawing.Size(120, 37);
             this.inicioBbutton.TabIndex = 9;
@@ -180,7 +180,7 @@
             this.logoPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.logoPictureBox.Image = global::POS.Properties.Resources.LOGO;
             this.logoPictureBox.Location = new System.Drawing.Point(4, 53);
-            this.logoPictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.logoPictureBox.Margin = new System.Windows.Forms.Padding(4);
             this.logoPictureBox.Name = "logoPictureBox";
             this.logoPictureBox.Size = new System.Drawing.Size(153, 123);
             this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -198,10 +198,11 @@
             this.Controls.Add(this.encabezadoPanel);
             this.Controls.Add(this.encabezadoLabel);
             this.Controls.Add(this.logoPictureBox);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "consultarOrdenesForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta ordenes";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.encabezadoPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
             this.ResumeLayout(false);

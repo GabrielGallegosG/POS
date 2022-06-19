@@ -55,11 +55,19 @@ namespace POS
 
         private void eliminarButton_Click(object sender, EventArgs e)
         {
-            string resultado = BLEditarElemento.idSeleccionadoDT(nombreSeleccionadoLabel.Text);
-            int id = Int32.Parse(resultado);
-            BLEliminarElemento.EliminarnDT(id);
-            MessageBox.Show("¡Se ha eliminado con exito!", "Eliminación de elemento", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            try
+            {
+                string resultado = BLEditarElemento.idSeleccionadoDT(nombreSeleccionadoLabel.Text);
+                int id = Int32.Parse(resultado);
+                BLEliminarElemento.EliminarnDT(id);
+                MessageBox.Show("¡Se ha eliminado con exito!", "Eliminación de elemento ID( " + id + " ).", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("¡Ha ocurrido un error al eliminar el elemento!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void notaRichTextBox_TextChanged(object sender, EventArgs e)

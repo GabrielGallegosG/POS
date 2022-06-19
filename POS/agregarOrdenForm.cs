@@ -17,7 +17,11 @@ namespace POS
             InitializeComponent();
 
             PLAgregarOrden.posicionAgregarOrden(empleadoLabel,empleadoOrdenLabel,tipoServicioLabel,noMesaLabel,fechaLabel,horaLabel,fechaOrdenLabel,horaOrdenLabel,tipoServicioComboBox,noMesaComboBox,
-                agregarLabel,platilloCheckBox,postreCheckBox,bebidaCheckBox);
+                agregarLabel,platilloCheckBox,postreCheckBox,bebidaCheckBox, comentariosLabel, comentariosRichTextBox,cancelarButton,agregarButton);
+
+            PLAgregarOrden.dataGridView(platillosDataGridView);
+            PLAgregarOrden.dataGridView(bebidasDataGridView);
+            PLAgregarOrden.dataGridView(postresDataGridView);
         }
 
         private void agregarOrdenForm_Load(object sender, EventArgs e)
@@ -31,6 +35,105 @@ namespace POS
             this.Close();
         }
 
+        private void platilloCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (platilloCheckBox.Checked == true) {
+                platillosDataGridView.Visible = true;
+                bebidasDataGridView.Visible = false;
+                postresDataGridView.Visible = false;
+                
+                platillosDataGridView.DataSource = BLConsultaElemento.PlatillosDT();
+                
+                bebidaCheckBox.Checked = false;
+                postreCheckBox.Checked = false;
+            }
+        }
+
+        private void postreCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (postreCheckBox.Checked == true)
+            {
+                platillosDataGridView.Visible = false;
+                bebidasDataGridView.Visible = false;
+                postresDataGridView.Visible = true;
+
+                postresDataGridView.DataSource = BLConsultaElemento.PostresDT();
+
+                platilloCheckBox.Checked = false;
+                bebidaCheckBox.Checked = false;
+            }
+        }
+        
+        private void bebidaCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (bebidaCheckBox.Checked == true)
+            {
+                platillosDataGridView.Visible = false;
+                bebidasDataGridView.Visible = true;
+                postresDataGridView.Visible = false;
+                
+                bebidasDataGridView.DataSource = BLConsultaElemento.BebidasDT();
+                
+                platilloCheckBox.Checked = false;
+                postreCheckBox.Checked = false;
+            }
+        }
+
+        private void tipoServicioComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void empleadoLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void noMesaLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void agregarLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void noMesaComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tipoServicioLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void empleadoOrdenLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fechaLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fechaOrdenLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void horaOrdenLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void horaLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+        
         private void agregarButton_Click(object sender, EventArgs e)
         {
             try {

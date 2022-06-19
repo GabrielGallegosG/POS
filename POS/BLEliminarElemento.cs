@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace POS
 {
@@ -17,6 +18,7 @@ namespace POS
                 conexion.Open();
                 string query = "DELETE FROM elemento WHERE id_elemento = " + id;
                 SqlCommand command = new SqlCommand(query, conexion);
+                int cant = command.ExecuteNonQuery();
             }
             catch (Exception)
             {

@@ -104,6 +104,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="consultarElementoMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="consultarElementoMenuForm.Designer.cs">
+      <DependentUpon>consultarElementoMenuForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="consultarOrdenesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +197,7 @@
     <Compile Include="PLAgregarUsuario.cs" />
     <Compile Include="PLConsultaMenu.cs" />
     <Compile Include="PLConsultaOrdenes.cs" />
+    <Compile Include="PLConsultarElementoMenu.cs" />
     <Compile Include="PLConsultarUsuarios.cs" />
     <Compile Include="PLEditarMenu.cs" />
     <Compile Include="PLEditarOrden.cs" />
@@ -221,6 +228,9 @@
       <DependentUpon>consultaOrdenesForm.cs</DependentUpon>
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>consultaOrdenesForm.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="consultarElementoMenuForm.resx">
+      <DependentUpon>consultarElementoMenuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="consultarOrdenesForm.resx">
       <DependentUpon>consultarOrdenesForm.cs</DependentUpon>
@@ -324,6 +334,9 @@
       <DependentUpon>POSBDModel.edmx</DependentUpon>
       <LastGenOutput>POSBDModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\ConsultaPar1.png" />
+    <None Include="Resources\verMas2.png" />
+    <None Include="Resources\verMas1.png" />
     <None Include="Resources\lupa.png" />
     <None Include="Resources\edi.png" />
   </ItemGroup>

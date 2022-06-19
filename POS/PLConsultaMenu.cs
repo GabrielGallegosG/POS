@@ -24,7 +24,8 @@ namespace POS
                                                     DataGridView platillosDGV, DataGridView bebidasDGV, DataGridView postresDGV,
                                                     Label platillo, Label bebida, Label postre, Button modiPlatillo, Button modiBebida, 
                                                     Button modiPostre, Button eliPlatillo, Button eliBebida, Button eliPostre,
-                                                    Label agregarMenuL, Button agregarMenuBtn, Label nombre, Label precio)
+                                                    Label agregarMenuL, Button agregarMenuBtn, Label nombre, Label precio, 
+                                                    Button verPlatillo, Button verBebida, Button verPostre, Button actualizar)
         {
             logo.Size = new Size(155, 120);
             menu.Size = new Size(100,40);
@@ -34,15 +35,16 @@ namespace POS
             postres.Size = new Size(300, 45);
 
             nombre.Size = new Size(450, 35);
-            nombre.Size = new Size(450, 35);
+            precio.Size = new Size(450, 35);
+            actualizar.Size = new Size(35, 35);
 
             platillosDGV.Size = new Size(900, 300);
             bebidasDGV.Size = new Size(900, 300);
             postresDGV.Size = new Size(900, 300);
 
-            platillo.Size = new Size(600, 30);
-            bebida.Size = new Size(600, 30);
-            postre.Size = new Size(600, 30);
+            platillo.Size = new Size(700, 30);
+            bebida.Size = new Size(700, 30);
+            postre.Size = new Size(700, 30);
 
             modiPlatillo.Size = new Size(35,35);
             modiBebida.Size = new Size(35, 35);
@@ -50,6 +52,11 @@ namespace POS
             eliPlatillo.Size = new Size(35, 35);
             eliBebida.Size = new Size(35, 35);
             eliPostre.Size = new Size(35, 35);
+            verPlatillo.Size = new Size(29, 29);
+            verBebida.Size = new Size(29, 29);
+            verPostre.Size = new Size(29, 29);
+
+
             agregarMenuBtn.Size = new Size(45, 30);
 
             logo.Location = new Point(40,70);
@@ -62,6 +69,7 @@ namespace POS
 
             nombre.Location = new Point(250, 270);
             precio.Location = new Point(700, 270);
+            actualizar.Location = new Point(1105, 265);
 
             platillosDGV.Location = new Point(250, 300);
             bebidasDGV.Location = new Point(250, 300);
@@ -71,16 +79,40 @@ namespace POS
             bebida.Location = new Point(250, 625);
             postre.Location = new Point(240, 625);
 
-            modiPlatillo.Location = new Point(915, 620);
-            modiBebida.Location = new Point(915, 620);
-            modiPostre.Location = new Point(915, 620);
+            modiPlatillo.Location = new Point(1080, 620);
+            modiBebida.Location = new Point(1080, 620);
+            modiPostre.Location = new Point(1080, 620);
 
-            eliPlatillo.Location = new Point(955, 620);
-            eliBebida.Location = new Point(955, 620);
-            eliPostre.Location = new Point(955,620);
+            eliPlatillo.Location = new Point(1115, 620);
+            eliBebida.Location = new Point(1115, 620);
+            eliPostre.Location = new Point(1115,620);
+
+            verPlatillo.Location = new Point(1042, 625);
+            verBebida.Location = new Point(1042, 625);
+            verPostre.Location = new Point(1042, 625);
 
             agregarMenuL.Location = new Point(1100, 90);
             agregarMenuBtn.Location = new Point(1300, 80);
+
+            var tt = new ToolTip();
+            tt.SetToolTip(modiPlatillo, "Modificar platillo");
+            tt.SetToolTip(modiBebida, "Modificar bebida");
+            tt.SetToolTip(modiPostre, "Modificar postre");
+            tt.SetToolTip(verPlatillo, "Ver contenido del platillo");
+            tt.SetToolTip(verBebida, "Ver contenido de la bebida");
+            tt.SetToolTip(verPostre, "Ver contenido del postre");
+            tt.SetToolTip(eliPlatillo, "Eliminar platillo");
+            tt.SetToolTip(eliBebida, "Eliminar bebida");
+            tt.SetToolTip(eliPostre, "Eliminar postre");
+            tt.SetToolTip(actualizar, "Actualizar menú");
+            tt.SetToolTip(agregarMenuBtn, "Agregar nuevo elemento al menú");
+            tt.SetToolTip(platillos, "Ver todos los platillos");
+            tt.SetToolTip(bebidas, "Ver todas las bebidas");
+            tt.SetToolTip(postres, "Ver todos los postres");
+
+
+
+
         }
 
         public static void dataGridView(DataGridView dataGrid) {
