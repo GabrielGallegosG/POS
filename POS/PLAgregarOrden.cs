@@ -35,14 +35,16 @@ namespace POS
 
             agregar.Location = new Point(50, 250);
             platillo.Location = new Point(50, 300);
-            postre.Location = new Point(180, 300);
-            bebida.Location = new Point(300, 300);
+            bebida.Location = new Point(180, 300);
+            postre.Location = new Point(300, 300);
 
             comentarios.Location = new Point(50, 620);
             comentarioRTB.Location = new Point(50, 650);
 
-            agregarB.Location = new Point(1200, 750);
-            cancelar.Location = new Point(50, 750);
+            agregarB.Location = new Point(1230, 740);
+            cancelar.Location = new Point(50, 740);
+            agregarB.Size = new Size(120, 40);
+            cancelar.Size = new Size(120, 40);
 
         }
 
@@ -50,7 +52,7 @@ namespace POS
 
         public static void dataGridView(DataGridView dataGrid)
         {
-            dataGrid.Size =  new Size(700,240);
+            dataGrid.Size =  new Size(750,240);
             dataGrid.Location = new Point(50, 330);
 
             dataGrid.AllowUserToOrderColumns = true;
@@ -84,11 +86,65 @@ namespace POS
 
             dataGrid.AutoResizeColumns();
             dataGrid.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dataGrid.ReadOnly = true;
 
-            dataGrid.RowHeadersWidth = 100;
+            dataGrid.RowsDefaultCellStyle.SelectionBackColor = Color.White;
+            dataGrid.RowsDefaultCellStyle.SelectionForeColor = Color.Black;
+
             dataGrid.RowHeadersVisible = false;
             dataGrid.ColumnHeadersVisible = false;
+
+
+        }
+
+        public static void dataGridView_2(DataGridView dataGrid)
+        {
+            dataGrid.Visible = true;
+            dataGrid.Size = new Size(500, 400);
+            dataGrid.Location = new Point(850, 330);
+
+            dataGrid.AllowUserToOrderColumns = true;
+            dataGrid.AllowUserToResizeColumns = true;
+
+            dataGrid.RowsDefaultCellStyle.Padding = new Padding(2, 2, 2, 2);
+            dataGrid.RowsDefaultCellStyle.Font = new Font("Gadugi", 15);
+            dataGrid.RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+
+            dataGrid.AlternatingRowsDefaultCellStyle.Padding = new Padding(2, 2, 2, 2);
+            dataGrid.AlternatingRowsDefaultCellStyle.Font = new Font("Gadugi", 15);
+            dataGrid.AlternatingRowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGrid.AlternatingRowsDefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
+            dataGrid.ColumnHeadersDefaultCellStyle.Padding = new Padding(0, 0, 0, 0);
+            dataGrid.ColumnHeadersDefaultCellStyle.Font = new Font("Gadugi", 15);
+            dataGrid.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGrid.ColumnHeadersDefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
+            dataGrid.DefaultCellStyle.Padding = new Padding(0, 0, 0, 0);
+            dataGrid.DefaultCellStyle.Font = new Font("Gadugi", 15);
+            dataGrid.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGrid.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
+            dataGrid.RowHeadersDefaultCellStyle.Padding = new Padding(0, 0, 0, 0);
+            dataGrid.RowHeadersDefaultCellStyle.Font = new Font("Gadugi", 15);
+            dataGrid.RowHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGrid.RowHeadersDefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
+            dataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            dataGrid.AutoResizeColumns();
+            dataGrid.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+
+            dataGrid.RowsDefaultCellStyle.SelectionBackColor = Color.White;
+            dataGrid.RowsDefaultCellStyle.SelectionForeColor = Color.Black;
+
+            dataGrid.RowHeadersVisible = false;
+            dataGrid.ColumnHeadersVisible = false;
+
+            dataGrid.Columns.Add("nombre_elemento", "nombre_elemento");
+            dataGrid.Columns.Add("precio", "precio");
+            dataGrid.Columns.Add("cantidad", "cantidad");
+            dataGrid.Columns.Add("subtotal", "subtotal");
+
 
         }
     }
