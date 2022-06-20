@@ -29,7 +29,7 @@ namespace POS
             tabla.Size = new Size(1000, 300);
             buscar.Size = new Size(350, 40);
             buscarU.Size = new Size(310, 40);
-            usuario.Size = new Size(350, 30);
+            usuario.Size = new Size(550, 30);
             lupa.Size = new Size(25, 25);
 
             logo.Location = new Point(40, 70);
@@ -40,25 +40,68 @@ namespace POS
             agregarUs.Location = new Point(1300, 80);
 
             panel.Location = new Point(200, 220);
-            tabla.Location = new Point(200, 260);
+            tabla.Location = new Point(200, 300);
 
             buscar.Location = new Point(850, 170);
             buscarU.Location = new Point(35, 9);
             lupa.Location = new Point(5, 5);
 
-            usuario.Location = new Point(200, 580);
-            editar.Location = new Point(580, 580);
-            baja.Location = new Point(620, 580);
+            usuario.Location = new Point(200, 620);
+            editar.Location = new Point(780, 620);
+            baja.Location = new Point(820, 620);
         }
 
         public static void encabezadosTabla(Label id, Label nombre, Label apellidoP, Label apellidoM, Label cargo)
         {
-            id.Location = new Point(250, 262);
-            nombre.Location = new Point(330, 262);
-            apellidoP.Location = new Point(430, 262);
-            apellidoM.Location = new Point(630, 262);
-            cargo.Location = new Point(850, 262);
+            id.Location = new Point(210, 262);
+            nombre.Location = new Point(400, 262);
+            apellidoP.Location = new Point(600, 262);
+            apellidoM.Location = new Point(790, 262);
+            cargo.Location = new Point(990, 262);
         }
-        
+
+        public static void dataGridView(DataGridView dataGrid)
+        {
+
+
+            dataGrid.AllowUserToOrderColumns = true;
+            dataGrid.AllowUserToResizeColumns = true;
+
+            dataGrid.RowsDefaultCellStyle.Padding = new Padding(2, 2, 2, 2);
+            dataGrid.RowsDefaultCellStyle.Font = new Font("Gadugi", 15);
+            dataGrid.RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+
+            dataGrid.AlternatingRowsDefaultCellStyle.Padding = new Padding(2, 2, 2, 2);
+            dataGrid.AlternatingRowsDefaultCellStyle.Font = new Font("Gadugi", 15);
+            dataGrid.AlternatingRowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGrid.AlternatingRowsDefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
+            dataGrid.ColumnHeadersDefaultCellStyle.Padding = new Padding(2, 2, 2, 2);
+            dataGrid.ColumnHeadersDefaultCellStyle.Font = new Font("Gadugi", 15);
+            dataGrid.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGrid.ColumnHeadersDefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
+            dataGrid.DefaultCellStyle.Padding = new Padding(2, 2, 2, 2);
+            dataGrid.DefaultCellStyle.Font = new Font("Gadugi", 15);
+            dataGrid.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGrid.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
+            dataGrid.RowHeadersDefaultCellStyle.Padding = new Padding(2, 2, 2, 2);
+            dataGrid.RowHeadersDefaultCellStyle.Font = new Font("Gadugi", 15);
+            dataGrid.RowHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGrid.RowHeadersDefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
+            dataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            dataGrid.AutoResizeColumns();
+            dataGrid.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dataGrid.ReadOnly = true;
+
+            dataGrid.RowHeadersWidth = 150;
+            dataGrid.RowHeadersVisible = false;
+            dataGrid.ColumnHeadersVisible = false;
+
+        }
+
     }
 }

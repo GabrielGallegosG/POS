@@ -238,6 +238,7 @@ namespace POS
             this.guardarButton.TabIndex = 86;
             this.guardarButton.Text = "GUARDAR";
             this.guardarButton.UseVisualStyleBackColor = false;
+            this.guardarButton.Click += new System.EventHandler(this.guardarButton_Click);
             // 
             // cancelarButton
             // 

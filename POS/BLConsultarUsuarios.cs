@@ -13,7 +13,7 @@ namespace POS
                 SqlConnection conexion = new SqlConnection("server=desktop-arias-r\\mssqlserver01 ; database=POS_BD  ;User=AdminPOS; password=admin");
                 conexion.Open();
 
-                string consulUs = "select nombre_elemento,precio from elemento where seccion = '1'";
+                string consulUs = "select id_usuario, nombre_usuario,apellidoP_usuario,apellidoM_usuario,tipo_usuario,cargo_usuario, usuario, contraseña from usuario";
                 SqlDataAdapter adaptUs = new SqlDataAdapter(consulUs, conexion);
                 DataTable dtUsuarios = new DataTable();
                 adaptUs.Fill(dtUsuarios);

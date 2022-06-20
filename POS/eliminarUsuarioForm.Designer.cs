@@ -168,6 +168,7 @@ namespace POS
             this.eliminarButton.TabIndex = 68;
             this.eliminarButton.Text = "ELIMINAR";
             this.eliminarButton.UseVisualStyleBackColor = false;
+            this.eliminarButton.Click += new System.EventHandler(this.eliminarButton_Click);
             // 
             // cancelarButton
             // 
@@ -209,6 +210,7 @@ namespace POS
             this.Name = "eliminarUsuarioForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Eliminar usuario";
+            this.Load += new System.EventHandler(this.eliminarUsuarioForm_Load);
             this.encabezadoPanel.ResumeLayout(false);
             this.encabezadoPanel.PerformLayout();
             this.ResumeLayout(false);
