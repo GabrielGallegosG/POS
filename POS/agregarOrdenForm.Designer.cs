@@ -64,9 +64,9 @@ namespace POS
             this.bebidasDataGridView = new System.Windows.Forms.DataGridView();
             this.postresDataGridView = new System.Windows.Forms.DataGridView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.ordenDataGridView = new System.Windows.Forms.DataGridView();
             this.agregarButton = new buttonSystem();
             this.cancelarButton = new buttonSystem();
-            this.ordenDataGridView = new System.Windows.Forms.DataGridView();
             this.encabezadoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.platillosDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bebidasDataGridView)).BeginInit();
@@ -84,7 +84,7 @@ namespace POS
             this.encabezadoPanel.Location = new System.Drawing.Point(2, 0);
             this.encabezadoPanel.Margin = new System.Windows.Forms.Padding(7);
             this.encabezadoPanel.Name = "encabezadoPanel";
-            this.encabezadoPanel.Size = new System.Drawing.Size(1729, 49);
+            this.encabezadoPanel.Size = new System.Drawing.Size(1972, 49);
             this.encabezadoPanel.TabIndex = 11;
             // 
             // noOrdenLabel
@@ -95,7 +95,7 @@ namespace POS
             this.noOrdenLabel.Location = new System.Drawing.Point(24, 15);
             this.noOrdenLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.noOrdenLabel.Name = "noOrdenLabel";
-            this.noOrdenLabel.Size = new System.Drawing.Size(181, 32);
+            this.noOrdenLabel.Size = new System.Drawing.Size(144, 25);
             this.noOrdenLabel.TabIndex = 9;
             this.noOrdenLabel.Text = "NO.ORDEN - ";
             // 
@@ -106,7 +106,7 @@ namespace POS
             this.empleadoLabel.Location = new System.Drawing.Point(44, 104);
             this.empleadoLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.empleadoLabel.Name = "empleadoLabel";
-            this.empleadoLabel.Size = new System.Drawing.Size(137, 28);
+            this.empleadoLabel.Size = new System.Drawing.Size(110, 22);
             this.empleadoLabel.TabIndex = 12;
             this.empleadoLabel.Text = "EMPLEADO:";
             // 
@@ -117,7 +117,7 @@ namespace POS
             this.tipoServicioLabel.Location = new System.Drawing.Point(28, 165);
             this.tipoServicioLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.tipoServicioLabel.Name = "tipoServicioLabel";
-            this.tipoServicioLabel.Size = new System.Drawing.Size(209, 28);
+            this.tipoServicioLabel.Size = new System.Drawing.Size(166, 22);
             this.tipoServicioLabel.TabIndex = 13;
             this.tipoServicioLabel.Text = "TIPO DE SERVICIO:";
             // 
@@ -128,7 +128,7 @@ namespace POS
             this.noMesaLabel.Location = new System.Drawing.Point(19, 239);
             this.noMesaLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.noMesaLabel.Name = "noMesaLabel";
-            this.noMesaLabel.Size = new System.Drawing.Size(163, 28);
+            this.noMesaLabel.Size = new System.Drawing.Size(128, 22);
             this.noMesaLabel.TabIndex = 14;
             this.noMesaLabel.Text = "NO. DE MESA:";
             // 
@@ -139,7 +139,7 @@ namespace POS
             this.fechaLabel.Location = new System.Drawing.Point(1258, 94);
             this.fechaLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.fechaLabel.Name = "fechaLabel";
-            this.fechaLabel.Size = new System.Drawing.Size(88, 28);
+            this.fechaLabel.Size = new System.Drawing.Size(70, 22);
             this.fechaLabel.TabIndex = 15;
             this.fechaLabel.Text = "FECHA:";
             // 
@@ -150,7 +150,7 @@ namespace POS
             this.horaLabel.Location = new System.Drawing.Point(1265, 209);
             this.horaLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.horaLabel.Name = "horaLabel";
-            this.horaLabel.Size = new System.Drawing.Size(81, 28);
+            this.horaLabel.Size = new System.Drawing.Size(64, 22);
             this.horaLabel.TabIndex = 16;
             this.horaLabel.Text = "HORA:";
             // 
@@ -165,7 +165,7 @@ namespace POS
             this.tipoServicioComboBox.Location = new System.Drawing.Point(253, 158);
             this.tipoServicioComboBox.Margin = new System.Windows.Forms.Padding(7);
             this.tipoServicioComboBox.Name = "tipoServicioComboBox";
-            this.tipoServicioComboBox.Size = new System.Drawing.Size(257, 35);
+            this.tipoServicioComboBox.Size = new System.Drawing.Size(257, 29);
             this.tipoServicioComboBox.TabIndex = 17;
             // 
             // noMesaComboBox
@@ -187,7 +187,7 @@ namespace POS
             this.noMesaComboBox.Location = new System.Drawing.Point(244, 232);
             this.noMesaComboBox.Margin = new System.Windows.Forms.Padding(7);
             this.noMesaComboBox.Name = "noMesaComboBox";
-            this.noMesaComboBox.Size = new System.Drawing.Size(257, 35);
+            this.noMesaComboBox.Size = new System.Drawing.Size(257, 29);
             this.noMesaComboBox.TabIndex = 18;
             // 
             // platilloCheckBox
@@ -198,7 +198,7 @@ namespace POS
             this.platilloCheckBox.Location = new System.Drawing.Point(33, 392);
             this.platilloCheckBox.Margin = new System.Windows.Forms.Padding(7);
             this.platilloCheckBox.Name = "platilloCheckBox";
-            this.platilloCheckBox.Size = new System.Drawing.Size(132, 32);
+            this.platilloCheckBox.Size = new System.Drawing.Size(108, 26);
             this.platilloCheckBox.TabIndex = 19;
             this.platilloCheckBox.Text = "PLATILLO";
             this.platilloCheckBox.UseVisualStyleBackColor = true;
@@ -212,7 +212,7 @@ namespace POS
             this.postreCheckBox.Location = new System.Drawing.Point(257, 392);
             this.postreCheckBox.Margin = new System.Windows.Forms.Padding(7);
             this.postreCheckBox.Name = "postreCheckBox";
-            this.postreCheckBox.Size = new System.Drawing.Size(117, 32);
+            this.postreCheckBox.Size = new System.Drawing.Size(95, 26);
             this.postreCheckBox.TabIndex = 20;
             this.postreCheckBox.Text = "POSTRE";
             this.postreCheckBox.UseVisualStyleBackColor = true;
@@ -226,7 +226,7 @@ namespace POS
             this.bebidaCheckBox.Location = new System.Drawing.Point(463, 392);
             this.bebidaCheckBox.Margin = new System.Windows.Forms.Padding(7);
             this.bebidaCheckBox.Name = "bebidaCheckBox";
-            this.bebidaCheckBox.Size = new System.Drawing.Size(112, 32);
+            this.bebidaCheckBox.Size = new System.Drawing.Size(91, 26);
             this.bebidaCheckBox.TabIndex = 21;
             this.bebidaCheckBox.Text = "BEBIDA";
             this.bebidaCheckBox.UseVisualStyleBackColor = true;
@@ -239,7 +239,7 @@ namespace POS
             this.agregarLabel.Location = new System.Drawing.Point(21, 324);
             this.agregarLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.agregarLabel.Name = "agregarLabel";
-            this.agregarLabel.Size = new System.Drawing.Size(278, 28);
+            this.agregarLabel.Size = new System.Drawing.Size(222, 22);
             this.agregarLabel.TabIndex = 22;
             this.agregarLabel.Text = "¿QUÉ DESEAS AGREGAR?";
             // 
@@ -260,7 +260,7 @@ namespace POS
             this.comentariosLabel.Location = new System.Drawing.Point(33, 832);
             this.comentariosLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.comentariosLabel.Name = "comentariosLabel";
-            this.comentariosLabel.Size = new System.Drawing.Size(150, 24);
+            this.comentariosLabel.Size = new System.Drawing.Size(121, 19);
             this.comentariosLabel.TabIndex = 25;
             this.comentariosLabel.Text = "COMENTARIOS:";
             // 
@@ -329,7 +329,8 @@ namespace POS
             this.platillosDataGridView.Size = new System.Drawing.Size(708, 103);
             this.platillosDataGridView.TabIndex = 32;
             this.platillosDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewPlatillos_CellMouseClick);
-            this.platillosDataGridView.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numeros_KeyPress);
+            this.platillosDataGridView.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.platillosDataGridView_EditingControlShowing);
+            this.platillosDataGridView.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Columns_KeyPress);
             // 
             // bebidasDataGridView
             // 
@@ -366,6 +367,7 @@ namespace POS
             this.bebidasDataGridView.TabIndex = 33;
             this.bebidasDataGridView.Visible = false;
             this.bebidasDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewBebidas_CellMouseClick);
+            this.bebidasDataGridView.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.bebidasDataGridView_EditingControlShowing);
             this.bebidasDataGridView.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numeros_KeyPress);
             // 
             // postresDataGridView
@@ -403,52 +405,12 @@ namespace POS
             this.postresDataGridView.TabIndex = 34;
             this.postresDataGridView.Visible = false;
             this.postresDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewPostres_CellMouseClick);
+            this.postresDataGridView.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.postresDataGridView_EditingControlShowing);
             this.postresDataGridView.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numeros_KeyPress);
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
-            // 
-            // agregarButton
-            // 
-            this.agregarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
-            this.agregarButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
-            this.agregarButton.BorderRadius = 20;
-            this.agregarButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.agregarButton.FlatAppearance.BorderSize = 0;
-            this.agregarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(60)))));
-            this.agregarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.agregarButton.Font = new System.Drawing.Font("Gadugi", 10F, System.Drawing.FontStyle.Bold);
-            this.agregarButton.ForeColor = System.Drawing.Color.Black;
-            this.agregarButton.Location = new System.Drawing.Point(1384, 981);
-            this.agregarButton.Margin = new System.Windows.Forms.Padding(7);
-            this.agregarButton.Name = "agregarButton";
-            this.agregarButton.Padding = new System.Windows.Forms.Padding(7);
-            this.agregarButton.Size = new System.Drawing.Size(182, 49);
-            this.agregarButton.TabIndex = 31;
-            this.agregarButton.Text = "AGREGAR";
-            this.agregarButton.UseVisualStyleBackColor = false;
-            // 
-            // cancelarButton
-            // 
-            this.cancelarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
-            this.cancelarButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
-            this.cancelarButton.BorderRadius = 20;
-            this.cancelarButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cancelarButton.FlatAppearance.BorderSize = 0;
-            this.cancelarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(60)))));
-            this.cancelarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancelarButton.Font = new System.Drawing.Font("Gadugi", 10F, System.Drawing.FontStyle.Bold);
-            this.cancelarButton.ForeColor = System.Drawing.Color.Black;
-            this.cancelarButton.Location = new System.Drawing.Point(49, 981);
-            this.cancelarButton.Margin = new System.Windows.Forms.Padding(7);
-            this.cancelarButton.Name = "cancelarButton";
-            this.cancelarButton.Padding = new System.Windows.Forms.Padding(7);
-            this.cancelarButton.Size = new System.Drawing.Size(162, 49);
-            this.cancelarButton.TabIndex = 30;
-            this.cancelarButton.Text = "CANCELAR";
-            this.cancelarButton.UseVisualStyleBackColor = false;
-            this.cancelarButton.Click += new System.EventHandler(this.cancelarButton_Click);
             // 
             // ordenDataGridView
             // 
@@ -485,13 +447,55 @@ namespace POS
             this.ordenDataGridView.Size = new System.Drawing.Size(631, 376);
             this.ordenDataGridView.TabIndex = 35;
             // 
+            // agregarButton
+            // 
+            this.agregarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
+            this.agregarButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
+            this.agregarButton.BorderRadius = 20;
+            this.agregarButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.agregarButton.FlatAppearance.BorderSize = 0;
+            this.agregarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(60)))));
+            this.agregarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.agregarButton.Font = new System.Drawing.Font("Gadugi", 10F, System.Drawing.FontStyle.Bold);
+            this.agregarButton.ForeColor = System.Drawing.Color.Black;
+            this.agregarButton.Location = new System.Drawing.Point(1384, 981);
+            this.agregarButton.Margin = new System.Windows.Forms.Padding(7);
+            this.agregarButton.Name = "agregarButton";
+            this.agregarButton.Padding = new System.Windows.Forms.Padding(7);
+            this.agregarButton.Size = new System.Drawing.Size(182, 49);
+            this.agregarButton.TabIndex = 31;
+            this.agregarButton.Text = "AGREGAR";
+            this.agregarButton.UseVisualStyleBackColor = false;
+            this.agregarButton.Click += new System.EventHandler(this.agregarButton_Click_1);
+            // 
+            // cancelarButton
+            // 
+            this.cancelarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
+            this.cancelarButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
+            this.cancelarButton.BorderRadius = 20;
+            this.cancelarButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cancelarButton.FlatAppearance.BorderSize = 0;
+            this.cancelarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(60)))));
+            this.cancelarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelarButton.Font = new System.Drawing.Font("Gadugi", 10F, System.Drawing.FontStyle.Bold);
+            this.cancelarButton.ForeColor = System.Drawing.Color.Black;
+            this.cancelarButton.Location = new System.Drawing.Point(49, 981);
+            this.cancelarButton.Margin = new System.Windows.Forms.Padding(7);
+            this.cancelarButton.Name = "cancelarButton";
+            this.cancelarButton.Padding = new System.Windows.Forms.Padding(7);
+            this.cancelarButton.Size = new System.Drawing.Size(162, 49);
+            this.cancelarButton.TabIndex = 30;
+            this.cancelarButton.Text = "CANCELAR";
+            this.cancelarButton.UseVisualStyleBackColor = false;
+            this.cancelarButton.Click += new System.EventHandler(this.cancelarButton_Click);
+            // 
             // agregarOrdenForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 27F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1735, 1055);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.ordenDataGridView);
             this.Controls.Add(this.postresDataGridView);
             this.Controls.Add(this.bebidasDataGridView);

@@ -87,7 +87,28 @@ namespace POS
                 }
             }
         }
-        
+
+        private void platillosDataGridView_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            e.Control.KeyPress -= new KeyPressEventHandler(Columns_KeyPress);
+            if (platillosDataGridView.CurrentCell.ColumnIndex == platillosDataGridView.Columns["cantidad"].Index) //Columnas deseadas
+            {
+                TextBox tb = e.Control as TextBox;
+                if (tb != null)
+                {
+                    tb.KeyPress += new KeyPressEventHandler(Columns_KeyPress);
+                }
+            }
+        }
+
+        private void Columns_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
         private void bebidaCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if (bebidaCheckBox.Checked == true)
@@ -113,6 +134,19 @@ namespace POS
 
                     beb++;
                     bebidasDataGridView.Columns.Add(GBeb);
+                }
+            }
+        }
+
+        private void bebidasDataGridView_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            e.Control.KeyPress -= new KeyPressEventHandler(Columns_KeyPress);
+            if (bebidasDataGridView.CurrentCell.ColumnIndex == bebidasDataGridView.Columns["cantidad"].Index) //Columnas deseadas
+            {
+                TextBox tb = e.Control as TextBox;
+                if (tb != null)
+                {
+                    tb.KeyPress += new KeyPressEventHandler(Columns_KeyPress);
                 }
             }
         }
@@ -147,7 +181,19 @@ namespace POS
             }
         }
 
-        
+        private void postresDataGridView_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            e.Control.KeyPress -= new KeyPressEventHandler(Columns_KeyPress);
+            if (postresDataGridView.CurrentCell.ColumnIndex == postresDataGridView.Columns["cantidad"].Index) //Columnas deseadas
+            {
+                TextBox tb = e.Control as TextBox;
+                if (tb != null)
+                {
+                    tb.KeyPress += new KeyPressEventHandler(Columns_KeyPress);
+                }
+            }
+        }
+
 
         private void agregarButton_Click(object sender, EventArgs e)
         {
@@ -165,16 +211,23 @@ namespace POS
 
         private void dataGridViewPlatillos_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.ColumnIndex == platillosDataGridView.Columns.IndexOf(GPla))
-            {
-                platillosDataGridView.CurrentRow.Cells[e.ColumnIndex].Style.SelectionBackColor = Color.FromArgb(255, 205, 89);
-                platillosDataGridView.CurrentRow.Cells[e.ColumnIndex].Style.BackColor = Color.FromArgb(255, 128, 0);
-                platillosDataGridView.CurrentRow.Cells[e.ColumnIndex].Style.ForeColor = Color.White;
-                platillosDataGridView.CurrentRow.Cells["cantidad"].Style.ForeColor = Color.FromArgb(255, 128, 0);
-                platillosDataGridView.CurrentRow.Cells[e.ColumnIndex].Style.Font = new Font("Gadugi", 15, FontStyle.Bold);
-                var box = "Platillo: " + platillosDataGridView.CurrentRow.Cells["nombre_elemento"].Value + "   Precio: " + platillosDataGridView.CurrentRow.Cells["precio"].Value;
-                MessageBox.Show(box, "Agregando al carrito", MessageBoxButtons.OK);
-            }
+
+                if (e.ColumnIndex == platillosDataGridView.Columns.IndexOf(GPla))
+                {
+                    if (platillosDataGridView.CurrentRow.Cells["cantidad"].Value == null)
+                    {
+                        MessageBox.Show("No se ha ingresado la cantidad", "Dato requerido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else {
+                    platillosDataGridView.CurrentRow.Cells[e.ColumnIndex].Style.SelectionBackColor = Color.FromArgb(255, 205, 89);
+                    platillosDataGridView.CurrentRow.Cells[e.ColumnIndex].Style.BackColor = Color.FromArgb(255, 128, 0);
+                    platillosDataGridView.CurrentRow.Cells[e.ColumnIndex].Style.ForeColor = Color.White;
+                    platillosDataGridView.CurrentRow.Cells["cantidad"].Style.ForeColor = Color.FromArgb(255, 128, 0);
+                    platillosDataGridView.CurrentRow.Cells[e.ColumnIndex].Style.Font = new Font("Gadugi", 15, FontStyle.Bold);
+                    var box = "Platillo: " + platillosDataGridView.CurrentRow.Cells["nombre_elemento"].Value + "   Precio: " + platillosDataGridView.CurrentRow.Cells["precio"].Value;
+                    MessageBox.Show(box, "Agregando al carrito", MessageBoxButtons.OK);
+                    }
+                }
         }
 
         private void dataGridViewBebidas_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -183,7 +236,12 @@ namespace POS
             {
                 if (e.ColumnIndex == bebidasDataGridView.Columns.IndexOf(GBeb))
                 {
-                    
+                    if (bebidasDataGridView.CurrentRow.Cells["cantidad"].Value == null)
+                    {
+                        MessageBox.Show("No se ha ingresado la cantidad", "Dato requerido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
                         bebidasDataGridView.CurrentRow.Cells[e.ColumnIndex].Style.SelectionBackColor = Color.FromArgb(255, 205, 89);
                         bebidasDataGridView.CurrentRow.Cells[e.ColumnIndex].Style.BackColor = Color.FromArgb(255, 128, 0);
                         bebidasDataGridView.CurrentRow.Cells[e.ColumnIndex].Style.ForeColor = Color.White;
@@ -201,6 +259,7 @@ namespace POS
                         ordenDataGridView.Rows[rowEscribir].Cells[1].Value = bebidasDataGridView.CurrentRow.Cells["precio"].Value;
                         ordenDataGridView.Rows[rowEscribir].Cells[2].Value = bebidasDataGridView.CurrentRow.Cells["precio"].Value;
                         ordenDataGridView.Rows[rowEscribir].Cells[4].Value = "$$.$$";
+                    }   
                 }
             }
             catch {
@@ -212,13 +271,19 @@ namespace POS
         {
             if (e.ColumnIndex == postresDataGridView.Columns.IndexOf(GPos))
             {
-                postresDataGridView.CurrentRow.Cells[e.ColumnIndex].Style.SelectionBackColor = Color.FromArgb(255, 205, 89);
-                postresDataGridView.CurrentRow.Cells[e.ColumnIndex].Style.BackColor = Color.FromArgb(255, 128, 0);
-                postresDataGridView.CurrentRow.Cells[e.ColumnIndex].Style.ForeColor = Color.White;
-                postresDataGridView.CurrentRow.Cells["cantidad"].Style.ForeColor = Color.FromArgb(255, 128, 0);
-                postresDataGridView.CurrentRow.Cells[e.ColumnIndex].Style.Font = new Font("Gadugi", 15, FontStyle.Bold);
-                var box = "Platillo: " + postresDataGridView.CurrentRow.Cells["nombre_elemento"].Value + "   Precio: " + postresDataGridView.CurrentRow.Cells["precio"].Value;
-                MessageBox.Show(box, "Agregando al carrito", MessageBoxButtons.OK);
+                if (bebidasDataGridView.CurrentRow.Cells["cantidad"].Value == null)
+                {
+                    MessageBox.Show("No se ha ingresado la cantidad", "Dato requerido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else {
+                    postresDataGridView.CurrentRow.Cells[e.ColumnIndex].Style.SelectionBackColor = Color.FromArgb(255, 205, 89);
+                    postresDataGridView.CurrentRow.Cells[e.ColumnIndex].Style.BackColor = Color.FromArgb(255, 128, 0);
+                    postresDataGridView.CurrentRow.Cells[e.ColumnIndex].Style.ForeColor = Color.White;
+                    postresDataGridView.CurrentRow.Cells["cantidad"].Style.ForeColor = Color.FromArgb(255, 128, 0);
+                    postresDataGridView.CurrentRow.Cells[e.ColumnIndex].Style.Font = new Font("Gadugi", 15, FontStyle.Bold);
+                    var box = "Platillo: " + postresDataGridView.CurrentRow.Cells["nombre_elemento"].Value + "   Precio: " + postresDataGridView.CurrentRow.Cells["precio"].Value;
+                    MessageBox.Show(box, "Agregando al carrito", MessageBoxButtons.OK);
+                } 
             }
         }
 
@@ -233,6 +298,11 @@ namespace POS
             {
                 e.Handled = true;
             }
+        }
+
+        private void agregarButton_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
