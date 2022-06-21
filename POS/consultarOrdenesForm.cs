@@ -45,12 +45,14 @@ namespace POS
 
         private void ventasButton_Click(object sender, EventArgs e)
         {
-            eliminarOrdenForm frm = new eliminarOrdenForm();
-            frm.ShowDialog();
+            
         }
 
         private void usuariosButton_Click(object sender, EventArgs e)
         {
+            consultarOrdenesForm frmOrd = new consultarOrdenesForm();
+            frmOrd.Close();
+            this.Hide();
             consultarUsuariosForm frm = new consultarUsuariosForm();
             frm.Show();
         }

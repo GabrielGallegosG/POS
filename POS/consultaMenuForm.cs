@@ -125,6 +125,7 @@ namespace POS
         {
             platillosDataGridView.DataSource = BLConsultaElemento.PlatillosDT();
             platillosDataGridView.Sort(platillosDataGridView.Columns["nombre_elemento"],ListSortDirection.Ascending);
+            platillosDataGridView.AllowUserToAddRows = false;
 
             platillosPanel.BackColor = Color.DodgerBlue;
             platilloLabel.Visible = true;
@@ -160,6 +161,7 @@ namespace POS
 
             platillosDataGridView.DataSource = BLConsultaElemento.PlatillosDT();
             platillosDataGridView.Sort(platillosDataGridView.Columns[0], ListSortDirection.Ascending);
+            platillosDataGridView.AllowUserToAddRows = false;
 
             platillosPanel.BackColor = Color.DodgerBlue;
             bebidasPanel.BackColor = Color.FromArgb(0, 87, 158);
@@ -195,6 +197,7 @@ namespace POS
 
             bebidasDataGridView.DataSource = BLConsultaElemento.BebidasDT();
             bebidasDataGridView.Sort(bebidasDataGridView.Columns[0], ListSortDirection.Ascending);
+            bebidasDataGridView.AllowUserToAddRows = false;
 
             platillosPanel.BackColor = Color.FromArgb(0, 87, 158);
             bebidasPanel.BackColor = Color.DodgerBlue;
@@ -229,6 +232,7 @@ namespace POS
 
             postresDataGridView.DataSource = BLConsultaElemento.PostresDT();
             postresDataGridView.Sort(postresDataGridView.Columns[0], ListSortDirection.Ascending);
+            postresDataGridView.AllowUserToAddRows = false;
 
             platillosPanel.BackColor = Color.FromArgb(0, 87, 158);
             bebidasPanel.BackColor = Color.FromArgb(0, 87, 158);
