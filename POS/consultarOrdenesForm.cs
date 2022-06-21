@@ -45,7 +45,11 @@ namespace POS
 
         private void ventasButton_Click(object sender, EventArgs e)
         {
-            
+            consultarOrdenesForm frmOrd = new consultarOrdenesForm();
+            frmOrd.Close();
+            this.Hide();
+            inicioVentasForm frm = new inicioVentasForm();
+            frm.Show();
         }
 
         private void usuariosButton_Click(object sender, EventArgs e)
@@ -56,5 +60,7 @@ namespace POS
             consultarUsuariosForm frm = new consultarUsuariosForm();
             frm.Show();
         }
+
+
     }
 }

@@ -331,5 +331,15 @@ namespace POS
             agregarMenuForm frm = new agregarMenuForm();
             frm.ShowDialog();
         }
+
+        private void ventasButton_Click(object sender, EventArgs e)
+        {
+            consultaMenuForm consultaMenu = new consultaMenuForm();
+            consultaMenu.Close();
+            this.Hide();
+            inicioVentasForm frm = new inicioVentasForm();
+            frm.Show();
+        }
+
     }
 }
