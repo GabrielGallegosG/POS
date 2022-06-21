@@ -12,6 +12,11 @@ namespace POS
 {
     public partial class loginForm : Form
     {
+        consultarUsuariosForm frm = new consultarUsuariosForm();
+        DataTable data = new DataTable();
+
+        int us = 0, contra = 0;
+        
         public loginForm()
         {
             InitializeComponent();
@@ -22,7 +27,7 @@ namespace POS
        
         private void empleadoButton_Click_1(object sender, EventArgs e)
         {
-            iniciarSesionButton.BackColor = Color.DodgerBlue;
+           iniciarSesionButton.BackColor = Color.DodgerBlue;
            contenedorPanel.Show();
         }
 
@@ -34,13 +39,32 @@ namespace POS
 
         private void iniciarSesionButton_Click_1(object sender, EventArgs e)
         {
-            loginForm logIn = new loginForm();
-            logIn.Close();
-            this.Hide();
-            consultaMenuForm consultaMenu = new consultaMenuForm();
-            consultaMenu.Show();
-            /*consultarUsuariosForm consultaUsuario = new consultarUsuariosForm();
-            consultaUsuario.Show(); */
+            frm.usuariosDataGridView.DataSource = BLConsultarUsuarios.UsuariosDT();
+            data = frm.usuariosDataGridView.DataSource as DataTable;
+
+            foreach (DataRow row in data.Rows)
+            {
+                if (usuarioTextBox.Text.Equals(row[6]) && contraseñaTextBox.Text.Equals(row[7]))
+                {
+                    us = 1;
+                    contra = 1;
+                }
+            }
+
+            if (us == 1 && contra ==1)
+            {
+                loginForm logIn = new loginForm();
+                logIn.Close();
+                this.Hide();
+                consultaMenuForm consultaMenu = new consultaMenuForm();
+                consultaMenu.Show();
+            }
+            else
+            {
+                usuarioTextBox.Text = "";
+                contraseñaTextBox.Text = "";
+                MessageBox.Show("¡Usuario o contraseña incorrectos, intente nuevamente!", "Usuario o contraseña incorrectos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
