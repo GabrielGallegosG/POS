@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -209,8 +210,20 @@ namespace POS
             }
         }
 
+        public class platillosSeleccionados
+        {
+            public string nombrePlatillo { get; set; }
+            public float precioUnitario { get; set; }
+            public int cantidad { get; set; }
+            public float subTotal { get; set; }
+        }
+
         private void dataGridViewPlatillos_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            List<platillosSeleccionados> Lista = new List<platillosSeleccionados>();
+            String nombrePlatillo;
+            float subTotal, precioUnitario;
+            int cantidad;
 
                 if (e.ColumnIndex == platillosDataGridView.Columns.IndexOf(GPla))
                 {
@@ -224,8 +237,28 @@ namespace POS
                     platillosDataGridView.CurrentRow.Cells[e.ColumnIndex].Style.ForeColor = Color.White;
                     platillosDataGridView.CurrentRow.Cells["cantidad"].Style.ForeColor = Color.FromArgb(255, 128, 0);
                     platillosDataGridView.CurrentRow.Cells[e.ColumnIndex].Style.Font = new Font("Gadugi", 15, FontStyle.Bold);
+
+                    nombrePlatillo = platillosDataGridView.CurrentRow.Cells["nombre_elemento"].Value.ToString();
+                    cantidad = Convert.ToInt32(platillosDataGridView.CurrentRow.Cells["cantidad"].Value.ToString());
+                    precioUnitario = Convert.ToSingle(platillosDataGridView.CurrentRow.Cells["precio"].Value.ToString());
+                    subTotal = precioUnitario * cantidad;
+
+                    
+                        platillosSeleccionados obj = new platillosSeleccionados();
+                        obj.nombrePlatillo = nombrePlatillo;
+                        obj.precioUnitario = precioUnitario;
+                        obj.cantidad = cantidad;
+                        obj.subTotal = subTotal;
+                        Lista.Add(obj);
+
                     var box = "Platillo: " + platillosDataGridView.CurrentRow.Cells["nombre_elemento"].Value + "   Precio: " + platillosDataGridView.CurrentRow.Cells["precio"].Value;
                     MessageBox.Show(box, "Agregando al carrito", MessageBoxButtons.OK);
+
+                    foreach (platillosSeleccionados element in Lista)
+                    {
+                        ordenDataGridView.DataSource = Lista.ToList();
+                    }
+
                     }
                 }
         }
