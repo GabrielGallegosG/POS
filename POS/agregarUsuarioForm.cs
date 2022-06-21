@@ -12,9 +12,12 @@ namespace POS
 {
     public partial class agregarUsuarioForm : Form
     {
+        consultarUsuariosForm frm = new consultarUsuariosForm();
+        DataTable data = new DataTable();
         public agregarUsuarioForm()
         {
             InitializeComponent();
+            frm.usuariosDataGridView.DataSource = BLConsultarUsuarios.UsuariosDT();
             PLAgregarUsuario.posicionAgregarUsuario(encabezadoLabel, nombreLabel, nombreTextBox, apellidoPLabel, apellidoPTextBox, apellidoMLabel, apellidoMTextBox,
                 usuarioLabel, usuarioTextBox, contraseñaLabel, contraseñaTextBox, tipoUsuarioLabel, tipoComboBox, cargoLabel, cargoTextBox, cancelarButton, agregarButton);
         }
@@ -47,41 +50,58 @@ namespace POS
                     }
                     else
                     {
+                        int cont = 0;
+                        data = frm.usuariosDataGridView.DataSource as DataTable;
+                        foreach (DataRow row in data.Rows)
+                        {
+                            if (usuarioTextBox.Text.Equals(row[6]))
+                            {
+                                cont = 1;
+
+                            }
+                        }
+                    if (cont == 1) {
+                                MessageBox.Show("¡Este usuario ya existe, por favor ingrese otro!", "Dato duplicado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        else { 
+
                         if (usuarioTextBox.Text.Equals(""))
                         {
                             MessageBox.Show("¡No se ha ingresado el usuario!", "Dato requerido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                         else
                         {
-                            if (contraseñaTextBox.Text.Equals(""))
-                            {
-                                MessageBox.Show("¡No se ha ingresado la contraseña!", "Dato requerido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            }
-                            else
-                            {
-                                if (tipoComboBox.Text.Equals(""))
+                                if (contraseñaTextBox.Text.Equals(""))
                                 {
-                                    MessageBox.Show("¡No se ha ingresado el tipo de usuario!", "Dato requerido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    MessageBox.Show("¡No se ha ingresado la contraseña!", "Dato requerido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 }
                                 else
                                 {
-                                    if (cargoTextBox.Text.Equals(""))
+                                    if (tipoComboBox.Text.Equals(""))
                                     {
-                                        MessageBox.Show("¡No se ha ingresado el cargo del usuario!", "Dato requerido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                        MessageBox.Show("¡No se ha ingresado el tipo de usuario!", "Dato requerido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                     }
                                     else
                                     {
-                                        try
+                                        if (cargoTextBox.Text.Equals(""))
                                         {
-                                            BLAgregarUsuario.agregarUsuario(nombreTextBox.Text, apellidoPTextBox.Text, apellidoMTextBox.Text, tipoComboBox.Text, cargoTextBox.Text, usuarioTextBox.Text, contraseñaTextBox.Text);
-                                            MessageBox.Show("¡Se ha dado de alta con exito!", "Alta de usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                            this.Close();
+                                            MessageBox.Show("¡No se ha ingresado el cargo del usuario!", "Dato requerido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                         }
-                                        catch (Exception ex)
+                                        else
                                         {
-                                            MessageBox.Show("¡Ha ocurrido un error al dar de alta a el usuario!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                            try
+                                            {
+                                                BLAgregarUsuario.agregarUsuario(nombreTextBox.Text, apellidoPTextBox.Text, apellidoMTextBox.Text, tipoComboBox.Text, cargoTextBox.Text, usuarioTextBox.Text, contraseñaTextBox.Text);
+                                                MessageBox.Show("¡Se ha dado de alta con exito!", "Alta de usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                                this.Close();
+                                            }
+                                            catch (Exception ex)
+                                            {
+                                                MessageBox.Show("¡Ha ocurrido un error al dar de alta a el usuario!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                            }
                                         }
                                     }
+
                                 }
                             }
                         }

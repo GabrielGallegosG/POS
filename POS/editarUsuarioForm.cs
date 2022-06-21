@@ -14,7 +14,7 @@ namespace POS
     {
         int id_editar,tipo_editar;
         string nombre_editar, apellidoP_editar, apellidoM_editar,usuario_editar,contraseña_editar,cargo_editar;
-
+        consultarUsuariosForm frm = new consultarUsuariosForm();
         
         public editarUsuarioForm(int id, string nombre, string apellidoP, string apellidoM, int tipo, string cargo, string usuario, string contraseña)
         {

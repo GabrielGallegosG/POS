@@ -51,13 +51,14 @@ namespace POS
             baja.Location = new Point(820, 620);
         }
 
-        public static void encabezadosTabla(Label id, Label nombre, Label apellidoP, Label apellidoM, Label cargo)
+        public static void encabezadosTabla(Label id, Label nombre, Label apellidoP, Label apellidoM, Label cargo, Button actualizar)
         {
             id.Location = new Point(210, 262);
             nombre.Location = new Point(400, 262);
             apellidoP.Location = new Point(600, 262);
             apellidoM.Location = new Point(790, 262);
             cargo.Location = new Point(990, 262);
+            actualizar.Location = new Point(1150, 262);
         }
 
         public static void dataGridView(DataGridView dataGrid)

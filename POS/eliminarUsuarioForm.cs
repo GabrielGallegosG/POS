@@ -16,7 +16,7 @@ namespace POS
         string nombre_eliminar;
         string apellidoP_eliminar;
         string apellidoM_eliminar;
-
+        consultarUsuariosForm frm = new consultarUsuariosForm();
         public eliminarUsuarioForm(int id, string nombre, string apellidoP, string apellidoM)
         {
             id_eliminar = id;
