@@ -67,6 +67,18 @@
     <Compile Include="agregarOrdenForm.Designer.cs">
       <DependentUpon>agregarOrdenForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="agregarSaldoFinalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="agregarSaldoFinalForm.Designer.cs">
+      <DependentUpon>agregarSaldoFinalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="agregarSaldoInicialForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="agregarSaldoInicialForm.Designer.cs">
+      <DependentUpon>agregarSaldoInicialForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="agregarUsuarioForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +104,15 @@
     <Compile Include="buttonSystem.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="consultarVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="consultarVentas.Designer.cs">
+      <DependentUpon>consultarVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLAgregarSaldoInicial.cs" />
+    <Compile Include="PLConsultarVentas.cs" />
+    <Compile Include="PLInicioVentas.cs" />
     <Compile Include="consultaMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +209,12 @@
     <Compile Include="inicioForm.Designer.cs">
       <DependentUpon>inicioForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="inicioVentasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inicioVentasForm.Designer.cs">
+      <DependentUpon>inicioVentasForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="loginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,6 +244,12 @@
     <EmbeddedResource Include="agregarOrdenForm.resx">
       <DependentUpon>agregarOrdenForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="agregarSaldoFinalForm.resx">
+      <DependentUpon>agregarSaldoFinalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="agregarSaldoInicialForm.resx">
+      <DependentUpon>agregarSaldoInicialForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="agregarUsuarioForm.resx">
       <DependentUpon>agregarUsuarioForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -240,6 +273,9 @@
     <EmbeddedResource Include="consultarUsuariosForm.resx">
       <DependentUpon>consultarUsuariosForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="consultarVentas.resx">
+      <DependentUpon>consultarVentas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="editarMenuForm.resx">
       <DependentUpon>editarMenuForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -260,6 +296,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="inicioForm.resx">
       <DependentUpon>inicioForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inicioVentasForm.resx">
+      <DependentUpon>inicioVentasForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="loginForm.resx">
       <DependentUpon>loginForm.cs</DependentUpon>

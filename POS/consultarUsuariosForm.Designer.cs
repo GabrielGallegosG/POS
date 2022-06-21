@@ -115,6 +115,7 @@ namespace POS
             this.ventasButton.TabIndex = 12;
             this.ventasButton.Text = "VENTAS";
             this.ventasButton.UseVisualStyleBackColor = false;
+            this.ventasButton.Click += new System.EventHandler(this.ventasButton_Click);
             // 
             // ordenesButton
             // 

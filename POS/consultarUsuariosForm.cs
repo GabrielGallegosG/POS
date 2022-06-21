@@ -65,5 +65,14 @@ namespace POS
             editarUsuarioForm frm = new editarUsuarioForm();
             frm.Show();
         }
+
+        private void ventasButton_Click(object sender, EventArgs e)
+        {
+            consultarUsuariosForm frmUs = new consultarUsuariosForm();
+            frmUs.Close();
+            this.Hide();
+            inicioVentasForm frm = new inicioVentasForm();
+            frm.Show();
+        }
     }
 }
