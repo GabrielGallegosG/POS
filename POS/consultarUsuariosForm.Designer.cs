@@ -29,6 +29,11 @@ namespace POS
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(consultarUsuariosForm));
             this.agregarUsuarioLabel = new System.Windows.Forms.Label();
             this.encabezadoPanel = new System.Windows.Forms.Panel();
@@ -53,6 +58,7 @@ namespace POS
             this.apellidoPUsuarioLabel = new System.Windows.Forms.Label();
             this.apellidoMUsuarioLabel = new System.Windows.Forms.Label();
             this.cargoUsuarioLabel = new System.Windows.Forms.Label();
+            this.actualizarButton = new System.Windows.Forms.Button();
             this.encabezadoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosDataGridView)).BeginInit();
             this.buscarPanel.SuspendLayout();
@@ -185,6 +191,7 @@ namespace POS
             this.buscarTextBox.Name = "buscarTextBox";
             this.buscarTextBox.Size = new System.Drawing.Size(196, 26);
             this.buscarTextBox.TabIndex = 28;
+            this.buscarTextBox.TextChanged += new System.EventHandler(this.buscarTextBox_TextChanged);
             // 
             // consultaPanel
             // 
@@ -198,17 +205,54 @@ namespace POS
             // 
             this.usuariosDataGridView.AllowUserToAddRows = false;
             this.usuariosDataGridView.AllowUserToDeleteRows = false;
+            this.usuariosDataGridView.AllowUserToResizeColumns = false;
+            this.usuariosDataGridView.AllowUserToResizeRows = false;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.usuariosDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.usuariosDataGridView.BackgroundColor = System.Drawing.Color.White;
+            this.usuariosDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.usuariosDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.usuariosDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.usuariosDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.usuariosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.usuariosDataGridView.Cursor = System.Windows.Forms.Cursors.Hand;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.usuariosDataGridView.DefaultCellStyle = dataGridViewCellStyle8;
             this.usuariosDataGridView.Location = new System.Drawing.Point(62, 255);
-            this.usuariosDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.usuariosDataGridView.Name = "usuariosDataGridView";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.usuariosDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.usuariosDataGridView.RowHeadersWidth = 51;
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
+            this.usuariosDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.usuariosDataGridView.Size = new System.Drawing.Size(653, 92);
             this.usuariosDataGridView.TabIndex = 30;
+            this.usuariosDataGridView.SelectionChanged += new System.EventHandler(this.usuariosDataGridView_SelectionChanged);
             // 
             // usuarioLabel
             // 
@@ -354,12 +398,31 @@ namespace POS
             this.cargoUsuarioLabel.TabIndex = 41;
             this.cargoUsuarioLabel.Text = "Cargo";
             // 
+            // actualizarButton
+            // 
+            this.actualizarButton.BackColor = System.Drawing.Color.White;
+            this.actualizarButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("actualizarButton.BackgroundImage")));
+            this.actualizarButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.actualizarButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.actualizarButton.FlatAppearance.BorderSize = 0;
+            this.actualizarButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.actualizarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.actualizarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.actualizarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.actualizarButton.Location = new System.Drawing.Point(721, 213);
+            this.actualizarButton.Name = "actualizarButton";
+            this.actualizarButton.Size = new System.Drawing.Size(40, 30);
+            this.actualizarButton.TabIndex = 42;
+            this.actualizarButton.UseVisualStyleBackColor = false;
+            this.actualizarButton.Click += new System.EventHandler(this.actualizarButton_Click);
+            // 
             // consultarUsuariosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.actualizarButton);
             this.Controls.Add(this.cargoUsuarioLabel);
             this.Controls.Add(this.apellidoMUsuarioLabel);
             this.Controls.Add(this.apellidoPUsuarioLabel);
@@ -380,6 +443,7 @@ namespace POS
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar usuarios";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.consultarUsuariosForm_Load);
             this.encabezadoPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.usuariosDataGridView)).EndInit();
             this.buscarPanel.ResumeLayout(false);
@@ -405,7 +469,7 @@ namespace POS
         private System.Windows.Forms.PictureBox logoPictureBox;
         private System.Windows.Forms.TextBox buscarTextBox;
         private System.Windows.Forms.Panel consultaPanel;
-        private System.Windows.Forms.DataGridView usuariosDataGridView;
+        public System.Windows.Forms.DataGridView usuariosDataGridView;
         private System.Windows.Forms.Label usuarioLabel;
         private System.Windows.Forms.Button editarUsuarioButton;
         private System.Windows.Forms.Button eliminarUsuarioButton;
@@ -416,5 +480,6 @@ namespace POS
         private System.Windows.Forms.Label apellidoPUsuarioLabel;
         private System.Windows.Forms.Label apellidoMUsuarioLabel;
         private System.Windows.Forms.Label cargoUsuarioLabel;
+        private System.Windows.Forms.Button actualizarButton;
     }
 }

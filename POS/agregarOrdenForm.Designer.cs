@@ -29,7 +29,7 @@ namespace POS
         /// </summary>
         private void InitializeComponent()
         {
-
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -39,8 +39,10 @@ namespace POS
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-          
-            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(agregarOrdenForm));
             this.encabezadoPanel = new System.Windows.Forms.Panel();
             this.noOrdenLabel = new System.Windows.Forms.Label();
             this.empleadoLabel = new System.Windows.Forms.Label();
@@ -63,12 +65,21 @@ namespace POS
             this.bebidasDataGridView = new System.Windows.Forms.DataGridView();
             this.postresDataGridView = new System.Windows.Forms.DataGridView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.ordenDataGridView = new System.Windows.Forms.DataGridView();
+            this.actualizarButton = new System.Windows.Forms.Button();
+            this.precioElementoLabel = new System.Windows.Forms.Label();
+            this.nombreElementoLabel = new System.Windows.Forms.Label();
+            this.cantidadElementoLabel = new System.Windows.Forms.Label();
+            this.subtotalElementoLabel = new System.Windows.Forms.Label();
+            this.totalLabel = new System.Windows.Forms.Label();
             this.agregarButton = new buttonSystem();
             this.cancelarButton = new buttonSystem();
+            this.totalElementosLabel = new System.Windows.Forms.Label();
             this.encabezadoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.platillosDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bebidasDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.postresDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordenDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // encabezadoPanel
@@ -79,9 +90,9 @@ namespace POS
             this.encabezadoPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
             this.encabezadoPanel.Controls.Add(this.noOrdenLabel);
             this.encabezadoPanel.Location = new System.Drawing.Point(2, 0);
-            this.encabezadoPanel.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.encabezadoPanel.Margin = new System.Windows.Forms.Padding(7);
             this.encabezadoPanel.Name = "encabezadoPanel";
-            this.encabezadoPanel.Size = new System.Drawing.Size(1729, 49);
+            this.encabezadoPanel.Size = new System.Drawing.Size(2098, 49);
             this.encabezadoPanel.TabIndex = 11;
             // 
             // noOrdenLabel
@@ -100,81 +111,75 @@ namespace POS
             // 
             this.empleadoLabel.AutoSize = true;
             this.empleadoLabel.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.empleadoLabel.Location = new System.Drawing.Point(44, 104);
+            this.empleadoLabel.Location = new System.Drawing.Point(39, 109);
             this.empleadoLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.empleadoLabel.Name = "empleadoLabel";
             this.empleadoLabel.Size = new System.Drawing.Size(137, 28);
             this.empleadoLabel.TabIndex = 12;
             this.empleadoLabel.Text = "EMPLEADO:";
-            this.empleadoLabel.Click += new System.EventHandler(this.empleadoLabel_Click);
             // 
             // tipoServicioLabel
             // 
             this.tipoServicioLabel.AutoSize = true;
             this.tipoServicioLabel.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tipoServicioLabel.Location = new System.Drawing.Point(28, 165);
+            this.tipoServicioLabel.Location = new System.Drawing.Point(23, 170);
             this.tipoServicioLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.tipoServicioLabel.Name = "tipoServicioLabel";
             this.tipoServicioLabel.Size = new System.Drawing.Size(209, 28);
             this.tipoServicioLabel.TabIndex = 13;
             this.tipoServicioLabel.Text = "TIPO DE SERVICIO:";
-            this.tipoServicioLabel.Click += new System.EventHandler(this.tipoServicioLabel_Click);
             // 
             // noMesaLabel
             // 
             this.noMesaLabel.AutoSize = true;
             this.noMesaLabel.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noMesaLabel.Location = new System.Drawing.Point(19, 239);
+            this.noMesaLabel.Location = new System.Drawing.Point(14, 244);
             this.noMesaLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.noMesaLabel.Name = "noMesaLabel";
             this.noMesaLabel.Size = new System.Drawing.Size(163, 28);
             this.noMesaLabel.TabIndex = 14;
             this.noMesaLabel.Text = "NO. DE MESA:";
-            this.noMesaLabel.Click += new System.EventHandler(this.noMesaLabel_Click);
             // 
             // fechaLabel
             // 
             this.fechaLabel.AutoSize = true;
             this.fechaLabel.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fechaLabel.Location = new System.Drawing.Point(1258, 94);
+            this.fechaLabel.Location = new System.Drawing.Point(1129, 99);
             this.fechaLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.fechaLabel.Name = "fechaLabel";
             this.fechaLabel.Size = new System.Drawing.Size(88, 28);
             this.fechaLabel.TabIndex = 15;
             this.fechaLabel.Text = "FECHA:";
-            this.fechaLabel.Click += new System.EventHandler(this.fechaLabel_Click);
             // 
             // horaLabel
             // 
             this.horaLabel.AutoSize = true;
             this.horaLabel.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.horaLabel.Location = new System.Drawing.Point(1265, 209);
+            this.horaLabel.Location = new System.Drawing.Point(1136, 214);
             this.horaLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.horaLabel.Name = "horaLabel";
             this.horaLabel.Size = new System.Drawing.Size(81, 28);
             this.horaLabel.TabIndex = 16;
             this.horaLabel.Text = "HORA:";
-            this.horaLabel.Click += new System.EventHandler(this.horaLabel_Click);
             // 
             // tipoServicioComboBox
             // 
-            this.tipoServicioComboBox.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tipoServicioComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tipoServicioComboBox.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tipoServicioComboBox.FormattingEnabled = true;
             this.tipoServicioComboBox.Items.AddRange(new object[] {
             "PARA COMER AQUI",
             "PARA LLEVAR"});
-            this.tipoServicioComboBox.Location = new System.Drawing.Point(253, 158);
-            this.tipoServicioComboBox.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.tipoServicioComboBox.Location = new System.Drawing.Point(248, 163);
+            this.tipoServicioComboBox.Margin = new System.Windows.Forms.Padding(7);
             this.tipoServicioComboBox.Name = "tipoServicioComboBox";
             this.tipoServicioComboBox.Size = new System.Drawing.Size(257, 35);
             this.tipoServicioComboBox.TabIndex = 17;
-            this.tipoServicioComboBox.SelectedIndexChanged += new System.EventHandler(this.tipoServicioComboBox_SelectedIndexChanged);
             // 
             // noMesaComboBox
             // 
-            this.noMesaComboBox.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.noMesaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.noMesaComboBox.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.noMesaComboBox.FormattingEnabled = true;
             this.noMesaComboBox.Items.AddRange(new object[] {
             "1",
@@ -187,20 +192,19 @@ namespace POS
             "8",
             "9",
             "10"});
-            this.noMesaComboBox.Location = new System.Drawing.Point(244, 232);
-            this.noMesaComboBox.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.noMesaComboBox.Location = new System.Drawing.Point(239, 237);
+            this.noMesaComboBox.Margin = new System.Windows.Forms.Padding(7);
             this.noMesaComboBox.Name = "noMesaComboBox";
             this.noMesaComboBox.Size = new System.Drawing.Size(257, 35);
             this.noMesaComboBox.TabIndex = 18;
-            this.noMesaComboBox.SelectedIndexChanged += new System.EventHandler(this.noMesaComboBox_SelectedIndexChanged);
             // 
             // platilloCheckBox
             // 
             this.platilloCheckBox.AutoSize = true;
             this.platilloCheckBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.platilloCheckBox.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.platilloCheckBox.Location = new System.Drawing.Point(33, 392);
-            this.platilloCheckBox.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.platilloCheckBox.Location = new System.Drawing.Point(28, 397);
+            this.platilloCheckBox.Margin = new System.Windows.Forms.Padding(7);
             this.platilloCheckBox.Name = "platilloCheckBox";
             this.platilloCheckBox.Size = new System.Drawing.Size(132, 32);
             this.platilloCheckBox.TabIndex = 19;
@@ -213,8 +217,8 @@ namespace POS
             this.postreCheckBox.AutoSize = true;
             this.postreCheckBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.postreCheckBox.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.postreCheckBox.Location = new System.Drawing.Point(257, 392);
-            this.postreCheckBox.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.postreCheckBox.Location = new System.Drawing.Point(252, 397);
+            this.postreCheckBox.Margin = new System.Windows.Forms.Padding(7);
             this.postreCheckBox.Name = "postreCheckBox";
             this.postreCheckBox.Size = new System.Drawing.Size(117, 32);
             this.postreCheckBox.TabIndex = 20;
@@ -227,8 +231,8 @@ namespace POS
             this.bebidaCheckBox.AutoSize = true;
             this.bebidaCheckBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bebidaCheckBox.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bebidaCheckBox.Location = new System.Drawing.Point(463, 392);
-            this.bebidaCheckBox.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.bebidaCheckBox.Location = new System.Drawing.Point(458, 397);
+            this.bebidaCheckBox.Margin = new System.Windows.Forms.Padding(7);
             this.bebidaCheckBox.Name = "bebidaCheckBox";
             this.bebidaCheckBox.Size = new System.Drawing.Size(112, 32);
             this.bebidaCheckBox.TabIndex = 21;
@@ -240,19 +244,18 @@ namespace POS
             // 
             this.agregarLabel.AutoSize = true;
             this.agregarLabel.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.agregarLabel.Location = new System.Drawing.Point(21, 324);
+            this.agregarLabel.Location = new System.Drawing.Point(16, 329);
             this.agregarLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.agregarLabel.Name = "agregarLabel";
             this.agregarLabel.Size = new System.Drawing.Size(278, 28);
             this.agregarLabel.TabIndex = 22;
             this.agregarLabel.Text = "¿QUÉ DESEAS AGREGAR?";
-            this.agregarLabel.Click += new System.EventHandler(this.agregarLabel_Click);
             // 
             // comentariosRichTextBox
             // 
             this.comentariosRichTextBox.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comentariosRichTextBox.Location = new System.Drawing.Point(45, 877);
-            this.comentariosRichTextBox.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.comentariosRichTextBox.Location = new System.Drawing.Point(32, 742);
+            this.comentariosRichTextBox.Margin = new System.Windows.Forms.Padding(7);
             this.comentariosRichTextBox.Name = "comentariosRichTextBox";
             this.comentariosRichTextBox.Size = new System.Drawing.Size(794, 90);
             this.comentariosRichTextBox.TabIndex = 26;
@@ -262,7 +265,7 @@ namespace POS
             // 
             this.comentariosLabel.AutoSize = true;
             this.comentariosLabel.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comentariosLabel.Location = new System.Drawing.Point(33, 832);
+            this.comentariosLabel.Location = new System.Drawing.Point(20, 697);
             this.comentariosLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.comentariosLabel.Name = "comentariosLabel";
             this.comentariosLabel.Size = new System.Drawing.Size(150, 24);
@@ -273,34 +276,31 @@ namespace POS
             // 
             this.horaOrdenLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.horaOrdenLabel.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.horaOrdenLabel.Location = new System.Drawing.Point(1397, 202);
+            this.horaOrdenLabel.Location = new System.Drawing.Point(1268, 207);
             this.horaOrdenLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.horaOrdenLabel.Name = "horaOrdenLabel";
             this.horaOrdenLabel.Size = new System.Drawing.Size(216, 46);
             this.horaOrdenLabel.TabIndex = 27;
-            this.horaOrdenLabel.Click += new System.EventHandler(this.horaOrdenLabel_Click);
             // 
             // fechaOrdenLabel
             // 
             this.fechaOrdenLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.fechaOrdenLabel.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fechaOrdenLabel.Location = new System.Drawing.Point(1397, 86);
+            this.fechaOrdenLabel.Location = new System.Drawing.Point(1268, 91);
             this.fechaOrdenLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.fechaOrdenLabel.Name = "fechaOrdenLabel";
             this.fechaOrdenLabel.Size = new System.Drawing.Size(216, 46);
             this.fechaOrdenLabel.TabIndex = 28;
-            this.fechaOrdenLabel.Click += new System.EventHandler(this.fechaOrdenLabel_Click);
             // 
             // empleadoOrdenLabel
             // 
             this.empleadoOrdenLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.empleadoOrdenLabel.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.empleadoOrdenLabel.Location = new System.Drawing.Point(262, 86);
+            this.empleadoOrdenLabel.Location = new System.Drawing.Point(257, 91);
             this.empleadoOrdenLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.empleadoOrdenLabel.Name = "empleadoOrdenLabel";
             this.empleadoOrdenLabel.Size = new System.Drawing.Size(216, 46);
             this.empleadoOrdenLabel.TabIndex = 29;
-            this.empleadoOrdenLabel.Click += new System.EventHandler(this.empleadoOrdenLabel_Click);
             // 
             // platillosDataGridView
             // 
@@ -312,7 +312,7 @@ namespace POS
             this.platillosDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.platillosDataGridView.BackgroundColor = System.Drawing.Color.White;
             this.platillosDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.platillosDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
+            this.platillosDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.platillosDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
@@ -323,8 +323,8 @@ namespace POS
             this.platillosDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.platillosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.platillosDataGridView.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.platillosDataGridView.Location = new System.Drawing.Point(29, 432);
-            this.platillosDataGridView.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.platillosDataGridView.Location = new System.Drawing.Point(22, 440);
+            this.platillosDataGridView.Margin = new System.Windows.Forms.Padding(7);
             this.platillosDataGridView.Name = "platillosDataGridView";
             this.platillosDataGridView.RowHeadersWidth = 51;
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
@@ -334,8 +334,11 @@ namespace POS
             this.platillosDataGridView.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.platillosDataGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
             this.platillosDataGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.platillosDataGridView.Size = new System.Drawing.Size(708, 103);
+            this.platillosDataGridView.Size = new System.Drawing.Size(708, 60);
             this.platillosDataGridView.TabIndex = 32;
+            this.platillosDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewPlatillos_CellMouseClick);
+            this.platillosDataGridView.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.platillosDataGridView_EditingControlShowing);
+            this.platillosDataGridView.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Columns_KeyPress);
             // 
             // bebidasDataGridView
             // 
@@ -346,7 +349,7 @@ namespace POS
             this.bebidasDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.bebidasDataGridView.BackgroundColor = System.Drawing.Color.White;
             this.bebidasDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.bebidasDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
+            this.bebidasDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.bebidasDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
@@ -357,8 +360,8 @@ namespace POS
             this.bebidasDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.bebidasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bebidasDataGridView.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bebidasDataGridView.Location = new System.Drawing.Point(29, 548);
-            this.bebidasDataGridView.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.bebidasDataGridView.Location = new System.Drawing.Point(22, 514);
+            this.bebidasDataGridView.Margin = new System.Windows.Forms.Padding(7);
             this.bebidasDataGridView.Name = "bebidasDataGridView";
             this.bebidasDataGridView.RowHeadersWidth = 51;
             dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
@@ -368,9 +371,12 @@ namespace POS
             this.bebidasDataGridView.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.bebidasDataGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
             this.bebidasDataGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.bebidasDataGridView.Size = new System.Drawing.Size(708, 122);
+            this.bebidasDataGridView.Size = new System.Drawing.Size(708, 63);
             this.bebidasDataGridView.TabIndex = 33;
             this.bebidasDataGridView.Visible = false;
+            this.bebidasDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewBebidas_CellMouseClick);
+            this.bebidasDataGridView.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.bebidasDataGridView_EditingControlShowing);
+            this.bebidasDataGridView.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numeros_KeyPress);
             // 
             // postresDataGridView
             // 
@@ -381,7 +387,7 @@ namespace POS
             this.postresDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.postresDataGridView.BackgroundColor = System.Drawing.Color.White;
             this.postresDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.postresDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
+            this.postresDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.postresDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
@@ -392,8 +398,8 @@ namespace POS
             this.postresDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.postresDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.postresDataGridView.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.postresDataGridView.Location = new System.Drawing.Point(33, 683);
-            this.postresDataGridView.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.postresDataGridView.Location = new System.Drawing.Point(22, 591);
+            this.postresDataGridView.Margin = new System.Windows.Forms.Padding(7);
             this.postresDataGridView.Name = "postresDataGridView";
             this.postresDataGridView.RowHeadersWidth = 51;
             dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
@@ -403,9 +409,125 @@ namespace POS
             this.postresDataGridView.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.postresDataGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
             this.postresDataGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.postresDataGridView.Size = new System.Drawing.Size(704, 125);
+            this.postresDataGridView.Size = new System.Drawing.Size(704, 78);
             this.postresDataGridView.TabIndex = 34;
             this.postresDataGridView.Visible = false;
+            this.postresDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewPostres_CellMouseClick);
+            this.postresDataGridView.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.postresDataGridView_EditingControlShowing);
+            this.postresDataGridView.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numeros_KeyPress);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            // 
+            // ordenDataGridView
+            // 
+            this.ordenDataGridView.AllowUserToAddRows = false;
+            this.ordenDataGridView.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.RoyalBlue;
+            this.ordenDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.ordenDataGridView.BackgroundColor = System.Drawing.Color.White;
+            this.ordenDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.ordenDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            this.ordenDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ordenDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.ordenDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ordenDataGridView.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ordenDataGridView.Location = new System.Drawing.Point(744, 440);
+            this.ordenDataGridView.Margin = new System.Windows.Forms.Padding(7);
+            this.ordenDataGridView.Name = "ordenDataGridView";
+            this.ordenDataGridView.RowHeadersWidth = 51;
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
+            this.ordenDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            this.ordenDataGridView.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.ordenDataGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.ordenDataGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.ordenDataGridView.Size = new System.Drawing.Size(631, 229);
+            this.ordenDataGridView.TabIndex = 35;
+            // 
+            // actualizarButton
+            // 
+            this.actualizarButton.BackColor = System.Drawing.Color.White;
+            this.actualizarButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("actualizarButton.BackgroundImage")));
+            this.actualizarButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.actualizarButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.actualizarButton.FlatAppearance.BorderSize = 0;
+            this.actualizarButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.actualizarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.actualizarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.actualizarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.actualizarButton.Location = new System.Drawing.Point(1286, 392);
+            this.actualizarButton.Margin = new System.Windows.Forms.Padding(4);
+            this.actualizarButton.Name = "actualizarButton";
+            this.actualizarButton.Size = new System.Drawing.Size(53, 37);
+            this.actualizarButton.TabIndex = 38;
+            this.actualizarButton.UseVisualStyleBackColor = false;
+            this.actualizarButton.Visible = false;
+            // 
+            // precioElementoLabel
+            // 
+            this.precioElementoLabel.AutoSize = true;
+            this.precioElementoLabel.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
+            this.precioElementoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.precioElementoLabel.Location = new System.Drawing.Point(863, 397);
+            this.precioElementoLabel.Name = "precioElementoLabel";
+            this.precioElementoLabel.Size = new System.Drawing.Size(69, 24);
+            this.precioElementoLabel.TabIndex = 37;
+            this.precioElementoLabel.Text = "Precio";
+            // 
+            // nombreElementoLabel
+            // 
+            this.nombreElementoLabel.AutoSize = true;
+            this.nombreElementoLabel.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
+            this.nombreElementoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.nombreElementoLabel.Location = new System.Drawing.Point(739, 397);
+            this.nombreElementoLabel.Name = "nombreElementoLabel";
+            this.nombreElementoLabel.Size = new System.Drawing.Size(87, 24);
+            this.nombreElementoLabel.TabIndex = 36;
+            this.nombreElementoLabel.Text = "Nombre";
+            // 
+            // cantidadElementoLabel
+            // 
+            this.cantidadElementoLabel.AutoSize = true;
+            this.cantidadElementoLabel.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
+            this.cantidadElementoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.cantidadElementoLabel.Location = new System.Drawing.Point(966, 397);
+            this.cantidadElementoLabel.Name = "cantidadElementoLabel";
+            this.cantidadElementoLabel.Size = new System.Drawing.Size(58, 24);
+            this.cantidadElementoLabel.TabIndex = 39;
+            this.cantidadElementoLabel.Text = "Cant.";
+            // 
+            // subtotalElementoLabel
+            // 
+            this.subtotalElementoLabel.AutoSize = true;
+            this.subtotalElementoLabel.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
+            this.subtotalElementoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.subtotalElementoLabel.Location = new System.Drawing.Point(1074, 397);
+            this.subtotalElementoLabel.Name = "subtotalElementoLabel";
+            this.subtotalElementoLabel.Size = new System.Drawing.Size(90, 24);
+            this.subtotalElementoLabel.TabIndex = 40;
+            this.subtotalElementoLabel.Text = "Subtotal";
+            // 
+            // totalLabel
+            // 
+            this.totalLabel.AutoSize = true;
+            this.totalLabel.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.totalLabel.Location = new System.Drawing.Point(1116, 693);
+            this.totalLabel.Name = "totalLabel";
+            this.totalLabel.Size = new System.Drawing.Size(70, 28);
+            this.totalLabel.TabIndex = 41;
+            this.totalLabel.Text = "Total";
             // 
             // agregarButton
             // 
@@ -418,7 +540,7 @@ namespace POS
             this.agregarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.agregarButton.Font = new System.Drawing.Font("Gadugi", 10F, System.Drawing.FontStyle.Bold);
             this.agregarButton.ForeColor = System.Drawing.Color.Black;
-            this.agregarButton.Location = new System.Drawing.Point(1384, 981);
+            this.agregarButton.Location = new System.Drawing.Point(1193, 835);
             this.agregarButton.Margin = new System.Windows.Forms.Padding(7);
             this.agregarButton.Name = "agregarButton";
             this.agregarButton.Padding = new System.Windows.Forms.Padding(7);
@@ -426,12 +548,10 @@ namespace POS
             this.agregarButton.TabIndex = 31;
             this.agregarButton.Text = "AGREGAR";
             this.agregarButton.UseVisualStyleBackColor = false;
+            this.agregarButton.Click += new System.EventHandler(this.agregarButton_Click_1);
             // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
             // cancelarButton
-            //
+            // 
             this.cancelarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
             this.cancelarButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
             this.cancelarButton.BorderRadius = 20;
@@ -441,7 +561,7 @@ namespace POS
             this.cancelarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelarButton.Font = new System.Drawing.Font("Gadugi", 10F, System.Drawing.FontStyle.Bold);
             this.cancelarButton.ForeColor = System.Drawing.Color.Black;
-            this.cancelarButton.Location = new System.Drawing.Point(49, 981);
+            this.cancelarButton.Location = new System.Drawing.Point(32, 866);
             this.cancelarButton.Margin = new System.Windows.Forms.Padding(7);
             this.cancelarButton.Name = "cancelarButton";
             this.cancelarButton.Padding = new System.Windows.Forms.Padding(7);
@@ -451,13 +571,34 @@ namespace POS
             this.cancelarButton.UseVisualStyleBackColor = false;
             this.cancelarButton.Click += new System.EventHandler(this.cancelarButton_Click);
             // 
+            // totalElementosLabel
+            // 
+            this.totalElementosLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.totalElementosLabel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.totalElementosLabel.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalElementosLabel.Location = new System.Drawing.Point(1196, 688);
+            this.totalElementosLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.totalElementosLabel.Name = "totalElementosLabel";
+            this.totalElementosLabel.Size = new System.Drawing.Size(179, 46);
+            this.totalElementosLabel.TabIndex = 42;
+            this.totalElementosLabel.Text = "$$.$$";
+            this.totalElementosLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // agregarOrdenForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1735, 1055);
+            this.ClientSize = new System.Drawing.Size(1517, 896);
+            this.Controls.Add(this.totalElementosLabel);
+            this.Controls.Add(this.totalLabel);
+            this.Controls.Add(this.subtotalElementoLabel);
+            this.Controls.Add(this.cantidadElementoLabel);
+            this.Controls.Add(this.actualizarButton);
+            this.Controls.Add(this.precioElementoLabel);
+            this.Controls.Add(this.nombreElementoLabel);
+            this.Controls.Add(this.ordenDataGridView);
             this.Controls.Add(this.postresDataGridView);
             this.Controls.Add(this.bebidasDataGridView);
             this.Controls.Add(this.platillosDataGridView);
@@ -481,7 +622,7 @@ namespace POS
             this.Controls.Add(this.empleadoLabel);
             this.Controls.Add(this.encabezadoPanel);
             this.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.Margin = new System.Windows.Forms.Padding(7);
             this.Name = "agregarOrdenForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar orden";
@@ -492,6 +633,7 @@ namespace POS
             ((System.ComponentModel.ISupportInitialize)(this.platillosDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bebidasDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.postresDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordenDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -523,5 +665,13 @@ namespace POS
         private System.Windows.Forms.DataGridView bebidasDataGridView;
         private System.Windows.Forms.DataGridView postresDataGridView;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.DataGridView ordenDataGridView;
+        private System.Windows.Forms.Button actualizarButton;
+        private System.Windows.Forms.Label precioElementoLabel;
+        private System.Windows.Forms.Label nombreElementoLabel;
+        private System.Windows.Forms.Label cantidadElementoLabel;
+        private System.Windows.Forms.Label subtotalElementoLabel;
+        private System.Windows.Forms.Label totalLabel;
+        private System.Windows.Forms.Label totalElementosLabel;
     }
 }

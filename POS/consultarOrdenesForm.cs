@@ -54,6 +54,9 @@ namespace POS
 
         private void usuariosButton_Click(object sender, EventArgs e)
         {
+            consultarOrdenesForm frmOrd = new consultarOrdenesForm();
+            frmOrd.Close();
+            this.Hide();
             consultarUsuariosForm frm = new consultarUsuariosForm();
             frm.Show();
         }

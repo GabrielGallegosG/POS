@@ -80,15 +80,26 @@ namespace POS
                     {
                         double precio;
                         precio = Convert.ToDouble(precioTextBox.Text);
-                        try
+
+                        int validacion = 0;
+                        validacion = BLAgregarElemento.validarNombre(nombreTextBox.Text);
+                        if (validacion == 1)
                         {
-                            BLAgregarElemento.agregarElemento(nombreTextBox.Text, seccionComboBox.Text, precio, descripcionRichTextBox.Text);
-                            MessageBox.Show("¡Se ha dado de alta con exito!", "Alta de elemento", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.Close();
+                            MessageBox.Show("¡El nombre ingresado \b"+ nombreTextBox.Text + " ya se encuentra registrado dentro del menú. \nIntente con otro.","Dato ya existente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
-                        catch (Exception ex)
+                        else
                         {
-                            MessageBox.Show("¡Ha ocurrido un error al dar de alta el elemento!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            try
+                            {
+                                BLAgregarElemento.agregarElemento(nombreTextBox.Text, seccionComboBox.Text, precio, descripcionRichTextBox.Text);
+                                MessageBox.Show("¡Se ha dado de alta con exito!", "Alta de elemento", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Close();
+
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("¡Ha ocurrido un error al dar de alta el elemento!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                     }
                 }
