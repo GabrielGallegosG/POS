@@ -140,10 +140,10 @@ namespace POS
             dataGrid.RowHeadersVisible = false;
             dataGrid.ColumnHeadersVisible = false;
 
-            dataGrid.Columns.Add("nombre_elemento", "nombre_elemento");
-            dataGrid.Columns.Add("precio", "precio");
-            dataGrid.Columns.Add("cantidad", "cantidad");
-            dataGrid.Columns.Add("subtotal", "subtotal");
+            //dataGrid.Columns.Add("nombre_elemento", "nombre_elemento");
+            //dataGrid.Columns.Add("precio", "precio");
+            //dataGrid.Columns.Add("cantidad", "cantidad");
+            //dataGrid.Columns.Add("subtotal", "subtotal");
 
 
         }
