@@ -18,6 +18,8 @@ namespace POS
                 SqlCommand command = new SqlCommand(query, conexion);
                 int cant;
                 cant = command.ExecuteNonQuery();*/
+
+                //CAMBIOS DE PRUEBA
             }
             catch (Exception)
             {
