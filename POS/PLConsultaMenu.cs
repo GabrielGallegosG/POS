@@ -91,8 +91,8 @@ namespace POS
             verBebida.Location = new Point(1042, 625);
             verPostre.Location = new Point(1042, 625);
 
-            agregarMenuL.Location = new Point(1100, 90);
-            agregarMenuBtn.Location = new Point(1300, 80);
+            agregarMenuL.Location = new Point(1120, 90);
+            agregarMenuBtn.Location = new Point(1300, 85);
 
             var tt = new ToolTip();
             tt.SetToolTip(modiPlatillo, "Modificar platillo");
@@ -109,10 +109,6 @@ namespace POS
             tt.SetToolTip(platillos, "Ver todos los platillos");
             tt.SetToolTip(bebidas, "Ver todas las bebidas");
             tt.SetToolTip(postres, "Ver todos los postres");
-
-
-
-
         }
 
         public static void dataGridView(DataGridView dataGrid) {

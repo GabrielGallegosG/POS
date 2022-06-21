@@ -56,6 +56,7 @@
             // agregarOrdenButton
             // 
             this.agregarOrdenButton.BackColor = System.Drawing.Color.Transparent;
+            this.agregarOrdenButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.agregarOrdenButton.FlatAppearance.BorderSize = 0;
             this.agregarOrdenButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.agregarOrdenButton.Image = global::POS.Properties.Resources.agregar;
@@ -80,15 +81,16 @@
             this.encabezadoPanel.Location = new System.Drawing.Point(0, 0);
             this.encabezadoPanel.Margin = new System.Windows.Forms.Padding(4);
             this.encabezadoPanel.Name = "encabezadoPanel";
-            this.encabezadoPanel.Size = new System.Drawing.Size(1067, 46);
+            this.encabezadoPanel.Size = new System.Drawing.Size(1067, 60);
             this.encabezadoPanel.TabIndex = 25;
             // 
             // usuariosButton
             // 
             this.usuariosButton.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.usuariosButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.usuariosButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.usuariosButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.usuariosButton.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
+            this.usuariosButton.Font = new System.Drawing.Font("Gadugi", 14F, System.Drawing.FontStyle.Bold);
             this.usuariosButton.ForeColor = System.Drawing.Color.White;
             this.usuariosButton.Location = new System.Drawing.Point(904, 5);
             this.usuariosButton.Margin = new System.Windows.Forms.Padding(4);
@@ -103,8 +105,9 @@
             // 
             this.ventasButton.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.ventasButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.ventasButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ventasButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ventasButton.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
+            this.ventasButton.Font = new System.Drawing.Font("Gadugi", 14F, System.Drawing.FontStyle.Bold);
             this.ventasButton.ForeColor = System.Drawing.Color.White;
             this.ventasButton.Location = new System.Drawing.Point(776, 5);
             this.ventasButton.Margin = new System.Windows.Forms.Padding(4);
@@ -119,8 +122,9 @@
             // 
             this.ordenesButton.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.ordenesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.ordenesButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ordenesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ordenesButton.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
+            this.ordenesButton.Font = new System.Drawing.Font("Gadugi", 14F, System.Drawing.FontStyle.Bold);
             this.ordenesButton.ForeColor = System.Drawing.Color.White;
             this.ordenesButton.Location = new System.Drawing.Point(632, 4);
             this.ordenesButton.Margin = new System.Windows.Forms.Padding(4);
@@ -135,8 +139,9 @@
             // 
             this.menuButton.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.menuButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.menuButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.menuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.menuButton.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
+            this.menuButton.Font = new System.Drawing.Font("Gadugi", 14F, System.Drawing.FontStyle.Bold);
             this.menuButton.ForeColor = System.Drawing.Color.White;
             this.menuButton.Location = new System.Drawing.Point(504, 4);
             this.menuButton.Margin = new System.Windows.Forms.Padding(4);
@@ -152,8 +157,9 @@
             this.inicioBbutton.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.inicioBbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.inicioBbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.inicioBbutton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.inicioBbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.inicioBbutton.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
+            this.inicioBbutton.Font = new System.Drawing.Font("Gadugi", 14F, System.Drawing.FontStyle.Bold);
             this.inicioBbutton.ForeColor = System.Drawing.Color.White;
             this.inicioBbutton.Location = new System.Drawing.Point(376, 4);
             this.inicioBbutton.Margin = new System.Windows.Forms.Padding(4);
