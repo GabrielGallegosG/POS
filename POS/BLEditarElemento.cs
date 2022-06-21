@@ -96,9 +96,48 @@ namespace POS
                 cant = command.ExecuteNonQuery();
                 if (cant == 1)
                 {
-                    MessageBox.Show("¡Se han guardado los combios con exito!", "Edición completada ID - " + id, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("¡Se han guardado los cambios con exito!", "Edición completada ID - " + id, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+
+
+        public static int validarNombre(string nombre, string id)
+        {
+            int ban = 0;
+
+            try
+            {
+                SqlConnection conexion = new SqlConnection("server=desktop-arias-r\\mssqlserver01; database=POS_BD ;User=AdminPOS; password=admin");
+                conexion.Open();
+                nombre = nombre.ToLower();
+                string query = "select * from elemento where nombre_elemento = '" + nombre + "'";
+                string validarNombre = "";
+                string validarId = "";
+                SqlCommand command = new SqlCommand(query, conexion);
+                SqlDataReader registro = command.ExecuteReader();
+                if (registro.Read())
+                {
+                    validarId = registro["id_elemento"].ToString();
+                    validarNombre = registro["nombre_elemento"].ToString();
+                    validarNombre = validarNombre.ToLower();
+                    if (validarNombre.Equals(nombre))
+                    {
+                        if (validarId.Equals(id))
+                            ban = 0;
+                        else
+                            ban = 1;
+                    }
+                    
+                }
+
+                return ban;
             }
             catch (Exception)
             {

@@ -63,32 +63,36 @@ namespace POS
                     }
                     else
                     {
-                        try
-                        {
-                           string seccion = "";
-                            if (seccionComboBox.SelectedIndex == 0)
-                                seccion = "1";
-                            else
-                                if (seccionComboBox.SelectedIndex == 1)
+                        int ban = BLEditarElemento.validarNombre(nombreTextBox.Text, idSeleccionadoLabel.Text);
+                        if (ban == 0) {
+                            try
+                            {
+                                string seccion = "";
+                                if (seccionComboBox.SelectedIndex == 0)
+                                    seccion = "1";
+                                else
+                                    if (seccionComboBox.SelectedIndex == 1)
                                     seccion = "2";
                                 else
-                                    if (seccionComboBox.SelectedIndex == 2)
-                                        seccion = "3";
-                            
-                            string descripcion = descripcionRichTextBox.Text;
-                            
-                            string nombre = nombreTextBox.Text;
-                            string precio = precioTextBox.Text;
-                            
-                            int id = Int32.Parse(idSeleccionadoLabel.Text);
-                            BLEditarElemento.guardarEdicionDT(id, nombre, seccion, descripcion, precio );
-                            this.Close();
+                                        if (seccionComboBox.SelectedIndex == 2)
+                                    seccion = "3";
 
+                                string descripcion = descripcionRichTextBox.Text;
 
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("¡Ha ocurrido un error!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                string nombre = nombreTextBox.Text;
+                                string precio = precioTextBox.Text;
+
+                                int id = Int32.Parse(idSeleccionadoLabel.Text);
+                                BLEditarElemento.guardarEdicionDT(id, nombre, seccion, descripcion, precio);
+                                this.Close();
+
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("¡Ha ocurrido un error!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }else {
+                            MessageBox.Show("¡El nombre ingresado \b" + nombreTextBox.Text + " ya se encuentra registrado dentro del menú. \nIntente con otro.", "Dato ya existente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
                 }

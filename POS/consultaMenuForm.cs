@@ -124,6 +124,8 @@ namespace POS
         private void consultaMenuForm_Load(object sender, EventArgs e)
         {
             platillosDataGridView.DataSource = BLConsultaElemento.PlatillosDT();
+            platillosDataGridView.Sort(platillosDataGridView.Columns["nombre_elemento"],ListSortDirection.Ascending);
+
             platillosPanel.BackColor = Color.DodgerBlue;
             platilloLabel.Visible = true;
 
@@ -157,7 +159,8 @@ namespace POS
             verPostreButton.Visible = false;
 
             platillosDataGridView.DataSource = BLConsultaElemento.PlatillosDT();
-            
+            platillosDataGridView.Sort(platillosDataGridView.Columns[0], ListSortDirection.Ascending);
+
             platillosPanel.BackColor = Color.DodgerBlue;
             bebidasPanel.BackColor = Color.FromArgb(0, 87, 158);
             postresPanel.BackColor = Color.FromArgb(0, 87, 158);
@@ -191,6 +194,7 @@ namespace POS
             verPostreButton.Visible = false;
 
             bebidasDataGridView.DataSource = BLConsultaElemento.BebidasDT();
+            bebidasDataGridView.Sort(bebidasDataGridView.Columns[0], ListSortDirection.Ascending);
 
             platillosPanel.BackColor = Color.FromArgb(0, 87, 158);
             bebidasPanel.BackColor = Color.DodgerBlue;
@@ -224,6 +228,7 @@ namespace POS
             verPostreButton.Visible = true;
 
             postresDataGridView.DataSource = BLConsultaElemento.PostresDT();
+            postresDataGridView.Sort(postresDataGridView.Columns[0], ListSortDirection.Ascending);
 
             platillosPanel.BackColor = Color.FromArgb(0, 87, 158);
             bebidasPanel.BackColor = Color.FromArgb(0, 87, 158);
@@ -240,19 +245,28 @@ namespace POS
         private void platillosDataGridView_SelectionChanged(object sender, EventArgs e)
         {
             var row = (sender as DataGridView).CurrentRow;
-            platilloLabel.Text = row.Cells[0].Value.ToString();
+            if (row == null)
+                platilloLabel.Text = "";
+            else
+                platilloLabel.Text = row.Cells[0].Value.ToString();
         }
 
         private void bebidasDataGridView_SelectionChanged(object sender, EventArgs e)
         {
             var row = (sender as DataGridView).CurrentRow;
-            bebidaLabel.Text = row.Cells[0].Value.ToString();
+            if (row == null)
+                bebidaLabel.Text = "";
+            else
+                bebidaLabel.Text = row.Cells[0].Value.ToString();
         }
 
         private void postresDataGridView_SelectionChanged(object sender, EventArgs e)
         {
             var row = (sender as DataGridView).CurrentRow;
-            postreLabel.Text = row.Cells[0].Value.ToString();
+            if (row == null)
+                postreLabel.Text = "";
+            else
+                postreLabel.Text = row.Cells[0].Value.ToString();
         }
 
         private void usuariosButton_Click(object sender, EventArgs e)
@@ -297,8 +311,14 @@ namespace POS
         private void actualizarButton_Click(object sender, EventArgs e)
         {
             platillosDataGridView.DataSource = BLConsultaElemento.PlatillosDT();
+            platillosDataGridView.Sort(platillosDataGridView.Columns[0], ListSortDirection.Ascending);
+           
             bebidasDataGridView.DataSource = BLConsultaElemento.BebidasDT();
+            bebidasDataGridView.Sort(bebidasDataGridView.Columns[0], ListSortDirection.Ascending);
+            
             postresDataGridView.DataSource = BLConsultaElemento.PostresDT();
+            postresDataGridView.Sort(postresDataGridView.Columns[0], ListSortDirection.Ascending);
+            
             this.Refresh();
         }
 
