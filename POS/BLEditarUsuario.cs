@@ -18,7 +18,7 @@ namespace POS
                 cant = command.ExecuteNonQuery();
                 if (cant == 1)
                 {
-                    MessageBox.Show("¡Se han guardado los combios con exito!", "Edición completada ID - " + id, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("¡Se han guardado los cambios con exito!", "Edición completada ID - " + id, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
             }
