@@ -121,7 +121,7 @@
     </Compile>
     <Compile Include="PLAgregarSaldoInicial.cs" />
     <Compile Include="PLConsultarVentas.cs" />
-    <Compile Include="PLInicioVentas.cs" />
+    <Compile Include="PLInicioSaldos.cs" />
     <Compile Include="consultaMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -218,11 +218,11 @@
     <Compile Include="inicioForm.Designer.cs">
       <DependentUpon>inicioForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="inicioVentasForm.cs">
+    <Compile Include="inicioSaldosForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="inicioVentasForm.Designer.cs">
-      <DependentUpon>inicioVentasForm.cs</DependentUpon>
+    <Compile Include="inicioSaldosForm.Designer.cs">
+      <DependentUpon>inicioSaldosForm.cs</DependentUpon>
     </Compile>
     <Compile Include="loginForm.cs">
       <SubType>Form</SubType>
@@ -246,6 +246,11 @@
     <Compile Include="PLInicio.cs" />
     <Compile Include="PLLogIn.cs" />
     <Compile Include="PLPagoOrden.cs" />
+    <Compile Include="POS_BDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POS_BDDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="agregarMenuForm.resx">
@@ -307,8 +312,8 @@
     <EmbeddedResource Include="inicioForm.resx">
       <DependentUpon>inicioForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="inicioVentasForm.resx">
-      <DependentUpon>inicioVentasForm.cs</DependentUpon>
+    <EmbeddedResource Include="inicioSaldosForm.resx">
+      <DependentUpon>inicioSaldosForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="loginForm.resx">
       <DependentUpon>loginForm.cs</DependentUpon>
@@ -334,6 +339,17 @@
       <DependentUpon>POSBDModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="POS_BDDataSet.xsc">
+      <DependentUpon>POS_BDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="POS_BDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>POS_BDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="POS_BDDataSet.xss">
+      <DependentUpon>POS_BDDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

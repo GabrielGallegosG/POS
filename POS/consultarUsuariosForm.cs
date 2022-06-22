@@ -73,6 +73,15 @@ namespace POS
             frm.Show();
         }
 
+        private void inicioBbutton_Click(object sender, EventArgs e)
+        {
+            consultarUsuariosForm frmUs = new consultarUsuariosForm();
+            frmUs.Close();
+            this.Hide();
+            inicioSaldosForm frm = new inicioSaldosForm();
+            frm.Show();
+        }
+
         private void agregarUsuarioButton_Click(object sender, EventArgs e)
         {
             agregarUsuarioForm frm = new agregarUsuarioForm();
@@ -90,7 +99,7 @@ namespace POS
             consultarUsuariosForm frmUs = new consultarUsuariosForm();
             frmUs.Close();
             this.Hide();
-            inicioVentasForm frm = new inicioVentasForm();
+            consultarVentas frm = new consultarVentas();
             frm.Show();
          }
 
@@ -142,6 +151,8 @@ namespace POS
             {
                 data.DefaultView.RowFilter = $"nombre_usuario LIKE '{buscarTextBox.Text}%'";
             }
+
+
         }
     }
 }

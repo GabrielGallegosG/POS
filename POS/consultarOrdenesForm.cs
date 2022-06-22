@@ -48,7 +48,7 @@ namespace POS
             consultarOrdenesForm frmOrd = new consultarOrdenesForm();
             frmOrd.Close();
             this.Hide();
-            inicioVentasForm frm = new inicioVentasForm();
+            consultarVentas frm = new consultarVentas();
             frm.Show();
         }
 
@@ -61,6 +61,13 @@ namespace POS
             frm.Show();
         }
 
-
+        private void inicioBbutton_Click(object sender, EventArgs e)
+        {
+            consultarOrdenesForm frmOrd = new consultarOrdenesForm();
+            frmOrd.Close();
+            this.Hide(); 
+            inicioSaldosForm frm = new inicioSaldosForm();
+            frm.Show();
+        }
     }
 }

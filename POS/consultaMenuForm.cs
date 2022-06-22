@@ -337,9 +337,17 @@ namespace POS
             consultaMenuForm consultaMenu = new consultaMenuForm();
             consultaMenu.Close();
             this.Hide();
-            inicioVentasForm frm = new inicioVentasForm();
+            consultarVentas frm = new consultarVentas();
             frm.Show();
         }
 
+        private void inicioBbutton_Click(object sender, EventArgs e)
+        {
+            consultaMenuForm consultaMenu = new consultaMenuForm();
+            consultaMenu.Close();
+            this.Hide();
+            inicioSaldosForm frm = new inicioSaldosForm();
+            frm.Show();
+        }
     }
 }

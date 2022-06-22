@@ -29,6 +29,7 @@ namespace POS
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(consultarVentas));
             this.logoPictureBox = new System.Windows.Forms.PictureBox();
             this.encabezadoPanel = new System.Windows.Forms.Panel();
@@ -37,24 +38,29 @@ namespace POS
             this.ordenesButton = new System.Windows.Forms.Button();
             this.menuButton = new System.Windows.Forms.Button();
             this.inicioBbutton = new System.Windows.Forms.Button();
-            this.saldoFinalPanel = new System.Windows.Forms.Panel();
-            this.saldoFinalLabel = new System.Windows.Forms.Label();
-            this.saldoInicialPanel = new System.Windows.Forms.Panel();
-            this.saldoInicialLabel = new System.Windows.Forms.Label();
-            this.consultarVentasPanel = new System.Windows.Forms.Panel();
-            this.consultVentasLabel = new System.Windows.Forms.Label();
             this.encabezadoLabel = new System.Windows.Forms.Label();
             this.consultTabla = new System.Windows.Forms.DataGridView();
+            this.ordenBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pOS_BDDataSet = new POS.POS_BDDataSet();
             this.filtroComboBox = new System.Windows.Forms.ComboBox();
             this.filtrarLabel = new System.Windows.Forms.Label();
             this.datoBuscarLabel = new System.Windows.Forms.Label();
-            this.datoBuscarComboBox = new System.Windows.Forms.ComboBox();
+            this.ordenTableAdapter = new POS.POS_BDDataSetTableAdapters.ordenTableAdapter();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comentariosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.metodoPagoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoServicioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numMesaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idMenuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idOrdenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
             this.encabezadoPanel.SuspendLayout();
-            this.saldoFinalPanel.SuspendLayout();
-            this.saldoInicialPanel.SuspendLayout();
-            this.consultarVentasPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.consultTabla)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordenBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pOS_BDDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // logoPictureBox
@@ -80,7 +86,7 @@ namespace POS
             this.encabezadoPanel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.encabezadoPanel.Location = new System.Drawing.Point(0, 0);
             this.encabezadoPanel.Name = "encabezadoPanel";
-            this.encabezadoPanel.Size = new System.Drawing.Size(872, 49);
+            this.encabezadoPanel.Size = new System.Drawing.Size(1061, 49);
             this.encabezadoPanel.TabIndex = 52;
             // 
             // usuariosButton
@@ -89,14 +95,15 @@ namespace POS
             this.usuariosButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.usuariosButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.usuariosButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.usuariosButton.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
+            this.usuariosButton.Font = new System.Drawing.Font("Gadugi", 14F, System.Drawing.FontStyle.Bold);
             this.usuariosButton.ForeColor = System.Drawing.Color.White;
-            this.usuariosButton.Location = new System.Drawing.Point(683, 10);
+            this.usuariosButton.Location = new System.Drawing.Point(902, 3);
             this.usuariosButton.Name = "usuariosButton";
             this.usuariosButton.Size = new System.Drawing.Size(110, 30);
             this.usuariosButton.TabIndex = 11;
             this.usuariosButton.Text = "USUARIOS";
             this.usuariosButton.UseVisualStyleBackColor = false;
+            this.usuariosButton.Click += new System.EventHandler(this.usuariosButton_Click);
             // 
             // ventasButton
             // 
@@ -104,9 +111,9 @@ namespace POS
             this.ventasButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ventasButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ventasButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ventasButton.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
+            this.ventasButton.Font = new System.Drawing.Font("Gadugi", 14F, System.Drawing.FontStyle.Bold);
             this.ventasButton.ForeColor = System.Drawing.Color.White;
-            this.ventasButton.Location = new System.Drawing.Point(587, 10);
+            this.ventasButton.Location = new System.Drawing.Point(806, 3);
             this.ventasButton.Name = "ventasButton";
             this.ventasButton.Size = new System.Drawing.Size(90, 30);
             this.ventasButton.TabIndex = 12;
@@ -120,14 +127,15 @@ namespace POS
             this.ordenesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ordenesButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ordenesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ordenesButton.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
+            this.ordenesButton.Font = new System.Drawing.Font("Gadugi", 14F, System.Drawing.FontStyle.Bold);
             this.ordenesButton.ForeColor = System.Drawing.Color.White;
-            this.ordenesButton.Location = new System.Drawing.Point(479, 10);
+            this.ordenesButton.Location = new System.Drawing.Point(698, 3);
             this.ordenesButton.Name = "ordenesButton";
             this.ordenesButton.Size = new System.Drawing.Size(101, 30);
             this.ordenesButton.TabIndex = 11;
             this.ordenesButton.Text = "ORDENES";
             this.ordenesButton.UseVisualStyleBackColor = false;
+            this.ordenesButton.Click += new System.EventHandler(this.ordenesButton_Click);
             // 
             // menuButton
             // 
@@ -135,14 +143,15 @@ namespace POS
             this.menuButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.menuButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.menuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.menuButton.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
+            this.menuButton.Font = new System.Drawing.Font("Gadugi", 14F, System.Drawing.FontStyle.Bold);
             this.menuButton.ForeColor = System.Drawing.Color.White;
-            this.menuButton.Location = new System.Drawing.Point(383, 10);
+            this.menuButton.Location = new System.Drawing.Point(602, 3);
             this.menuButton.Name = "menuButton";
             this.menuButton.Size = new System.Drawing.Size(90, 30);
             this.menuButton.TabIndex = 10;
             this.menuButton.Text = "MENÚ";
             this.menuButton.UseVisualStyleBackColor = false;
+            this.menuButton.Click += new System.EventHandler(this.menuButton_Click);
             // 
             // inicioBbutton
             // 
@@ -151,85 +160,15 @@ namespace POS
             this.inicioBbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.inicioBbutton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.inicioBbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.inicioBbutton.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
+            this.inicioBbutton.Font = new System.Drawing.Font("Gadugi", 14F, System.Drawing.FontStyle.Bold);
             this.inicioBbutton.ForeColor = System.Drawing.Color.White;
-            this.inicioBbutton.Location = new System.Drawing.Point(287, 10);
+            this.inicioBbutton.Location = new System.Drawing.Point(506, 3);
             this.inicioBbutton.Name = "inicioBbutton";
             this.inicioBbutton.Size = new System.Drawing.Size(90, 30);
             this.inicioBbutton.TabIndex = 9;
             this.inicioBbutton.Text = "INICIO";
             this.inicioBbutton.UseVisualStyleBackColor = false;
-            // 
-            // saldoFinalPanel
-            // 
-            this.saldoFinalPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
-            this.saldoFinalPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.saldoFinalPanel.Controls.Add(this.saldoFinalLabel);
-            this.saldoFinalPanel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.saldoFinalPanel.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saldoFinalPanel.Location = new System.Drawing.Point(652, 107);
-            this.saldoFinalPanel.Name = "saldoFinalPanel";
-            this.saldoFinalPanel.Size = new System.Drawing.Size(208, 41);
-            this.saldoFinalPanel.TabIndex = 59;
-            this.saldoFinalPanel.Click += new System.EventHandler(this.saldoFinalPanel_Click);
-            // 
-            // saldoFinalLabel
-            // 
-            this.saldoFinalLabel.AutoSize = true;
-            this.saldoFinalLabel.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
-            this.saldoFinalLabel.ForeColor = System.Drawing.Color.White;
-            this.saldoFinalLabel.Location = new System.Drawing.Point(5, 7);
-            this.saldoFinalLabel.Name = "saldoFinalLabel";
-            this.saldoFinalLabel.Size = new System.Drawing.Size(192, 19);
-            this.saldoFinalLabel.TabIndex = 6;
-            this.saldoFinalLabel.Text = "INGRESAR SALDO FINAL";
-            // 
-            // saldoInicialPanel
-            // 
-            this.saldoInicialPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
-            this.saldoInicialPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.saldoInicialPanel.Controls.Add(this.saldoInicialLabel);
-            this.saldoInicialPanel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.saldoInicialPanel.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saldoInicialPanel.Location = new System.Drawing.Point(431, 107);
-            this.saldoInicialPanel.Name = "saldoInicialPanel";
-            this.saldoInicialPanel.Size = new System.Drawing.Size(217, 41);
-            this.saldoInicialPanel.TabIndex = 58;
-            this.saldoInicialPanel.Click += new System.EventHandler(this.saldoInicialPanel_Click);
-            // 
-            // saldoInicialLabel
-            // 
-            this.saldoInicialLabel.AutoSize = true;
-            this.saldoInicialLabel.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
-            this.saldoInicialLabel.ForeColor = System.Drawing.Color.White;
-            this.saldoInicialLabel.Location = new System.Drawing.Point(3, 7);
-            this.saldoInicialLabel.Name = "saldoInicialLabel";
-            this.saldoInicialLabel.Size = new System.Drawing.Size(204, 19);
-            this.saldoInicialLabel.TabIndex = 6;
-            this.saldoInicialLabel.Text = "INGRESAR SALDO INICIAL";
-            // 
-            // consultarVentasPanel
-            // 
-            this.consultarVentasPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
-            this.consultarVentasPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.consultarVentasPanel.Controls.Add(this.consultVentasLabel);
-            this.consultarVentasPanel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.consultarVentasPanel.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.consultarVentasPanel.Location = new System.Drawing.Point(246, 107);
-            this.consultarVentasPanel.Name = "consultarVentasPanel";
-            this.consultarVentasPanel.Size = new System.Drawing.Size(179, 41);
-            this.consultarVentasPanel.TabIndex = 57;
-            // 
-            // consultVentasLabel
-            // 
-            this.consultVentasLabel.AutoSize = true;
-            this.consultVentasLabel.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
-            this.consultVentasLabel.ForeColor = System.Drawing.Color.White;
-            this.consultVentasLabel.Location = new System.Drawing.Point(2, 7);
-            this.consultVentasLabel.Name = "consultVentasLabel";
-            this.consultVentasLabel.Size = new System.Drawing.Size(169, 19);
-            this.consultVentasLabel.TabIndex = 5;
-            this.consultVentasLabel.Text = "CONSULTAR VENTAS";
+            this.inicioBbutton.Click += new System.EventHandler(this.inicioBbutton_Click);
             // 
             // encabezadoLabel
             // 
@@ -244,30 +183,55 @@ namespace POS
             // 
             // consultTabla
             // 
+            this.consultTabla.AllowUserToDeleteRows = false;
+            this.consultTabla.AutoGenerateColumns = false;
             this.consultTabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.consultTabla.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idOrdenDataGridViewTextBoxColumn,
+            this.idMenuDataGridViewTextBoxColumn,
+            this.numMesaDataGridViewTextBoxColumn,
+            this.tipoServicioDataGridViewTextBoxColumn,
+            this.metodoPagoDataGridViewTextBoxColumn,
+            this.fechaDataGridViewTextBoxColumn,
+            this.horaDataGridViewTextBoxColumn,
+            this.comentariosDataGridViewTextBoxColumn,
+            this.totalDataGridViewTextBoxColumn});
+            this.consultTabla.DataSource = this.ordenBindingSource;
             this.consultTabla.Location = new System.Drawing.Point(13, 171);
             this.consultTabla.Name = "consultTabla";
-            this.consultTabla.Size = new System.Drawing.Size(609, 334);
+            this.consultTabla.ReadOnly = true;
+            this.consultTabla.Size = new System.Drawing.Size(915, 334);
             this.consultTabla.TabIndex = 60;
+            // 
+            // ordenBindingSource
+            // 
+            this.ordenBindingSource.DataMember = "orden";
+            this.ordenBindingSource.DataSource = this.pOS_BDDataSet;
+            // 
+            // pOS_BDDataSet
+            // 
+            this.pOS_BDDataSet.DataSetName = "POS_BDDataSet";
+            this.pOS_BDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // filtroComboBox
             // 
             this.filtroComboBox.FormattingEnabled = true;
             this.filtroComboBox.Items.AddRange(new object[] {
-            "Día",
+            "Dia",
             "Empleado",
             "Tipo de Servicio",
             "Tipo de Pago"});
-            this.filtroComboBox.Location = new System.Drawing.Point(652, 214);
+            this.filtroComboBox.Location = new System.Drawing.Point(299, 97);
             this.filtroComboBox.Name = "filtroComboBox";
             this.filtroComboBox.Size = new System.Drawing.Size(199, 21);
             this.filtroComboBox.TabIndex = 61;
+            this.filtroComboBox.SelectedIndexChanged += new System.EventHandler(this.filtroComboBox_SelectedIndexChanged);
             // 
             // filtrarLabel
             // 
             this.filtrarLabel.AutoSize = true;
             this.filtrarLabel.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.filtrarLabel.Location = new System.Drawing.Point(648, 171);
+            this.filtrarLabel.Location = new System.Drawing.Point(295, 62);
             this.filtrarLabel.Name = "filtrarLabel";
             this.filtrarLabel.Size = new System.Drawing.Size(132, 21);
             this.filtrarLabel.TabIndex = 62;
@@ -277,33 +241,96 @@ namespace POS
             // 
             this.datoBuscarLabel.AutoSize = true;
             this.datoBuscarLabel.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datoBuscarLabel.Location = new System.Drawing.Point(648, 270);
+            this.datoBuscarLabel.Location = new System.Drawing.Point(595, 62);
             this.datoBuscarLabel.Name = "datoBuscarLabel";
             this.datoBuscarLabel.Size = new System.Drawing.Size(164, 21);
             this.datoBuscarLabel.TabIndex = 63;
             this.datoBuscarLabel.Text = "DATO A BUSCAR:";
             // 
-            // datoBuscarComboBox
+            // ordenTableAdapter
             // 
-            this.datoBuscarComboBox.FormattingEnabled = true;
-            this.datoBuscarComboBox.Location = new System.Drawing.Point(652, 321);
-            this.datoBuscarComboBox.Name = "datoBuscarComboBox";
-            this.datoBuscarComboBox.Size = new System.Drawing.Size(199, 21);
-            this.datoBuscarComboBox.TabIndex = 64;
+            this.ordenTableAdapter.ClearBeforeFill = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(602, 97);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(197, 20);
+            this.textBox1.TabIndex = 64;
+            // 
+            // totalDataGridViewTextBoxColumn
+            // 
+            this.totalDataGridViewTextBoxColumn.DataPropertyName = "total";
+            this.totalDataGridViewTextBoxColumn.HeaderText = "total";
+            this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
+            this.totalDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // comentariosDataGridViewTextBoxColumn
+            // 
+            this.comentariosDataGridViewTextBoxColumn.DataPropertyName = "comentarios";
+            this.comentariosDataGridViewTextBoxColumn.HeaderText = "comentarios";
+            this.comentariosDataGridViewTextBoxColumn.Name = "comentariosDataGridViewTextBoxColumn";
+            this.comentariosDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // horaDataGridViewTextBoxColumn
+            // 
+            this.horaDataGridViewTextBoxColumn.DataPropertyName = "hora";
+            this.horaDataGridViewTextBoxColumn.HeaderText = "hora";
+            this.horaDataGridViewTextBoxColumn.Name = "horaDataGridViewTextBoxColumn";
+            this.horaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fechaDataGridViewTextBoxColumn
+            // 
+            this.fechaDataGridViewTextBoxColumn.DataPropertyName = "fecha";
+            this.fechaDataGridViewTextBoxColumn.HeaderText = "fecha";
+            this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
+            this.fechaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // metodoPagoDataGridViewTextBoxColumn
+            // 
+            this.metodoPagoDataGridViewTextBoxColumn.DataPropertyName = "metodoPago";
+            this.metodoPagoDataGridViewTextBoxColumn.HeaderText = "metodoPago";
+            this.metodoPagoDataGridViewTextBoxColumn.Name = "metodoPagoDataGridViewTextBoxColumn";
+            this.metodoPagoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tipoServicioDataGridViewTextBoxColumn
+            // 
+            this.tipoServicioDataGridViewTextBoxColumn.DataPropertyName = "tipoServicio";
+            this.tipoServicioDataGridViewTextBoxColumn.HeaderText = "tipoServicio";
+            this.tipoServicioDataGridViewTextBoxColumn.Name = "tipoServicioDataGridViewTextBoxColumn";
+            this.tipoServicioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // numMesaDataGridViewTextBoxColumn
+            // 
+            this.numMesaDataGridViewTextBoxColumn.DataPropertyName = "numMesa";
+            this.numMesaDataGridViewTextBoxColumn.HeaderText = "numMesa";
+            this.numMesaDataGridViewTextBoxColumn.Name = "numMesaDataGridViewTextBoxColumn";
+            this.numMesaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idMenuDataGridViewTextBoxColumn
+            // 
+            this.idMenuDataGridViewTextBoxColumn.DataPropertyName = "idMenu";
+            this.idMenuDataGridViewTextBoxColumn.HeaderText = "idMenu";
+            this.idMenuDataGridViewTextBoxColumn.Name = "idMenuDataGridViewTextBoxColumn";
+            this.idMenuDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idOrdenDataGridViewTextBoxColumn
+            // 
+            this.idOrdenDataGridViewTextBoxColumn.DataPropertyName = "idOrden";
+            this.idOrdenDataGridViewTextBoxColumn.HeaderText = "idOrden";
+            this.idOrdenDataGridViewTextBoxColumn.Name = "idOrdenDataGridViewTextBoxColumn";
+            this.idOrdenDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // consultarVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(872, 531);
-            this.Controls.Add(this.datoBuscarComboBox);
+            this.ClientSize = new System.Drawing.Size(1061, 620);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.datoBuscarLabel);
             this.Controls.Add(this.filtrarLabel);
             this.Controls.Add(this.filtroComboBox);
             this.Controls.Add(this.consultTabla);
-            this.Controls.Add(this.saldoFinalPanel);
-            this.Controls.Add(this.saldoInicialPanel);
-            this.Controls.Add(this.consultarVentasPanel);
             this.Controls.Add(this.encabezadoLabel);
             this.Controls.Add(this.logoPictureBox);
             this.Controls.Add(this.encabezadoPanel);
@@ -311,15 +338,12 @@ namespace POS
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ventas";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.consultarVentas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
             this.encabezadoPanel.ResumeLayout(false);
-            this.saldoFinalPanel.ResumeLayout(false);
-            this.saldoFinalPanel.PerformLayout();
-            this.saldoInicialPanel.ResumeLayout(false);
-            this.saldoInicialPanel.PerformLayout();
-            this.consultarVentasPanel.ResumeLayout(false);
-            this.consultarVentasPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.consultTabla)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordenBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pOS_BDDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -334,17 +358,23 @@ namespace POS
         private System.Windows.Forms.Button ordenesButton;
         private System.Windows.Forms.Button menuButton;
         private System.Windows.Forms.Button inicioBbutton;
-        private System.Windows.Forms.Panel saldoFinalPanel;
-        private System.Windows.Forms.Label saldoFinalLabel;
-        private System.Windows.Forms.Panel saldoInicialPanel;
-        private System.Windows.Forms.Label saldoInicialLabel;
-        private System.Windows.Forms.Panel consultarVentasPanel;
-        private System.Windows.Forms.Label consultVentasLabel;
         private System.Windows.Forms.Label encabezadoLabel;
         private System.Windows.Forms.DataGridView consultTabla;
         private System.Windows.Forms.ComboBox filtroComboBox;
         private System.Windows.Forms.Label filtrarLabel;
         private System.Windows.Forms.Label datoBuscarLabel;
-        private System.Windows.Forms.ComboBox datoBuscarComboBox;
+        private POS_BDDataSet pOS_BDDataSet;
+        private System.Windows.Forms.BindingSource ordenBindingSource;
+        private POS_BDDataSetTableAdapters.ordenTableAdapter ordenTableAdapter;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idOrdenDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idMenuDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numMesaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoServicioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn metodoPagoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn horaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn comentariosDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn totalDataGridViewTextBoxColumn;
     }
 }
