@@ -92,7 +92,7 @@ namespace POS
             this.encabezadoPanel.Location = new System.Drawing.Point(2, 0);
             this.encabezadoPanel.Margin = new System.Windows.Forms.Padding(7);
             this.encabezadoPanel.Name = "encabezadoPanel";
-            this.encabezadoPanel.Size = new System.Drawing.Size(1951, 49);
+            this.encabezadoPanel.Size = new System.Drawing.Size(2212, 49);
             this.encabezadoPanel.TabIndex = 11;
             // 
             // noOrdenLabel
@@ -103,7 +103,7 @@ namespace POS
             this.noOrdenLabel.Location = new System.Drawing.Point(24, 15);
             this.noOrdenLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.noOrdenLabel.Name = "noOrdenLabel";
-            this.noOrdenLabel.Size = new System.Drawing.Size(181, 32);
+            this.noOrdenLabel.Size = new System.Drawing.Size(144, 25);
             this.noOrdenLabel.TabIndex = 9;
             this.noOrdenLabel.Text = "NO.ORDEN - ";
             // 
@@ -114,7 +114,7 @@ namespace POS
             this.empleadoLabel.Location = new System.Drawing.Point(39, 109);
             this.empleadoLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.empleadoLabel.Name = "empleadoLabel";
-            this.empleadoLabel.Size = new System.Drawing.Size(137, 28);
+            this.empleadoLabel.Size = new System.Drawing.Size(110, 22);
             this.empleadoLabel.TabIndex = 12;
             this.empleadoLabel.Text = "EMPLEADO:";
             // 
@@ -125,7 +125,7 @@ namespace POS
             this.tipoServicioLabel.Location = new System.Drawing.Point(23, 170);
             this.tipoServicioLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.tipoServicioLabel.Name = "tipoServicioLabel";
-            this.tipoServicioLabel.Size = new System.Drawing.Size(209, 28);
+            this.tipoServicioLabel.Size = new System.Drawing.Size(166, 22);
             this.tipoServicioLabel.TabIndex = 13;
             this.tipoServicioLabel.Text = "TIPO DE SERVICIO:";
             // 
@@ -136,7 +136,7 @@ namespace POS
             this.noMesaLabel.Location = new System.Drawing.Point(14, 244);
             this.noMesaLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.noMesaLabel.Name = "noMesaLabel";
-            this.noMesaLabel.Size = new System.Drawing.Size(163, 28);
+            this.noMesaLabel.Size = new System.Drawing.Size(128, 22);
             this.noMesaLabel.TabIndex = 14;
             this.noMesaLabel.Text = "NO. DE MESA:";
             // 
@@ -147,7 +147,7 @@ namespace POS
             this.fechaLabel.Location = new System.Drawing.Point(1129, 99);
             this.fechaLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.fechaLabel.Name = "fechaLabel";
-            this.fechaLabel.Size = new System.Drawing.Size(88, 28);
+            this.fechaLabel.Size = new System.Drawing.Size(70, 22);
             this.fechaLabel.TabIndex = 15;
             this.fechaLabel.Text = "FECHA:";
             // 
@@ -158,7 +158,7 @@ namespace POS
             this.horaLabel.Location = new System.Drawing.Point(1136, 214);
             this.horaLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.horaLabel.Name = "horaLabel";
-            this.horaLabel.Size = new System.Drawing.Size(81, 28);
+            this.horaLabel.Size = new System.Drawing.Size(64, 22);
             this.horaLabel.TabIndex = 16;
             this.horaLabel.Text = "HORA:";
             // 
@@ -173,7 +173,7 @@ namespace POS
             this.tipoServicioComboBox.Location = new System.Drawing.Point(248, 163);
             this.tipoServicioComboBox.Margin = new System.Windows.Forms.Padding(7);
             this.tipoServicioComboBox.Name = "tipoServicioComboBox";
-            this.tipoServicioComboBox.Size = new System.Drawing.Size(257, 35);
+            this.tipoServicioComboBox.Size = new System.Drawing.Size(257, 29);
             this.tipoServicioComboBox.TabIndex = 17;
             // 
             // noMesaComboBox
@@ -195,7 +195,7 @@ namespace POS
             this.noMesaComboBox.Location = new System.Drawing.Point(239, 237);
             this.noMesaComboBox.Margin = new System.Windows.Forms.Padding(7);
             this.noMesaComboBox.Name = "noMesaComboBox";
-            this.noMesaComboBox.Size = new System.Drawing.Size(257, 35);
+            this.noMesaComboBox.Size = new System.Drawing.Size(257, 29);
             this.noMesaComboBox.TabIndex = 18;
             // 
             // platilloCheckBox
@@ -206,7 +206,7 @@ namespace POS
             this.platilloCheckBox.Location = new System.Drawing.Point(28, 397);
             this.platilloCheckBox.Margin = new System.Windows.Forms.Padding(7);
             this.platilloCheckBox.Name = "platilloCheckBox";
-            this.platilloCheckBox.Size = new System.Drawing.Size(132, 32);
+            this.platilloCheckBox.Size = new System.Drawing.Size(108, 26);
             this.platilloCheckBox.TabIndex = 19;
             this.platilloCheckBox.Text = "PLATILLO";
             this.platilloCheckBox.UseVisualStyleBackColor = true;
@@ -220,7 +220,7 @@ namespace POS
             this.postreCheckBox.Location = new System.Drawing.Point(252, 397);
             this.postreCheckBox.Margin = new System.Windows.Forms.Padding(7);
             this.postreCheckBox.Name = "postreCheckBox";
-            this.postreCheckBox.Size = new System.Drawing.Size(117, 32);
+            this.postreCheckBox.Size = new System.Drawing.Size(95, 26);
             this.postreCheckBox.TabIndex = 20;
             this.postreCheckBox.Text = "POSTRE";
             this.postreCheckBox.UseVisualStyleBackColor = true;
@@ -234,7 +234,7 @@ namespace POS
             this.bebidaCheckBox.Location = new System.Drawing.Point(458, 397);
             this.bebidaCheckBox.Margin = new System.Windows.Forms.Padding(7);
             this.bebidaCheckBox.Name = "bebidaCheckBox";
-            this.bebidaCheckBox.Size = new System.Drawing.Size(112, 32);
+            this.bebidaCheckBox.Size = new System.Drawing.Size(91, 26);
             this.bebidaCheckBox.TabIndex = 21;
             this.bebidaCheckBox.Text = "BEBIDA";
             this.bebidaCheckBox.UseVisualStyleBackColor = true;
@@ -247,7 +247,7 @@ namespace POS
             this.agregarLabel.Location = new System.Drawing.Point(16, 329);
             this.agregarLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.agregarLabel.Name = "agregarLabel";
-            this.agregarLabel.Size = new System.Drawing.Size(278, 28);
+            this.agregarLabel.Size = new System.Drawing.Size(222, 22);
             this.agregarLabel.TabIndex = 22;
             this.agregarLabel.Text = "¿QUÉ DESEAS AGREGAR?";
             // 
@@ -268,7 +268,7 @@ namespace POS
             this.comentariosLabel.Location = new System.Drawing.Point(20, 697);
             this.comentariosLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.comentariosLabel.Name = "comentariosLabel";
-            this.comentariosLabel.Size = new System.Drawing.Size(150, 24);
+            this.comentariosLabel.Size = new System.Drawing.Size(121, 19);
             this.comentariosLabel.TabIndex = 25;
             this.comentariosLabel.Text = "COMENTARIOS:";
             // 
@@ -454,6 +454,7 @@ namespace POS
             this.ordenDataGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
             this.ordenDataGridView.Size = new System.Drawing.Size(631, 229);
             this.ordenDataGridView.TabIndex = 35;
+            this.ordenDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.ordenDataGridView_CellMouseClick);
             // 
             // actualizarButton
             // 
@@ -481,7 +482,7 @@ namespace POS
             this.precioElementoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.precioElementoLabel.Location = new System.Drawing.Point(863, 397);
             this.precioElementoLabel.Name = "precioElementoLabel";
-            this.precioElementoLabel.Size = new System.Drawing.Size(69, 24);
+            this.precioElementoLabel.Size = new System.Drawing.Size(57, 19);
             this.precioElementoLabel.TabIndex = 37;
             this.precioElementoLabel.Text = "Precio";
             // 
@@ -492,7 +493,7 @@ namespace POS
             this.nombreElementoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.nombreElementoLabel.Location = new System.Drawing.Point(739, 397);
             this.nombreElementoLabel.Name = "nombreElementoLabel";
-            this.nombreElementoLabel.Size = new System.Drawing.Size(87, 24);
+            this.nombreElementoLabel.Size = new System.Drawing.Size(72, 19);
             this.nombreElementoLabel.TabIndex = 36;
             this.nombreElementoLabel.Text = "Nombre";
             // 
@@ -503,7 +504,7 @@ namespace POS
             this.cantidadElementoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.cantidadElementoLabel.Location = new System.Drawing.Point(966, 397);
             this.cantidadElementoLabel.Name = "cantidadElementoLabel";
-            this.cantidadElementoLabel.Size = new System.Drawing.Size(58, 24);
+            this.cantidadElementoLabel.Size = new System.Drawing.Size(48, 19);
             this.cantidadElementoLabel.TabIndex = 39;
             this.cantidadElementoLabel.Text = "Cant.";
             // 
@@ -514,7 +515,7 @@ namespace POS
             this.subtotalElementoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.subtotalElementoLabel.Location = new System.Drawing.Point(1074, 397);
             this.subtotalElementoLabel.Name = "subtotalElementoLabel";
-            this.subtotalElementoLabel.Size = new System.Drawing.Size(90, 24);
+            this.subtotalElementoLabel.Size = new System.Drawing.Size(74, 19);
             this.subtotalElementoLabel.TabIndex = 40;
             this.subtotalElementoLabel.Text = "Subtotal";
             // 
@@ -525,7 +526,7 @@ namespace POS
             this.totalLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.totalLabel.Location = new System.Drawing.Point(1116, 693);
             this.totalLabel.Name = "totalLabel";
-            this.totalLabel.Size = new System.Drawing.Size(70, 28);
+            this.totalLabel.Size = new System.Drawing.Size(55, 21);
             this.totalLabel.TabIndex = 41;
             this.totalLabel.Text = "Total";
             // 
@@ -586,11 +587,11 @@ namespace POS
             // 
             // agregarOrdenForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 27F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1559, 896);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.totalElementosLabel);
             this.Controls.Add(this.totalLabel);
             this.Controls.Add(this.subtotalElementoLabel);
