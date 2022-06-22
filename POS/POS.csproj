@@ -388,6 +388,7 @@
       <DependentUpon>POSBDModel.edmx</DependentUpon>
       <LastGenOutput>POSBDModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\ojo.png" />
     <None Include="Resources\ConsultaPar1.png" />
     <None Include="Resources\verMas2.png" />
     <None Include="Resources\verMas1.png" />
