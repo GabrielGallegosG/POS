@@ -113,6 +113,12 @@
     <Compile Include="consultarVentas.Designer.cs">
       <DependentUpon>consultarVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="pagoOrdenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pagoOrdenForm.Designer.cs">
+      <DependentUpon>pagoOrdenForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PLAgregarSaldoInicial.cs" />
     <Compile Include="PLConsultarVentas.cs" />
     <Compile Include="PLInicioVentas.cs" />
@@ -239,6 +245,7 @@
     <Compile Include="PLEliminarUsuario.cs" />
     <Compile Include="PLInicio.cs" />
     <Compile Include="PLLogIn.cs" />
+    <Compile Include="PLPagoOrden.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="agregarMenuForm.resx">
@@ -305,6 +312,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="loginForm.resx">
       <DependentUpon>loginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pagoOrdenForm.resx">
+      <DependentUpon>pagoOrdenForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
