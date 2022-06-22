@@ -64,8 +64,11 @@ namespace POS
                     loginForm logIn = new loginForm();
                     logIn.Close();
                     this.Hide();
-                    consultaMenuForm consultaMenu = new consultaMenuForm();
-                    consultaMenu.Show();
+
+                    inicioSaldosForm  inicioSaldos = new inicioSaldosForm();
+                    inicioSaldos.Show();
+                    /*consultaMenuForm consultaMenu = new consultaMenuForm();
+                    consultaMenu.Show();*/
                 }
                 else
                 {

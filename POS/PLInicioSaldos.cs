@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace POS
 {
-    class PLInicioVentas
+    class PLInicioSaldos
     {
         public static void posicionEncabezado(Button inicio, Button menu, Button orden, Button venta, Button usuario)
         {
@@ -20,25 +20,21 @@ namespace POS
             usuario.Location = new Point(683, 10);
         }
 
-        public static void posicionConsultaMenu(PictureBox logo, Label ventas, Panel consultarVentas, Panel saldoInicial, Panel saldoFinal,
-                                                    Label consultVentas, Label saldoInicialLabel, Label saldoFinalLabel)
+        public static void posicionSaldosInicio(PictureBox logo, Label saldosLabel, Panel saldoInicial, Panel saldoFinal,
+                                                 Label saldoInicialLabel, Label saldoFinalLabel)
         {
             logo.Size = new Size(115, 100);
-            ventas.Size = new Size(110, 30);
-            consultarVentas.Size = new Size(179, 41);
-            saldoInicial.Size = new Size(217, 41);
-            saldoFinal.Size = new Size(208, 41);
-            consultVentas.Size = new Size(169, 19);
+            saldosLabel.Size = new Size(96, 32);
+            saldoInicial.Size = new Size(214, 41);
+            saldoFinal.Size = new Size(209, 41);
             saldoInicialLabel.Size = new Size(204, 19);
             saldoFinalLabel.Size = new Size(192, 19);
 
             logo.Location = new Point(12, 48);
             logo.BringToFront();
-            ventas.Location = new Point(133, 87);
-            consultarVentas.Location = new Point(246, 107);
-            saldoInicial.Location = new Point(431, 107);
-            saldoFinal.Location = new Point(652, 107);
-            consultVentas.Location = new Point(2,7);
+            saldosLabel.Location = new Point(133, 87);
+            saldoInicial.Location = new Point(220, 285);
+            saldoFinal.Location = new Point(480, 285);
             saldoInicialLabel.Location = new Point(3,7);
             saldoFinalLabel.Location = new Point(5,7);
         }

@@ -1,7 +1,7 @@
 ﻿
 namespace POS
 {
-    partial class inicioVentasForm
+    partial class inicioSaldosForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace POS
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(inicioVentasForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(inicioSaldosForm));
             this.encabezadoPanel = new System.Windows.Forms.Panel();
             this.usuariosButton = new System.Windows.Forms.Button();
             this.ventasButton = new System.Windows.Forms.Button();
@@ -39,14 +39,11 @@ namespace POS
             this.encabezadoLabel = new System.Windows.Forms.Label();
             this.saldoInicialPanel = new System.Windows.Forms.Panel();
             this.saldoInicialLabel = new System.Windows.Forms.Label();
-            this.consultarVentasPanel = new System.Windows.Forms.Panel();
-            this.consultVentasLabel = new System.Windows.Forms.Label();
             this.saldoFinalPanel = new System.Windows.Forms.Panel();
             this.saldoFinalLabel = new System.Windows.Forms.Label();
             this.logoPictureBox = new System.Windows.Forms.PictureBox();
             this.encabezadoPanel.SuspendLayout();
             this.saldoInicialPanel.SuspendLayout();
-            this.consultarVentasPanel.SuspendLayout();
             this.saldoFinalPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -72,14 +69,15 @@ namespace POS
             this.usuariosButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.usuariosButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.usuariosButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.usuariosButton.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
+            this.usuariosButton.Font = new System.Drawing.Font("Gadugi", 14F, System.Drawing.FontStyle.Bold);
             this.usuariosButton.ForeColor = System.Drawing.Color.White;
-            this.usuariosButton.Location = new System.Drawing.Point(683, 10);
+            this.usuariosButton.Location = new System.Drawing.Point(772, 9);
             this.usuariosButton.Name = "usuariosButton";
             this.usuariosButton.Size = new System.Drawing.Size(110, 30);
-            this.usuariosButton.TabIndex = 11;
+            this.usuariosButton.TabIndex = 15;
             this.usuariosButton.Text = "USUARIOS";
             this.usuariosButton.UseVisualStyleBackColor = false;
+            this.usuariosButton.Click += new System.EventHandler(this.usuariosButton_Click);
             // 
             // ventasButton
             // 
@@ -87,14 +85,15 @@ namespace POS
             this.ventasButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ventasButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ventasButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ventasButton.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
+            this.ventasButton.Font = new System.Drawing.Font("Gadugi", 14F, System.Drawing.FontStyle.Bold);
             this.ventasButton.ForeColor = System.Drawing.Color.White;
-            this.ventasButton.Location = new System.Drawing.Point(587, 10);
+            this.ventasButton.Location = new System.Drawing.Point(676, 9);
             this.ventasButton.Name = "ventasButton";
             this.ventasButton.Size = new System.Drawing.Size(90, 30);
-            this.ventasButton.TabIndex = 12;
+            this.ventasButton.TabIndex = 17;
             this.ventasButton.Text = "VENTAS";
             this.ventasButton.UseVisualStyleBackColor = false;
+            this.ventasButton.Click += new System.EventHandler(this.ventasButton_Click);
             // 
             // ordenesButton
             // 
@@ -102,14 +101,15 @@ namespace POS
             this.ordenesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ordenesButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ordenesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ordenesButton.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
+            this.ordenesButton.Font = new System.Drawing.Font("Gadugi", 14F, System.Drawing.FontStyle.Bold);
             this.ordenesButton.ForeColor = System.Drawing.Color.White;
-            this.ordenesButton.Location = new System.Drawing.Point(479, 10);
+            this.ordenesButton.Location = new System.Drawing.Point(568, 9);
             this.ordenesButton.Name = "ordenesButton";
             this.ordenesButton.Size = new System.Drawing.Size(101, 30);
-            this.ordenesButton.TabIndex = 11;
+            this.ordenesButton.TabIndex = 16;
             this.ordenesButton.Text = "ORDENES";
             this.ordenesButton.UseVisualStyleBackColor = false;
+            this.ordenesButton.Click += new System.EventHandler(this.ordenesButton_Click);
             // 
             // menuButton
             // 
@@ -117,14 +117,15 @@ namespace POS
             this.menuButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.menuButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.menuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.menuButton.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
+            this.menuButton.Font = new System.Drawing.Font("Gadugi", 14F, System.Drawing.FontStyle.Bold);
             this.menuButton.ForeColor = System.Drawing.Color.White;
-            this.menuButton.Location = new System.Drawing.Point(383, 10);
+            this.menuButton.Location = new System.Drawing.Point(472, 9);
             this.menuButton.Name = "menuButton";
             this.menuButton.Size = new System.Drawing.Size(90, 30);
-            this.menuButton.TabIndex = 10;
+            this.menuButton.TabIndex = 14;
             this.menuButton.Text = "MENÚ";
             this.menuButton.UseVisualStyleBackColor = false;
+            this.menuButton.Click += new System.EventHandler(this.menuButton_Click);
             // 
             // inicioBbutton
             // 
@@ -133,14 +134,15 @@ namespace POS
             this.inicioBbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.inicioBbutton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.inicioBbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.inicioBbutton.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
+            this.inicioBbutton.Font = new System.Drawing.Font("Gadugi", 14F, System.Drawing.FontStyle.Bold);
             this.inicioBbutton.ForeColor = System.Drawing.Color.White;
-            this.inicioBbutton.Location = new System.Drawing.Point(287, 10);
+            this.inicioBbutton.Location = new System.Drawing.Point(376, 9);
             this.inicioBbutton.Name = "inicioBbutton";
             this.inicioBbutton.Size = new System.Drawing.Size(90, 30);
-            this.inicioBbutton.TabIndex = 9;
+            this.inicioBbutton.TabIndex = 13;
             this.inicioBbutton.Text = "INICIO";
             this.inicioBbutton.UseVisualStyleBackColor = false;
+            this.inicioBbutton.Click += new System.EventHandler(this.inicioBbutton_Click);
             // 
             // encabezadoLabel
             // 
@@ -148,9 +150,9 @@ namespace POS
             this.encabezadoLabel.Font = new System.Drawing.Font("Gadugi", 18.75F, System.Drawing.FontStyle.Bold);
             this.encabezadoLabel.Location = new System.Drawing.Point(133, 87);
             this.encabezadoLabel.Name = "encabezadoLabel";
-            this.encabezadoLabel.Size = new System.Drawing.Size(110, 30);
+            this.encabezadoLabel.Size = new System.Drawing.Size(383, 30);
             this.encabezadoLabel.TabIndex = 52;
-            this.encabezadoLabel.Text = "VENTAS";
+            this.encabezadoLabel.Text = "SALDO INICIAL Y SALDO FINAL";
             this.encabezadoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // saldoInicialPanel
@@ -160,10 +162,11 @@ namespace POS
             this.saldoInicialPanel.Controls.Add(this.saldoInicialLabel);
             this.saldoInicialPanel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.saldoInicialPanel.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saldoInicialPanel.Location = new System.Drawing.Point(431, 107);
+            this.saldoInicialPanel.Location = new System.Drawing.Point(220, 285);
             this.saldoInicialPanel.Name = "saldoInicialPanel";
-            this.saldoInicialPanel.Size = new System.Drawing.Size(217, 41);
+            this.saldoInicialPanel.Size = new System.Drawing.Size(214, 41);
             this.saldoInicialPanel.TabIndex = 54;
+            this.saldoInicialPanel.Click += new System.EventHandler(this.saldoInicialPanel_Click);
             // 
             // saldoInicialLabel
             // 
@@ -176,29 +179,6 @@ namespace POS
             this.saldoInicialLabel.TabIndex = 6;
             this.saldoInicialLabel.Text = "INGRESAR SALDO INICIAL";
             // 
-            // consultarVentasPanel
-            // 
-            this.consultarVentasPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
-            this.consultarVentasPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.consultarVentasPanel.Controls.Add(this.consultVentasLabel);
-            this.consultarVentasPanel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.consultarVentasPanel.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.consultarVentasPanel.Location = new System.Drawing.Point(246, 107);
-            this.consultarVentasPanel.Name = "consultarVentasPanel";
-            this.consultarVentasPanel.Size = new System.Drawing.Size(179, 41);
-            this.consultarVentasPanel.TabIndex = 53;
-            // 
-            // consultVentasLabel
-            // 
-            this.consultVentasLabel.AutoSize = true;
-            this.consultVentasLabel.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold);
-            this.consultVentasLabel.ForeColor = System.Drawing.Color.White;
-            this.consultVentasLabel.Location = new System.Drawing.Point(2, 7);
-            this.consultVentasLabel.Name = "consultVentasLabel";
-            this.consultVentasLabel.Size = new System.Drawing.Size(169, 19);
-            this.consultVentasLabel.TabIndex = 5;
-            this.consultVentasLabel.Text = "CONSULTAR VENTAS";
-            // 
             // saldoFinalPanel
             // 
             this.saldoFinalPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
@@ -206,10 +186,11 @@ namespace POS
             this.saldoFinalPanel.Controls.Add(this.saldoFinalLabel);
             this.saldoFinalPanel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.saldoFinalPanel.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saldoFinalPanel.Location = new System.Drawing.Point(652, 107);
+            this.saldoFinalPanel.Location = new System.Drawing.Point(480, 285);
             this.saldoFinalPanel.Name = "saldoFinalPanel";
-            this.saldoFinalPanel.Size = new System.Drawing.Size(208, 41);
+            this.saldoFinalPanel.Size = new System.Drawing.Size(209, 41);
             this.saldoFinalPanel.TabIndex = 55;
+            this.saldoFinalPanel.Click += new System.EventHandler(this.saldoFinalPanel_Click);
             // 
             // saldoFinalLabel
             // 
@@ -226,33 +207,30 @@ namespace POS
             // 
             this.logoPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.logoPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("logoPictureBox.Image")));
-            this.logoPictureBox.Location = new System.Drawing.Point(12, 48);
+            this.logoPictureBox.Location = new System.Drawing.Point(12, 55);
             this.logoPictureBox.Name = "logoPictureBox";
             this.logoPictureBox.Size = new System.Drawing.Size(115, 100);
             this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logoPictureBox.TabIndex = 51;
             this.logoPictureBox.TabStop = false;
             // 
-            // inicioVentasForm
+            // inicioSaldosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(872, 531);
             this.Controls.Add(this.saldoFinalPanel);
             this.Controls.Add(this.saldoInicialPanel);
-            this.Controls.Add(this.consultarVentasPanel);
             this.Controls.Add(this.encabezadoLabel);
             this.Controls.Add(this.logoPictureBox);
             this.Controls.Add(this.encabezadoPanel);
-            this.Name = "inicioVentasForm";
+            this.Name = "inicioSaldosForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "inicioVentasForm";
+            this.Text = "INICIO";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.encabezadoPanel.ResumeLayout(false);
             this.saldoInicialPanel.ResumeLayout(false);
             this.saldoInicialPanel.PerformLayout();
-            this.consultarVentasPanel.ResumeLayout(false);
-            this.consultarVentasPanel.PerformLayout();
             this.saldoFinalPanel.ResumeLayout(false);
             this.saldoFinalPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
@@ -264,18 +242,16 @@ namespace POS
         #endregion
 
         private System.Windows.Forms.Panel encabezadoPanel;
+        private System.Windows.Forms.Label encabezadoLabel;
+        private System.Windows.Forms.PictureBox logoPictureBox;
+        private System.Windows.Forms.Panel saldoInicialPanel;
+        private System.Windows.Forms.Label saldoInicialLabel;
+        private System.Windows.Forms.Panel saldoFinalPanel;
+        private System.Windows.Forms.Label saldoFinalLabel;
         private System.Windows.Forms.Button usuariosButton;
         private System.Windows.Forms.Button ventasButton;
         private System.Windows.Forms.Button ordenesButton;
         private System.Windows.Forms.Button menuButton;
         private System.Windows.Forms.Button inicioBbutton;
-        private System.Windows.Forms.Label encabezadoLabel;
-        private System.Windows.Forms.PictureBox logoPictureBox;
-        private System.Windows.Forms.Panel saldoInicialPanel;
-        private System.Windows.Forms.Label saldoInicialLabel;
-        private System.Windows.Forms.Panel consultarVentasPanel;
-        private System.Windows.Forms.Label consultVentasLabel;
-        private System.Windows.Forms.Panel saldoFinalPanel;
-        private System.Windows.Forms.Label saldoFinalLabel;
     }
 }

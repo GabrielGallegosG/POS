@@ -17,17 +17,17 @@ namespace POS
             InitializeComponent();
 
             PLConsultarVentas.posicionEncabezado(inicioBbutton, menuButton, ordenesButton, ventasButton, usuariosButton);
-            PLConsultarVentas.posicionConsultaMenu(logoPictureBox, encabezadoLabel, consultarVentasPanel, saldoInicialPanel, saldoFinalPanel,
-                                                    consultVentasLabel, saldoInicialLabel, saldoFinalLabel, consultTabla, filtrarLabel, filtroComboBox,
-                                                    datoBuscarLabel, datoBuscarComboBox);
-
+            PLConsultarVentas.posicionConsultaMenu(logoPictureBox, encabezadoLabel, consultTabla, filtrarLabel, filtroComboBox,
+                                                    datoBuscarLabel, textBox1);
+            //PLConsultarVentas.dataGridView(consultTabla);
+            consultTabla.AutoResizeColumns();
         }
 
         //Botones encabezado
         private void ordenesButton_Click(object sender, EventArgs e)
         {
-            inicioVentasForm inicioVentas = new inicioVentasForm();
-            inicioVentas.Close();
+            consultarVentas consultVentas = new consultarVentas();
+            consultVentas.Close();
             this.Hide();
             consultarOrdenesForm frm = new consultarOrdenesForm();
             frm.Show();
@@ -35,8 +35,8 @@ namespace POS
 
         private void menuButton_Click(object sender, EventArgs e)
         {
-            inicioVentasForm inicioVentas = new inicioVentasForm();
-            inicioVentas.Close();
+            consultarVentas consultVentas = new consultarVentas();
+            consultVentas.Close();
             this.Hide();
             consultaMenuForm frm = new consultaMenuForm();
             frm.Show();
@@ -44,8 +44,8 @@ namespace POS
 
         private void usuariosButton_Click(object sender, EventArgs e)
         {
-            inicioVentasForm inicioVentas = new inicioVentasForm();
-            inicioVentas.Close();
+            consultarVentas consultVentas = new consultarVentas();
+            consultVentas.Close();
             this.Hide();
             consultarUsuariosForm frm = new consultarUsuariosForm();
             frm.Show();
@@ -53,11 +53,11 @@ namespace POS
 
         private void ventasButton_Click(object sender, EventArgs e)
         {
-            inicioVentasForm inicioVentas = new inicioVentasForm();
-            inicioVentas.Close();
+            consultarVentas consultVentas = new consultarVentas();
+            consultVentas.Close();
             this.Hide();
-            inicioVentasForm frm = new inicioVentasForm();
-            frm.Show();
+            consultarVentas consultVentasfrm = new consultarVentas();
+            consultVentasfrm.Show();
         }
 
         private void saldoInicialPanel_Click(object sender, EventArgs e)
@@ -70,6 +70,49 @@ namespace POS
         {
             agregarSaldoFinalForm frm = new agregarSaldoFinalForm();
             frm.ShowDialog();
+        }
+
+        private void consultarVentas_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'pOS_BDDataSet.orden' table. You can move, or remove it, as needed.
+            this.ordenTableAdapter.Fill(this.pOS_BDDataSet.orden);
+
+        }
+
+        private void inicioBbutton_Click(object sender, EventArgs e)
+        {
+            consultarVentas consultVentas = new consultarVentas();
+            consultVentas.Close();
+            this.Hide();
+            inicioSaldosForm frm = new inicioSaldosForm();
+            frm.Show();
+        }
+
+        private void filtroComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            /*try
+            {
+                if (filtroComboBox.SelectedItem.Equals("Dia"))
+                {
+                    
+                }
+                else if (filtroComboBox.SelectedItem.Equals("Empleado"))
+                {
+
+                }
+                else if (filtroComboBox.SelectedItem.Equals("Tipo de Servicio"))
+                {
+
+                }
+                else if (filtroComboBox.SelectedItem.Equals("Tipo de Pago"))
+                {
+
+                }
+            }
+            catch (Exception e)
+            {
+
+            }*/
         }
     }
 }

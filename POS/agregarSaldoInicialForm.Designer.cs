@@ -55,6 +55,7 @@ namespace POS
             this.agregarButton.TabIndex = 21;
             this.agregarButton.Text = "AGREGAR";
             this.agregarButton.UseVisualStyleBackColor = false;
+            this.agregarButton.Click += new System.EventHandler(this.agregarButton_Click);
             // 
             // cancelarButton
             // 
