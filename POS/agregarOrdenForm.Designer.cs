@@ -72,9 +72,9 @@ namespace POS
             this.cantidadElementoLabel = new System.Windows.Forms.Label();
             this.subtotalElementoLabel = new System.Windows.Forms.Label();
             this.totalLabel = new System.Windows.Forms.Label();
+            this.totalElementosLabel = new System.Windows.Forms.Label();
             this.agregarButton = new buttonSystem();
             this.cancelarButton = new buttonSystem();
-            this.totalElementosLabel = new System.Windows.Forms.Label();
             this.encabezadoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.platillosDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bebidasDataGridView)).BeginInit();
@@ -92,7 +92,7 @@ namespace POS
             this.encabezadoPanel.Location = new System.Drawing.Point(2, 0);
             this.encabezadoPanel.Margin = new System.Windows.Forms.Padding(7);
             this.encabezadoPanel.Name = "encabezadoPanel";
-            this.encabezadoPanel.Size = new System.Drawing.Size(2098, 49);
+            this.encabezadoPanel.Size = new System.Drawing.Size(1951, 49);
             this.encabezadoPanel.TabIndex = 11;
             // 
             // noOrdenLabel
@@ -529,6 +529,19 @@ namespace POS
             this.totalLabel.TabIndex = 41;
             this.totalLabel.Text = "Total";
             // 
+            // totalElementosLabel
+            // 
+            this.totalElementosLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.totalElementosLabel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.totalElementosLabel.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalElementosLabel.Location = new System.Drawing.Point(1196, 688);
+            this.totalElementosLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.totalElementosLabel.Name = "totalElementosLabel";
+            this.totalElementosLabel.Size = new System.Drawing.Size(179, 46);
+            this.totalElementosLabel.TabIndex = 42;
+            this.totalElementosLabel.Text = "$$.$$";
+            this.totalElementosLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // agregarButton
             // 
             this.agregarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(89)))));
@@ -571,26 +584,13 @@ namespace POS
             this.cancelarButton.UseVisualStyleBackColor = false;
             this.cancelarButton.Click += new System.EventHandler(this.cancelarButton_Click);
             // 
-            // totalElementosLabel
-            // 
-            this.totalElementosLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.totalElementosLabel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.totalElementosLabel.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalElementosLabel.Location = new System.Drawing.Point(1196, 688);
-            this.totalElementosLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this.totalElementosLabel.Name = "totalElementosLabel";
-            this.totalElementosLabel.Size = new System.Drawing.Size(179, 46);
-            this.totalElementosLabel.TabIndex = 42;
-            this.totalElementosLabel.Text = "$$.$$";
-            this.totalElementosLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // agregarOrdenForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1517, 896);
+            this.ClientSize = new System.Drawing.Size(1559, 896);
             this.Controls.Add(this.totalElementosLabel);
             this.Controls.Add(this.totalLabel);
             this.Controls.Add(this.subtotalElementoLabel);

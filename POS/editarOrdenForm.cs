@@ -15,13 +15,28 @@ namespace POS
         public editarOrdenForm()
         {
             InitializeComponent();
-            PLEditarOrden.posicionEditarOrden(empleadoLabel, empleadoOrdenLabel, tipoServicioLabel, noMesaLabel, fechaLabel, horaLabel, fechaOrdenLabel, horaOrdenLabel, tipoServicioComboBox, noMesaComboBox,
-                agregarLabel, platilloCheckBox, postreCheckBox, bebidaCheckBox);
+           
+            PLEditarOrden.posicionEditarOrden(empleadoLabel, empleadoOrdenLabel,tipoServicioLabel,noMesaLabel, fechaLabel,horaLabel, 
+                                fechaOrdenLabel, horaOrdenLabel,tipoServicioComboBox,noMesaComboBox,agregarLabel,platilloCheckBox, 
+                                postreCheckBox, bebidaCheckBox, comentariosLabel,comentariosRichTextBox, cancelarButton,guardarButton);
+
+            PLEditarOrden.dataGridView(platillosDataGridView);
+            PLEditarOrden.dataGridView(bebidasDataGridView);
+            PLEditarOrden.dataGridView(postresDataGridView);
+            PLEditarOrden.dataGridView_2(ordenDataGridView);
+            PLEditarOrden.posicionrOrden(nombreElementoLabel, precioElementoLabel, cantidadElementoLabel, subtotalElementoLabel, totalLabel, totalElementosLabel, actualizarButton);
+
+            ordenDataGridView.AutoResizeColumns();
         }
 
         private void cancelarButton_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void agregarButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
