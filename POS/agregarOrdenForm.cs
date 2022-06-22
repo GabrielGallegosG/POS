@@ -276,12 +276,12 @@ namespace POS
                         //sum += Convert.ToSingle(ordenDataGridView.Rows[i].Cells[4].Value);
                         sum = Lista.Sum(lista => lista.subTotal);
                     }
-                    
+
                     totalElementosLabel.Text = sum.ToString();
                     total = Convert.ToSingle(totalElementosLabel.Text);
                 }
             }
-            
+
         }
 
         private void actualizarOrdenDataGrid()
@@ -317,23 +317,24 @@ namespace POS
         {
 
         }
-        
+
         //OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
         private void ordenDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            if (e.ColumnIndex == ordenDataGridView.Columns.IndexOf(GOrd))
             {
-                if (e.ColumnIndex == ordenDataGridView.Columns.IndexOf(GOrd))
-                {
-                        Lista.RemoveAt(ordenDataGridView.CurrentRow.Index);
-                        ordenDataGridView.Rows.RemoveAt(ordenDataGridView.CurrentRow.Index);
+                Lista.RemoveAt(ordenDataGridView.CurrentRow.Index);
 
-                        String test = ordenDataGridView.CurrentRow.Index.ToString();
-                        MessageBox.Show(test, "Dato requerido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                float operacion = Convert.ToSingle(ordenDataGridView.CurrentRow.Cells[4].Value);
+                totalElementosLabel.Text = Convert.ToString(total - operacion);
+                total = Convert.ToSingle(totalElementosLabel.Text);
+
+                actualizarOrdenDataGrid();
+                //ordenDataGridView.Rows.RemoveAt(ordenDataGridView.CurrentRow.Index);
             }
         }
 
-            private void dataGridViewBebidas_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void dataGridViewBebidas_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             try
             {

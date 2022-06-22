@@ -454,6 +454,7 @@ namespace POS
             this.ordenDataGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
             this.ordenDataGridView.Size = new System.Drawing.Size(631, 229);
             this.ordenDataGridView.TabIndex = 35;
+            this.ordenDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.ordenDataGridView_CellMouseClick);
             // 
             // actualizarButton
             // 
@@ -590,7 +591,7 @@ namespace POS
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1421, 800);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.totalElementosLabel);
             this.Controls.Add(this.totalLabel);
             this.Controls.Add(this.subtotalElementoLabel);
