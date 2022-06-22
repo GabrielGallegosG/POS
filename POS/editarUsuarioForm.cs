@@ -12,10 +12,10 @@ namespace POS
 {
     public partial class editarUsuarioForm : Form
     {
-        int id_editar,tipo_editar;
-        string nombre_editar, apellidoP_editar, apellidoM_editar,usuario_editar,contraseña_editar,cargo_editar;
+        int id_editar, tipo_editar;
+        string nombre_editar, apellidoP_editar, apellidoM_editar, usuario_editar, contraseña_editar, cargo_editar;
         consultarUsuariosForm frm = new consultarUsuariosForm();
-        
+        DataTable data = new DataTable();
         public editarUsuarioForm(int id, string nombre, string apellidoP, string apellidoM, int tipo, string cargo, string usuario, string contraseña)
         {
             id_editar = id;
@@ -28,7 +28,8 @@ namespace POS
             cargo_editar = cargo;
 
             InitializeComponent();
-            PLEditarUsuario.posicionEditarUsuario(encabezadoLabel,idLabel,idUsuarioLabel,nombreLabel, nombreTextBox, apellidoPLabel, apellidoPTextBox, apellidoMLabel, apellidoMTextBox,
+            frm.usuariosDataGridView.DataSource = BLConsultarUsuarios.UsuariosDT();
+            PLEditarUsuario.posicionEditarUsuario(encabezadoLabel, idLabel, idUsuarioLabel, nombreLabel, nombreTextBox, apellidoPLabel, apellidoPTextBox, apellidoMLabel, apellidoMTextBox,
                 usuarioLabel, usuarioTextBox, contraseñaLabel, contraseñaTextBox, tipoUsuarioLabel, tipoComboBox, cargoLabel, cargoTextBox, cancelarButton, guardarButton);
         }
 
@@ -68,55 +69,73 @@ namespace POS
                     }
                     else
                     {
-                        if (usuarioTextBox.Text.Equals(""))
+                        int cont = 0;
+                        data = frm.usuariosDataGridView.DataSource as DataTable;
+                        foreach (DataRow row in data.Rows)
                         {
-                            MessageBox.Show("¡No se ha ingresado el usuario!", "Dato requerido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            if (usuarioTextBox.Text.Equals(row[6]))
+                            {
+                                cont = 1;
+
+                            }
+                        }
+                        if (cont == 1)
+                        {
+                            MessageBox.Show("¡Este usuario ya existe, por favor ingrese otro!", "Dato duplicado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                         else
                         {
-                            if (contraseñaTextBox.Text.Equals(""))
+
+                            if (usuarioTextBox.Text.Equals(""))
                             {
-                                MessageBox.Show("¡No se ha ingresado la contraseña!", "Dato requerido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                MessageBox.Show("¡No se ha ingresado el usuario!", "Dato requerido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             }
                             else
                             {
-                                if (tipoComboBox.Text.Equals(""))
+                                if (contraseñaTextBox.Text.Equals(""))
                                 {
-                                    MessageBox.Show("¡No se ha ingresado el tipo de usuario!", "Dato requerido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    MessageBox.Show("¡No se ha ingresado la contraseña!", "Dato requerido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 }
                                 else
                                 {
-                                    if (cargoTextBox.Text.Equals(""))
+                                    if (tipoComboBox.Text.Equals(""))
                                     {
-                                        MessageBox.Show("¡No se ha ingresado el cargo del usuario!", "Dato requerido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                        MessageBox.Show("¡No se ha ingresado el tipo de usuario!", "Dato requerido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                     }
                                     else
                                     {
-                                        try
+                                        if (cargoTextBox.Text.Equals(""))
                                         {
-
-                                            string tipo = "";
-                                            if (tipoComboBox.SelectedIndex == 0)
-                                                tipo = "0";
-                                            else
-                                                if (tipoComboBox.SelectedIndex == 1)
-                                                tipo = "1";
-
-                                            string nombre = nombreTextBox.Text;
-                                            string apellidoP = apellidoPTextBox.Text;
-                                            string apellidoM = apellidoMTextBox.Text;
-                                            string usuario = usuarioTextBox.Text;
-                                            string contraseña = contraseñaTextBox.Text;
-                                            string cargo = cargoTextBox.Text;
-
-
-                                            int id = Int32.Parse(idUsuarioLabel.Text);
-                                            BLEditarUsuario.guardarEdicionDT(id, nombre, apellidoP, apellidoM, tipo, cargo, usuario, contraseña);
-                                            this.Close();
+                                            MessageBox.Show("¡No se ha ingresado el cargo del usuario!", "Dato requerido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                         }
-                                        catch (Exception ex)
+                                        else
                                         {
-                                            MessageBox.Show("¡Ha ocurrido un error al dar de alta a el usuario!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                            try
+                                            {
+
+                                                string tipo = "";
+                                                if (tipoComboBox.SelectedIndex == 0)
+                                                    tipo = "0";
+                                                else
+                                                    if (tipoComboBox.SelectedIndex == 1)
+                                                    tipo = "1";
+
+                                                string nombre = nombreTextBox.Text;
+                                                string apellidoP = apellidoPTextBox.Text;
+                                                string apellidoM = apellidoMTextBox.Text;
+                                                string usuario = usuarioTextBox.Text;
+                                                string contraseña = contraseñaTextBox.Text;
+                                                string cargo = cargoTextBox.Text;
+
+
+                                                int id = Int32.Parse(idUsuarioLabel.Text);
+                                                BLEditarUsuario.guardarEdicionDT(id, nombre, apellidoP, apellidoM, tipo, cargo, usuario, contraseña);
+                                                this.Close();
+                                            }
+                                            catch (Exception ex)
+                                            {
+                                                MessageBox.Show("¡Ha ocurrido un error al dar de alta a el usuario!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                            }
                                         }
                                     }
                                 }
