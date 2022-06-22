@@ -21,6 +21,7 @@ namespace POS
         int beb = 0;
         int pos = 0;
         int ord = 0;
+
         public agregarOrdenForm()
         {
             InitializeComponent();
@@ -32,7 +33,7 @@ namespace POS
             PLAgregarOrden.dataGridView(bebidasDataGridView);
             PLAgregarOrden.dataGridView(postresDataGridView);
             PLAgregarOrden.dataGridView_2(ordenDataGridView);
-            PLAgregarOrden.posicionrOrden(nombreElementoLabel, precioElementoLabel, cantidadElementoLabel, subtotalElementoLabel, totalLabel,totalElementosLabel, actualizarButton);
+            PLAgregarOrden.posicionrOrden(nombreElementoLabel, precioElementoLabel, cantidadElementoLabel, subtotalElementoLabel, totalLabel, totalElementosLabel, actualizarButton);
 
             ordenDataGridView.AutoResizeColumns();
         }
@@ -75,8 +76,9 @@ namespace POS
                 bebidaCheckBox.Checked = false;
                 postreCheckBox.Checked = false;
 
-                
-                if (pla == 0) {
+
+                if (pla == 0)
+                {
                     //DataGridPlatillos
 
                     GPla.Name = "agregar";
@@ -172,7 +174,7 @@ namespace POS
 
                 platilloCheckBox.Checked = false;
                 bebidaCheckBox.Checked = false;
-                
+
                 if (pos == 0)
                 {
                     //DataGridPostres
@@ -191,7 +193,7 @@ namespace POS
                     postresDataGridView.Columns.Add(GPos);
                     pos++;
                 }
-                
+
             }
         }
 
@@ -230,21 +232,22 @@ namespace POS
             public int cantidad { get; set; }
             public float subTotal { get; set; }
         }
-        
+
         List<elementosSeleccionados> Lista = new List<elementosSeleccionados>();
         String nombreElemento;
-        float subTotal, precioUnitario;
+        float subTotal, precioUnitario, total;
         int cantidad;
         private void dataGridViewPlatillos_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
 
-                if (e.ColumnIndex == platillosDataGridView.Columns.IndexOf(GPla))
+            if (e.ColumnIndex == platillosDataGridView.Columns.IndexOf(GPla))
+            {
+                if (platillosDataGridView.CurrentRow.Cells["cantidad"].Value == null)
                 {
-                    if (platillosDataGridView.CurrentRow.Cells["cantidad"].Value == null)
-                    {
-                        MessageBox.Show("No se ha ingresado la cantidad", "Dato requerido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                    else {
+                    MessageBox.Show("No se ha ingresado la cantidad", "Dato requerido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
                     platillosDataGridView.CurrentRow.Cells[e.ColumnIndex].Style.SelectionBackColor = Color.FromArgb(255, 205, 89);
                     platillosDataGridView.CurrentRow.Cells[e.ColumnIndex].Style.BackColor = Color.FromArgb(255, 128, 0);
                     platillosDataGridView.CurrentRow.Cells[e.ColumnIndex].Style.ForeColor = Color.White;
@@ -256,19 +259,34 @@ namespace POS
                     precioUnitario = Convert.ToSingle(platillosDataGridView.CurrentRow.Cells["precio"].Value.ToString());
                     subTotal = precioUnitario * cantidad;
 
-                    Lista.Add(new elementosSeleccionados(){ nombre = nombreElemento, precioUnitario = precioUnitario, cantidad = cantidad, subTotal = subTotal });
+                    Lista.Add(new elementosSeleccionados() { nombre = nombreElemento, precioUnitario = precioUnitario, cantidad = cantidad, subTotal = subTotal });
 
                     var box = "Platillo: " + platillosDataGridView.CurrentRow.Cells["nombre_elemento"].Value + "   Precio: " + platillosDataGridView.CurrentRow.Cells["precio"].Value;
                     MessageBox.Show(box, "Agregando a la orden", MessageBoxButtons.OK);
                     actualizarOrdenDataGrid();
-                    }
-                }
-        }
 
+
+                    //string test = ordenDataGridView.Rows[0].Cells[4].Value.ToString();
+                    //MessageBox.Show(test, "Dato requerido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    float sum = 0;
+                    //for (int i = 1; i < ordenDataGridView.Rows.Count; ++i)
+                    for (int i = 0; i < Lista.Count; ++i)
+                    {
+                        //sum += Convert.ToSingle(ordenDataGridView.Rows[i].Cells[4].Value);
+                        sum = Lista.Sum(lista => lista.subTotal);
+                    }
+                    
+                    totalElementosLabel.Text = sum.ToString();
+                    total = Convert.ToSingle(totalElementosLabel.Text);
+                }
+            }
+            
+        }
 
         private void actualizarOrdenDataGrid()
         {
-            
+
             foreach (elementosSeleccionados element in Lista)
             {
                 ordenDataGridView.DataSource = Lista.ToList();
@@ -297,11 +315,25 @@ namespace POS
 
         private void OrdenReadDataGrid(DataGridView dataGrid)
         {
-            
+
+        }
+        
+        //OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+        private void ordenDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            {
+                if (e.ColumnIndex == ordenDataGridView.Columns.IndexOf(GOrd))
+                {
+                        Lista.RemoveAt(ordenDataGridView.CurrentRow.Index);
+                        ordenDataGridView.Rows.RemoveAt(ordenDataGridView.CurrentRow.Index);
+
+                        String test = ordenDataGridView.CurrentRow.Index.ToString();
+                        MessageBox.Show(test, "Dato requerido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
         }
 
-
-        private void dataGridViewBebidas_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+            private void dataGridViewBebidas_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             try
             {
@@ -330,10 +362,22 @@ namespace POS
                         MessageBox.Show(box, "Agregando a la orden", MessageBoxButtons.OK);
 
                         actualizarOrdenDataGrid();
-                    }   
+
+                        float sum = 0;
+                        //for (int i = 1; i < ordenDataGridView.Rows.Count; ++i)
+                        for (int i = 0; i < Lista.Count; ++i)
+                        {
+                            //sum += Convert.ToSingle(ordenDataGridView.Rows[i].Cells[4].Value);
+                            sum = Lista.Sum(lista => lista.subTotal);
+                        }
+
+                        totalElementosLabel.Text = sum.ToString();
+                        total = Convert.ToSingle(totalElementosLabel.Text);
+                    }
                 }
             }
-            catch {
+            catch
+            {
                 throw;
             }
         }
@@ -346,7 +390,8 @@ namespace POS
                 {
                     MessageBox.Show("No se ha ingresado la cantidad", "Dato requerido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                else {
+                else
+                {
                     postresDataGridView.CurrentRow.Cells[e.ColumnIndex].Style.SelectionBackColor = Color.FromArgb(255, 205, 89);
                     postresDataGridView.CurrentRow.Cells[e.ColumnIndex].Style.BackColor = Color.FromArgb(255, 128, 0);
                     postresDataGridView.CurrentRow.Cells[e.ColumnIndex].Style.ForeColor = Color.White;
@@ -365,7 +410,18 @@ namespace POS
                     var box = "Platillo: " + postresDataGridView.CurrentRow.Cells["nombre_elemento"].Value + "   Precio: " + postresDataGridView.CurrentRow.Cells["precio"].Value;
                     MessageBox.Show(box, "Agregando al carrito", MessageBoxButtons.OK);
                     actualizarOrdenDataGrid();
-                } 
+
+                    float sum = 0;
+                    //for (int i = 1; i < ordenDataGridView.Rows.Count; ++i)
+                    for (int i = 0; i < Lista.Count; ++i)
+                    {
+                        //sum += Convert.ToSingle(ordenDataGridView.Rows[i].Cells[4].Value);
+                        sum = Lista.Sum(lista => lista.subTotal);
+                    }
+
+                    totalElementosLabel.Text = sum.ToString();
+                    total = Convert.ToSingle(totalElementosLabel.Text);
+                }
             }
         }
 
@@ -388,5 +444,5 @@ namespace POS
         }
     }
 }
-    
+
 
