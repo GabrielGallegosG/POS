@@ -20,8 +20,10 @@ namespace POS
         public loginForm()
         {
             InitializeComponent();
+            visibleButton.MouseEnter += OnMouseEnterVisibleButton;
+            visibleButton.MouseLeave += OnMouseLeaveVisibleButton;
             PLLogIn.posicionLogin(encabezadoPanel,encabezadoLabel, inicioSesionLabel, empleadoButton, administradorButton,contenedorPanel);
-            PLLogIn.posicionPanel(usuarioLabel, usuarioTextBox, contraseñaLabel, contraseñaTextBox, iniciarSesionButton);
+            PLLogIn.posicionPanel(usuarioLabel, usuarioTextBox, contraseñaLabel, contraseñaTextBox, iniciarSesionButton,visibleButton);
         }
 
        
@@ -42,29 +44,46 @@ namespace POS
             frm.usuariosDataGridView.DataSource = BLConsultarUsuarios.UsuariosDT();
             data = frm.usuariosDataGridView.DataSource as DataTable;
 
-            foreach (DataRow row in data.Rows)
+            if (usuarioTextBox.Text == "" || contraseñaTextBox.Text == "")
             {
-                if (usuarioTextBox.Text.Equals(row[6]) && contraseñaTextBox.Text.Equals(row[7]))
-                {
-                    us = 1;
-                    contra = 1;
-                }
-            }
+                MessageBox.Show("Usuario y/o contraseña no validos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            if (us == 1 && contra ==1)
-            {
-                loginForm logIn = new loginForm();
-                logIn.Close();
-                this.Hide();
-                consultaMenuForm consultaMenu = new consultaMenuForm();
-                consultaMenu.Show();
             }
             else
             {
-                usuarioTextBox.Text = "";
-                contraseñaTextBox.Text = "";
-                MessageBox.Show("¡Usuario o contraseña incorrectos, intente nuevamente!", "Usuario o contraseña incorrectos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                foreach (DataRow row in data.Rows)
+                {
+                    if (usuarioTextBox.Text.Equals(row[6]) && contraseñaTextBox.Text.Equals(row[7]))
+                    {
+                        us = 1;
+                        contra = 1;
+                    }
+                }
+                if (us == 1 && contra == 1)
+                {
+                    loginForm logIn = new loginForm();
+                    logIn.Close();
+                    this.Hide();
+                    consultaMenuForm consultaMenu = new consultaMenuForm();
+                    consultaMenu.Show();
+                }
+                else
+                {
+                    usuarioTextBox.Text = "";
+                    contraseñaTextBox.Text = "";
+                    MessageBox.Show("Usuario y/o contraseña son incorrectos, intente nuevamente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
+        }
+
+        private void OnMouseEnterVisibleButton(object sender, EventArgs e)
+        {
+            contraseñaTextBox.PasswordChar = '\0';
+        }
+
+        private void OnMouseLeaveVisibleButton(object sender, EventArgs e)
+        {
+            contraseñaTextBox.PasswordChar = '*';
         }
     }
 }

@@ -20,19 +20,21 @@ namespace POS
             panel.Hide();
         }
 
-        public static void posicionPanel(Label usuarioL, TextBox usuario, Label contraseñaL, TextBox contraseña, buttonLogin inicio)
+        public static void posicionPanel(Label usuarioL, TextBox usuario, Label contraseñaL, TextBox contraseña, buttonLogin inicio, Button visible)
         {
             usuarioL.Size = new Size(170, 20);
             usuario.Size = new Size(380, 20);
             contraseñaL.Size = new Size(150, 20);
             contraseña.Size = new Size(380, 20);
             inicio.Size = new Size(155, 35);
+            visible.Size = new Size(25, 25);
 
             usuarioL.Location = new Point(80, 50);
             usuario.Location = new Point(80, 80);
             contraseñaL.Location = new Point(80, 150);
             contraseña.Location = new Point(80, 180);
             inicio.Location = new Point(190, 250);
+            visible.Location = new Point(430, 182);
         }
     }
 }
