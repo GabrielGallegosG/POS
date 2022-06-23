@@ -69,23 +69,22 @@ namespace POS
                     }
                     else
                     {
-                        int cont = 0;
+                        int cont = 0, idUs;
+                        idUs = Convert.ToInt32(idUsuarioLabel.Text);
                         data = frm.usuariosDataGridView.DataSource as DataTable;
                         foreach (DataRow row in data.Rows)
                         {
-                            if (usuarioTextBox.Text.Equals(row[6]))
-                            {
-                                cont = 1;
 
-                            }
+                            if (usuarioTextBox.Text.Equals(row[6]) && idUs.Equals(row[0]) == false)
+                                cont = 1;
                         }
                         if (cont == 1)
-                        {
+                    {
                             MessageBox.Show("¡Este usuario ya existe, por favor ingrese otro!", "Dato duplicado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
-                        else
+                            usuarioTextBox.Text = "";
+                    }
+                    else
                         {
-
                             if (usuarioTextBox.Text.Equals(""))
                             {
                                 MessageBox.Show("¡No se ha ingresado el usuario!", "Dato requerido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
