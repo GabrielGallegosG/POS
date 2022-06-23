@@ -193,6 +193,7 @@ namespace POS
             // 
             // tipoComboBox
             // 
+            this.tipoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.tipoComboBox.Font = new System.Drawing.Font("Gadugi", 12F);
             this.tipoComboBox.FormattingEnabled = true;
             this.tipoComboBox.Items.AddRange(new object[] {
