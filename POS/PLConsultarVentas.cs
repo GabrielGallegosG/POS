@@ -9,15 +9,15 @@ namespace POS
         {
             inicio.Size = new Size(90, 30);
             menu.Size = new Size(90, 30);
-            orden.Size = new Size(101, 30);
+            orden.Size = new Size(110, 30);
             venta.Size = new Size(90, 30);
             usuario.Size = new Size(110, 30);
 
-            inicio.Location = new Point(282, 3);
-            menu.Location = new Point(378, 3);
-            orden.Location = new Point(474, 3);
-            venta.Location = new Point(582, 3);
-            usuario.Location = new Point(678, 3);
+            inicio.Location = new Point(808, 7);
+            menu.Location = new Point(907, 7);
+            orden.Location = new Point(1005, 7);
+            venta.Location = new Point(1123, 7);
+            usuario.Location = new Point(1230, 7);
         }
 
         public static void posicionConsultaMenu(PictureBox logo, Label ventas, DataGridView consultTabla,
@@ -25,7 +25,7 @@ namespace POS
         {
             logo.Size = new Size(115, 100);
             ventas.Size = new Size(110, 30);
-            consultTabla.Size = new Size(915, 334);
+            consultTabla.Size = new Size(942, 437);
             filtrarL.Size = new Size(132, 21);
             filtrarCB.Size = new Size(199, 21);
             datoBuscarL.Size = new Size(164, 21);
@@ -34,7 +34,7 @@ namespace POS
             logo.Location = new Point(12, 48);
             logo.BringToFront();
             ventas.Location = new Point(133, 87);
-            consultTabla.Location = new Point(13, 171);
+            consultTabla.Location = new Point(13, 198);
             filtrarL.Location = new Point(295, 62);
             filtrarCB.Location = new Point(299, 97);
             datoBuscarL.Location = new Point(595, 62);
@@ -42,7 +42,48 @@ namespace POS
 
         }
 
+        public static void dataGridView(DataGridView dataGrid)
+        {
 
+
+            dataGrid.AllowUserToOrderColumns = true;
+            dataGrid.AllowUserToResizeColumns = true;
+
+            dataGrid.RowsDefaultCellStyle.Padding = new Padding(2, 2, 2, 2);
+            dataGrid.RowsDefaultCellStyle.Font = new Font("Gadugi", 15);
+            dataGrid.RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+
+            dataGrid.AlternatingRowsDefaultCellStyle.Padding = new Padding(2, 2, 2, 2);
+            dataGrid.AlternatingRowsDefaultCellStyle.Font = new Font("Gadugi", 15);
+            dataGrid.AlternatingRowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGrid.AlternatingRowsDefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
+            dataGrid.ColumnHeadersDefaultCellStyle.Padding = new Padding(0, 0, 0, 0);
+            dataGrid.ColumnHeadersDefaultCellStyle.Font = new Font("Gadugi", 15);
+            dataGrid.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGrid.ColumnHeadersDefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
+            dataGrid.DefaultCellStyle.Padding = new Padding(0, 0, 0, 0);
+            dataGrid.DefaultCellStyle.Font = new Font("Gadugi", 15);
+            dataGrid.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGrid.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
+            dataGrid.RowHeadersDefaultCellStyle.Padding = new Padding(0, 0, 0, 0);
+            dataGrid.RowHeadersDefaultCellStyle.Font = new Font("Gadugi", 15);
+            dataGrid.RowHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGrid.RowHeadersDefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
+            dataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            dataGrid.AutoResizeColumns();
+            dataGrid.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dataGrid.ReadOnly = true;
+
+            dataGrid.RowHeadersWidth = 100;
+            dataGrid.RowHeadersVisible = false;
+            dataGrid.ColumnHeadersVisible = false;
+
+        }
 
 
 

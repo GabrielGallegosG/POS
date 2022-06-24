@@ -26,7 +26,7 @@ namespace POS
         {
             if (cantidadFinalTextBox.Text.Equals(""))
             {
-                MessageBox.Show("¡No se ha ingresado el nombre del elemento!", "Dato requerido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("¡No se ha ingresado el saldo final!", "Dato requerido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {

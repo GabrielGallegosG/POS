@@ -105,7 +105,7 @@ namespace POS
             this.ordenesButton.ForeColor = System.Drawing.Color.White;
             this.ordenesButton.Location = new System.Drawing.Point(568, 9);
             this.ordenesButton.Name = "ordenesButton";
-            this.ordenesButton.Size = new System.Drawing.Size(101, 30);
+            this.ordenesButton.Size = new System.Drawing.Size(110, 30);
             this.ordenesButton.TabIndex = 16;
             this.ordenesButton.Text = "ORDENES";
             this.ordenesButton.UseVisualStyleBackColor = false;

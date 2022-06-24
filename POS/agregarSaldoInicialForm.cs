@@ -26,15 +26,15 @@ namespace POS
         {
             if (cantidadInicialTextBox.Text.Equals(""))
             {
-                MessageBox.Show("¡No se ha ingresado el nombre del elemento!", "Dato requerido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("¡No se ha ingresado el saldo inicial!", "Dato requerido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
                 try
                 {
-                    /*BLAgregarElemento.agregarElemento(nombreTextBox.Text, seccionComboBox.Text, precio, descripcionRichTextBox.Text);
-                    MessageBox.Show("¡Se ha dado de alta con exito!", "Alta de elemento", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();*/
+                    BLAgregarSaldo.agregarSaldoInicial(cantidadInicialTextBox.Text);
+                    MessageBox.Show("¡Se ha guardado el saldo inicial con exito!", "Alta de Saldo Inicial", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
 
                 }
                 catch (Exception ex)
