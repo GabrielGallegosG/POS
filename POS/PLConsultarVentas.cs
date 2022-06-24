@@ -25,7 +25,7 @@ namespace POS
         {
             logo.Size = new Size(115, 100);
             ventas.Size = new Size(110, 30);
-            consultTabla.Size = new Size(942, 437);
+            consultTabla.Size = new Size(1036, 410);
             filtrarL.Size = new Size(132, 21);
             filtrarCB.Size = new Size(199, 21);
             datoBuscarL.Size = new Size(164, 21);
@@ -42,9 +42,20 @@ namespace POS
 
         }
 
+        public static void etiquetas(Label idOrd, Label usuario, Label mesa, Label servicio, Label fecha, Label hora, Label total, Label metoPago)
+        {
+            idOrd.Location = new Point(23, 174);
+            usuario.Location = new Point(133, 174);
+            mesa.Location = new Point(240, 174);
+            servicio.Location = new Point(351, 174);
+            fecha.Location = new Point(532, 174);
+            hora.Location = new Point(670, 174);
+            total.Location = new Point(785, 174);
+            metoPago.Location = new Point(892, 174);
+        }
+
         public static void dataGridView(DataGridView dataGrid)
         {
-
 
             dataGrid.AllowUserToOrderColumns = true;
             dataGrid.AllowUserToResizeColumns = true;
@@ -79,7 +90,6 @@ namespace POS
             dataGrid.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGrid.ReadOnly = true;
 
-            dataGrid.RowHeadersWidth = 100;
             dataGrid.RowHeadersVisible = false;
             dataGrid.ColumnHeadersVisible = false;
 

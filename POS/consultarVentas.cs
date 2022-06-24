@@ -74,13 +74,7 @@ namespace POS
 
         private void consultarVentas_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'pOS_BDDataSet.orden' table. You can move, or remove it, as needed.
-            //this.ordenTableAdapter.Fill(this.pOS_BDDataSet.orden);
-
-            /*consultarVentas.DataSource = BLConsultarVentas.UsuariosDT();
-            consultarVentas.Columns["estadoElaboracion"].Visible = false;
-            consultarVentas.Columns["estadoPago"].Visible = false;
-            consultarVentas.Columns["comentarios"].Visible = false;*/
+            consultTabla.DataSource = BLConsultaVenta.consultTabla();
         }
 
         private void inicioBbutton_Click(object sender, EventArgs e)

@@ -182,14 +182,19 @@ namespace POS
             // 
             // consultTabla
             // 
+            this.consultTabla.AllowUserToAddRows = false;
             this.consultTabla.AllowUserToDeleteRows = false;
             this.consultTabla.BackgroundColor = System.Drawing.Color.White;
             this.consultTabla.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.consultTabla.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
+            this.consultTabla.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.consultTabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.consultTabla.Cursor = System.Windows.Forms.Cursors.Hand;
             this.consultTabla.Location = new System.Drawing.Point(13, 198);
+            this.consultTabla.Margin = new System.Windows.Forms.Padding(2, 3, 3, 3);
             this.consultTabla.Name = "consultTabla";
             this.consultTabla.ReadOnly = true;
-            this.consultTabla.Size = new System.Drawing.Size(942, 410);
+            this.consultTabla.Size = new System.Drawing.Size(1036, 410);
             this.consultTabla.TabIndex = 60;
             // 
             // ordenBindingSource
@@ -267,7 +272,7 @@ namespace POS
             this.usuarioLabel.AutoSize = true;
             this.usuarioLabel.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usuarioLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.usuarioLabel.Location = new System.Drawing.Point(88, 174);
+            this.usuarioLabel.Location = new System.Drawing.Point(133, 174);
             this.usuarioLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.usuarioLabel.Name = "usuarioLabel";
             this.usuarioLabel.Size = new System.Drawing.Size(79, 21);
@@ -279,7 +284,7 @@ namespace POS
             this.numMesaLabel.AutoSize = true;
             this.numMesaLabel.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numMesaLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.numMesaLabel.Location = new System.Drawing.Point(203, 174);
+            this.numMesaLabel.Location = new System.Drawing.Point(240, 174);
             this.numMesaLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.numMesaLabel.Name = "numMesaLabel";
             this.numMesaLabel.Size = new System.Drawing.Size(93, 21);
@@ -291,7 +296,7 @@ namespace POS
             this.tipoServLabel.AutoSize = true;
             this.tipoServLabel.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tipoServLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.tipoServLabel.Location = new System.Drawing.Point(322, 174);
+            this.tipoServLabel.Location = new System.Drawing.Point(351, 174);
             this.tipoServLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.tipoServLabel.Name = "tipoServLabel";
             this.tipoServLabel.Size = new System.Drawing.Size(152, 21);
@@ -303,7 +308,7 @@ namespace POS
             this.fechaLabel.AutoSize = true;
             this.fechaLabel.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fechaLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.fechaLabel.Location = new System.Drawing.Point(511, 174);
+            this.fechaLabel.Location = new System.Drawing.Point(532, 174);
             this.fechaLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.fechaLabel.Name = "fechaLabel";
             this.fechaLabel.Size = new System.Drawing.Size(60, 21);
@@ -315,7 +320,7 @@ namespace POS
             this.horaLabel.AutoSize = true;
             this.horaLabel.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.horaLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.horaLabel.Location = new System.Drawing.Point(615, 174);
+            this.horaLabel.Location = new System.Drawing.Point(670, 174);
             this.horaLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.horaLabel.Name = "horaLabel";
             this.horaLabel.Size = new System.Drawing.Size(55, 21);
@@ -327,7 +332,7 @@ namespace POS
             this.totalOrdenLabel.AutoSize = true;
             this.totalOrdenLabel.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalOrdenLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.totalOrdenLabel.Location = new System.Drawing.Point(704, 174);
+            this.totalOrdenLabel.Location = new System.Drawing.Point(785, 174);
             this.totalOrdenLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.totalOrdenLabel.Name = "totalOrdenLabel";
             this.totalOrdenLabel.Size = new System.Drawing.Size(55, 21);
@@ -339,7 +344,7 @@ namespace POS
             this.metodoPagoLabel.AutoSize = true;
             this.metodoPagoLabel.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metodoPagoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.metodoPagoLabel.Location = new System.Drawing.Point(796, 174);
+            this.metodoPagoLabel.Location = new System.Drawing.Point(892, 174);
             this.metodoPagoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metodoPagoLabel.Name = "metodoPagoLabel";
             this.metodoPagoLabel.Size = new System.Drawing.Size(159, 21);
