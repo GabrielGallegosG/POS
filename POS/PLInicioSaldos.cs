@@ -9,15 +9,15 @@ namespace POS
         {
             inicio.Size = new Size(90, 30);
             menu.Size = new Size(90, 30);
-            orden.Size = new Size(101, 30);
+            orden.Size = new Size(110, 30);
             venta.Size = new Size(90, 30);
             usuario.Size = new Size(110, 30);
 
-            inicio.Location = new Point(287, 10);
-            menu.Location = new Point(383, 10);
-            orden.Location = new Point(479, 10);
-            venta.Location = new Point(587, 10);
-            usuario.Location = new Point(683, 10);
+            inicio.Location = new Point(808, 7);
+            menu.Location = new Point(907, 7);
+            orden.Location = new Point(1005, 7);
+            venta.Location = new Point(1123, 7);
+            usuario.Location = new Point(1230, 7);
         }
 
         public static void posicionSaldosInicio(PictureBox logo, Label saldosLabel, Panel saldoInicial, Panel saldoFinal,
@@ -33,8 +33,8 @@ namespace POS
             logo.Location = new Point(12, 48);
             logo.BringToFront();
             saldosLabel.Location = new Point(133, 87);
-            saldoInicial.Location = new Point(220, 285);
-            saldoFinal.Location = new Point(480, 285);
+            saldoInicial.Location = new Point(450, 285);
+            saldoFinal.Location = new Point(780, 285);
             saldoInicialLabel.Location = new Point(3,7);
             saldoFinalLabel.Location = new Point(5,7);
         }
