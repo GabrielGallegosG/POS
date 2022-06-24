@@ -15,8 +15,10 @@ namespace POS
         public consultarOrdenesForm()
         {
             InitializeComponent();
-            PLConsultaOrdenes.posicionEncabezado(inicioBbutton, menuButton, ordenesButton, ventasButton, usuariosButton);
+            PLConsultaOrdenes.posicionEncabezado(inicioBbutton, menuButton, ordenesButton, ventasButton, usuariosButton, ordenesDataGridView);
             PLConsultaOrdenes.posisiconConsultaOrdenes(logoPictureBox, encabezadoLabel, nuevaOrdenLabel, agregarOrdenButton);
+            PLConsultaOrdenes.dataGridView(ordenesDataGridView);
+            PLConsultaOrdenes.etiquetas(idLabel, noMesaLabel, servicioLabel, fechaLabel,horaLabel,totalLabel, estadoELabel, actualizarButton);
         }
 
         private void ordenesButton_Click(object sender, EventArgs e)
@@ -68,6 +70,16 @@ namespace POS
             this.Hide(); 
             inicioSaldosForm frm = new inicioSaldosForm();
             frm.Show();
+        }
+
+        private void consultarOrdenesForm_Load(object sender, EventArgs e)
+        {
+            ordenesDataGridView.DataSource = BLConsultarOrden.OrdenesDT();
+        }
+
+        private void actualizarButton_Click(object sender, EventArgs e)
+        {
+            ordenesDataGridView.DataSource = BLConsultarOrden.OrdenesDT();
         }
     }
 }
