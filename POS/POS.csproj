@@ -98,6 +98,7 @@
     <Compile Include="BLConsultaElemento.cs" />
     <Compile Include="BLConsultarOrden.cs" />
     <Compile Include="BLConsultarUsuarios.cs" />
+    <Compile Include="BLConsultaVenta.cs" />
     <Compile Include="BLEditarElemento.cs" />
     <Compile Include="BLEditarUsuario.cs" />
     <Compile Include="BLEliminarElemento.cs" />
