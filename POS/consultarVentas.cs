@@ -75,7 +75,7 @@ namespace POS
         private void consultarVentas_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'pOS_BDDataSet.orden' table. You can move, or remove it, as needed.
-            this.ordenTableAdapter.Fill(this.pOS_BDDataSet.orden);
+            //this.ordenTableAdapter.Fill(this.pOS_BDDataSet.orden);
 
         }
 

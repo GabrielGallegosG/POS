@@ -216,8 +216,8 @@ namespace POS
             try
             {
                 int numMesa;
-                numMesa = Convert.ToInt32(noMesaComboBox.Text);
-                BLAgregarOrden.agregarOrden(tipoServicioComboBox.Text, numMesa);
+                numMesa = noMesaComboBox.SelectedIndex;
+                //BLAgregarOrden.agregarOrden(tipoServicioComboBox.Text, numMesa);
             }
             catch (Exception ex)
             {
@@ -233,7 +233,7 @@ namespace POS
             public float subTotal { get; set; }
         }
 
-        List<elementosSeleccionados> Lista = new List<elementosSeleccionados>();
+        public List<elementosSeleccionados> Lista = new List<elementosSeleccionados>();
         String nombreElemento;
         float subTotal, precioUnitario, total;
         int cantidad;
@@ -261,8 +261,6 @@ namespace POS
 
                     Lista.Add(new elementosSeleccionados() { nombre = nombreElemento, precioUnitario = precioUnitario, cantidad = cantidad, subTotal = subTotal });
 
-                    var box = "Platillo: " + platillosDataGridView.CurrentRow.Cells["nombre_elemento"].Value + "   Precio: " + platillosDataGridView.CurrentRow.Cells["precio"].Value;
-                    MessageBox.Show(box, "Agregando a la orden", MessageBoxButtons.OK);
                     actualizarOrdenDataGrid();
 
 
@@ -359,9 +357,6 @@ namespace POS
 
                         Lista.Add(new elementosSeleccionados() { nombre = nombreElemento, precioUnitario = precioUnitario, cantidad = cantidad, subTotal = subTotal });
 
-                        var box = "Platillo: " + bebidasDataGridView.CurrentRow.Cells["nombre_elemento"].Value + "   Precio: " + bebidasDataGridView.CurrentRow.Cells["precio"].Value;
-                        MessageBox.Show(box, "Agregando a la orden", MessageBoxButtons.OK);
-
                         actualizarOrdenDataGrid();
 
                         float sum = 0;
@@ -408,8 +403,6 @@ namespace POS
 
 
                     postresDataGridView.CurrentRow.Cells[e.ColumnIndex].Style.Font = new Font("Gadugi", 15, FontStyle.Bold);
-                    var box = "Platillo: " + postresDataGridView.CurrentRow.Cells["nombre_elemento"].Value + "   Precio: " + postresDataGridView.CurrentRow.Cells["precio"].Value;
-                    MessageBox.Show(box, "Agregando al carrito", MessageBoxButtons.OK);
                     actualizarOrdenDataGrid();
 
                     float sum = 0;
@@ -441,6 +434,10 @@ namespace POS
 
         private void agregarButton_Click_1(object sender, EventArgs e)
         {
+            int empleado = 1;
+            float total = float.Parse(totalElementosLabel.Text);
+            BLAgregarOrden.agregarOrden(empleado, noMesaComboBox.SelectedItem.ToString(),tipoServicioComboBox.SelectedItem.ToString(), fechaOrdenLabel.Text,
+                                        horaOrdenLabel.Text, total, "En Espera", "No Pagado", "Indefinido",comentariosRichTextBox.Text);
 
         }
     }
