@@ -19,7 +19,7 @@ namespace POS
             PLConsultarVentas.posicionEncabezado(inicioBbutton, menuButton, ordenesButton, ventasButton, usuariosButton);
             PLConsultarVentas.posicionConsultaMenu(logoPictureBox, encabezadoLabel, consultTabla, filtrarLabel, filtroComboBox,
                                                     datoBuscarLabel, textBox1);
-            //PLConsultarVentas.dataGridView(consultTabla);
+            PLConsultarVentas.dataGridView(consultTabla);
             consultTabla.AutoResizeColumns();
         }
 
@@ -74,8 +74,10 @@ namespace POS
 
         private void consultarVentas_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'pOS_BDDataSet.orden' table. You can move, or remove it, as needed.
-            this.ordenTableAdapter.Fill(this.pOS_BDDataSet.orden);
+            /*consultarVentas.DataSource = BLConsultarVentas.UsuariosDT();
+            consultarVentas.Columns["estadoElaboracion"].Visible = false;
+            consultarVentas.Columns["estadoPago"].Visible = false;
+            consultarVentas.Columns["comentarios"].Visible = false;*/
 
         }
 
@@ -90,28 +92,31 @@ namespace POS
 
         private void filtroComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            /*try
+            /*
+            int filtro = 1;
+            
+            try
             {
                 if (filtroComboBox.SelectedItem.Equals("Dia"))
                 {
-                    
+                    filtro = 1;
                 }
                 else if (filtroComboBox.SelectedItem.Equals("Empleado"))
                 {
-
+                    filtro = 2;
                 }
                 else if (filtroComboBox.SelectedItem.Equals("Tipo de Servicio"))
                 {
-
+                    filtro = 3;
                 }
                 else if (filtroComboBox.SelectedItem.Equals("Tipo de Pago"))
                 {
-
+                    filtro = 4;
                 }
             }
             catch (Exception e)
             {
-
+                
             }*/
         }
     }

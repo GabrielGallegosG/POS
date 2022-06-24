@@ -93,6 +93,7 @@
     </Compile>
     <Compile Include="BLAgregarElemento.cs" />
     <Compile Include="BLAgregarOrden.cs" />
+    <Compile Include="BLAgregarSaldo.cs" />
     <Compile Include="BLAgregarUsuario.cs" />
     <Compile Include="BLConsultaElemento.cs" />
     <Compile Include="BLConsultarOrden.cs" />
